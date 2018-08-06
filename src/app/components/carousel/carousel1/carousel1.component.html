@@ -1,0 +1,27 @@
+<div class="container carousel carousel1">
+    <div
+      ng2-carouselamos
+      class="slides-wrapper"
+      [items]="items"
+      [width]="1000"
+      [$prev]="prev"
+      [$next]="next"
+      [$item]="item"
+    >
+  </div>
+  <ng-template #prev>
+    <img src="assets/images/carousel/left-arrow.png" id="left" />
+  </ng-template>
+  <ng-template #next>
+    <img src="assets/images/carousel/right-arrow.png" id="right" />
+  </ng-template>
+  <ng-template #item let-item let-i="index">
+
+      <div class="items flex-container flex-pc flex-d-c">
+        <h2 class="title">{{ item.title }}</h2>
+        <img class="thumbnail" src="{{ item.path }}">
+        <p class="info">{{item.info}}</p>
+        <h6 class="name">{{ item.name }}</h6>
+        <p class="desg">{{ item.desg }}</p>
+      </div>
+  </ng-template>

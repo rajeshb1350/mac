@@ -1,0 +1,76 @@
+.port-image {
+	width: 100%;
+}
+.col-md-3 {
+	margin-bottom: 20px;
+}
+.each-item {
+	position: relative;
+	overflow: hidden;
+	&:hover {
+		.cap2 {
+			left: 0px;
+		}
+		.cap1 {
+			left: 0px;
+		}
+	}
+}
+.cap1 {
+	position: absolute;
+	width: 100%;
+	height: 70%;
+	top: 0px;
+	left: -100%;
+	padding: 10px;
+	transition: all .5s;
+}
+.cap2 {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	bottom: 0px;
+	left: 100%;
+	padding: 10px;
+	transition: all .5s;
+}
+.about-heading {
+	text-align: center;
+}
+.filter-button {
+	float: left;
+	margin: 0px 10px;
+}
+.study_filter {
+	.selected {
+		font-weight: bold;
+	}
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	clear: both;
+	padding-top: 25px;
+	>div {
+		margin: 10px;
+		text-align: center;
+		cursor: pointer;
+	}
+}
+
+.image-group{
+	.filter{
+		width: 50%;
+		padding: 5px;
+	}
+}
+
+
+@media only screen and ( min-width: 1024px ){
+
+	.image-group{
+		.filter{
+			width: 25%;
+		}
+	}
+
+}

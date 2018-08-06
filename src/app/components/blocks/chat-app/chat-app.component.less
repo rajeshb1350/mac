@@ -1,0 +1,96 @@
+.chatWindow{
+    position: fixed;
+    right: 30px;
+    bottom: 200px;
+    padding: 13px 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 19999;
+    display: none;
+    .chatHeading{
+        .fa-times{
+            padding: 10px;
+            position: absolute;
+            right: 6px;
+            top: 5px;
+        }
+        .fa-times:hover{
+            cursor: pointer;
+        }
+        .mShiri{
+            position: absolute;
+            top: -48px;
+            right: 50%;
+            left: 40%;
+            border-radius: 50%;
+        }
+    }
+    .chatbody{
+        width: 25vw;
+        padding: 0 10px 0px 10px;
+   
+        .chatList {
+            height: 322px;
+            max-height: 320px;
+            overflow-y: auto;
+
+
+            .msgList{
+                padding: 0;
+                font-size: 12px;
+                margin-top: 20px;
+                .adminMsg{
+                    float: left;
+                    display: block;
+                    list-style-type: none;
+                    margin-top: 5px;
+                    padding: 5px;
+                    min-width: 70%;
+                
+                    border-radius: 0px 15px 2px 15px;
+                }
+                .adMsg{
+                    padding: 10px;
+                    border-radius: 1px 6px 6px 18px;
+                    
+                }
+                .usMsg {
+                    padding: 10px;
+                    border-radius: 3px 1px 12px 12px;
+                    
+                }
+                .userMsg{
+                    float: right;
+                    display: block;
+                    list-style-type: none;
+                    text-align: right; 
+                    margin-top: 5px; 
+                    padding: 5px;
+                    min-width: 70%;
+                    border-radius: 0px 15px 2px 15px;
+                }
+            }
+        }
+    }
+}
+
+.chatIcon{
+    position: fixed;
+    right: 30px;
+    bottom: 130px;
+    padding: 13px 17px;
+    cursor: pointer;
+    z-index: 19999;
+    transition: background-color 0.3s ease;
+}
+
+.button.send-button{
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 11px 13px;
+    transition: 0.1s all ease-in;
+    border: none !important;
+    cursor: pointer;
+    font-size: 14px;
+}
+

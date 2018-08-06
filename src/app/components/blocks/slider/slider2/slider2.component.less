@@ -1,0 +1,229 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+* {
+	box-sizing: border-box;
+	&::after {
+		box-sizing: border-box;
+	}
+	&::before {
+		box-sizing: border-box;
+	}
+}
+a {
+	text-decoration: none;
+}
+
+.sliderShowContainer {
+	position: relative;
+	height: 100vh;
+}
+
+[class^="cd-background-wrapper"]{
+	position: relative;
+	overflow: hidden;
+	-webkit-perspective: 4000px;
+	perspective: 4000px;
+	width: calc(100vw - 5px) !important;
+	height: 100vh !important;
+	position: absolute;
+	top: 0px;
+	transform: translateX(-50%);
+	// transition: 0.5s all linear;
+	transition: visibility 1s, opacity 1.5s linear;
+	visibility: hidden;
+	opacity: 0;
+	&.active{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.cd-floating-background{
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		transform-style: preserve-3d;
+		transform: translateZ(0);
+
+		img {
+			display: block;
+			width: 100%;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			&:not(.image-bg) {
+				position: absolute;
+				transition: 2.5s all ease-out;
+			}
+			&.image-bg {
+				background: white;
+				filter: brightness(1.1);
+			}
+		}
+	}
+	.cd-floating-background.is-absolute {
+		position: absolute;
+	}
+	.no-preserve-3d {
+		.cd-floating-background {
+			position: relative;
+		}
+	}
+	.banner-text {
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		bottom: -50%;
+		transform: translate(-50%, -50%) rotate3d(1,1,-1,146deg);
+		padding: 20px;
+		text-align: center;
+		transition: 2.5s all cubic-bezier(0.4, 0, 1, 1);
+		&.comeastart {
+			transform: translate(-50%, -50%) rotate3d(1,1,-1,0deg);
+			bottom: 27%;
+		}
+		h2 {
+			&::after {
+				content: "";
+				display: block;
+				width: 40px;
+				height: 2px;
+				margin: 30px auto 10px;
+				border-radius: 2px;
+			}
+			letter-spacing: 4px;
+			font-size: 60px !important;
+			line-height: 40px;
+		}
+		h4 {
+			font-size: 20px;
+			font-weight: 100 !important;
+			letter-spacing: 4px;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.control-btn{
+	position: absolute;
+	top: 47%;
+	display: flex;
+	left: 50%;
+	transform: translateX(-50%);
+	justify-content: space-between;
+	width: 95vw;
+	&>*{
+		img{
+			opacity: 0.6;
+		}
+	}
+}
+
+.cd-background-wrapper{
+	.cd-floating-background{
+		img {
+			&.image-move {
+				bottom: -6%;
+				left: -30%;
+				height: 90%;
+				width: auto;
+				transform: translateZ(150px);
+			}
+			&.image-move.comeastart {
+				left: 4%;
+			}
+			&.image-fix
+			{	
+				&.image-fix-1 {
+					right: -50%;
+					width: auto;
+					bottom: -10%;
+					height: 75%;
+				}
+				&.image-fix-1.comeastart {
+					right: 0%;
+				}
+				&.image-fix-2 {
+					right: -50%;
+					width: auto;
+					bottom: -10%;
+					height: 75%;
+				}
+				&.image-fix-2.comeastart {
+					right: 23%;
+				}
+			}
+			&.image-bg {
+				background: white;
+				filter: brightness(1.1);
+			}
+		}
+	}
+	.cd-floating-background.is-absolute {
+		position: absolute;
+	}
+	.no-preserve-3d {
+		.cd-floating-background {
+			position: relative;
+		}
+	}
+}
+@media only screen and (min-width: 1024px){
+	
+}

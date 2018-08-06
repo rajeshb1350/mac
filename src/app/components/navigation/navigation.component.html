@@ -1,0 +1,26 @@
+<ul class="nav navbar-nav">
+    <li 
+        routerLinkActive="active" 
+        [routerLinkActiveOptions] = "{exact: true}"
+        ><a routerLink="/">Home</a>
+    </li>
+    <li 
+        routerLinkActive="active"
+        ><a routerLink="about">About</a>
+    </li>
+    <li 
+        routerLinkActive="active"
+        ><a routerLink="contact">Contact</a>
+    </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+    <li class="dropdown" appdropdown>
+        <a class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
+        <ul class="dropdown-menu" >
+            <li><a href="#">Login</a></li>
+            <li><a href="#">SignUp</a></li>
+            <li><a href="#">Forgot Password</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </li>
+</ul>

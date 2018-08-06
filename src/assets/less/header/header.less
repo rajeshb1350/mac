@@ -1,0 +1,214 @@
+#nav-icon1 span:nth-child(1) {
+    top: 1px;
+}
+
+#nav-icon1 span:nth-child(2) {
+    top: 11px;
+}
+
+#nav-icon1 span:nth-child(3) {
+    top: 21px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+    top: 13px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+    top: 13px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.nav-menu{
+    display: none;
+}
+.nav-menu.active{
+    display: block;   
+}
+
+ul.navbar-nav{
+    width: 100%;
+    li{
+        display: flex;
+        a{
+            flex: 0 0 100%;
+            padding: 15px 0px 15px 17px;
+            text-decoration: none;
+        }
+    }
+}
+@media only screen and (min-width: 1024px){
+
+    .nav-menu.sticky {
+        position: fixed;
+        top: 0;
+    }
+
+    .burger-icon{
+        display: none;
+    } 
+    
+    .nav-menu {
+        display: block;
+        position: absolute;
+        z-index: 99;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 88%;
+        border-radius: 3px;
+        padding: .8rem 1rem;
+    }
+
+    ul{
+        padding-left: 0;
+    }
+
+    ul li{
+        display: inline;
+        float: left;
+        list-style-type: none;
+    }
+
+    ul li a{
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        // text-transform: uppercase;
+    }
+
+    ul li.active a{
+        font-weight: 600;
+        background: transparent;
+    }
+    .navbar{
+        margin-bottom: 0;
+    }
+
+
+
+.subscribe_head_btn{width: 115px;top: -18px;position: fixed;right: 19px;}
+
+}
+// ------------------------------------------------
+// ------------------------------------------------
+.mainHeader{
+    margin: 2rem 0rem 1rem;
+    clear: both;
+}
+
+.icon-box{
+    display: none;
+}
+
+.cllpMenu{
+    display: inline-block;
+}
+
+@media only screen and (min-width: 1024px) {
+    nav{
+        li {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            perspective-origin: top;
+
+            .dropdown-menu {
+                top: calc( 100% + 7px);
+                margin: 0px;
+                padding: 0px;
+                border-color: transparent;
+                display: block;
+                transition: 0.2s all ease-in-out;
+                transform: rotate3d(1, 0, 0, -86deg);
+
+                transform-origin: 100% 0%;
+                visibility: hidden;
+                
+                &.show{
+                    transform: rotate3d(1,0,0,0deg);
+                    visibility: visible;
+                }
+
+                ul.list-group.list-item-screen {
+                    position: absolute;
+                    left: 100%;
+                    width: 340px;
+                    color: white;
+                    background-color: #3a3a3a;
+                    height: 270px;
+                    top: 0;
+                    border: 1px solid rgba(0,0,0,.15);
+                }
+                a {
+                    color: white;
+                    background-color: rgb(58, 58, 58);
+                    width: 180px;
+                    margin: 0px;
+                    padding: 15px 20px;
+                    transition: 0.07s all ease-in;
+                    cursor: pointer;
+                    &.active{
+                        color: rgb(9, 9, 9);
+                        background-color: rgb(250, 250, 250);
+                    }
+                }
+            }
+        }
+    }
+
+    .list-item-screen>*{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    
+
+    .mainHeader{    
+        position: absolute;
+        z-index: 99;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+
+    .mainHeader h5{
+        font-size: 13px;
+        margin: 0px;
+        font-weight: 500 !important;
+    }   
+
+    .icon-box{
+        display: flex
+    }
+    
+    .mainHeader .header-icons > div > div:nth-child(2){
+        margin: 0px 26px 0px 13px;
+    }
+    .mainHeader{
+        .fa{
+            font-size: 30px;
+        }
+    }
+
+    .cllpMenu{
+        display: none;
+    }
+    
+    .toHideCmp{
+        display: block;
+    }
+}

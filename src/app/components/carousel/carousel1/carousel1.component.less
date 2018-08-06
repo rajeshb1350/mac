@@ -1,0 +1,67 @@
+#container {
+    width: 100%;
+    margin: 5em auto;
+    padding: 0;
+}
+
+.items {
+    min-width: 100%;
+    height: auto;
+    background: #f4f4f4;
+    width: 100%;
+}
+
+#left, #right { 
+    margin: 0px;
+    width: 10px;
+}
+
+.carousel{
+    &>div{
+        margin: 40px 0px;
+    }
+}
+
+div.items {
+    & > *:not(:nth-child(4)){
+        margin: 10px 30px;
+    }
+    & > .title {
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    & > .thumbnail{
+        box-shadow: 0px 0px 20px 0px rgb(119, 119, 119);
+        border-radius: 50%;
+    }
+    & > .info{
+        text-align: center;
+    }
+    & > .name{
+        font-weight: bold;
+        font-size: 20px; 
+    }
+    & > .desg{
+        margin: 0px;
+    }
+}
+
+.controls button {
+    outline: none;
+    cursor: pointer; 
+}
+
+@media only screen and ( min-width: 1024px ){
+    #left, #right { 
+        margin: 20px;
+        width: 40px;
+    }
+    
+    
+    div.items {
+        & > *:not(:nth-child(4)){
+            margin: 30px;
+        }
+    }
+    
+}

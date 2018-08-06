@@ -1,0 +1,124 @@
+#msform {
+	text-align: center;
+    position: relative;
+    min-height: 440px;
+    fieldset {
+        border: 0 none;
+        border-radius: 0px;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        position: relative;
+        .form-group {
+            margin-bottom: 0rem;
+        }
+        &:not(:first-of-type) {
+            display: none;
+        }
+
+        .frm-cntrl, textarea {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #2C3E50;
+            font-size: 13px;
+        }
+        
+        input:focus, textarea:focus {
+            box-shadow: none !important;
+            outline-width: 0;
+            transition: All 0.5s ease-in;
+        }
+    
+        .action-button, .action-button-previous {
+            width: 100px;
+            font-weight: bold;
+            border: 0 none;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+            
+        .fs-title {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        
+        .fs-subtitle {
+            font-weight: normal;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        a.qmark{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+        }
+    }
+
+
+    #progressbar {
+        margin-bottom: 30px;
+        overflow: hidden;
+        counter-reset: step;
+        li {
+            list-style-type: none;
+            text-transform: uppercase;
+            font-size: 9px;
+            width: 33.33%;
+            float: left;
+            position: relative;
+            letter-spacing: 1px;
+    
+            &:before {
+                content: counter(step);
+                counter-increment: step;
+                width: 24px;
+                height: 24px;
+                line-height: 26px;
+                display: block;
+                font-size: 12px;
+                border-radius: 25px;
+                margin: 0 auto 10px auto;
+            }
+            
+            &:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                left: -50%;
+                top: 9px;
+                z-index: -1;
+            }
+            
+            &:first-child:after {
+                content: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1020px){
+    #msform {
+        fieldset {
+            width: 80%; 
+            margin: 0 10%;
+            a.qmark{
+                position: absolute;
+                top: 50%;
+                right: 10px;
+            }
+        }
+    }
+}

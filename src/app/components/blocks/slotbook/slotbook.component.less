@@ -1,0 +1,78 @@
+.slotbook {
+	background-image: url("/assets/images/banner/slots.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 50px 0;
+
+
+
+	.box {
+		transition: all 0.2s ease;
+		margin-top: 10px;
+		box-sizing: border-box;
+		border-radius: 5px;
+		background-clip: padding-box;
+		padding: 0 10px 0px 10px;
+		&:hover {
+		}
+		span.box-title {
+			font-size: 24px;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+		.box-content {
+			padding: 16px 0;
+			border-radius: 0 0 2px 2px;
+			background-clip: padding-box;
+			box-sizing: border-box;
+			ul {
+				margin-left: 0px;
+				padding-left: 0px;
+				li {
+					list-style-type: none;
+					text-align: left;
+					margin-bottom: 15px;
+					font-size: 12px;
+					i {
+						font-size: 22px;
+						margin-right: 10px;
+					}
+				}
+			}
+			p {
+				text-transform: none;
+			}
+		}
+	}
+}
+
+@media only screen and ( min-width: 1020px ){
+	.slotbook {
+		h2 {
+			margin-bottom: 36px;
+			font-size: 20px;
+		}
+		h4 {
+			margin-bottom: 24px;
+			font-size: 20px;
+		}
+		.box {
+			&:hover {
+			}
+			span.box-title {
+			}
+			.box-content {
+				ul {
+					li {
+						i {
+						}
+					}
+				}
+				p {
+				}
+			}
+		}
+	}
+} 

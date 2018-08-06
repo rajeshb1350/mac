@@ -1,0 +1,42 @@
+.sidmenu{
+    display: none;
+}
+@media only screen and (min-width:992px){
+    .sidmenu{
+        display: block;
+        padding: 0;
+        position: fixed;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        li{
+            list-style-type: none;
+            padding: 15px 20px;
+            font-size: 23px;
+            position:relative;
+            .iconText{
+                font-size: 16px;
+                padding: 22px 32px;
+                top: 0;
+                font-size: 14px;
+                /* bottom: 0; */
+                min-width: 200px;
+                transition: 
+                    0.2s transform ease-in-out;
+            }
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        li:hover{
+            .iconText{
+                -webkit-transform: translate(-138%);
+                transform: translate(-200px);
+            }
+        }
+        .iconText{
+            position: absolute;
+            z-index: -100;
+        }
+    }
+}

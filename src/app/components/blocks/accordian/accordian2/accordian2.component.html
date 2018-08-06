@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div id="accordion2" class="accordion2"  aria-multiselectable="true">
+    <div class="card" *ngFor="let pdata of data; let i = index">
+      <div class="card-header"  role="tab">
+        <a class="card-link container" data-toggle="collapse" href="#block{{i}}">
+          {{pdata.title}}
+        </a>
+      </div>
+      <div id="block{{i}}" class="collapse content" [ngClass]="i==0?'show':''" data-parent="#accordion2">
+        <div class="sub-tab container">
+          <div class="section-tab" *ngFor="let cdata of pdata.data">
+              <h3>Q: {{cdata.question}}</h3>
+              <p>A: {{cdata.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

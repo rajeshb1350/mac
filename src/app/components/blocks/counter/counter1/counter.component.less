@@ -1,0 +1,53 @@
+.counter-wrapper {
+	position: relative;
+	
+	.counter {
+		position: relative;
+		width: calc( 100% - 30px );
+		top: 37px;
+		left: 15px;
+		
+		.css_counter_font {
+			font-size: 50px;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+		.vl {
+			margin: 5px 16px 10px 5px;
+			padding: 10px;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
+}
+	
+
+@media only screen and ( min-width: 1024px ){
+.counter-wrapper {
+	position: relative;
+		.counter {
+			position: absolute;
+			width: 1250px;
+			transform: translate(-50%);
+			top: -120px;
+			left: 50%;
+			.pad_count {
+				padding: 48px 30px;
+				&>*{
+					width: 100%;	
+					justify-content: space-between;
+				}
+				.css_counter_font {
+					font-size: 60px;
+				}
+				.vl {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+
+	.pad-counter{    
+		padding: 10px 4.2% !important;
+	}
+}

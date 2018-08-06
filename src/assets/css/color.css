@@ -1,0 +1,56 @@
+/* -----------------GREY COLOR----------------------- */
+.bg-grey,
+.bg-hover-grey:hover{
+    background-color: #f4f4f4 !important;
+}
+.text-grey,
+.text-hover-grey:hover{
+    color: #f4f4f4 !important;
+}
+.border-grey,
+.border-hover-grey{
+    border: 2px solid #f4f4f4 !important;
+}
+
+
+/* -----------------ORANGE COLOR----------------------- */
+.bg-orange,
+.bg-hover-orange:hover{
+    background-color: #fe6f41 !important;
+}
+.text-orange,
+.text-hover-orange:hover{
+    color: #fe6f41 !important;
+}
+.border-orange,
+.border-hover-orange{
+    border: 2px solid #fe6f41 !important;
+}
+
+/* -----------------BLACK COLOR----------------------- */
+.bg-black,
+.bg-hover-black:hover{
+    background-color: #3f3f3f !important;
+}
+.text-black,
+.text-hover-black:hover{
+    color: #3f3f3f !important;
+}
+.border-black,
+.border-hover-black{
+    border: 2px solid #3f3f3f !important;
+}
+
+/* -----------------WHITE COLOR----------------------- */
+.bg-white,
+.bg-hover-white:hover{
+    background-color: #f8f8f8 !important;
+}
+.text-white,
+.text-hover-white:hover{
+    color: #f8f8f8 !important;
+}
+.border-white,
+.border-hover-white{
+    border: 2px solid #f8f8f8 !important;
+}

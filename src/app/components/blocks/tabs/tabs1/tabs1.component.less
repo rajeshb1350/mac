@@ -1,0 +1,80 @@
+.tab-sp{
+  margin-top: 100px;
+  padding: 50px 0;
+  text-align: center;
+  .heading{
+    h1{
+      font-size: 1.5rem;
+    }
+  }
+  .tabs{
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    .nav.nav-pills{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      z-index: 999;
+      li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{    
+          display: inline-flex;
+          text-align: center;
+          font-size: 10px;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .tab-content{
+      flex: 0 0 100%;
+      margin-top: 24px;
+      width: 100%;
+      background-repeat: repeat;
+      background-size: cover;
+      position: relative;
+      padding: 0px;
+    }
+  }
+}
+@media only screen and (min-width: 1024px){
+  .tab-sp{
+    .heading{
+      h1{
+        font-size: 2.5rem;
+      }
+    }
+    .tabs{
+      width: 80%;
+      flex-wrap: nowrap;
+      .nav.nav-pills{
+        flex: 0 0 20%;
+        flex-direction: column;
+        li{
+          a{
+            width: 240px;
+            padding: 20px 0px 20px 15px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 1px;
+            min-height: 50px;
+            justify-content: flex-start;
+          }
+        }
+      }
+      .tab-content{      
+      margin-top: 40px;
+      flex: 0 0 80%;
+      }
+    }
+  }
+}

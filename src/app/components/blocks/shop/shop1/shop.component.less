@@ -1,0 +1,137 @@
+.team-sec {
+	float: left;
+	width: 100%;
+}
+.team {
+	.photo {
+		display: inline-block;
+		overflow: hidden;
+		position: relative;
+		img {
+			width: 100%;
+			vertical-align: middle;
+			position: relative;
+		}
+	}
+}
+.shop-heading{
+	&>*{
+		flex: 0 0 50%;
+	}
+}
+.photo-shadow {
+	position: absolute;
+	z-index: -1;
+	top: 12px;
+	left: 16px;
+	bottom: -10px;
+	height: 250px;
+	width: 246px;
+}
+.col-item {
+	position: relative;
+	padding: 10px;
+	flex: 0 0 50%;
+}
+.social-connect {
+	margin-top: 13px;
+	a {
+		display: inline-block;
+		font-size: 14px;
+		width: 24px;
+		height: 24px;
+		text-align: center;
+		line-height: 24px;
+		margin-right: 4px;
+		.fa {
+			margin: 0;
+		}
+	}
+}
+.info {
+	margin-top: 10px;
+	.name {
+		font-size: 14px;
+		font-weight: 600;
+		margin-bottom: 2px;
+	}
+	.degination {
+		font-size: 11px;
+		font-weight: 300;
+		font-style: italic;
+	}
+}
+.carousel-line {
+	height: 320px;
+	position: absolute;
+	bottom: -90px;
+	width: 110%;
+	left: -5.5%;
+	>.controls {
+		position: absolute;
+		bottom: -16px;
+		left: 50%;
+		margin-left: -50px;
+		padding: 0px 20px;
+		>a {
+			font-size: 24px;
+			font-weight: 300;
+		}
+	}
+}
+
+.sh-woocommerce-products-style2 {
+	display: flex;
+	i{
+		border-radius: 50%;
+		width: 42px;
+		height: 42px;
+		line-height: 42px;
+		text-align: center;
+	}
+	&::before{
+		content: "";
+		display: inline-block;
+		width: calc( 100% - 76px );
+		height: 3px;
+	}
+}
+.css_shop_online {
+	font-size: 16px;
+	font-weight: bold;
+}
+.css_margin_top_shop {
+	margin-top: 39px;
+}
+
+
+@media only screen and ( min-width: 1024px ){
+	.main_pad_left {
+		padding-left: 101px;
+	}
+
+	.un0versiti_backimg {
+		padding: 150px 0px 100px 0px;
+		right: -15px;
+	}
+
+	.team {
+		.photo {
+			width: 250px;
+			height: 250px;
+		}
+	}
+	.col-item {
+		flex: 0 0 25%;
+	}
+
+	.info {
+		margin-top: 22px;
+		.name {
+			font-size: 18px;
+		}
+		.degination {
+			font-size: 16px;
+		}
+	}
+}

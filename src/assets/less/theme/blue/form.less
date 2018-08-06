@@ -1,0 +1,74 @@
+form.form-1{
+    width: 100%;
+    .group {
+        position: relative;
+        margin-bottom: 45px;
+
+        input {
+            font-size: 14px !important;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 100%;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+            &:focus ~ label,
+            &:valid ~ label {
+                top: -10px;
+                font-size: 11px;
+            }
+            
+            &:focus ~ .bar
+            {
+                &:before, &:after {
+                    width: 50%;
+                }
+            }
+            &:focus ~ .highlight {
+                animation: inputHighlighter 0.3s ease;
+            }
+        }
+        
+        label {
+            font-size: 14px;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            transition: 0.2s ease all;
+        }
+
+        .bar {
+            position: relative;
+            display: block;
+            width: 100%;
+            &:before,
+            &:after {
+                content: '';
+                height: 2px;
+                width: 0;
+                bottom: 1px;
+                position: absolute;
+                transition: 0.2s ease all;
+            }
+            &:before {
+                left: 50%;
+            }
+            &:after {
+                right: 50%;
+            }
+        }
+
+        .highlight {
+            position: absolute;
+            height: 60%;
+            width: 100px;
+            top: 25%;
+            left: 0;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    }
+}

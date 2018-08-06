@@ -1,0 +1,40 @@
+.mainHeader{    
+    margin: 0;
+    z-index: 99;
+    transition: 0.3s all ease-in-out;
+    top: 46px;
+    right: 16px;
+    position: relative;
+    img{
+        transition: 0.3s all ease-in-out;
+        width: 200px;
+    }
+}
+.sticky{
+    .mainHeader{
+        top: 20px;
+        width: 50%;
+        img{
+            width: 160px;
+        }
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .mainHeader{    
+        z-index: 99;
+        top: 30px;
+        transition: 0.3s all ease-in-out;
+        img{
+            transition: 0.3s all ease-in-out;
+            width: 250px;
+        }
+    }
+    .sticky{
+        .mainHeader{
+            top: 23px;
+            img{
+                width: 160px;
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.topbar-sp{
+    float: right;
+    margin: 10px 0px 10px;
+    width: 100%;
+    ul.links {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        li{
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            a.link{
+                
+                font-size: 10px;
+                color: #444;
+            }
+            &:not(:last-child)::after{
+                content: "|";
+                font-size: 10px;
+                margin: 0px 7px;
+            }
+        }
+
+    }
+}
+.sticky{
+    .topbar-sp{
+        display: none;
+    }
+}
+
+@media only screen and ( min-width: 1024px ){
+    .topbar-sp{
+        margin: 10px 20px 30px;
+        ul.links {
+            justify-content: flex-end;
+            li{
+                &:not(:last-child)::after{
+                    margin: 0px 10px;
+                }
+            }
+    
+        }
+    }
+    .sticky{
+        .topbar-sp{
+            display: none;
+        }
+    }
+}
