@@ -9,7 +9,7 @@ export class ApiService{
     ){}
 
     getHeaderData(){
-        return this.http.get("http://www.js30.com/data/data1.json")
+        return this.http.get("http://localhost/data/data1.json")
         .pipe(map((response: Response)=> response.json()));
     }
 }

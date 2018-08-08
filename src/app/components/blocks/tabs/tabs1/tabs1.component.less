@@ -1,17 +1,35 @@
 .tab-sp{
+  padding: 50px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
   margin-top: 100px;
   padding: 50px 0;
   text-align: center;
-  .heading{
-    h1{
-      font-size: 1.5rem;
-    }
-  }
+
   .tabs{
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 60px;
     flex-wrap: wrap;
     flex: 0 0 100%;
+    top: 45px;
+    position: relative;
+    .heading{
+      position: absolute;
+      list-style-type: none;
+      top: 0;
+      transform: translateY(calc( -100% - 24px ));
+      left: 0px;
+      li{
+        display: none;
+        h2{
+          font-size: 1.5rem;
+        }
+        &.active{
+          display: block;
+        }
+      }
+    }
     .nav.nav-pills{
       display: flex;
       flex-direction: row;
@@ -19,6 +37,9 @@
       justify-content: center;
       z-index: 999;
       li{
+        top: -73px;
+        position: relative;
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,7 +64,14 @@
       background-size: cover;
       position: relative;
       padding: 0px;
+      left: 0px;
+      top: 50px;
     }
+  }
+}
+@media only screen and (min-width: 768px){
+  .tab-sp{
+
   }
 }
 @media only screen and (min-width: 1024px){
@@ -56,10 +84,12 @@
     .tabs{
       width: 80%;
       flex-wrap: nowrap;
+      top: 0px;
       .nav.nav-pills{
         flex: 0 0 20%;
         flex-direction: column;
         li{
+          top: 10px;
           a{
             width: 240px;
             padding: 20px 0px 20px 15px;
@@ -71,9 +101,10 @@
           }
         }
       }
-      .tab-content{      
-      margin-top: 40px;
-      flex: 0 0 80%;
+      .tab-content{  
+        margin-top: 40px;
+        flex: 0 0 80%;
+        left: 10px;
       }
     }
   }

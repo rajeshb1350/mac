@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div id="accordion2" class="accordion2"  aria-multiselectable="true">
-    <div class="card" *ngFor="let pdata of data; let i = index">
+    <div class="card container" *ngFor="let pdata of data; let i = index">
       <div class="card-header"  role="tab">
-        <a class="card-link container" data-toggle="collapse" href="#block{{i}}">
+        <a class="card-link" [ngClass]="i==0?'active':''"  data-toggle="collapse" href="#block{{i}}">
           {{pdata.title}}
         </a>
       </div>

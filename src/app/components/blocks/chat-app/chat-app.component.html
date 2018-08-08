@@ -1,28 +1,71 @@
-<div class="chatIcon" (click)="showChatWindow()">
-  <i class="fa fa-comments"><!-- --></i>
-</div>
+<div class="chatbot">
+  <div class="chatIcon">
+    <i class="fa fa-comments"></i>
+    <div class="chatWindow d-none">
+      <div class="chatHeading">
+        <img src="/assets/images/banner/msiri.jpg" alt="mSiri" class="img-fluid">
+        <a class="closeChat">
+          <i class="fa fa-times"></i>
+        </a>
+      </div>
+      <div class="chatbody">
+        <div class="chatList">
+          <ul class="msgList">
+            <li class="adminMsg">
+              <label>MShiri</label>
+              <div class="adMsg">
+                Hello user, i am <b>mSiri</b>. <br> How can I help you
+              </div>
+            </li>
+            <li class="userMsg">
+              <label>User</label>
+              <div class="usMsg">
+                How can I register for courses?
+              </div>
+            </li>
+            <li class="adminMsg">
+              <label>MShiri</label>
+              <div class="adMsg">
+                Hello user, i am <b>mSiri</b>. <br> How can I help you
+              </div>
+            </li>
+            <li class="userMsg">
+              <label>User</label>
+              <div class="usMsg">
+                How can I register for courses?
+              </div>
+            </li>
+            <li class="adminMsg">
+              <label>MShiri</label>
+              <div class="adMsg">
+                Hello user, i am <b>mSiri</b>. <br> How can I help you
+              </div>
+            </li>
+            <li class="userMsg">
+              <label>User</label>
+              <div class="usMsg">
+                How can I register for courses?
+              </div>
+            </li>
+          </ul>
 
-<div class="chatWindow">
-  <div class="chatHeading">
-    <i class="fa fa-times" (click)="closeChatWindow()"><!-- --></i>
-  </div>
-  <div class="chatbody">
-    <div class="chatList">
-      <ul class="msgList">
-        <li class="adminMsg">
-          <small>MShiri</small>
-          <div class="adMsg">Hello user, i am <b>mSiri</b>. <br> How can I help you</div></li>
-        <li class="userMsg">
-            <small>User</small>
-          <div class="usMsg">How can I register for courses?</div></li>
-      </ul>
-    </div>
-    <div class="chatInput">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Enter your query"/>
-        <div class="input-group-append">
-          <button class="button send-button" type="button"><i class="fa fa-paper-plane"><!-- --></i></button>
-          <button class="button send-button" type="button"><i class="fa fa-microphone"><!-- --></i></button>
+
+          <ul  id="showRelalted">
+      
+          </ul>
+
+
+        </div>
+
+
+        <div class="chatInput">
+          <div class="input-group">
+            <input type="text" class="form-control" id="inputText" placeholder="Enter your query"/>
+            <div class="input-group-append">
+              <button class="button send-button" type="button"><i class="fa fa-paper-plane"></i></button>
+              <button class="button send-button" type="button"><i class="fa fa-microphone"></i></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

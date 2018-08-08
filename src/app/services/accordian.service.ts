@@ -174,7 +174,7 @@ export class AccordianService{
                     "coursedata": [
                         {
                             "name": "Effective Communication",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/effective-communication.jpg",
                             "type": "Basic",
                             "Duration": "60 Hours",
                             "Access": "Lifetime",
@@ -194,7 +194,7 @@ export class AccordianService{
                         },
                         {
                             "name": "MS-Office Essentials",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/office.jpg",
                             "type": "Basic",
                             "Duration": "60 Hours",
                             "Access": "Lifetime",
@@ -210,7 +210,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Telephonic Etiquette",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/telephonic.jpg",
                             "type": "Basic",
                             "Duration": "6 Hours",
                             "Access": "Lifetime",
@@ -229,7 +229,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Effective E-Mail Writing",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/email.jpg",
                             "type": "Basic",
                             "Duration": "6 Hours",
                             "Access": "Lifetime",
@@ -247,7 +247,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Customer Centricity",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/customer.jpg",
                             "type": "Basic",
                             "Duration": "8 Hours",
                             "Access": "Lifetime",
@@ -266,7 +266,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Management Information System (MIS) & Data Analysis",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/mis.jpg",
                             "type": "Business Intelligence",
                             "Duration": "90 Hours",
                             "Access": "Lifetime",
@@ -292,7 +292,7 @@ export class AccordianService{
                     "coursedata": [
                         {
                             "name": "Accounting Fundamentals",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/accounting-fundamentals.jpg",
                             "type": "Accounts",
                             "Duration": "180 Hours",
                             "Access": "Lifetime",
@@ -315,7 +315,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Accounts Payable",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/accounts-payable.jpg",
                             "type": "Basic",
                             "Duration": "120 Hours",
                             "Access": "Lifetime",
@@ -341,7 +341,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Record-to-Report",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/record-to-report.jpg",
                             "type": "Accounts",
                             "Duration": "60 Hours",
                             "Access": "Lifetime",
@@ -357,7 +357,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Tally ERP 9",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/tally-erp.jpg",
                             "type": "Accounting",
                             "Duration": "120 Hours",
                             "Access": "Lifetime",
@@ -391,7 +391,7 @@ export class AccordianService{
                         },
                         {
                             "name": "GST Fundamentals",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/gst.jpg",
                             "type": "Tax Filling",
                             "Duration": "120 Hours",
                             "Access": "Lifetime",
@@ -419,7 +419,7 @@ export class AccordianService{
                     "coursedata": [
                         {
                             "name": "Effective Communication",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/effective-communication.jpg",
                             "type": "Basic",
                             "Duration": "60 Hours",
                             "Access": "Lifetime",
@@ -439,7 +439,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Body Language & Building Personal Image",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/body-language.jpg",
                             "type": "Soft Skills",
                             "Duration": "10 Hours",
                             "Access": "Lifetime",
@@ -462,7 +462,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Decision Making",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/decision-making.jpg",
                             "type": "Basic",
                             "Duration": "8 Hours",
                             "Access": "Lifetime",
@@ -489,7 +489,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Critical Thinking",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/critical-thinking.jpg",
                             "type": "Basic",
                             "Duration": "6 Hours",
                             "Access": "Lifetime",
@@ -505,7 +505,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Interpersonal Skills",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/interpersonal-skills.jpg",
                             "type": "Soft Skills",
                             "Duration": "6 Hours",
                             "Access": "Lifetime",
@@ -523,7 +523,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Effective Feedback Mechanism",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/effective-feedback-mechanism.jpg",
                             "type": "Soft Skills",
                             "Duration": "6 Hours",
                             "Access": "Lifetime",
@@ -545,7 +545,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Time Management",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/time-management.jpg",
                             "type": "Basic",
                             "Duration": "6 Hours",
                             "Access": "Lifetime",
@@ -562,7 +562,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Stress Management",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/stress-management.jpg",
                             "type": "Basic",
                             "Duration": "6 Hours",
                             "Access": "Lifetime",
@@ -579,7 +579,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Negotiation Skills",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/negotiation-skills.jpg",
                             "type": "Basic",
                             "Duration": "6 Hours",
                             "Access": "Lifetime",
@@ -599,7 +599,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Conflict Management",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/conflict-management.jpg",
                             "type": "Basic",
                             "Duration": "6 Hours",
                             "Access": "Lifetime",
@@ -625,7 +625,7 @@ export class AccordianService{
                     "coursedata": [
                         {
                             "name": "Quantitative-Aptitude",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/quantitative-aptitude.jpg",
                             "type": "Basic",
                             "Duration": "120 Hours",
                             "Access": "Lifetime",
@@ -648,7 +648,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Numerical Ability",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/numerical-ability.jpg",
                             "type": "Basic",
                             "Duration": "120 Hours",
                             "Access": "Lifetime",
@@ -674,7 +674,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Verbal Ability",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/verbal-ability.jpg",
                             "type": "Basic",
                             "Duration": "80 Hours",
                             "Access": "Lifetime",
@@ -702,7 +702,7 @@ export class AccordianService{
                     "coursedata": [
                         {
                             "name": "Resume and Cover Letter",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/resume.jpg",
                             "type": "Basic",
                             "Duration": "2 Hours",
                             "Access": "Lifetime",
@@ -719,7 +719,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Interview Essentials",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/interview.jpg",
                             "type": "Basic",
                             "Duration": "4 Hours",
                             "Access": "Lifetime",
@@ -736,7 +736,7 @@ export class AccordianService{
                         },
                         {
                             "name": "MS-Office Essentials",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/office.jpg",
                             "type": "Basic",
                             "Duration": "60 Hours",
                             "Access": "Lifetime",
@@ -752,7 +752,7 @@ export class AccordianService{
                         },
                         {
                             "name": "Presentation Skills",
-                            "img": "/assets/images/background/thumb1.JPG",
+                            "img": "/assets/images/coursesImages/presentation.jpg",
                             "type": "Basic",
                             "Duration": "6 Hours",
                             "Access": "Lifetime",
@@ -858,3 +858,4 @@ export class AccordianService{
         return this.supportData;
     }
 }
+

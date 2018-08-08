@@ -19,6 +19,7 @@ img {
 		margin-top: 5px;
 	}
 	.img-box {
+		overflow: hidden;
 		opacity: 1;
 		display: block;
 		position: relative;
@@ -32,49 +33,54 @@ img {
 			bottom: 0;
 			transition: all 0.3s ease-in-out 0s;
 		}
-	}
-}
-.img-box {
-	.text-box{
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%) scale(0.9);
-		width: 95%;
-		z-index: 100;
-		p {
-			font-weight: bold;
-			text-align: center;
-			opacity: 1;
-			font-size: 12px;
-			padding: 20px;
+		img{
+			transition: all 0.3s ease-in-out 0s;
+			filter: blur(0px) brightness(1);
+			transform: scale(1);	
 		}
-		h4 {
-			font-weight: bold;
-		}
-		h5 {
-			font-weight: bold;
-			text-align: center;
-			a {
-				transition: all 0.3s ease-in-out 0s;
+		
+
+		.text-box{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) scale(0.9);
+			width: 95%;
+			z-index: 100;
+			opacity: 0;
+			visibility: hidden;
+			transition: .3s all ease-in-out;
+			p {
+				font-weight: bold;
+				text-align: center;
+				opacity: 1;
+				font-size: 12px;
+				padding: 20px;
+			}
+			h4 {
+				font-weight: bold;
+			}
+			h5 {
+				font-weight: bold;
+				text-align: center;
+				a {
+					transition: all 0.3s ease-in-out 0s;
+				}
 			}
 		}
-	}
-	ul {
-		transition: all 0.5s ease-in-out 0s;
-		li {
-			transition: all 0.5s ease-in-out 0s;
-			width: 30px;
-			height: 30px;
-			text-align: center;
-			margin: 2px;
-			padding: 5px;
-			display: inline-block;
-		}
-	}
-	&:hover {
-		&::after {
-			opacity: 0.5 !important;
+
+		&:hover{
+			img{
+				filter: blur(3px) brightness(0.4);
+				transform: scale(1.1);	
+			}
+			.text-box{
+				opacity: 1;
+				visibility: visible;
+			}
+			&::after {
+				opacity: 0.5 !important;
+			}
 		}
 	}
 }

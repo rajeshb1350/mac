@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { AccordianService } from '../../../../services/accordian.service';
 import * as $ from "jquery";
-import { $$ } from 'protractor';
 
 @Component({
   selector: 'app-accordian1',
@@ -48,6 +47,13 @@ export class Accordian1Component implements OnInit, AfterViewInit {
       }
       
       // $(document).on("scroll", debounce(checkSlide));
+      var $head = $(".accordion1 .card .card-header a");
+      $head.each(function(element){
+        $(this).on("click", function(){
+          $head.removeClass("active");
+          $(this).addClass("active");
+        });
+      });
     });
   }
 }

@@ -13,10 +13,7 @@
 				<h2 class="fs-title">Company Details</h2>
 				<h3 class="fs-subtitle">Enter Company Details</h3>
 				<div class="form-group">
-					<input type="text" class="frm-cntrl" formControlName="name" placeholder="Contact Name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
-					<div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-						<div *ngIf="f.name.errors.required">First Name is required</div>
-					</div>
+					<input type="text" class="frm-cntrl" formControlName="name" placeholder="Contact Name" />
 				</div>
 				<input type="text" class="frm-cntrl"  formControlName="email" placeholder="Email id"/>
 				<input type="text" class="frm-cntrl"  formControlName="phoneNum" placeholder="Mobile no."/>
@@ -25,24 +22,27 @@
 			<fieldset formGroupName="organizeInfo">
 				<h2 class="fs-title">Contact Address</h2>
 				<h3 class="fs-subtitle">Enter Contact Details</h3>
+				<div class="space-40"></div>
 				<input type="text" class="frm-cntrl"  formControlName="orgname" placeholder="Organization Name"/>
-				<a data-toggle="tooltip" class="qmark" title="Users can be out of students, trainers and Employers">
-					<i class="fa fa-question-circle-o" aria-hidden="true"></i>
+				<a data-toggle="tooltip" class="qmark" title="Users inclusive students, trainers and employers">
+					<i class="fa fa-info-circle" aria-hidden="true"></i>
 				</a>
-				<input type="text" class="frm-cntrl"  formControlName="usersNo" placeholder="Number Of Users"/>
+				<input type="text" class="frm-cntrl"  formControlName="usersNo" placeholder="Number of Users"/>
 				<input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
 				<input type="button" name="next" class="next action-button" value="Next" (click)="onNext();"/>
 			</fieldset>
 			<fieldset formGroupName="userAddress">
-				<h2 class="fs-title">Create your Address</h2>
-				<h3 class="fs-subtitle">Enter Address Details</h3>
-				<input type="text" class="frm-cntrl" formControlName="addressOne" placeholder="Address1"/>
-				<input type="text" class="frm-cntrl"  formControlName="state" placeholder="State"/>
-				<input type="text" class="frm-cntrl"  formControlName="country" placeholder="Country"/>
-				<input type="text" class="frm-cntrl"  formControlName="pincode" placeholder="Pincode"/>
-				<input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-				<!-- <a name="submit" class="submit action-button" routerLink="/verifydash"  target="_blank" (click)="onFinalSubmit();">Submit</a> -->
-				<a name="submit" class="submit action-button" routerLink="/verifydash"  >Submit</a>
+				<div class="status">
+					<div class="done">
+						<!-- <i class="fa fa-check" aria-hidden="true"></i> -->
+						<img src="/assets/images/icons/tickicon.png" alt="" class="img-fluid">
+						<h4>Request Completed</h4>
+						<h6>Sit calm and have a coffee while your environment is getting ready to use.</h6>
+					</div>
+					<div class="undone" *ngIf="false">
+						<i class="fa fa-times-circle-o" aria-hidden="true"></i>
+					</div>
+				</div>
 			</fieldset>
 		</form>
 	</div>

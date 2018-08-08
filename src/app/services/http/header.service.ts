@@ -9,6 +9,6 @@ export class HeaderService{
     ){}
 
     getHeaderData(){
-        return this.http.get("http://www.js30.com/data/data1.json");
+        return this.http.get("http://localhost/data/data1.json");
     }
 }

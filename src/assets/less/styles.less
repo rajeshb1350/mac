@@ -30,8 +30,6 @@
 
 --site-font: @site-font;
 --scroll-width: @scroll-width;
---scroll-color-track: @scroll-color-track;
---scroll-color-hover: @scroll-color-hover;
 }
 
 body, .body {
@@ -84,7 +82,7 @@ body, .body {
     background-color: var(--secondary-background-color);
 	color: var(--quaternary-color) !important;
 	&:hover{
-        background-color: var(--primary-background-color);
+        background-color: var(--secondary-transparent-color);
     }
 }
 
@@ -103,11 +101,9 @@ body, .body {
     background: var(--quaternary-color); 
 }
 ::-webkit-scrollbar-thumb{
-    background: var(--primary-color); 
-    &:hover {
-        background: var(--secondary-color); 
-    }
+    background: var(--quinary-transparent-color); 
 }
+
 
 /*.hero_banner{position: absolute; top: 0px; width:100%;} */
 .each-item:hover .cap1 p, 
@@ -158,9 +154,6 @@ body, .body {
 		li {
 			a{
 				color: var(--tertiary-color);
-				&:hover{
-					color: var(--primary-color);
-				}
 			}
 			.dropdown-menu {
 				ul.list-group.list-item-screen {
@@ -179,7 +172,8 @@ body, .body {
 			}
 		}
 		li.active a{
-			color: var(--primary-color);
+			background: linear-gradient(45deg, var(--secondary-background-color), var(--secondary-transparent-color));
+			color: var(--quaternary-color);
 		}
 	}
 }
@@ -187,7 +181,8 @@ body, .body {
 // FOOTER LESS--------------------------------------------------
 // Footer1
 p {
-    font-size: 13px;
+	font-size: 13px;
+	font-weight: 400;
 }
 *{
 	letter-spacing: 1px;
@@ -246,7 +241,7 @@ p {
 		}
 	}
     .footer_border {
-        background:  var(--tertiary-background-color);
+        background:  var(--primary-background-color);
 		color: var(--quaternary-color);
 	}
 	.footer-bar{
@@ -325,6 +320,9 @@ form.form-1{
 
 // Subscription Form
 
+#subscription-form{
+    background: var(--tertiary-background-color);
+}
 /*basic reset*/
 #msform {
     fieldset {
@@ -344,17 +342,30 @@ form.form-1{
 			background: var(--secondary-background-color);
 			color: var(--quaternary-color);
 			&:hover, &:focus {
-				background: var(--primary-background-color);
+				background: var(--secondary-transparent-color);
 			}
 		}
 	
 		.action-button-previous {
-			background: var(--tertiary-background-color);
+			background: var(--quinary-background-color);
 			color: var(--quaternary-color);
 			&:hover, &:focus {
-				background: var(--primary-background-color);        
+				background: var(--quinary-transparent-color);        
 			}
 		}
+
+		.status{
+            i{
+				color: var(--primary-color)
+			}
+            h4{
+                color: var(--quinary-color);
+            }
+            h6{
+                color: var(--tertiary-color);
+            }
+
+        }
 		
     }
     .fs-title {
@@ -368,18 +379,14 @@ form.form-1{
     #progressbar {
         li {
             color: var(--quaternary-color);
-            &:before {
-                color: var(--quinary-color);
-                background: var(--quaternary-background-color);
-            }
-            
-            &:after {
-                background: var(--quaternary-background-color);
+            &:before, &:after {
+				color: var(--quinary-color);
+				background: var(--quaternary-background-color);
+                border: 4px solid var(--quaternary-color);
             }
             &.active:before,
             &.active:after {
-                background: var(--secondary-background-color);
-                color: var(--quaternary-color);
+				border: 4px solid var(--secondary-border-color);
             }
         }
     }
@@ -424,8 +431,7 @@ form.form-1{
 		color: var(--quinary-color);
 		border: 2px solid var(--quaternary-border-color);
 		&:hover {
-			background-color: var(--primary-background-color);
-			border: 2px solid var(--primary-border-color);
+			background-color: var(--secondary-background-color);
 			color: var(--quaternary-color);
 		}
 	}
@@ -559,7 +565,7 @@ form.form-1{
 	.profile {
 		.img-box {
 			&:after {
-				background-color: var(--primary-background-color);
+				background-color: var(--secondary-background-color);
 			}
 		}
 	}
@@ -587,7 +593,7 @@ form.form-1{
 	a {
 		color: var(--tertiary-color);
 		&:hover {
-			color: var(--primary-color);
+			color: var(--secondary-color);
 		}
 	}
 }
@@ -697,7 +703,7 @@ form.form-1{
 // Tab Panel
 .tab-sp{
 	background-color: var(--primary-background-color);
-	h1{
+	h2{
 	  color: var(--quaternary-color);
 	}
 	.tabs{
@@ -745,44 +751,44 @@ form.form-1{
 	box-shadow: 0px 3px 13px 1px var(--tertiary-transparent-color);
     .chatHeading{
         .fa-times{
-            color:	var(--primary-color);
+            color:	var(--secondary-color);
         }
         .fa-times:hover{
-            color:	var(--primary-color);
+           color:	var(--secondary-color);
         }
         .mShiri{
             border: 1px solid var(--quinary-border-color);
         }
-        
     }
     .chatbody{
 		.chatList {
 			.msgList{
-				color: var(--quaternary-color);
-				.adMsg{
-					background: var(--secondary-background-color);
-				}
-				.usMsg {
-					background: var(--tertiary-background-color);
-				}
+				.adminMsg{background-color: rgb(226, 58, 89);		
+	    color: #fff;;			
+	}		
+	.userMsg{		
+	    background-color: rgba(63, 124, 151, 0.95);		
+	    color: #fff;		
+	}
 				small{
 					color:var(--quinary-color);
+				}
+				&>*{
+					background-color: var(--secondary-transparent-color);
 				}
 			}
 		}
     }
 }
 .chatIcon{
-    background: var(--quaternary-border-color);
-	color: var(--quinary-color);       
+    background: var(--secondary-background-color);
+	color: var(--quaternary-color);       
 	box-shadow: 0px 3px 13px 1px var(--tertiary-transparent-color);
-    background-color: var(--quaternary-background-color);
+	&:hover{
+		background-color: var(--secondary-transparent-color);
+	}
 }
 
-.chatIcon:hover{
-    background-color: var(--primary-background-color);
-    color: var(--quaternary-color);
-}
 
 .button.send-button{
     background-color:var(--secondary-color);
@@ -790,3 +796,101 @@ form.form-1{
     border-right: 1px var(--quaternary-border-color) solid important;
 }
 
+// ACCORDIAN
+// ACCORDIAN1
+.container-fluid{
+    .accordion1{
+        .card {
+			.card-header{                
+				box-shadow: 0 7px 25px -10px var(--quinary-transparent-color);
+				a{
+					color:  var(--tertiary-background-color);
+					background: var(--quaternary-background-color);
+					&.active{
+						color:  var(--secondary-background-color);	
+						border-color: var(--secondary-border-color);
+					}
+					border-color: var(--quinary-transparent-color);
+				}
+				&:hover{
+					a {
+						color:  var(--secondary-background-color);	
+						border-color: var(--secondary-border-color);
+					}
+				}
+			}
+        }
+
+        .content{
+            .sub-tab{
+                .heading{
+                    background: var(--quaternary-background-color);
+                    border: 1px solid var(--tertiary-border-color);
+                    h2{
+                        color: var(--primary-color);
+                    }
+                }
+                .section-tab{
+                    .first{
+                        ul.overview {
+                            li{
+                                &::before{
+                                    background-color: var(--primary-background-color);
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(odd){
+                        background: linear-gradient(45deg, var(--primary-transparent-color),  var(--primary-background-color));
+                        color: var(--quaternary-color);
+                        .first{
+                            ul.overview {
+                                li{
+                                    &::before{
+                                        background-color: var(--quaternary-border-color);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ACCORDIAN2
+
+.container-fluid{
+    .accordion2{
+		.card-header{                
+			box-shadow: 0 7px 25px -10px var(--quinary-transparent-color);
+			a{
+				color:  var(--tertiary-background-color);
+				background: var(--quaternary-background-color);
+				&.active{
+					color:  var(--secondary-background-color);	
+					border-color: var(--secondary-border-color);
+				}
+				border-color: var(--quinary-transparent-color);
+			}
+			&:hover{
+				a {
+					color:  var(--secondary-background-color);	
+					border-color: var(--secondary-border-color);
+				}
+			}
+		}
+		
+        .content{
+            .sub-tab{
+                .section-tab{
+                    &:not(:last-child){
+						// border-bottom: px solid  var(--quinary-transparent-color);
+						box-shadow: 0px 10px 30px -14px var(--quinary-transparent-color);
+                    }
+                }
+            }
+        }
+    }
+}

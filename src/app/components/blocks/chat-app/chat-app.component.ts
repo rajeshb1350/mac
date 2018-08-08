@@ -7,17 +7,18 @@ import * as $ from 'jquery';
 })
 export class ChatAppComponent implements OnInit {
   
-  constructor() { }
-
+  constructor() { 
+  }
+  
   ngOnInit() {
+    $(document).ready(function(){
+      $(".chatIcon i").on("click", function(){
+        $(".chatWindow").toggleClass("d-none");
+      });
+      $(".closeChat").on("click", function(){
+        $(".chatWindow").addClass("d-none");
+      });
+    });
   }
-  showChatWindow(){
-    let chatWin= document.querySelector('.chatWindow');
-    chatWin.setAttribute("style",'display:block;');
-  }
-
-  closeChatWindow(){
-    let closechatWin= document.querySelector('.chatWindow');
-    closechatWin.setAttribute("style",'display:none');
-  }
+  
 }

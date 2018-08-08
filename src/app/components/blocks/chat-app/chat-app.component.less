@@ -1,96 +1,115 @@
-.chatWindow{
+.chatbot{
     position: fixed;
     right: 30px;
-    bottom: 200px;
-    padding: 13px 17px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    bottom: 30px;
     z-index: 19999;
-    display: none;
-    .chatHeading{
-        .fa-times{
-            padding: 10px;
-            position: absolute;
-            right: 6px;
-            top: 5px;
+    .chatIcon{
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+
+        i{
+            padding: 17px;
         }
-        .fa-times:hover{
+        .chatWindow{
+            position: absolute;
+            right: 0px;
+            bottom: 60px;
+            padding: 0px 0px 0px 0px;
             cursor: pointer;
-        }
-        .mShiri{
-            position: absolute;
-            top: -48px;
-            right: 50%;
-            left: 40%;
-            border-radius: 50%;
-        }
-    }
-    .chatbody{
-        width: 25vw;
-        padding: 0 10px 0px 10px;
-   
-        .chatList {
-            height: 322px;
-            max-height: 320px;
-            overflow-y: auto;
+            transition: background-color 0.3s ease;
+            z-index: 19999;
+            
+            .chatHeading{
+                padding: 13px 0px 0px 25px;
+
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 10px 0px;
+             
+.closeChat{
+    i{padding:5px 5px 10px;}
+}
 
 
-            .msgList{
-                padding: 0;
-                font-size: 12px;
-                margin-top: 20px;
-                .adminMsg{
-                    float: left;
-                    display: block;
-                    list-style-type: none;
-                    margin-top: 5px;
-                    padding: 5px;
-                    min-width: 70%;
-                
-                    border-radius: 0px 15px 2px 15px;
+                .fa-times{
+                 }
+                .fa-times:hover{
+                    cursor: pointer;
                 }
-                .adMsg{
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+            }
+            .chatbody{
+                min-width: 300px;
+                ::-webkit-scrollbar-thumb {
+                    background:#6c757d;
+                }
+
+                .chatList {
+                    height: 322px;
+                    max-height: 320px;
+                    overflow-y: auto;
                     padding: 10px;
-                    border-radius: 1px 6px 6px 18px;
-                    
+                    .msgList{
+                        padding: 0;
+                        font-size: 12px;
+                        margin-top: 20px;
+                        .adminMsg{
+                            padding: 5px 10px;
+                            float: left;
+                            display: block;
+                            list-style-type: none;
+                            margin-top: 5px;
+                            min-width: 70%;
+                            border-radius: 5px;
+                            .adMsg{
+                                padding: 0px;
+                            }
+                        }
+                        .userMsg{
+                            padding: 5px 10px;
+                            float: right;
+                            display: block;
+                            list-style-type: none;
+                            text-align: right; 
+                            margin-top: 5px; 
+                            min-width: 70%;
+                            border-radius: 5px;
+                            .usMsg {
+                                padding: 0px;
+                            }
+                        }
+                        label{
+                            margin: 0;
+                            font-weight: bold;
+                        }
+                    }
                 }
-                .usMsg {
-                    padding: 10px;
-                    border-radius: 3px 1px 12px 12px;
-                    
-                }
-                .userMsg{
-                    float: right;
-                    display: block;
-                    list-style-type: none;
-                    text-align: right; 
-                    margin-top: 5px; 
-                    padding: 5px;
-                    min-width: 70%;
-                    border-radius: 0px 15px 2px 15px;
+                .chatInput{
+                    input{
+                        font-size: 13px;
+                        border-radius: 0px;
+                    }        
+                    i{
+                        padding: 0px;
+                    }
+                    .button.send-button{
+                        border-radius: 0px;
+                        font-weight: bold;
+                        padding: 11px 13px;
+                        transition: 0.1s all ease-in;
+                        border: none !important;
+                        cursor: pointer;
+                        font-size: 14px;
+                    }
                 }
             }
         }
     }
-}
-
-.chatIcon{
-    position: fixed;
-    right: 30px;
-    bottom: 130px;
-    padding: 13px 17px;
-    cursor: pointer;
-    z-index: 19999;
-    transition: background-color 0.3s ease;
-}
-
-.button.send-button{
-    border-radius: 0px;
-    font-weight: bold;
-    padding: 11px 13px;
-    transition: 0.1s all ease-in;
-    border: none !important;
-    cursor: pointer;
-    font-size: 14px;
 }
 

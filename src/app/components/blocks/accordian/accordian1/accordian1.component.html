@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div id="accordion" class="accordion1">
-    <div class="card" *ngFor="let pdata of skilldata">
+    <div class="card container" *ngFor="let pdata of skilldata">
       <div class="card-header">
-        <a class="card-link container" data-toggle="collapse" href="#{{pdata.sname}}">
+        <a class="card-link" [ngClass]="pdata.show?'active':''" data-toggle="collapse" href="#{{pdata.sname}}">
           {{pdata.name}}
         </a>
       </div>
