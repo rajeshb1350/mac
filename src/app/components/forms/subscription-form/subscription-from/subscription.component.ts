@@ -176,8 +176,6 @@ export class SubscriptionComponent implements OnInit {
         $(".submit").click(function(){
             return false;
         })
-
-        $('a[data-toggle="tooltip"]').tooltip();   
     });
     
   }

@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import {TabModule} from 'angular-tabs-component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { TabModule } from 'angular-tabs-component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
+
 // Webpage components 
+import { AppComponent } from './app.component';
 import { IndexComponent } from './webpages/index/index.component';
 import { AboutUsComponent } from './webpages/about-us/about-us.component';
 import { ContactUsComponent } from './webpages/contact-us/contact-us.component';
@@ -15,6 +17,11 @@ import { BlogsComponent } from './webpages/blogs/blogs.component';
 import { ApplyComponent } from './webpages/apply/apply.component';
 import { StudyProgramsComponent } from './webpages/study-programs/study-programs.component';
 import { EmailverificationComponent } from './webpages/emailverification/emailverification.component';
+import { SupportpageComponent } from './webpages/support/supportpage/supportpage.component';
+import { CoursesComponent } from 'src/app/webpages/courses/courses.component';
+import { PagenotfoundComponent } from './webpages/pagenotfound/pagenotfound.component';
+import { StudyProgramDetailsComponent } from './webpages/study-program-details/study-program-details.component';
+import { SubscriptionComponent } from './components/forms/subscription-form/subscription-from/subscription.component';
 
 
 // Global Components
@@ -27,9 +34,6 @@ import { FooterComponent } from './components/footer/footer1/footer.component';
 
 // Directives
 import { dropdownDirective } from './directive/dropdown.directive';
-
-// Routes Imports
-import { Routes, RouterModule } from '@angular/router';
 
 // Ng2  Carousel Component
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
@@ -55,17 +59,14 @@ import { ShopComponent } from './components/blocks/shop/shop1/shop.component';
 import { GotopComponent } from './components/blocks/gotop/gototop1/gotop.component';
 import { TestimonialComponent } from 'src/app/components/blocks/testimonial/testimonial1/testimonial.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu/sidemenu.component';
-import { StudyProgramDetailsComponent } from './webpages/study-program-details/study-program-details.component';
 import { StudyProgramDescComponent } from './webpages/study-program-details/study-program-desc/study-program-desc.component';
 import { StudyProgramInfoComponent } from './webpages/study-program-details/study-program-info/study-program-info.component';
 import { StudyProgramCarouselComponent } from './webpages/study-program-details/study-program-carousel/study-program-carousel.component';
 import { Header2Component } from './components/header/header2/header2.component';
-import { SubscriptionComponent } from './components/forms/subscription-form/subscription-from/subscription.component';
 import { SubscribeComponent } from './components/blocks/subscribe/subscribe.component';
 import { Slider3Component } from './components/blocks/slider/slider3/slider3.component';
 import { Tabs1Component } from './components/blocks/tabs/tabs1/tabs1.component';
 import { Header3Component } from './components/header/header3/header3.component';
-import { HttpModule } from '@angular/http';
 import { JobreadyComponent } from './components/blocks/jobready/jobready.component';
 import { SlotbookComponent } from './components/blocks/slotbook/slotbook.component';
 import { KeyhighlightsComponent } from './components/blocks/keyhighlights/keyhighlights.component';
@@ -75,32 +76,14 @@ import { WorkflowComponent } from './components/blocks/workflow/workflow.compone
 import { TopbarComponent } from './components/header/topbar/topbar.component';
 import { NavMenuComponent } from './components/header/nav-menu/nav-menu.component';
 import { ApiService } from './services/http/api.service';
-import { SupportpageComponent } from './webpages/support/supportpage/supportpage.component';
-import { CoursesComponent } from 'src/app/webpages/courses/courses.component';
 import { Accordian1Component } from './components/blocks/accordian/accordian1/accordian1.component';
 import { AccordianService } from './services/accordian.service';
 import { Accordian2Component } from './components/blocks/accordian/accordian2/accordian2.component';
 import { ChatAppComponent } from './components/blocks/chat-app/chat-app.component';
 
+// For Routing files imports and exports
+import { AppRoutingModule } from './app-routing.module';
 
-
-
-const appRoutes: Routes = [
-  { path: "", component: IndexComponent },
-  { path: "study-programs", component: StudyProgramsComponent },
-  { path: "apply", component: ApplyComponent },
-  { path: "blogs", component: BlogsComponent },
-  { path: "about", component: AboutUsComponent },
-  { path: "contact", component: ContactUsComponent },
-  { path: "study-programs/card1", component: StudyProgramDetailsComponent },
-  { path: "suscribe", component: SubscriptionComponent },
-  { path: "verifydash", component: EmailverificationComponent },
-  { path: "courses", component: CoursesComponent },
-  { path: "support", component: SupportpageComponent }
-  
- 
-
-];
 
 @NgModule({
   declarations: [
@@ -115,11 +98,20 @@ const appRoutes: Routes = [
     StudyProgramsComponent,
     SidemenuComponent,
     EmailverificationComponent,
+    StudyProgramDetailsComponent,
+    SubscriptionComponent,
+    CoursesComponent,
+    SupportpageComponent,
+    PagenotfoundComponent,
+
     // Global Components
+    TopbarComponent,
     HeaderComponent,
+    Header2Component,
+    Header3Component,
     MainHeaderComponent,
-    FooterComponent,
     NavigationComponent,
+    FooterComponent,
     
     // Directives
     dropdownDirective,
@@ -143,41 +135,33 @@ const appRoutes: Routes = [
     UpcomingEventsComponent,
     GotopComponent,
     TestimonialComponent,
-    StudyProgramDetailsComponent,
     StudyProgramDescComponent,
     StudyProgramInfoComponent,
     StudyProgramCarouselComponent,
-    Header2Component,
-    SubscriptionComponent,
     SubscribeComponent,
     Slider3Component,
     Tabs1Component,
-    Header3Component,
     JobreadyComponent,
     SlotbookComponent,
     KeyhighlightsComponent,
     SupportComponent,
     CoursesCardComponent,
     WorkflowComponent,
-    TopbarComponent,
     NavMenuComponent,
-    SupportpageComponent,
-    CoursesComponent,
     Accordian1Component,
     Accordian2Component,
     ChatAppComponent,
-    ShopComponent,
-    ChatAppComponent
+    ShopComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
     Ng2CarouselamosModule,
     HttpClientModule,    
     TabModule,
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     NgbModule.forRoot()
   ],
   providers: [

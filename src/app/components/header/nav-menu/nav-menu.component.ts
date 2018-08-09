@@ -20,9 +20,14 @@ export class NavMenuComponent implements OnInit, AfterContentInit {
 
   ngAfterContentInit() {    
     (function(){
-      $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').on("click", function(){
+      $('[id^="nav-icon"]').on("click", function(){
         $(this).toggleClass('open');
         $(this).siblings(".nav-menu").toggleClass("active");
+      });
+
+      $('.header-sp .nav-item a').on("click", function(){
+        $(".header-sp .nav-menu").toggleClass("active");
+        $(".header-sp .burger-icon").toggleClass("open");
       });
 
       $(".add-dropdown .dropdown-menu a").on("mouseover", function(e){

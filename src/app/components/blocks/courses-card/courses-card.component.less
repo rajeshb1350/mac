@@ -19,43 +19,17 @@ img {
 		margin-top: 5px;
 	}
 	.img-box {
-		overflow: hidden;
-		opacity: 1;
-		display: block;
-		position: relative;
-		&:after {
-			content: "";
-			opacity: 0;
-			position: absolute;
-			right: 0;
-			left: 0;
-			top: 0;
-			bottom: 0;
-			transition: all 0.3s ease-in-out 0s;
-		}
 		img{
-			transition: all 0.3s ease-in-out 0s;
-			filter: blur(0px) brightness(1);
-			transform: scale(1);	
+			transform: scale(0.9);	
 		}
 		
-
 		.text-box{
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%) scale(0.9);
-			width: 95%;
-			z-index: 100;
-			opacity: 0;
-			visibility: hidden;
-			transition: .3s all ease-in-out;
+			width: 100%;
 			p {
-				font-weight: bold;
 				text-align: center;
 				opacity: 1;
-				font-size: 12px;
-				padding: 20px;
+				font-size: 13px;
+				padding: 10px 10px 0px;
 			}
 			h4 {
 				font-weight: bold;
@@ -63,29 +37,94 @@ img {
 			h5 {
 				font-weight: bold;
 				text-align: center;
-				a {
-					transition: all 0.3s ease-in-out 0s;
-				}
-			}
-		}
-
-		&:hover{
-			img{
-				filter: blur(3px) brightness(0.4);
-				transform: scale(1.1);	
-			}
-			.text-box{
-				opacity: 1;
-				visibility: visible;
-			}
-			&::after {
-				opacity: 0.5 !important;
 			}
 		}
 	}
 }
-a {
-	&:hover {
-		text-decoration: none;
+
+
+@media only screen and (min-width: 1020px){
+	.profile {
+		margin-top: 25px;
+		h1 {
+			font-weight: normal;
+			font-size: 20px;
+			margin: 10px 0 0 0;
+		}
+		h2 {
+			font-size: 14px;
+			font-weight: lighter;
+			margin-top: 5px;
+		}
+		.img-box {
+			overflow: hidden;
+			opacity: 1;
+			display: block;
+			position: relative;
+			&:after {
+				content: "";
+				opacity: 0;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				transition: all 0.3s ease-in-out 0s;
+			}
+			img{
+				transition: all 0.3s ease-in-out 0s;
+				filter: blur(0px) brightness(1);
+				transform: scale(1);	
+			}
+			
+	
+			.text-box{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%) scale(0.9);
+				width: 95%;
+				z-index: 100;
+				opacity: 0;
+				visibility: hidden;
+				transition: .3s all ease-in-out;
+				p {
+					font-weight: bold;
+					text-align: center;
+					opacity: 1;
+					font-size: 12px;
+					padding: 20px;
+				}
+				h4 {
+					font-weight: bold;
+				}
+				h5 {
+					font-weight: bold;
+					text-align: center;
+					a {
+						transition: all 0.3s ease-in-out 0s;
+					}
+				}
+			}
+	
+			&:hover{
+				img{
+					filter: blur(3px) brightness(0.4);
+					transform: scale(1.1);	
+				}
+				.text-box{
+					opacity: 1;
+					visibility: visible;
+				}
+				&::after {
+					opacity: 0.5 !important;
+				}
+			}
+		}
+	}
+	a {
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }

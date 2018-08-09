@@ -1,35 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
 
-
 @import "./theme/blue/export";
 
 :root{
---primary-color: @primary-color;
---secondary-color: @secondary-color;
---tertiary-color: @tertiary-color;
---quaternary-color: @quaternary-color;
---quinary-color: @quinary-color;
+	--primary-color: @primary-color;
+	--secondary-color: @secondary-color;
+	--tertiary-color: @tertiary-color;
+	--quaternary-color: @quaternary-color;
+	--quinary-color: @quinary-color;
 
---primary-background-color: @primary-background-color;
---secondary-background-color: @secondary-background-color;
---tertiary-background-color: @tertiary-background-color;
---quaternary-background-color: @quaternary-background-color;
---quinary-background-color: @quinary-background-color;
+	--primary-background-color: @primary-background-color;
+	--secondary-background-color: @secondary-background-color;
+	--tertiary-background-color: @tertiary-background-color;
+	--quaternary-background-color: @quaternary-background-color;
+	--quinary-background-color: @quinary-background-color;
 
---primary-border-color: @primary-border-color;
---secondary-border-color: @secondary-border-color;
---tertiary-border-color: @tertiary-border-color;
---quaternary-border-color: @quaternary-border-color;
---quinary-border-color: @quinary-border-color;
+	--primary-border-color: @primary-border-color;
+	--secondary-border-color: @secondary-border-color;
+	--tertiary-border-color: @tertiary-border-color;
+	--quaternary-border-color: @quaternary-border-color;
+	--quinary-border-color: @quinary-border-color;
 
---primary-transparent-color : @primary-transparent-color ;
---secondary-transparent-color : @secondary-transparent-color ;
---tertiary-transparent-color : @tertiary-transparent-color ;
---quaternary-transparent-color : @quaternary-transparent-color ;
---quinary-transparent-color : @quinary-transparent-color ;
+	--primary-transparent-color : @primary-transparent-color ;
+	--secondary-transparent-color : @secondary-transparent-color ;
+	--tertiary-transparent-color : @tertiary-transparent-color ;
+	--quaternary-transparent-color : @quaternary-transparent-color ;
+	--quinary-transparent-color : @quinary-transparent-color ;
 
---site-font: @site-font;
---scroll-width: @scroll-width;
+	--site-font: @site-font;
+	--scroll-width: @scroll-width;
 }
 
 body, .body {
@@ -47,32 +46,23 @@ body, .body {
 }
 
 // Some default background colors
-.primary-bg-color,
-.primary-bg-hover-color:hover {
+.primary-bg-color, .primary-bg-hover-color:hover {
 	background-color: var(--primary-background-color);
 	transition: 0.1s all linear; 
 }
-
-.secondary-bg-color,
-.secondary-bg-hover-color:hover {
+.secondary-bg-color, .secondary-bg-hover-color:hover {
 	background-color: var(--secondary-background-color);
 	transition: 0.1s all linear; 
 }
-
-.tertiary-bg-color,
-.tertiary-bg-hover-color:hover {
+.tertiary-bg-color, .tertiary-bg-hover-color:hover {
 	background-color: var(--tertiary-background-color);
 	transition: 0.1s all linear; 
 }
-
-.quaternary-bg-color,
-.quaternary-bg-hover-color:hover {
+.quaternary-bg-color, .quaternary-bg-hover-color:hover {
 	background-color: var(--quaternary-background-color);
 	transition: 0.1s all linear; 
 }
-
-.quinary-bg-color,
-.quinary-bg-hover-color:hover {
+.quinary-bg-color, .quinary-bg-hover-color:hover {
 	background-color: var(--quinary-background-color);
 	transition: 0.1s all linear; 
 }
@@ -121,8 +111,17 @@ body, .body {
 			box-shadow: 0px 8px 29px 0px none;
 			&.active{
 				background: var(--quaternary-color);
-				border-top: 3px solid var(--quinary-border-color);
 				box-shadow: 0px 8px 20px -11px var(--quinary-transparent-color);
+			}
+		}
+	}
+	@media only screen and ( min-width: 1020px ){
+		&.header-sp {
+			.nav-menu {
+				&.active{
+					background: var(--transparent);
+					box-shadow: 0px 8px 20px -11px var(--transparent);
+				}
 			}
 		}
 	}
@@ -557,43 +556,46 @@ form.form-1{
 
 // Cards
 // card1
-.card1{
-	h6.description {
-		color: var(--tertiary-color);
-		border-bottom: 1px solid var(--tertiary-background-color);
-	}
-	.profile {
-		.img-box {
-			&:after {
-				background-color: var(--secondary-background-color);
-			}
+
+@media only screen and (min-width: 1020px){
+	.card1{
+		h6.description {
+			color: var(--tertiary-color);
+			border-bottom: 1px solid var(--tertiary-background-color);
 		}
-	}
-	.img-box {
-		.text-box{
-			h4, h5, p {
-				color: var(--quaternary-color);
-			}
-		}
-		ul {
-			li {
-				border: 1px solid var(--primary-border-color);
-			}
-		}
-		a {
-			color: var(--quaternary-color);
-			&:hover {
-				li {
-					border-color: var(--quaternary-border-color);
-					color: var(--primary-color);
+		.profile {
+			.img-box {
+				&:after {
+					background-color: var(--secondary-background-color);
 				}
 			}
 		}
-	}
-	a {
-		color: var(--tertiary-color);
-		&:hover {
-			color: var(--secondary-color);
+		.img-box {
+			.text-box{
+				h4, h5, p {
+					color: var(--quaternary-color);
+				}
+			}
+			ul {
+				li {
+					border: 1px solid var(--primary-border-color);
+				}
+			}
+			a {
+				color: var(--quaternary-color);
+				&:hover {
+					li {
+						border-color: var(--quaternary-border-color);
+						color: var(--primary-color);
+					}
+				}
+			}
+		}
+		a {
+			color: var(--tertiary-color);
+			&:hover {
+				color: var(--secondary-color);
+			}
 		}
 	}
 }
@@ -759,17 +761,18 @@ form.form-1{
         .mShiri{
             border: 1px solid var(--quinary-border-color);
         }
-    }
-    .chatbody{
+	}
+	.chatbody{
 		.chatList {
 			.msgList{
-				.adminMsg{background-color: rgb(226, 58, 89);		
-	    color: #fff;;			
-	}		
-	.userMsg{		
-	    background-color: rgba(63, 124, 151, 0.95);		
-	    color: #fff;		
-	}
+				.adminMsg{
+					background-color: rgb(226, 58, 89);		
+					color:  var(--quaternary-background-color);;			
+				}		
+				.userMsg{		
+					background-color:  var(--primary-background-color);		
+					color:  var(--quaternary-background-color);		
+				}
 				small{
 					color:var(--quinary-color);
 				}

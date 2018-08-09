@@ -787,70 +787,113 @@ export class AccordianService{
         {
             "title": "I'm a Student",
             "data": [
-                {
-                    "question": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                {  
+                    "question":"What is Skill Passport?",
+                    "description":"Skill Passport is the gateway that provides students with engaging learning experience. It’s an intuitive digital platform that leverages result driven assessment and sustainable learning.  ",
                 },
-                {
-                    "question": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                {  
+                    "question":"Who are eligible to register?",
+                    "description":"Skill Passport caters programs to various sectors like IT/ITES , Retail  and BFSI. \n     In  Which sector would you like to take up the program\n     IT /ITES  - B.Tech , M.Tech , B.Sc , M.Sc , BCA , MCA \n      BFSI -   B.com, M.com , MBA , CA Inter , CWA Inter \n     Retail – B.com, B.Sc, MBA , BBM \n",
                 },
-                {
-                    "question": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                {  
+                    "question":"What is the age limit for the enrollment",
+                    "description":"21-30 Years",
+                },
+                {  
+                    "question":"What are the scheduled trainings in java course. ",
+                    "description":"Are you looking for offline programs or online programs ?\n     Please give all the upcoming training programs information based on selection criteria.\nEx : If the user asks for offline programs going on in Chittoor district we should populate that    information\n",
+                },
+                {  
+                    "question":"What is the eligibility criteria for Mean Stack developer Training (Technology Product Development Expertise’ (TPDE)?",
+                    "description":"Skill Passport caters programs to various sectors like IT/ITES , Retail  and BFSI. \n     IT /ITES  - B.Tech , M.Tech , B.Sc , M.Sc , BCA , MCA\n",
+                },
+                {  
+                    "question":"What is the eligibility criteria for Full Stack developer Training (Technology Product Development Expertise’ (TPDE)",
+                    "description":"Skill Passport caters programs to various sectors like IT/ITES , Retail  and BFSI. \n     IT /ITES  - B.Tech , M.Tech , B.Sc , M.Sc , BCA , MCA\n",
+                },
+                {  
+                    "question":"What is the eligibility criteria for finance and accounts Training ( Practical Finance and Accounting Experts) (PFAE)",
+                    "description":"Skill Passport caters programs to various sectors like IT/ITES , Retail  and BFSI. \nBFSI -   B.com, M.com , MBA , CA Inter , CWA Inter\n",
+                },
+                {  
+                    "question":" What is the eligibility criteria for Retail Training (Retail Resource Experts)",
+                    "description":"Skill Passport caters programs to various sectors like IT/ITES , Retail  and BFSI. \nRRE -  B.com , M.com, BBA, MBA\n",
+                },
+                {  
+                    "question":"What Courses do you offer?",
+                    "description":"IT/ITES – Java , Dot Net , PHP , Angular 2, HTML , CSS , CMS , UI /UX , QA , DBA , Cloud -DevOps , J2EE-MS , J2EE–FS , Web 3.0 Architecture, Full Stack , Mean Stack, Wordpress, Python\nRetail – Customer Service , Sales , Marketing \nBFSI – Accounts Payable , Accounts Receivable , General Ledger , Asset Management , Procurement Management, Professional Tax, Payroll Accounting , GST , Taxation & Accounting \nLife skills – Effective Communication, Body Language and Building Personal Image, Decision Making, Critical Thinking, Interpersonal Skills for Success, Effective Feedback Mechanism, Time Management, Stress Management, Negotiation Skills, Conflict Management\nCognitive - Quantitative Ability , Logical Reasoning , Verbal Ability\nEmployability Skills - Resume & Cover Letter, Interview Essentials, Body Language, MS Office Essentials, Presentation Skills\n",
+                },
+                {  
+                    "question":"What is the course syllabus for --------",
+                    "description":"Ex: If a student asks what is the curriculum or syllabus for Java Course . We should display all the topics in java course",
+                },
+                {  
+                    "question":"What is pre assessment",
+                    "description":"All Participants must take a pre assessment after registering themselves with Skill Passport to confirm there eligibility before enrollment to a program. Pre assessment will help the trainer to understand the individuals strengths and weakness and help them to improve the course delivery.",
+                },
+                {  
+                    "question":"What is a sector",
+                    "description":"Based on Employer needs 38 sector skills were identified for skill development and entrepreneurship ",
+                },
+                {  
+                    "question":"What is a segment",
+                    "description":"To facilitate trainings the target population has been divided into 7 Segments and separate programs are designed for each segment.",
+                },
+                {  
+                    "question":"Who all will come under ‘out of college’ segment",
+                    "description":"Engineering , Polytechnic, degree and PG pass-outs who are still unemployed",
+                },
+                {  
+                    "question":" Who will come under ‘Engineering skills’ segment",
+                    "description":"Engineering , Polytechnic students who are still in college",
+                },
+                {  
+                    "question":"Who will come under ‘Engineering skills’ segment",
+                    "description":"Degree and Post-graduate students ( Non-Engineering)  students who are still in college",
+                },
+                {  
+                    "question":"Pre assessment categories or pre assessment test",
+                    "description":"The multi-dimensional tool assesses a student on General aptitude , General Communication , Programming skills, Employability skills and Psychometric skills",
+                },
+                {  
+                    "question":"What is psychometric test",
+                    "description":"A seldom spoken innate skill of an individual, Psychometric Analysis engages scientific method measure individuals' mental capabilities , behavioral style and candidates' suitability for a role based",
+                },
+                {  
+                    "question":"What is domain test",
+                    "description":"The ‘Intelligent Code Analyzer’ prompts the student a scenario for coding and smartly analyzes the code and identifies accuracies and highlights any disparity",
+                },
+                {  
+                    "question":"What is general aptitude test",
+                    "description":"Quick decision making is a critical skill. The range of Aptitude Skills assessment gauges the students’ propensity to succeed in a given activity and inherent strengths and weaknesses",
+                },
+                {  
+                    "question":" What is general communication test",
+                    "description":"The multi-dimensional tool assesses a student on essential business communication and behavioral skills to determine competency that are critical for a career progression",
+                },
+                {  
+                    "question":"What are the benefits of doing a course in skill passport ?",
+                    "description":"Skill passport offers an interactive learning experience and helps students to empower to step-in to professional career.",
                 }
             ]
-        },
-        {
-            "title": "I'm a Trainer",
-            "data": [
-                {
-                    "question": "2Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                },
-                {
-                    "question": "2Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                },
-                {
-                    "question": "2Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                }
-            ]
-        },
-        {
-            "title": "I'm a Employer",
-            "data": [
-                {
-                    "question": "2Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                },
-                {
-                    "question": "2Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                },
-                {
-                    "question": "2Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                }
-            ]
-        },
-        {
-            "title": "I'm a Organization",
-            "data": [
-                {
-                    "question": "2Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                },
-                {
-                    "question": "2Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                },
-                {
-                    "question": "2Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                }
-            ]
+        // },
+        // {
+        //     "title": "I'm a Trainer",
+        //     "data": [
+
+        //     ]
+        // },
+        // {
+        //     "title": "I'm a Employer",
+        //     "data": [
+
+        //     ]
+        // },
+        // {
+        //     "title": "I'm a Organization",
+        //     "data": [
+
+        //     ]
         }
     ];
 
@@ -858,4 +901,3 @@ export class AccordianService{
         return this.supportData;
     }
 }
-
