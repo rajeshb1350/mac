@@ -1,0 +1,36 @@
+<div class="dashboard space-100 min-h-100">
+  <div class="container">
+    <p>{{currentTime}}</p>
+  </div>
+  <a class="help-btn" href="#">?</a>
+  
+  <div class="col-md-2 col-sm-2 col-2 list-container">
+    <div class="list-block">
+      <a [routerLink]="['/dashboard']">
+        Dashboard
+        <i class="fa fa-th-large" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="list-block">
+      <a [routerLink]="['software']">
+        Software
+        <i class="fa fa-tasks" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="list-block">
+      <a [routerLink]="['setting']">
+        Settings
+        <i class="fa fa-cogs" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="list-block">
+      <a href="" (click)="onLogout()">
+        Logout
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

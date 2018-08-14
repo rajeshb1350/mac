@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 // Webpage components 
@@ -83,12 +84,19 @@ import { ChatAppComponent } from './components/blocks/chat-app/chat-app.componen
 
 // For Routing files imports and exports
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './webpages/dashboard/dashboard.component';
+import { GuardService } from './services/guard.service';
+import { AuthorizationService } from './services/authorization.service';
+import { HomeComponent } from './webpages/dashboard/home/home.component';
+import { SettingComponent } from './webpages/dashboard/setting/setting.component';
+import { SoftwareComponent } from './webpages/dashboard/software/software.component';
+import { DashboardService } from './webpages/dashboard/dashboard.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    
+  
     // Webpage components 
     IndexComponent,
     AboutUsComponent,
@@ -151,7 +159,11 @@ import { AppRoutingModule } from './app-routing.module';
     Accordian1Component,
     Accordian2Component,
     ChatAppComponent,
-    ShopComponent
+    ShopComponent,
+    DashboardComponent,
+    HomeComponent,
+    SettingComponent,
+    SoftwareComponent,
   ],
   imports: [
     BrowserModule,
@@ -162,11 +174,15 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     NgbModule.forRoot()
   ],
   providers: [
     ApiService,
-    AccordianService
+    AccordianService,
+    GuardService,
+    AuthorizationService,
+    DashboardService
   ],
   bootstrap: [AppComponent],
 })

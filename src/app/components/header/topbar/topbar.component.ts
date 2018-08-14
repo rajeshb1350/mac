@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { ApiService } from '../../../services/http/api.service';
+import { AuthorizationService } from '../../../services/authorization.service';
 
 @Component({
   selector: 'app-topbar',
@@ -7,21 +7,45 @@ import { ApiService } from '../../../services/http/api.service';
   styleUrls: ['./style/topbar-sp.component.less']
 })
 export class TopbarComponent implements OnInit, AfterViewInit {
-
-  topbarData: any;
-  constructor( private apiData: ApiService) { 
-    this.apiData.getHeaderData().subscribe(
-      (data: any) => this.topbarData = data.body.header.topbar , 
-      error => console.error(error)
-    );
-  }
-
+  loginStatus: boolean;
+  constructor(
+    private authService: AuthorizationService
+  ) { }
+  
+    
+  currentTime: any;
+  days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   ngOnInit() {
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    setInterval(
+      ()=>{
+        const today = new Date();
+        var D = today.getDate();
+        var d = today.getDay();
+        var M = today.getMonth();
+        var Y = today.getFullYear();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        this.currentTime = `${this.days[d]} ${D}/${M}/${Y} ${h}:${m}:${s}`;
+      }
+    ,1000);
 
-    console.log(this.topbarData);
+    
+    this.loginStatus = this.authService.loginStatus;
+    console.log(this.loginStatus);
   }
 
   ngAfterViewInit(){
 
+  }
+
+  logIn(){
+    this.authService.logout();
   }
 }

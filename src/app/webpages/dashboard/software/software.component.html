@@ -1,0 +1,44 @@
+<div class="dashboard dashboard-home">
+  <div class="grid-container">
+    <div class="d-comp logo-space">
+      <img src="/assets/images/icons/SBuS.png" alt="" class="img-fluid">
+    </div>
+    <div class="d-comp welcome-space">
+      <h3>
+        <i class="fa fa-tasks" aria-hidden="true"></i>
+        Software status
+      </h3>
+    </div>
+    <div class="d-comp softwares">
+      <div class="list-products flex-container flex-w-w">
+        <div class="product" *ngFor="let plist of erplist">
+          <div class="flex-container flex-ai-c">
+            <img src="{{plist.img}}" alt="{{plist.name}} img" class="img-fluid">
+            <h3>{{plist.name}}</h3>
+          </div>
+          <p>{{plist.content}}</p>
+          <div class="blocks flex-container flex-w-w">
+            <div class="block">
+              <h5>Status</h5>
+              <p>{{plist.day}}</p>
+              <span>{{plist.status}}</span>
+            </div>
+            <div class="block">
+              <h5>Active</h5>
+              <p>{{plist.active}}</p>
+              <span>User</span>
+            </div>
+          </div>
+          <div class="links flex-container flex-jc-fe">
+            <button class="button button-1" disabled="true" *ngIf="plist.btn1">
+              {{plist.btn1.name}}
+            </button>
+            <button class="button button-1 secondary" disabled="true" *ngIf="plist.btn2">
+              {{plist.btn2 .name}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

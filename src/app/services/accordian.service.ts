@@ -876,18 +876,80 @@ export class AccordianService{
                     "description":"Skill passport offers an interactive learning experience and helps students to empower to step-in to professional career.",
                 }
             ]
-        // },
-        // {
-        //     "title": "I'm a Trainer",
-        //     "data": [
-
-        //     ]
-        // },
-        // {
-        //     "title": "I'm a Employer",
-        //     "data": [
-
-        //     ]
+        },
+        {
+            "title": "I'm a Trainer",
+            "data": [
+                {  
+                    "question":"Who have the privilege to create trainer profile in skill passport?",
+                    "description":"Admin is the one who’s going to control everything in skill passport & he has the privilege to create the trainers profile.",
+                },
+                {  
+                    "question":"Can we provide trainings for more than one course?",
+                    "description":"Yes. We will provide that opportunity to trainers, they can train the students based on their skills set.",
+                },
+                {  
+                    "question":"Do you provide digital class rooms?",
+                    "description":"Yes. We are going to provide digital class rooms",
+                },
+                {  
+                    "question":"What is a lesson plan? Why do we create lesson plan?",
+                    "description":"A lesson plan is a trainer's detailed description of the course of instruction or \"learning trajectory\" for a program. ... Details will vary depending on the preference of the trainer, subject being covered, and the needs of the students. For every trainer we are going to give the login credentials so that they can create their desired program.",
+                },
+                {  
+                    "question":"What is lesson plan calendar view?",
+                    "description":"Whatever the lesson has plan created by the trainer that particular lesson plan is going to place in calendar view. So that it will be easy for trainer to manage the course in effective way.",
+                },
+                {  
+                    "question":"What are Admit & Exit slips? What is the use of it?",
+                    "description":"Admit & Exit slips are written student responses to questions trainers pose i.e admit slip at the starting of the session & exit slip at the end of a session. These quick, informal assessments enable trainers to quickly assess students' understanding of the material.",
+                },
+                {  
+                    "question":"Where we can trainer see the Admit & Exit Slips?",
+                    "description":"Whatever the admit/exit slips are created by the trainer those slips will be present in trainer’s calendar view. The created slip will map to students so that they can write the slips which are mapped to them.",
+                },
+                {  
+                    "question":"What is a lesson plan? Why do we create lesson plan?",
+                    "description":"Admin is the one who’s going to control everything in skill passport & he has the privilege to create the trainers profile.",
+                },
+                {  
+                    "question":"What is a lesson plan? Why do we create lesson plan?",
+                    "description":"Admin is the one who’s going to control everything in skill passport & he has the privilege to create the trainers profile.",
+                },
+                {  
+                    "question":"What is a lesson plan? Why do we create lesson plan?",
+                    "description":"Admin is the one who’s going to control everything in skill passport & he has the privilege to create the trainers profile.",
+                }
+            ]
+        },
+        {
+            "title": "I'm a Employer",
+            "data": [
+                {  
+                    "question":"what technologies do SP provide?",
+                    "description":"We provide trainings for IT sector(C, Java, Python, PHP, .Net), Banking (Income Tax, Finance, Insurance, Accounts) Retail (Business administration, Marketing, Business Intelligence analytics) and many more.",
+                },
+                    {  
+                    "question":"What is the team size of students for each course?",
+                    "description":"For each course the team size is 20 to 30 students.",
+                },
+                    {  
+                    "question":"Do you provide live projects for the students?",
+                    "description":"Yes. After completion of training we will be providing live projects which help the student to experience the real time world and to build up there.",
+                },
+                    {  
+                    "question":"In how many months you are completing each course?",
+                    "description":"Three months is the completion time for each course.",
+                },
+                    {  
+                    "question":"What are the eligibility criteria for the students?",
+                    "description":"SSC, Inter/Diploma/Graduation/PG students are eligible. The students should be very passionate to new learn the new technologies.",
+                },
+                    {  
+                    "question":"Are the students provided any certificate trainings?",
+                    "description":"Yes, they are. After completion of training the students will be given a certificate which states that the student has finished training on the respective courses.",
+                }
+            ]
         // },
         // {
         //     "title": "I'm a Organization",
@@ -901,3 +963,5 @@ export class AccordianService{
         return this.supportData;
     }
 }
+
+

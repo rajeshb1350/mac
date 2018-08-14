@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { HeaderService } from './services/http/header.service';
-import { Response } from '@angular/http';
 import { Router, NavigationEnd } from '@angular/router';
+import { ApiService } from './services/http/api.service';
 
 @Component({
   selector: 'app-root',
@@ -14,22 +13,15 @@ import { Router, NavigationEnd } from '@angular/router';
 export class AppComponent implements OnInit {
 
 
-    constructor(private router: Router) { }
+    constructor(
+        private router: Router,
+        private apiservice: ApiService
+    ) {
+        // this.propertyColor = this.apiservice.getApiData();
+    }
+    title = 'Look jQuery Animation working in action!';
+    propertyColor = [];
 
-  title = 'Look jQuery Animation working in action!';
-
-  propertyColor = [];
-    // constructor(
-    //     private headerservice: HeaderService
-    // ){
-    //     this.headerservice.getHeaderData().subscribe(
-    //         (data: Response) => {
-    //             this.propertyColor = data.json().head.style.color;
-    //         },
-    //         error => console.error(error)
-    //     );
-    // }
-    
     public ngOnInit(){
         var changeTheme = () =>{
             console.log(this.propertyColor);
@@ -107,9 +99,6 @@ export class AppComponent implements OnInit {
     });
 
   }
-
-
-
 }
 
 

@@ -76,11 +76,33 @@ body, .body {
     }
 }
 
+// Switches
+.switches{
+    &.switch1 {
+        input {
+            &:checked + .slider {
+                background-color: var(--secondary-background-color);
+            }
+            &:focus + .slider {
+                box-shadow: 0 0 1px var(--secondary-border-color);
+            }
+        }
+        .slider {
+			background-color: var(--tertiary-transparent-color);
+			&:before {
+	            background-color: var(--quaternary-background-color);
+            }
+        }
+    }
+}
+
 // FORM
 .css_form_joinus{
 	border-bottom: 1px solid var(--quinary-border-color);
 	background: transparent;
 }
+
+
 
 // SCROLL BAR
 ::-webkit-scrollbar {

@@ -8,17 +8,20 @@ import { ApiService } from '../../../services/http/api.service';
   styleUrls: ['./style/nav-sp.component.less']
 })
 export class NavMenuComponent implements OnInit, AfterContentInit {
-  constructor( private apidata: ApiService ) {
-    this.apidata.getHeaderData().subscribe(
-      (data: any) => data , 
-      error => console.error(error)
-    );
-  }
+  constructor( private apidata: ApiService ) {}
+  data: any;
 
   ngOnInit() {
+    console.log(this.apidata.getApiData());
+    this.apidata.getApi().subscribe(
+      data => this.data = data,
+      error => this.data = error
+    )
+    
   }
-
+  
   ngAfterContentInit() {    
+    console.log(this.data);
     (function(){
       $('[id^="nav-icon"]').on("click", function(){
         $(this).toggleClass('open');
