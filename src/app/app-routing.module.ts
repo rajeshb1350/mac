@@ -19,18 +19,36 @@ import { HomeComponent } from './webpages/dashboard/home/home.component';
 import { SettingComponent } from './webpages/dashboard/setting/setting.component';
 import { SoftwareComponent } from './webpages/dashboard/software/software.component';
 
-import { GuardService } from "./services/guard.service";
+import { GuardService } from "./services/authentication/guard.service";
+import { SpSetupStartComponent } from "./webpages/dashboard/setting/skillpassportSetup/start/start.component";
+import { SpSetupFormComponent } from "./webpages/dashboard/setting/skillpassportSetup/form/form.component";
+import { SlotbookResolverService } from "./services/resolver/slotbook-resolver.service";
+import { FeaturesComponent } from "./webpages/features/features.component";
 
 const appRoutes: Routes = [
-    { path: "", component: IndexComponent },
-    { path: "courses", component: CoursesComponent },
+    // { path: "", component: IndexComponent, resolve: {server: SlotbookResolverService} },
+    { 
+        // path: "feature", 
+        path: "", 
+        component: FeaturesComponent, 
+        resolve: {server: SlotbookResolverService}  
+    },
+    { 
+        path: "courses", children: [
+            { path: "", component: CoursesComponent },  
+            { path: ":section", component: CoursesComponent }  
+        ] 
+    },
     { path: "support", component: SupportpageComponent },
     { path: "dashboard", 
         canActivate:[GuardService], 
         component: DashboardComponent,
         children: [
             { path: "", component: HomeComponent },
-            { path: "setting", component: SettingComponent },
+            { path: "setting", component: SettingComponent, children: [
+                { path: "", component: SpSetupStartComponent },
+                { path: "sp-setup-form", component: SpSetupFormComponent }
+            ] },
             { path: "software", component: SoftwareComponent }
         ] 
     },
@@ -48,7 +66,7 @@ const appRoutes: Routes = [
   
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, {useHash: true})
     ],
     exports: [ RouterModule ]
 })

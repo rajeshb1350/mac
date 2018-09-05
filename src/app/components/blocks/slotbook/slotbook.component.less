@@ -6,43 +6,81 @@
 	background-attachment: fixed;
 	padding: 50px 0;
 
-
-
-	.box {
-		transition: all 0.2s ease;
-		margin-top: 10px;
-		box-sizing: border-box;
-		border-radius: 5px;
-		background-clip: padding-box;
-		padding: 0 10px 0px 10px;
-		&:hover {
+	h2{
+		padding: 10px 0;
+		span{
+			padding: 0px 10px;
 		}
-		span.box-title {
-			font-size: 24px;
-			font-weight: 300;
-			text-transform: uppercase;
-		}
-		.box-content {
-			padding: 16px 0;
-			border-radius: 0 0 2px 2px;
-			background-clip: padding-box;
-			box-sizing: border-box;
-			ul {
-				margin-left: 0px;
-				padding-left: 0px;
-				li {
-					list-style-type: none;
-					text-align: left;
-					margin-bottom: 15px;
-					font-size: 12px;
-					i {
-						font-size: 22px;
-						margin-right: 10px;
+	}
+	h4 {
+		margin: 30px 0px;
+		font-size: 1.5rem;
+	}
+
+	.box-container{
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		.box {
+			transition: all 0.2s ease;
+			padding: 0 15px;
+			flex: 0 0 calc(100% - 10px);
+			margin: 0px 5px 10px;
+			transform: scale(0.95);
+			&:hover{
+				transform: scale(1);
+			}
+			span.box-title {
+				font-size: 24px;
+				font-weight: 300;
+				text-transform: uppercase;
+			}
+			.box-content {
+				padding: 1rem 0;
+				background-clip: padding-box;
+				box-sizing: border-box;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 100%;
+				
+				h4 {
+					margin: 0 0 20px;
+					font-size: 1.2rem;
+					font-weight: bold
+				}
+
+				ul {
+					padding-left: 0px;
+					li {
+						list-style-type: none;
+						text-align: left;
+						margin-bottom: 4px;
+						font-size: 1rem;
+						i {
+							font-size: 1rem;
+						}
 					}
 				}
+				p {
+					text-transform: none;
+				}
 			}
-			p {
-				text-transform: none;
+		}
+	}
+}
+
+@media only screen and ( min-width: 768px ){
+	.slotbook {
+		padding: 100px 0;
+	
+		h4 {
+			margin-bottom: 20px;
+			font-size: 1.2rem;
+		}
+		.box-container{
+			.box {
+				flex: 0 0 calc(50% - 10px);
 			}
 		}
 	}
@@ -50,28 +88,15 @@
 
 @media only screen and ( min-width: 1020px ){
 	.slotbook {
-		h2 {
-			margin-bottom: 36px;
-			font-size: 20px;
-		}
+		padding: 100px 0;
+	
 		h4 {
-			margin-bottom: 24px;
-			font-size: 20px;
+			margin-bottom: 20px;
+			font-size: 1.2rem;
 		}
-		.box {
-			&:hover {
-			}
-			span.box-title {
-			}
-			.box-content {
-				ul {
-					li {
-						i {
-						}
-					}
-				}
-				p {
-				}
+		.box-container{
+			.box {
+				flex: 0 0 calc(25% - 10px);
 			}
 		}
 	}

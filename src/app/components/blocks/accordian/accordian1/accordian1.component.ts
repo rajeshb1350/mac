@@ -20,10 +20,12 @@ export class Accordian1Component implements OnInit, AfterViewInit {
 
   ngAfterViewInit(){
     $(document).ready(function(){
-      var $ele =  $(".accordion1 .card .card-header a.card-link.active");
+      const $cardHeader = $(".accordion1 .card .card-header");
+      var $ele =  $cardHeader.children("a.card-link.active").parent();
       var eletop = $ele.offset().top;
+      
       function debounce(func){
-        var wait = 20;
+        var wait = 10;
         var immediate = true;
         var timeout;
         return function() {
@@ -42,24 +44,32 @@ export class Accordian1Component implements OnInit, AfterViewInit {
       function checkSlide(){
         var wintop = window.scrollY;
         if(wintop > eletop){
-          $ele.parents(".card-header").addClass("sticky");
+          $ele.addClass("sticky");
         }
         else {
-          $ele.parents(".card-header").removeClass("sticky");
+          $ele.removeClass("sticky");
         }
       }
       
       $(document).on("scroll", debounce(checkSlide));
       
-      var $head = $(".accordion1 .card .card-header a");
-      $head.each(function(){
-        $(this).on("click", function(){
-          $head.removeClass("active");
-          $ele = $(this);
+      $cardHeader.each(function(val, element){
+        $(this).on("click", ()=>{ 
+          $ele =  $(this);
           eletop = $ele.offset().top;
-          $(this).addClass("active");
+          console.log(eletop);
+          setTimeout(animatehead, 700);
         });
       });
+      
+      function animatehead(){
+        $cardHeader.removeClass("sticky").children("a.card-link").removeClass("active");
+        $ele.children("a.card-link").addClass("active");
+        eletop = $ele.offset().top;
+        console.log(eletop);
+        checkSlide();
+        $('html,body').animate({scrollTop: $ele.offset().top - 70},'slow');
+      }
     });
   }
 }

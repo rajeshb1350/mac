@@ -1,7 +1,7 @@
 <!-- MultiStep Form -->
 <div class="flex-container flex-jc-c row">
 	<div class="col-md-12 col-sm-12 col-xs-12">
-		<form id="msform" [formGroup]="subscribeUsers">
+		<form id="msform" (ngSubmit)="onFormSubmit()" [formGroup]="subscriptionFrom">
 			<!-- progressbar -->
 			<ul id="progressbar">
 				<li class="active">Personal Details</li>
@@ -9,39 +9,113 @@
 				<li>Done</li>
 			</ul>
 			<!-- fieldsets -->
-			<fieldset>
-				<h2 class="fs-title">Company Details</h2>
-				<h3 class="fs-subtitle">Enter Company Details</h3>
+			<fieldset 
+				formGroupName="userData"
+				>
+				<div class="space-20"></div>
+				<h2 class="fs-title">Your Information</h2>
+				<div class="space-20"></div>
 				<div class="form-group">
-					<input type="text" class="frm-cntrl" formControlName="name" placeholder="Contact Name" />
+					<input 
+						type="text" 
+						class="frm-cntrl" 
+						formControlName="name" 
+						placeholder="Contact Name" 
+					/>
+					<p *ngIf="subscriptionFrom.get('userData.name').invalid && subscriptionFrom.get('userData.name').touched" class="warn-text">Enter a valid name eg. JohnDoe</p>
+					<input 
+						type="email" 
+						class="frm-cntrl" 
+						formControlName="email" 
+						placeholder="Email id"
+					/>
+					<p *ngIf="subscriptionFrom.get('userData.email').invalid && subscriptionFrom.get('userData.email').touched" class="warn-text">Enter a valid email eg. johndoe@example.com</p>
+					<input 
+						type="tel" 
+						class="frm-cntrl" 
+						formControlName="phone" 
+						placeholder="Mobile no."
+					/>
+					<p *ngIf="subscriptionFrom.get('userData.phone').invalid && subscriptionFrom.get('userData.phone').touched" class="warn-text">Enter a valid mobile number eg. 9000090000</p>
 				</div>
-				<input type="text" class="frm-cntrl"  formControlName="email" placeholder="Email id"/>
-				<input type="text" class="frm-cntrl"  formControlName="phoneNum" placeholder="Mobile no."/>
-				<input type="button" name="next" class="next action-button" value="Next" (click)="onNext();"/>
+				<input 
+					type="button" 
+					name="next" 
+					class="next action-button"
+					[ngClass]="subscriptionFrom.get('userData').invalid?'disabled':''"
+					value="Next"
+					[disabled]="subscriptionFrom.get('userData').invalid"
+					/>
 			</fieldset>
-			<fieldset formGroupName="organizeInfo">
-				<h2 class="fs-title">Contact Address</h2>
-				<h3 class="fs-subtitle">Enter Contact Details</h3>
-				<div class="space-40"></div>
-				<input type="text" class="frm-cntrl"  formControlName="orgname" placeholder="Organization Name"/>
-				<a data-toggle="tooltip" class="qmark" title="Users inclusive students, trainers and employers">
-					<i class="fa fa-info-circle" aria-hidden="true"></i>
-				</a>
-				<input type="text" class="frm-cntrl"  formControlName="usersNo" placeholder="Number of Users"/>
-				<input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-				<input type="button" name="submit" class="next action-button" value="submit" (click)="onNext();"/>
+			<fieldset
+				formGroupName="orgData"
+			>
+				<div class="space240"></div>
+				<h2 class="fs-title">Organization Details</h2>
+				<div class="space240"></div>
+				<div class="form-group">
+					<input 
+						type="text" 
+						class="frm-cntrl" 
+						formControlName="orgname" 
+						placeholder="Organization Name"
+						/>
+					<p *ngIf="subscriptionFrom.get('orgData.orgname').invalid && subscriptionFrom.get('orgData.orgname').touched" class="warn-text">Enter a valid Organization number eg. Johndoe Inc.</p>
+					<a data-toggle="tooltip" class="qmark" title="Users inclusive students, trainers and employers">
+						<i class="fa fa-info-circle" aria-hidden="true"></i>
+					</a>
+					<input 
+						type="number" 
+						class="frm-cntrl" 
+						formControlName="usersNo" 
+						min="1"
+						max="1000"
+						placeholder="Number of Users"
+					/>
+					<p *ngIf="subscriptionFrom.get('orgData.usersNo').invalid && subscriptionFrom.get('orgData.usersNo').touched" class="warn-text">Enter a valid users value eg. 200</p>
+					<input 
+						type="text" 
+						class="frm-cntrl" 
+						formControlName="gstin" 
+						min="1"
+						max="1000"
+						placeholder="Enter you GST number"
+					/>
+				</div>
+				<input 
+					type="button" 
+					name="previous" 
+					class="previous action-button-previous" 
+					value="Previous"
+				/>
+				<input 
+					type="submit" 
+					name="submit" 
+					class="next action-button" 
+					value="submit"
+					[ngClass]="subscriptionFrom.get('orgData').invalid?'disabled':''"
+					[disabled]="subscriptionFrom.get('orgData').invalid"
+				/>
 			</fieldset>
-			<fieldset formGroupName="userAddress">
+			<fieldset>
 				<div class="status">
-					<div class="done">
+					<div *ngIf="status==true; else undone" class="done">
 						<!-- <i class="fa fa-check" aria-hidden="true"></i> -->
-						<img src="/assets/images/icons/tickicon.png" alt="" class="img-fluid">
-						<h4>Request Completed</h4>
-						<h6>Sit calm and have a coffee while your environment is getting ready to use.</h6>
+						<img *ngIf="responseStatus.status=='OK'" src="/assets/images/icons/tickicon.png" alt="Info-icons" class="img-fluid">
+						<h4 *ngIf="responseStatus.status=='OK'">Success</h4>
+						<h6 *ngIf="responseStatus.status=='OK'">We have sent an email to {{responseStatus.response.emailId}}. Please validate your email to get access.</h6>
+
+						<!-- <i class="fa fa-check" aria-hidden="true"></i> -->
+						<img *ngIf="responseStatus.status=='ALREADY_REPORTED'" src="/assets/images/icons/crossicon.png" alt="Info-icons" class="img-fluid">
+						<h4 *ngIf="responseStatus.status=='ALREADY_REPORTED'">Already Exist</h4>
+						<h6 *ngIf="responseStatus.status=='ALREADY_REPORTED'">{{responseStatus.response}}</h6>
 					</div>
-					<div class="undone" *ngIf="false">
-						<i class="fa fa-times-circle-o" aria-hidden="true"></i>
-					</div>
+					<ng-template class="undone" #undone>
+						<!-- <i class="fa fa-check" aria-hidden="true"></i> -->
+						<img src="/assets/images/icons/crossicon.png" alt="Info-icons" class="img-fluid">
+						<h4>Oops! something went wrong</h4>
+						<h6>Please refresh page and try again.</h6>
+					</ng-template>
 				</div>
 			</fieldset>
 		</form>

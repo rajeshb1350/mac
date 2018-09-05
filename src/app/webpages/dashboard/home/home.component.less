@@ -1,8 +1,5 @@
 
 .dashboard{
-    .d-comp{
-        box-shadow: 2px 6px 38px -10px #808080;
-    }
     .grid-container{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -11,41 +8,79 @@
         color: #435674;
         grid-template-areas:     
         "ws ws ws ws ws ws"
-        ". ava ava ava ava ."
+        ". ds ds ds ds ."
         "noti noti noti noti noti noti"
         "noti noti noti noti noti noti";
-        .welcome-space{
-            background-color: #fabc00;
-            grid-area: ws;
-            h3 {
-                line-height: 100px;
-                padding: 0px 30px;
+        .logo-space{
+            grid-area: ls;
+            img {
+                height: 100px;
             }
         }
-        .avatar{
-            grid-area: ava;
-            .avatar-img{
-                background: url(/assets/images/upload/avatar/avatar.png);
-                width: 100%;
-                height: 200px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+        .welcome-space{
+            background-color: #333333;
+            color: #fabc00;
+            grid-area: ws;
+            display: flex;
+            box-shadow: 2px 6px 38px -10px #808080;
+            align-items: center;
+            h3 {
+                padding-left: 40px;
+            }
+        }
+        .display-setup{
+            box-shadow: 2px 6px 38px -10px #808080;
+            grid-area: ds;
+            .display-options{
+                padding: 20px;
+                [class^="opt"]{
+                    .avatar-img{
+                        height: 250px;
+                        background-position: center !important;
+                        background-size: cover !important;
+                        background-repeat: no-repeat !important;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: 1rem;
+                        b {
+                            margin:0 10px;
+                            .switches{
+                                margin:0 10px;
+                            }
+                        }
+                    }
+                }
             }
         }
         .notification{
+            box-shadow: 2px 6px 38px -10px #808080;
             grid-area: noti;
-            h4.heading{    
-                padding: 20px;
-                background-color: #435674;
-                color: #fff;
-            }
             ul {
                 padding: 20px 20px;
                 li {
                     list-style-type: none;
                     margin: 10px 0 10px;
                 }
+            }
+        }            
+        h4.heading{    
+            padding: 20px;
+            background-color: #333333;
+            color: #fabc00;
+            a{
+                cursor: pointer;
+            }
+        }
+    }
+    .modal {
+        background: rgba(68, 68, 68, 0.4);
+        .modal-dialog {
+            max-width: 500px;
+            margin: 8.75rem auto;
+            .modal-content{
+                border-radius: 0;
+                box-shadow: 0 0 30px 0px #444;
             }
         }
     }
@@ -56,10 +91,10 @@
     .dashboard{
         .grid-container{
             grid-template-areas:     
-            "ws ws ws. . ."
-            "ava ava noti noti noti noti"
+            "ls ls ls ws ws ws"
+            "ds ds noti noti noti noti"
             ". . noti noti noti noti";
-            .avatar{
+            .display-options{
                 .avatar-img{
                     height: 350px;
                 }

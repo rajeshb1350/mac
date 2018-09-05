@@ -12,6 +12,9 @@
         .d-comp{
             &.logo-space{
                 grid-area: ls;
+                img {
+                    height: 100px;
+                }
             }
             &.welcome-space{
                 grid-area: ws;
@@ -19,9 +22,10 @@
                 font-weight: bold;
                 background-color: #333333;
                 box-shadow: 2px 6px 38px -10px #808080;
+                display: flex;
+                align-items: center;
                 h3 {
-                    line-height: 100px;
-                    padding: 0px 30px;
+                    padding-left: 40px;
                 }
             }
             &.softwares{

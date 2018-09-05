@@ -1,0 +1,44 @@
+<div class="tabs tab1">
+  <div class="container">
+    <!-- Nav pills -->
+    <ul class="nav nav-pills" role="tablist">
+      <li class="nav-item" *ngFor="let pdata of skilldata">
+        <a class="nav-link" [ngClass]="pdata.show?'active':''" data-toggle="pill" href="#{{pdata.sname}}">
+          {{pdata.name}}
+        </a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="{{pdata.sname}}" class="container tab-pane" [ngClass]="pdata.show?'active':'fade'"  *ngFor="let pdata of skilldata"><br>
+        <div class="sub-tab" *ngFor="let cdata of pdata.subdata">
+          <div *ngIf="cdata.name" class="heading container">
+            <h2>{{cdata.name}}</h2>
+            <p>{{cdata.content}}</p>
+          </div>
+          <div class="section-tab container" *ngFor="let gcdata of cdata.coursedata">
+            <div class="first">
+              <h3>{{gcdata.name}}</h3>
+              <ul class="describe">
+                <li>{{gcdata.type}}</li>
+                <li>{{gcdata.Duration}}</li>
+                <li>{{gcdata.Access}}</li>
+              </ul>
+              <p>{{gcdata.objective}}</p>
+              <h4 class="overview">
+                Course Overview :
+              </h4>
+              <ul class="overview">
+                <li *ngFor="let gcdatalist of gcdata.overview"> {{gcdatalist}}</li>
+              </ul>
+            </div>
+            <div class="section-tab last flex-pc">
+              <img src="{{gcdata.img}}" alt="{{gcdata.name}} image" title="{{gcdata.name}} image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

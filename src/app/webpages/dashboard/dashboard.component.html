@@ -1,7 +1,4 @@
 <div class="dashboard space-100 min-h-100">
-  <div class="container">
-    <p>{{currentTime}}</p>
-  </div>
   <a class="help-btn" href="#">?</a>
   
   <div class="col-md-2 col-sm-2 col-2 list-container">
@@ -24,7 +21,7 @@
       </a>
     </div>
     <div class="list-block">
-      <a href="" (click)="onLogout()">
+      <a routerLink="/" (click)="onLogout()">
         Logout
         <i class="fa fa-sign-out" aria-hidden="true"></i>
       </a>

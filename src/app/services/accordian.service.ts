@@ -412,7 +412,7 @@ export class AccordianService{
             ]
         },
         {
-            "name": "Life Skill",
+            "name": "Interpersonal Skill",
             "sname": "life",
             "subdata": [
                 {
@@ -785,7 +785,7 @@ export class AccordianService{
 
     supportData =[
         {
-            "title": "I'm a Student",
+            "title": "Student",
             "data": [
                 {  
                     "question":"What is Skill Passport?",
@@ -878,7 +878,7 @@ export class AccordianService{
             ]
         },
         {
-            "title": "I'm a Trainer",
+            "title": "Trainer",
             "data": [
                 {  
                     "question":"Who have the privilege to create trainer profile in skill passport?",
@@ -923,7 +923,7 @@ export class AccordianService{
             ]
         },
         {
-            "title": "I'm a Employer",
+            "title": "Employer",
             "data": [
                 {  
                     "question":"what technologies do SP provide?",

@@ -85,12 +85,18 @@ import { ChatAppComponent } from './components/blocks/chat-app/chat-app.componen
 // For Routing files imports and exports
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './webpages/dashboard/dashboard.component';
-import { GuardService } from './services/guard.service';
-import { AuthorizationService } from './services/authorization.service';
+import { GuardService } from './services/authentication/guard.service';
 import { HomeComponent } from './webpages/dashboard/home/home.component';
 import { SettingComponent } from './webpages/dashboard/setting/setting.component';
 import { SoftwareComponent } from './webpages/dashboard/software/software.component';
 import { DashboardService } from './webpages/dashboard/dashboard.service';
+import { AuthenticationService } from './services/authentication/authentication.service';
+import { SpSetupStartComponent } from './webpages/dashboard/setting/skillpassportSetup/start/start.component';
+import { SpSetupFormComponent } from './webpages/dashboard/setting/skillpassportSetup/form/form.component';
+import { SlotserviceService } from './services/http/slotservice.service';
+import { SlotbookResolverService } from './services/resolver/slotbook-resolver.service';
+import { FeaturesComponent } from './webpages/features/features.component';
+import { Tab1Component } from './components/blocks/tabs/tab1/tab1.component';
 
 
 @NgModule({
@@ -164,6 +170,10 @@ import { DashboardService } from './webpages/dashboard/dashboard.service';
     HomeComponent,
     SettingComponent,
     SoftwareComponent,
+    SpSetupStartComponent,
+    SpSetupFormComponent,
+    FeaturesComponent,
+    Tab1Component,
   ],
   imports: [
     BrowserModule,
@@ -181,8 +191,10 @@ import { DashboardService } from './webpages/dashboard/dashboard.service';
     ApiService,
     AccordianService,
     GuardService,
-    AuthorizationService,
-    DashboardService
+    DashboardService,
+    AuthenticationService,
+    SlotbookResolverService,
+    SlotserviceService
   ],
   bootstrap: [AppComponent],
 })

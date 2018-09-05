@@ -1,0 +1,45 @@
+.counter-sp{
+    &.counter-wrapper{
+        .css_counter{
+            width: 100%;
+            .count{
+                position: relative;
+                width: auto;
+                flex: 0 0 50%;
+                .css_counter_font {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-align: center;
+                    &::after{
+                        content: "";
+                        height: 1px;
+                        width: 120px;
+                        display: block;
+                    }
+                }
+                .vl {
+                    padding: 5px 10px;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+@media only screen and ( min-width: 1024px ){
+    .counter-sp{
+        &.counter-wrapper{
+            .css_counter{
+                .count{
+                    flex: 0 0 20%;
+                    .css_counter_font {
+                        &::after{
+                        }
+                    }
+                    .vl {
+                    }
+                }
+            }
+        }
+    }
+}

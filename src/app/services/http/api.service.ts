@@ -9,13 +9,12 @@ export class ApiService implements OnInit{
     constructor(
         private http: Http
     ){
-        this.http.get("http://skpass.com/data/data1.json").subscribe(
-            (data: Response)=> {
-                console.log(data.json());
-                this.globalData = data.json();
-            },
-            error=>console.log(error)
-        );
+        // this.http.get("http://skpass.com/data/data1.json").subscribe(
+        //     (data: Response)=> {
+        //         this.globalData = data.json();
+        //     },
+        //     error=>error
+        // );
     }
 
     ngOnInit(){}
@@ -25,7 +24,26 @@ export class ApiService implements OnInit{
     }
 
 
+    getFAQList(){
+        return this.http.get("http://183.82.117.232:8085/lms-web/data/get/faq/list")
+        .pipe(map((response: Response)=> response.json()));
+    } 
+
+    sendChatHistoryToUser(dataObj){
+        return this.http.post("http://183.82.117.232:8085/lms-web/data/send/chatHistory/toUser", dataObj)
+        .pipe(map((response: Response)=> response));
+    } 
+
     getApiData(){
         return this.globalData;
+    }
+
+    postSubscriptionData(data){
+        return this.http.post("http://183.82.117.232:8085/lms-web/data/organization/registration", data);
+    }
+
+    getSlotBookData(){
+        return this.http.get("http://183.82.117.232:8085/lms-web/data/get/latest-trainings")
+        .pipe(map((response: Response)=> response.json()));
     }
 }

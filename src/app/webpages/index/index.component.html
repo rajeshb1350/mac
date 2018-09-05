@@ -2,33 +2,31 @@
   <app-tabs1 class="width-100"></app-tabs1>
   <app-keyhighlights class="width-100"></app-keyhighlights>
   <app-courses-card  class="width-100"></app-courses-card>
-  <app-slotbook class="width-100"></app-slotbook>
+  <app-slotbook class="width-100" [items]="slotBookData.server"></app-slotbook>
   <app-workflow class="width-100"></app-workflow>
   <div class="width-100" id="subscription-form">
     <div class="container">
-      <div class="space-80"></div>
       <div class="row subscription">
         <div class="col-md-6 col-sm-6 col-xs-12 content-subscription">
-            <h2 class="">For Corporates and Institutions</h2>
-
+            <h2 class="display-4">For Corporates and Institutions</h2>
             <h4>Whats Included for you</h4>
-            <br>
-            <dl>
-              <dt><i class="fa fa-fw fa-check-square-o" aria-hidden="true"></i> AI Enabled LMS </dt>
-           <br>
-              <dt><i class="fa fa-fw fa-check-square-o" aria-hidden="true"></i> Online Course Creation </dt>
+            <ul class="fa-ul">
+              <li><i class="fa fa-li fa-fw fa-check-square-o" aria-hidden="true"></i> AI Enabled LMS </li>
               <br>
-              <dt><i class="fa fa-fw fa-check-square-o" aria-hidden="true"></i> Tests and Assessments </dt>
+              <li><i class="fa fa-li fa-fw fa-check-square-o" aria-hidden="true"></i> Online Course Creation </li>
               <br>
-              <dt><i class="fa fa-fw fa-check-square-o" aria-hidden="true"></i> e-Learning </dt>
-              <br><dt><i class="fa fa-check-square-o" aria-hidden="true"></i> Virtual Classroom  </dt>
-            </dl>
+              <li><i class="fa fa-li fa-fw fa-check-square-o" aria-hidden="true"></i> Tests and Assessments </li>
+              <br>
+              <li><i class="fa fa-li fa-fw fa-check-square-o" aria-hidden="true"></i> e-Learning </li>
+              <br>
+              <li><i class="fa fa-li fa-fw fa-check-square-o" aria-hidden="true"></i> Virtual Classroom  </li>
+              <br>
+            </ul>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12">
           <app-subscription></app-subscription>
         </div>
       </div>
-      <div class="space-50"></div>
     </div>
   </div>
 </div>

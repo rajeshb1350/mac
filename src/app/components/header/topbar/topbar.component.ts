@@ -1,20 +1,21 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { AuthorizationService } from '../../../services/authorization.service';
+import { Component, OnInit, DoCheck} from '@angular/core';
+import { AuthenticationService } from '../../../services/authentication/authentication.service';
 
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
   styleUrls: ['./style/topbar-sp.component.less']
 })
-export class TopbarComponent implements OnInit, AfterViewInit {
+
+export class TopbarComponent implements OnInit, DoCheck {
   loginStatus: boolean;
-  constructor(
-    private authService: AuthorizationService
-  ) { }
-  
-    
   currentTime: any;
   days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  
+  constructor(
+    private authService: AuthenticationService
+  ) { }
+  
   ngOnInit() {
     function checkTime(i) {
       if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
@@ -35,17 +36,21 @@ export class TopbarComponent implements OnInit, AfterViewInit {
         this.currentTime = `${this.days[d]} ${D}/${M}/${Y} ${h}:${m}:${s}`;
       }
     ,1000);
+  }
 
-    
-    this.loginStatus = this.authService.loginStatus;
+  ngDoCheck() {
+    this.loginStatus = this.authService.getLoginStatus();
+  }
+  
+  login(){
+    this.authService.doLogin();
+    this.loginStatus = this.authService.getLoginStatus();
     console.log(this.loginStatus);
   }
-
-  ngAfterViewInit(){
-
-  }
-
-  logIn(){
-    this.authService.logout();
+  
+  logout(){
+    this.authService.doLogout();
+    this.loginStatus = this.authService.getLoginStatus();
+    console.log(this.loginStatus);
   }
 }

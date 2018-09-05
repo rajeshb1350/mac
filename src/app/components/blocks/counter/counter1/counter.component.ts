@@ -4,7 +4,7 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.less']
+  styleUrls: ['./style/counter-sp.component.less']
 })
 export class CounterComponent implements OnInit {
 

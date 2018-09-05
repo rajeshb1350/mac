@@ -15,29 +15,28 @@ export class AppComponent implements OnInit {
 
     constructor(
         private router: Router,
-        private apiservice: ApiService
+        // private apiservice: ApiService
     ) {
         // this.propertyColor = this.apiservice.getApiData();
     }
-    title = 'Look jQuery Animation working in action!';
-    propertyColor = [];
+    // title = 'Look jQuery Animation working in action!';
+    // propertyColor = [];
 
     public ngOnInit(){
-        var changeTheme = () =>{
-            console.log(this.propertyColor);
-            const documentpath = document.documentElement.style;
-            this.propertyColor.forEach(function(element){
-            var property = `--${element.color}-color`;
-            var propertybg = `--${element.color}-background-color`;
-            var propertyborder = `--${element.color}-border-color`;
-            var value = `rgb(${element.value.r},${element.value.g},${element.value.b})`;
-            documentpath.setProperty( property, value);
-            documentpath.setProperty( propertybg, value);
-            documentpath.setProperty( propertyborder, value);
-            console.log(property+":"+value);
-            });
-        }
-        setTimeout( changeTheme, 5000 );
+        // var changeTheme = () =>{
+        //     const documentpath = document.documentElement.style;
+        //     this.propertyColor.forEach(function(element){
+        //     var property = `--${element.color}-color`;
+        //     var propertybg = `--${element.color}-background-color`;
+        //     var propertyborder = `--${element.color}-border-color`;
+        //     var value = `rgb(${element.value.r},${element.value.g},${element.value.b})`;
+        //     documentpath.setProperty( property, value);
+        //     documentpath.setProperty( propertybg, value);
+        //     documentpath.setProperty( propertyborder, value);
+        //     console.log(property+":"+value);
+        //     });
+        // }
+        // setTimeout( changeTheme, 5000 );
         
             
         $(document).ready(function(){

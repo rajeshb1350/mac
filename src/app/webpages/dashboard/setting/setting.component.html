@@ -1,130 +1,21 @@
 <div class="dashboard dashboard-home">
   <div class="grid-container">
-    <div class="d-comp welcome-space">
-      <h3>Setting</h3>
+    <div class="d-comp logo-space">
+      <img src="/assets/images/applicationLogos/SBuS.png" alt="" class="img-fluid">
     </div>
-    <div class="d-comp display-setup">
-      <h4 class="heading">
-        Personal Setting
-        <a class="float-right" data-toggle="modal" data-target="#modelId">
-          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        </a>
-      </h4>
-      <div class="display-options">
-        <div class="opt1">
-          <p>Username: <b>Testmon</b></p>
-        </div>
-        <div class="opt2">
-          <p>Organization: <b>Testmon Inc.</b></p>
-        </div>
-        <div class="opt3">
-          <p>Number of users: <b>7</b></p>
-        </div>
-        <div class="opt4">
-          <p>Mobile: <b>9999 8888 77</b></p>
-        </div>
-        <div class="opt5">
-          <p>email: <b>testmon@example.com</b></p>
-        </div>
-        <div class="opt6">
-          <p>Address: <b>Not Available</b></p>
-        </div>
-        <div class="opt7">
-          <p class="flex-container flex-ai-c">Theme: <b>Dark</b> 
-            <label class="switches switch1">
-              <input type="checkbox" checked>
-              <span class="slider round"></span>
-            </label>
-            <b>Light</b>
-          </p>
-        </div>
-      </div>
+    <div class="d-comp welcome-space">
+      <h3>
+        <i class="fa fa-cogs" aria-hidden="true"></i>
+        Setting
+      </h3>
     </div>
     <div class="d-comp software-setup">
       <h4 class="heading">
         Software Setting
       </h4>
-      <div class="options">
-
-      </div>
-    </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title" id="modelTitleId">Edit Personal Details</h4>
-          <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form action="/action_page.php" (ngSubmit)="editPersonalDetails(f)" #f="ngForm">
-              <div class="form-group">
-                <label for="name">Username:</label>
-                <input 
-                  name="name" 
-                  type="text" 
-                  class="form-control"
-                  ngModel  
-                >
-              </div>
-              <div class="form-group">
-                <label for="organization">Organization name:</label>
-                <input 
-                  name="organization" 
-                  type="text" 
-                  class="form-control"
-                  ngModel  
-                >
-              </div>
-              <div class="form-group">
-                <label for="usersnum">Number of users:</label>
-                <input 
-                  name="usersnum" 
-                  type="number" 
-                  min="1" 
-                  max="1000" 
-                  class="form-control"
-                  ngModel  
-                >
-              </div>
-              <div class="form-group">
-                <label for="mobile">Mobile:</label>
-                <input 
-                  name="mobile" 
-                  type="tel" 
-                  class="form-control"
-                  ngModel  
-                >
-              </div>
-              <div class="form-group">
-                <label for="email">Email address:</label>
-                <input 
-                  name="email" 
-                  type="email" 
-                  class="form-control"
-                  ngModel  
-                >
-              </div>
-              <div class="form-group">
-                <label for="address">Address address:</label>
-                <input 
-                  name="address" 
-                  type="text" 
-                  class="form-control"
-                  ngModel  
-                >
-              </div>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary">Save</button>
-            </form>
-        </div>
+      <div class="section-install">
+        <router-outlet></router-outlet>
       </div>
     </div>
   </div>
 </div>
-
-

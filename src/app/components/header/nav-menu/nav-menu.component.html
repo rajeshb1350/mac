@@ -44,10 +44,11 @@
         </div>
       </li> -->
       
-      <li routerLinkActive="active" class="nav-item"><a routerLink="/dashboard">Dashboard</a></li>
+      <li *ngIf="loginStatus" routerLinkActive="active" class="nav-item"><a routerLink="/dashboard">Dashboard</a></li>
       <li routerLinkActive="active" class="nav-item"><a routerLink="/courses">Course Offerings</a></li>
+      <!-- <li routerLinkActive="active" class="nav-item"><a routerLink="/feature">Features</a></li> -->
       <li routerLinkActive="active" class="nav-item"><a routerLink="/support">Support</a></li>
-      <!-- <a href="/#subscription-form" title="start your trail subscription" class="button button-s">Start Trial</a> -->
+      <a id="scrollToSubscriptionform" title="start your trail subscription" class="button button-s" (click)="startTrialBtn()">Start Trial</a>
     </ul>
   </nav>
 </div>
