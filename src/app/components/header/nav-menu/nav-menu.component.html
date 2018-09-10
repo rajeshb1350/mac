@@ -45,9 +45,28 @@
       </li> -->
       
       <li *ngIf="loginStatus" routerLinkActive="active" class="nav-item"><a routerLink="/dashboard">Dashboard</a></li>
-      <li routerLinkActive="active" class="nav-item"><a routerLink="/courses">Course Offerings</a></li>
+      <!-- <li routerLinkActive="active" class="nav-item"><a routerLink="/aboutUs">About Us</a></li> -->
+      <li routerLinkActive="active" class="nav-item"><a routerLink="/aboutUs">Why Mactec</a></li>
+      <li routerLinkActive="active" class="nav-item"><a  class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
+      
+        <div class="dropdown-menu ">
+          <a class="float-left " data-screen="1">
+          Rite Erp<i class="fa fa-caret-right float-right"></i>
+          </a>
+          <a class="float-left" data-screen="2">
+          Rite Campus<i class="fa fa-caret-right float-right"></i>
+          </a>
+          <a class="float-left" data-screen="3">
+          Easy Ship<i class="fa fa-caret-right float-right"></i>
+          </a>
+          <a class="float-left" data-screen="4">
+          Skill Passport<i class="fa fa-caret-right float-right"></i>
+          </a>
+       
+        </div>
+      </li>
       <!-- <li routerLinkActive="active" class="nav-item"><a routerLink="/feature">Features</a></li> -->
-      <li routerLinkActive="active" class="nav-item"><a routerLink="/support">Support</a></li>
+      <li routerLinkActive="active" class="nav-item"><a routerLink="/support">Contact Us</a></li>
       <a id="scrollToSubscriptionform" title="start your trail subscription" class="button button-s" (click)="startTrialBtn()">Start Trial</a>
     </ul>
   </nav>

@@ -9,6 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class FeaturesComponent implements OnInit{
   slotBookData: any;
+  servicesdata: any;
 
   constructor(
     private title: Title,
@@ -24,8 +25,8 @@ export class FeaturesComponent implements OnInit{
     
     this.route.data.subscribe(
       (data: Data)=>{
-        
-        this.slotBookData = data
+        this.slotBookData = data.server
+        this.servicesdata = data.serviceData
       }
     );
 

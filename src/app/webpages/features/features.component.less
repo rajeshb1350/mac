@@ -55,6 +55,7 @@
     }
 }
 @media only screen and (min-width: 992px){
+    .display-4{   color: var(--quaternary-color);}
     .section{
         #subscription-form{
             padding: 100px 0px;
@@ -102,6 +103,35 @@
                     height: auto;
                     opacity: 0.1;
                 }
+
+
+                .scroll-down {
+                    position: absolute;
+                    width: 150px;
+                    bottom: 20px;
+                    left: 50%;
+                    margin-left: -75px;
+                    z-index: 50;
+                    display: block;
+                    text-align: center;
+                    font-size: 12px;
+                    -webkit-font-smoothing: antialiased;
+               
+                    .scroll-down .icon {
+                        -webkit-transition: all .3s ease;
+                        -moz-transition: all .3s ease;
+                        -o-transition: all .3s ease;
+                        transition: all .3s ease;
+                        width: 26px;
+                        height: 44px;
+                        display: block;
+                        border-radius: 13px;
+                        border: 2px solid #b3b3b3;
+                        margin: 0 auto;
+                    }
+                }
+
+
             }
             a.downarr{
                 position: absolute;

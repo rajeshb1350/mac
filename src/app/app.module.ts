@@ -58,7 +58,7 @@ import { UniversityComponent } from './components/blocks/university/university1/
 import { UpcomingEventsComponent } from './components/blocks/upcoming-events/upcoming-events1/upcoming-events.component';
 import { ShopComponent } from './components/blocks/shop/shop1/shop.component';
 import { GotopComponent } from './components/blocks/gotop/gototop1/gotop.component';
-import { TestimonialComponent } from 'src/app/components/blocks/testimonial/testimonial1/testimonial.component';
+import { TestimonialComponent } from 'src/app/components/blocks/testimonial/testimonial.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu/sidemenu.component';
 import { StudyProgramDescComponent } from './webpages/study-program-details/study-program-desc/study-program-desc.component';
 import { StudyProgramInfoComponent } from './webpages/study-program-details/study-program-info/study-program-info.component';
@@ -94,9 +94,16 @@ import { AuthenticationService } from './services/authentication/authentication.
 import { SpSetupStartComponent } from './webpages/dashboard/setting/skillpassportSetup/start/start.component';
 import { SpSetupFormComponent } from './webpages/dashboard/setting/skillpassportSetup/form/form.component';
 import { SlotserviceService } from './services/http/slotservice.service';
+import { ModuleService } from './services/model/module.service';
 import { SlotbookResolverService } from './services/resolver/slotbook-resolver.service';
 import { FeaturesComponent } from './webpages/features/features.component';
 import { Tab1Component } from './components/blocks/tabs/tab1/tab1.component';
+import { ServiceCheckComponent } from './components/blocks/service-check/service-check.component';
+import { FinalCheckComponent } from './components/blocks/final-check/final-check.component';
+import { ServiceCheckService } from './services/servicecheck.service';
+import { ServiceResolverService } from './services/resolver/serviceCheck-resolver.service';
+import { CareerIndexComponent } from './components/blocks/career-index/career-index.component';
+import { AboutComponent } from './components/blocks/about/about.component';
 
 
 @NgModule({
@@ -174,6 +181,10 @@ import { Tab1Component } from './components/blocks/tabs/tab1/tab1.component';
     SpSetupFormComponent,
     FeaturesComponent,
     Tab1Component,
+    ServiceCheckComponent,
+    FinalCheckComponent,
+    CareerIndexComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -194,7 +205,10 @@ import { Tab1Component } from './components/blocks/tabs/tab1/tab1.component';
     DashboardService,
     AuthenticationService,
     SlotbookResolverService,
-    SlotserviceService
+    SlotserviceService,
+    ModuleService,
+    ServiceCheckService,
+    ServiceResolverService
   ],
   bootstrap: [AppComponent],
 })

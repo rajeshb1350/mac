@@ -1,0 +1,24 @@
+<div class="container clr-white">
+    <div class="space-50"></div>
+      <h3 class="text-center">List of Products we provide</h3>
+      <p class="text-center ">Select one or more products with nominal charges and flexi pay.</p>
+     
+      <form class="controls">
+           <!-- <label> Select All : <input type="checkbox" name="check"  data-toggle="toggle" /> </label>
+          <br/> -->
+  <div class="row">  
+    <div class="flex flex-container">
+   <div *ngFor="let mod of services">
+          <div class="col-md-12 col-sm-12 col-xs-12 ">
+              <h2 class="done panel-title" aria-hidden="true">{{mod.productCategory}}</h2>
+               <div  class="brdbttm" *ngFor="let modsub of mod.productDetails">
+                <label> <input type="checkbox" name="check"  value='{{modsub.productId}}'  [checked]="id"   /> {{modsub.productName}} </label> <br/>
+               </div>
+          </div>
+  </div>
+   </div>
+   
+   </div>
+       </form>
+       <div class="space-50"></div>
+      </div>

@@ -2,14 +2,12 @@ import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/r
 import { Observable } from "rxjs";
 import { Injectable } from "@angular/core";
 
-import { ApiService } from "../http/api.service";
 import { SlotserviceService } from "../http/slotservice.service";
 
 @Injectable()
 export class SlotbookResolverService implements Resolve<any>{
     
     constructor(
-        private api: ApiService,
         private slotservice: SlotserviceService
     ){}
 

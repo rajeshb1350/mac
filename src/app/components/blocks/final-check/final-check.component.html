@@ -1,0 +1,65 @@
+
+<div class="row">
+<div class="container">
+<div class="row">
+
+      <div class="dual-list list-left col-md-5">
+          <div class="card text-right">
+              <div class="row pad-5">
+                  <div class="col-md-9">
+                      <div class="input-group">
+                          <input type="text" name="SearchDualList" class="form-control" placeholder="search" />
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="btn-group">
+                          <a class="btn btn-default selector" title="select all"><i class="fa fa-square-o"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="min-h200">
+              <ul class="list-group" *ngFor="let mod of moduledata">
+               
+                  <li *ngFor="let modsub of mod.subdata" class="list-group-item">{{modsub.name}}</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+
+      <div class="list-arrows col-md-1 text-center">
+          <button class="btn btn-default btn-sm move-left">
+              <span class="fa fa-angle-double-left"></span>
+          </button>
+
+          <button class="btn btn-default btn-sm move-right">
+              <span class="fa fa-angle-double-right"></span>
+          </button>
+      </div>
+
+      <div class="dual-list list-right col-md-5">
+          <div class="card">
+              <div class="row pad-5">
+               
+                  <div class="col-md-9">
+                      <div class="input-group">
+                          <input type="text" name="SearchDualList" class="form-control" placeholder="search" />
+                         
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="btn-group">
+                        <a class="btn btn-default selector" title="select all"><i class="fa fa-square-o"></i></a>
+                    </div>
+                </div>
+              </div>
+              <div class="min-h200">
+              <ul class="list-group">
+                 
+              </ul>
+              </div>
+          </div>
+      </div>
+
+</div>
+</div>
+</div>

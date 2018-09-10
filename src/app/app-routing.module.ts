@@ -24,6 +24,8 @@ import { SpSetupStartComponent } from "./webpages/dashboard/setting/skillpasspor
 import { SpSetupFormComponent } from "./webpages/dashboard/setting/skillpassportSetup/form/form.component";
 import { SlotbookResolverService } from "./services/resolver/slotbook-resolver.service";
 import { FeaturesComponent } from "./webpages/features/features.component";
+import { ServiceResolverService } from "./services/resolver/serviceCheck-resolver.service";
+import { AboutComponent } from "src/app/components/blocks/about/about.component";
 
 const appRoutes: Routes = [
     // { path: "", component: IndexComponent, resolve: {server: SlotbookResolverService} },
@@ -31,12 +33,16 @@ const appRoutes: Routes = [
         // path: "feature", 
         path: "", 
         component: FeaturesComponent, 
-        resolve: {server: SlotbookResolverService}  
+        resolve: {
+            server: SlotbookResolverService,
+            serviceData: ServiceResolverService
+        } 
+
     },
     { 
         path: "courses", children: [
             { path: "", component: CoursesComponent },  
-            { path: ":section", component: CoursesComponent }  
+            { path: "section", component: CoursesComponent }  
         ] 
     },
     { path: "support", component: SupportpageComponent },
@@ -55,7 +61,8 @@ const appRoutes: Routes = [
     { path: "study-programs", component: StudyProgramsComponent },
     { path: "apply", component: ApplyComponent },
     { path: "blogs", component: BlogsComponent },
-    { path: "about", component: AboutUsComponent },
+    { path: "about", component: AboutComponent },
+    { path: "aboutUs", component: AboutUsComponent },
     { path: "contact", component: ContactUsComponent },
     { path: "study-programs/card1", component: StudyProgramDetailsComponent },
     { path: "suscribe", component: SubscriptionComponent },
