@@ -71,13 +71,13 @@ body, .body {
 
 // Buttons
 .button{
-    background-color: var(--secondary-background-color);
+    background-color: var(--primary-background-color);
 	color: var(--quaternary-color) !important;
 	&:hover{
-        background-color: var(--secondary-transparent-color);
+        background-color: var(--primary-background-color);
 	}
 	&.disabled {
-		background-color: var(--secondary-transparent-color);
+		background-color: var(--primary-transparent-color);
 	}
 }
 
@@ -150,7 +150,7 @@ body, .body {
 				a{
 					color: var(--quinary-color);
 					&:hover{
-						background:var(--secondary-transparent-color);
+						background:var(--primary-background-color);
 					}
 				}
 			}
@@ -178,6 +178,8 @@ body, .body {
 		}
 	}
 	@media only screen and ( min-width: 1020px ){
+.dropdown-menu a{ color: var(--quaternary-color) !important;}
+
 		&.header-sp {
 			.nav-menu {
 				.navbar-nav{
@@ -191,6 +193,46 @@ body, .body {
 				}
 			}
 		}
+
+
+		ul.navbar-nav{
+			li {
+				a{
+					color: var(--tertiary-color);
+				}
+				.dropdown-menu {
+					ul.list-group.list-item-screen {
+						color: var(--quaternary-color);
+						background-color: var(--primary-background-color);
+						border: 1px solid var(--primary-background-color);
+					}
+					a {
+						color: var(--quinary-color);
+						background-color: var(--quaternary-background-color);
+						&.active{
+							color: var(--quaternary-color);
+							background-color: var(--primary-background-color);
+						}
+					}
+				}
+			}
+			li.active a{
+				background: linear-gradient(45deg, var(--primary-background-color), var(--primary-transparent-color));
+				color: var(--quaternary-color);
+			}
+		}
+
+
+
+.dropdown-menu li a{
+	color: var(--quinary-color) !important;
+
+}
+.dropdown-menu li a:hover{
+	color: var(--quaternary-color) !important;
+}
+
+
 	}
 	
 	&.header1 {
@@ -242,7 +284,7 @@ body, .body {
 			}
 		}
 		li.active a{
-			background: linear-gradient(45deg, var(--secondary-background-color), var(--secondary-transparent-color));
+			background: linear-gradient(45deg, var(--primary-background-color), var(--primary-transparent-color));
 			color: var(--quaternary-color);
 		}
 	}
@@ -310,19 +352,20 @@ p {
 
 .footer2{
 	a {
-		color:  var(--secondary-color);
+		color:  var(--quaternary-color);
 		&:hover{
-			color:  var(--tertiary-color);
+			color:  var(--quaternary-color);
 		}
 	}
     .footer_border {
-		background: var(--quaternary-background-color);
+		background: var(--quinary-background-color);
 		opacity: 0.9;
-		color: var(--secondary-color);
+		color: var(--quaternary-color);
+	//box-shadow: 0px -7px 85px #000;
 	}
 	.footer-bar{
-		background: var(--secondary-background-color);
-		color: var(--quaternary-background-color);
+		background: var(--quinary-background-color);
+		color: var(--quaternary-color);
     }
 }
 
@@ -415,18 +458,18 @@ form.form-1{
 		}
 	
 		.action-button {
-			background: var(--secondary-background-color);
+			background: var(--primary-background-color);
 			color: var(--quaternary-color);
 			&:hover, &:focus {
-				background: var(--secondary-transparent-color);
+				background: var(--primary-background-color);
 			}
 			&.disabled {
-				background-color: var(--secondary-transparent-color);
+				background-color: var(--primary-transparent-color);
 			}
 		}
 	
 		.action-button-previous {
-			background: var(--quinary-background-color);
+			background: var(--secondary-background-color);
 			color: var(--quaternary-color);
 		}
 
@@ -462,7 +505,7 @@ form.form-1{
             }
             &.active:before,
             &.active:after {
-				border: 2px solid var(--secondary-border-color);
+				border: 2px solid var(--primary-border-color);
             }
         }
     }
@@ -686,9 +729,9 @@ form.form-1{
 			}
 		}
 		a {
-			color: var(--tertiary-color);
+			color: var(--primary-color);
 			&:hover {
-				color: var(--secondary-color);
+				color: var(--primary-color);
 			}
 		}
 	}
@@ -946,11 +989,11 @@ form.form-1{
     }
 }
 .chatIcon{
-    background: var(--secondary-background-color);
+    background: var(--primary-background-color);
 	color: var(--quaternary-color);       
 	box-shadow: 0px 3px 13px 1px var(--tertiary-transparent-color);
 	&:hover{
-		background-color: var(--secondary-transparent-color);
+		background-color: var(--primary-transparent-color);
 	}
 }
 
@@ -1031,18 +1074,18 @@ form.form-1{
 		.card-header{                
 			box-shadow: 0 7px 25px -10px var(--quinary-transparent-color);
 			a{
-				color:  var(--tertiary-background-color);
+				color:  var(--primary-color);
 				background: var(--quaternary-background-color);
 				&.active{
-					color:  var(--secondary-background-color);	
-					border-color: var(--secondary-border-color);
+					color:  var(--primary-color);	
+					border-color: var(--primary-border-color);
 				}
-				border-color: var(--quinary-transparent-color);
+				border-color: var(--primary-transparent-color);
 			}
 			&:hover{
 				a {
-					color:  var(--secondary-background-color);	
-					border-color: var(--secondary-border-color);
+					color:  var(--primary-background-color);	
+					border-color: var(--primary-border-color);
 				}
 			}
 		}

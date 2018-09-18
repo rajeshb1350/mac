@@ -1,23 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import * as $ from 'jquery';
 import { SubscriptionFrom, OrganizeInfo, UserAddress } from '../../../../services/model/subscriptionForm.model';
 import { ApiService } from '../../../../services/http/api.service';
 import { Response } from '@angular/http';
+import { ModuleService } from '../../../../services/model/module.service';
+import { Location } from '@angular/common';
+
+
 @Component({
   selector: 'app-subscription',
   templateUrl: './subscription.component.html',
   styleUrls: ['./subscription.component.less']
 })
 export class SubscriptionComponent implements OnInit {
+    private trailactive:boolean = false;
+ 
+
+    @Input() services: any;
     formdata: SubscriptionFrom;
     responseStatus: string = "";
     status: boolean;
     subscriptionFrom: FormGroup;
 
     constructor(
-        private api: ApiService
+        private api: ApiService, private  moduleser:  ModuleService
     ){}
+
+
 
 // Responses GET--------------------------------
 // OK Responses
@@ -82,7 +92,7 @@ export class SubscriptionComponent implements OnInit {
             }
         });
 
-        $(document).ready(function(){
+        $(document).ready(()=>{
             //$ time
             var current_fs, next_fs, previous_fs; //fieldsets
             var left, opacity, scale; //fieldset properties which we will animate
@@ -166,8 +176,53 @@ export class SubscriptionComponent implements OnInit {
             $(".submit").click(function(){
                 return false;
             })
+            // --------------------------------------------------
+            // --------------------------------------------------
+            let checkpert = $(".perchecknan");
+            let clr_bg = $(".prdname");
+
+            checkpert.each((id, element) => {
+                $(element).on("click", (elem)=>{
+                    const $this = $($(elem)[0].target).parents(".prdname");
+                    if(this.trailactive) {
+                        $this.hasClass("bg_yellow")?
+                        $this.removeClass("bg_yellow"):
+                        $this.addClass("bg_yellow");
+                    }
+                })
+            });
         });
-        
     }
+
+
+
+    onfree(){
+        let elements = document.querySelectorAll(".serpro");
+        let freetrail = document.querySelector("#prosearch");
+        this.trailactive = !this.trailactive;
+        Array.from(elements).forEach(element => {
+            element.classList.add("disblk");
+        });
+        freetrail.classList.add("serpro");
+    }
+       
+    onsubmit(){
+        var fram = setInterval(frames, 5);
+        let subscrp = document.querySelector("#msform");
+        let pronone = document.querySelector("#section-9");
+        pronone.classList.add("dispnone");
+        subscrp.classList.add("dispblk");
+       
+
+        window.scrollBy({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth' 
+        });
+     //   window.location.reload(true);
+    }
+
+
+
 
 }

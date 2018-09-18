@@ -104,6 +104,9 @@ import { ServiceCheckService } from './services/servicecheck.service';
 import { ServiceResolverService } from './services/resolver/serviceCheck-resolver.service';
 import { CareerIndexComponent } from './components/blocks/career-index/career-index.component';
 import { AboutComponent } from './components/blocks/about/about.component';
+import { ServicesAllComponent } from './components/blocks/services-all/services-all.component';
+import { CheckColorChangeDirective } from './directive/check-color-change.directive';
+import { CareersComponent } from 'src/app/components/blocks/careers/careers.component';
 
 
 @NgModule({
@@ -182,9 +185,12 @@ import { AboutComponent } from './components/blocks/about/about.component';
     FeaturesComponent,
     Tab1Component,
     ServiceCheckComponent,
+    CareersComponent,
     FinalCheckComponent,
     CareerIndexComponent,
     AboutComponent,
+    ServicesAllComponent,
+    CheckColorChangeDirective,
   ],
   imports: [
     BrowserModule,

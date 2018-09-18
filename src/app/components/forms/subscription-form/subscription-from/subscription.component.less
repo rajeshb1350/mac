@@ -2,6 +2,8 @@
 	text-align: center;
     position: relative;
     min-height: 440px;
+margin: 60px 0 0;
+
     fieldset {
         border: 0 none;
         border-radius: 0px;
@@ -52,7 +54,7 @@
         }
 
         .frm-cntrl, textarea {
-            padding: 15px;
+            padding: 25px;
             border-radius: 5px;
             width: 100%;
             box-sizing: border-box;
@@ -73,7 +75,7 @@
             border: 0 none;
             border-radius: 25px;
             cursor: pointer;
-            padding: 10px 15px;
+            padding: 12px 15px 30px;
             margin: 10px 5px;
             text-transform: uppercase;
             font-size: 12px;
@@ -157,4 +159,252 @@
             }
         }
     }
+
+
+
+    #progressbar {
+        margin-bottom: 30px;
+        overflow: hidden;
+        counter-reset: step;
+        padding: 0;
+        li {
+            list-style-type: none;
+            text-transform: uppercase;
+            font-size: 12px !important;
+            width: 33.33%;
+            float: left;
+            position: relative;
+            letter-spacing: 1px;
+    
+            &:before {
+                content: counter(step);
+                counter-increment: step;
+                width: 24px;
+                height: 24px;
+                line-height: 26px;
+                display: block;
+                font-size: 12px;
+                border-radius: 5px;
+                margin: 0 auto 10px auto;
+                box-sizing: content-box;
+            }
+            
+            &:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                left: -50%;
+                top: 9px;
+                z-index: -1;
+            }
+            
+            &:first-child:after {
+                content: none;
+            }
+        }
+    }
+
+}
+
+.prdname{
+    label{
+        display: block;
+        margin-bottom: 0rem;
+        padding: 5px 2px; 
+    }
+}
+
+.bg_yellow{border: 1px solid var(--quaternary-color); border-radius:5px;}
+.mar_l5{margin-left:15px;}
+#msform,.serpro,.dispnone{display: none;}
+.dispblk{display:block !important;}
+.disblk{display:inline-block;}
+.bg_none{background: transparent;}
+
+
+.clear{clear: both;}
+
+.clr-white{
+    color: var(--quaternary-color);
+    }
+    label{
+        display: inline-block;
+    margin-bottom: .5rem;
+    
+    }
+    .brdbttm{
+
+        padding-left: 0px;
+
+        li{
+            display: flex;
+            border-bottom: 1px #ce8632 solid;
+            width: 100%;
+            padding-bottom: 7px;
+            padding-top: 7px;
+            padding-left: 0px;
+            margin-bottom: 0;
+            background: var(--quaternary-background-color);
+            
+            .img-rds{
+                border-radius: 5px;
+            }
+            .prod-style{
+                margin-left: 5px;
+                width: 100%;
+                color: #002c4e;
+                .prdname{
+                    font-size: 15px;
+                    }
+                .sub-ttl{
+                    font-size:11px; margin-top:5px;
+                }
+            }
+            &:last-child{
+                border-bottom: 0px;
+            }
+
+        }
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 10px 5px;
+        background: var(--quaternary-background-color);
+        border-left: 6px var(--primary-color) solid;
+        bottom: 100%;
+        width: 100%;
+        color: var(--primary-color);
+        border-radius: 7px;
+            
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 10px;
+                    bottom: 10px;
+                    left: -20px;
+                    width: 5px;
+                    // background-color: @background_color_1;
+                }
+                &::after {
+                    display: block;
+                    float: right;
+                    font-weight: normal;
+                }
+            }
+    input{
+        width: 15px;
+        height: 20px;
+        position: relative;
+        top: 2px;
+    }
+    
+    .btn-light {
+        color: #212529;
+        background-color: transparent;
+        border: 0;
+    }
+
+
+
+.listrap {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.msform h2{
+    border-left:0px;
+}
+.listrap li {
+    margin: 0;
+    padding: 10px;
+}
+
+.listrap li.active, .listrap li:hover {
+    background-color: var(--quaternary-background-color);
+}
+
+.listrap strong {
+    margin-left: 10px;
+}
+
+.listrap .listrap-toggle {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.listrap .listrap-toggle span {
+    background-color: #428bca;
+    opacity: 0.8;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    vertical-align: middle;
+    color: var(--quaternary-color);
+}
+
+.listrap .listrap-toggle span:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e013";
+}
+
+.listrap li.active .listrap-toggle span {
+    display: block;
+}
+
+
+.glyph {
+    display: inline-block;
+     margin: 6px  0px;
+    text-align: center;
+    vertical-align: top;
+    background: transparent;
+    svg.icon {
+        width: 35px;
+        height: 35px;
+    }
+    .glyph-icon {
+        padding: 10px;
+        display: block;
+        font-family:"Flaticon";
+        font-size: 64px;
+        line-height: 1;
+        &:before {
+            font-size: 64px;
+            color: var(--quaternary-color);
+            margin-left: 0;
+        }
+    }
+    use{
+        fill: var(--primary-color);
+    }
+}
+.iconica span {
+    display: inline-block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    //border-radius: 50% 1px 50%;
+    //background: var(--quaternary-background-color);
+    text-align: center;
+    margin-right: 15px;
+    border-right: 1px var(--primary-color) solid;
+    i{
+       color: var(--primary-color);
+       line-height: 40px;
+   }
 }

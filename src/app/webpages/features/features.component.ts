@@ -56,21 +56,7 @@ export class FeaturesComponent implements OnInit{
           }
         }
         
-        $(window).on("scroll", debounce(fixedpencil));
-        
-        const $sidenav = $(".side-nav .img-pencil");
-        const $sideLine = $(".side-nav .pencil-line");
-        const sidenavst = $(".side-nav .img-pencil").offset().top - 100;
-        function fixedpencil(){
-          if( window.scrollY > sidenavst){
-            $sidenav.css("position","fixed");
-            $sideLine.css("position","fixed");
-          }
-          else{
-            $sidenav.css("position","absolute");
-            $sideLine.css("position","absolute");
-          }
-        }
+
       })();
 
       (function(){

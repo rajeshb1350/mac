@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { AccordianService } from '../../../../services/accordian.service';
 import * as $ from "jquery";
 
@@ -7,14 +7,18 @@ import * as $ from "jquery";
   templateUrl: './accordian2.component.html',
   styleUrls: ['./accordian2.component.less']
 })
-export class Accordian2Component implements OnInit {
+export class Accordian2Component implements OnInit, AfterViewInit {
 
   constructor(
     private accService: AccordianService
   ) { }
   data = [];
   ngOnInit() {
+
     this.data = this.accService.getSupportData();
+  }
+    ngAfterViewInit(){
+
     $(document).ready(function(){
       const $cardHeader = $(".accordion2 .card .card-header");
       var $ele =  $cardHeader.children("a.card-link.active").parent();
@@ -51,7 +55,7 @@ export class Accordian2Component implements OnInit {
       
       $cardHeader.each(function(val, element){
         $(this).on("click", ()=>{ 
-          $ele =  $(this);
+          $ele = $(this);
           eletop = $ele.offset().top;
           console.log(eletop);
           setTimeout(animatehead, 700);
@@ -63,10 +67,10 @@ export class Accordian2Component implements OnInit {
         $cardHeader.removeClass("sticky").children("a.card-link").removeClass("active");
         $ele.children("a.card-link").addClass("active");
         eletop = $ele.offset().top;
-        console.log(eletop);
         checkSlide();
         $('html,body').animate({scrollTop: $ele.offset().top - 70},'slow');
       }
     });
   }
-}
+  }
+

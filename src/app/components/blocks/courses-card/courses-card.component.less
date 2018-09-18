@@ -37,23 +37,45 @@
 				}
 				h4 {
 					font-weight: bold;
+					font-size: 18px;
 				}
 				h5 {
 					font-weight: bold;
 					text-align: center;
+					font-size: 13px;
 				}
 				img{
 					margin: 0px;
 				}
 			}
 		}
+        .box-1{
+			height:452px;
+		}
+
+   		.img-hgt{
+			   height:315px;
+		}
+	}
+	.d-desk-hide{
+		display: inherit !important;
+	}
+	.d-mobi-none{
+		display: none;
+	}
+	.mar_t2{
+		margin-top: 0;
 	}
 }
 
 
 @media only screen and (min-width: 1020px){
 	.card1{
+		.mar_t2{margin-top: 25px;}
 		margin: 50px 0;
+		.box-1{
+			height:500px !important;
+		}
 		.pt-md{
 			&>div{
 				.img-box{
@@ -153,6 +175,65 @@
 			&:hover {
 				text-decoration: none;
 			}
+		}
+		.d-desk-hide{
+			display: none !important;
+		}
+		.d-mobi-none{
+			display: inherit;
+		}
+	}
+}
+
+.capbilityCard{
+   
+    border: 1px solid #cecece;
+    border-radius: 13px; 
+    transform: rotateY(20deg) skewY(-10deg);
+    box-shadow:-15px 1px 4px rgba(189, 189, 189, 0.46);
+	transition: 0.5s ease-in-out;
+	p{
+		display: none;
+	}
+	.img-Width {
+		width: 100%;
+		height: 300px;
+	}
+}
+.capbilityCard:hover{
+    transform: rotateY(0deg) skewY(0deg) scale(1.1);
+    box-shadow: 0 7px 3px #ddd;
+	p{
+		display: block;
+		position: absolute;
+		top: 0;
+		background: #f07615db;
+		width: 100%;
+		left: 0;
+		padding: 91px 0 0px 5px;
+		color: #fff;
+		height: 46vh;
+		text-align: center;
+
+	}
+	.img-Width:hover {
+		filter:grayscale(100%);
+	}
+}
+
+@media only screen and (max-width:768px){
+	.capbilityCard{
+		border: 1px solid #cecece;
+		border-radius: 13px; 
+		transform: rotateY(0deg) skewY(0deg);
+		box-shadow:none;
+		transition: 0.5s ease-in-out;
+		p{
+			display: none;
+		}
+		.img-Width {
+			width: 100%;
+			height: 300px;
 		}
 	}
 }

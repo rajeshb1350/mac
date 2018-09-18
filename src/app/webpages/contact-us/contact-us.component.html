@@ -1,80 +1,125 @@
-<div class="parallax-banner"></div>
-<div class="container">
-    <div class="space-40"></div>
-    <div class="row"> 
-        <div class="col-md-6">
-            <h2>Contact us <small>Feel free to contact us</small></h2>
-        </div>
-        <div class="col-md-6 pull-right">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contact</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <div class="space-50"></div>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="well well-sm">
-                <form>
-                    <div class="form-group">
-                        <label for="name">
-                            Name</label>
-                        <input type="text" class="form-control css_inputfield" id="name" placeholder="Enter name" required="required" />
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="email">
-                            Email Address</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                        </span>
-                        <input type="email" class="form-control css_inputfield" id="email" placeholder="Enter email" required="required" /></div>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="subject">
-                            Subject</label>
-                        <select id="subject" name="subject" class="form-control css_inputfield" required="required">
-                            <option value="na" selected="">Choose One:</option>
-                            <option value="service">General Customer Service</option>
-                            <option value="suggestions">Suggestions</option>
-                            <option value="product">Product Support</option>
-                        </select>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="name">
-                            Message</label>
-                        <textarea name="message" id="message" class="form-control " rows="9" cols="25" required="required"
-                            placeholder="Message"></textarea>
-                    </div>
-                    <button type="submit" class="button button-1 pull-right" id="btnContactUs">
-                        Send Message
-                    </button>
-                </form>
+<div class="parallax-banner">
+        <div class="slide-content">
+                <h2 class="slide-heading">Contact Us</h2>
+                <p class="slide-text">Feel free to contact us any time</p>
             </div>
-        </div>
-        <div class="col-md-4">
-            <form>
-            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
-            <address>
-                <strong>Twitter, Inc.</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
-                <abbr title="Phone">
-                    P:</abbr>
-                (123) 456-7890
-            </address>
-            <address>
-                <strong>Full Name</strong><br>
-                <a href="mailto:#">first.last@example.com</a>
-            </address>
-            </form>
-        </div>
+
+
+</div>
+<div class="contact-us-page">
+<div class="container">
+                <div class="row">
+    
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
+    
+                        <div class="contact-us-form">
+    
+                            <h3>Send A Message</h3>
+    
+                           
+    
+                            <form action="inc/sendemail.php" class="form-validation" autocomplete="off" novalidate="novalidate">
+    
+                                <div class="row">
+    
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    
+                                        <input name="name" placeholder="Username" type="text">
+    
+                                    </div>
+    
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    
+                                        <input name="email" placeholder="Email" type="email">
+    
+                                    </div>
+    
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    
+                                        <input name="sub" placeholder="Subject" type="text">
+    
+                                    </div>
+    
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    
+                                        <textarea name="message" placeholder="Write Message"></textarea>
+    
+                                        <button class="button button-s" title="Send">send message</button>
+    
+                                    </div>
+    
+                                </div>
+    
+                            </form>
+    
+    
+    
+                        </div> <!-- /.contact-us-form -->
+    
+                    </div> <!-- /.col- -->
+    
+    
+    
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
+    
+                        <div class="contactUs-address">
+    
+                            <!-- <h3>CONTACT US</h3> -->
+    
+                            <p>Welcome to our website , Feel free to contact us any time </p>
+    <div class="row mr_l0">
+    <div class="col-md-6">
+
+        <ul>
+        
+            <li>
+        
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        
+                <a href="mailto:helpneed@edutech.com" class="tran3s">info@mactecit.com</a>
+        
+            </li>
+        
+    
+        
+          
+        
+        </ul>
+    </div>
+    <div class="col-md-6">
+            <ul>
+            <li>
+         <i class="fa fa-phone" aria-hidden="true"></i>
+             <a href="tel:+8801712570051" class="tran3s">INDIA : (+91) 40 6514 2434</a><br/>
+             <a href="tel:+1 848-217-1487" class="tran3s">USA : (+1) 848-217-1487</a>
+              </li>
+       </ul>
+
     </div>
 </div>
-<div class="space-100"></div>
-<app-sidemenu></app-sidemenu>
+    
+<div class="row mr_l0">
+        <div class="col-md-12">
+            <ul>
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>
+        
+                    <h4> <b> INDIA</b> </h4>1-98/K/15, 2nd Floor, Krithika Layout <br>Opposite Image Gardens, Hitech City , Rd, Hyderabad, Telangana 500081
+            <div class="space-20"></div>
+                    <h4> <b>USA</b> </h4>74 Dublin Road. Skillman <br/> New Jersey – 08558 USA
+            
+            
+            
+                </li>
+                </ul>
+            </div>
+            </div>
+            
+    
+    
+                        </div> <!-- /.our-address -->
+    
+                    </div>
+    </div>
+                </div> <!-- /.row -->
+    
+</div>
