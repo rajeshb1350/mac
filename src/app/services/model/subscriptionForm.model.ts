@@ -2,9 +2,10 @@ export class SubscriptionFrom {
     constructor(
         public name: string ,
         public email: string ,
-        public phoneNum: number ,
+        public mobile: number ,
         public organizeInfo: OrganizeInfo ,
-        public userAddress: UserAddress
+        public userAddress: UserAddress,
+        public productIds: any
     ){}
 }
 

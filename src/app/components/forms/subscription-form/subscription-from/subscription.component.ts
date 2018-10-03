@@ -15,11 +15,11 @@ import { Location } from '@angular/common';
 })
 export class SubscriptionComponent implements OnInit {
     private trailactive:boolean = false;
- 
+    loader: boolean = false;
 
     @Input() services: any;
     formdata: SubscriptionFrom;
-    responseStatus: string = "";
+    responseStatus: any;
     status: boolean;
     subscriptionFrom: FormGroup;
 
@@ -27,7 +27,9 @@ export class SubscriptionComponent implements OnInit {
         private api: ApiService, private  moduleser:  ModuleService
     ){}
 
-
+    setStatusVal(statusval: any){
+        this.responseStatus = statusval;
+    }
 
 // Responses GET--------------------------------
 // OK Responses
@@ -35,11 +37,25 @@ export class SubscriptionComponent implements OnInit {
 // ALREADY_REPORTED
 // {"status":"ALREADY_REPORTED","message":"Already Exist","response":"This email id is already registered.Please give another email"}
 
+
+
+
+
     onFormSubmit(){
+        this.loader = true;
+
+        var productIds=[]; 
+     
+      
+        $(".productCheckbox").each(function() {
+			if($(this).is(':checked')==true){
+				productIds.push($(this).val());
+			}
+        });
         this.formdata = new SubscriptionFrom(
             this.subscriptionFrom.get("userData.name").value,
             this.subscriptionFrom.get("userData.email").value,
-            this.subscriptionFrom.get("userData.phone").value,
+            this.subscriptionFrom.get("userData.mobile").value,
             new OrganizeInfo(
                 this.subscriptionFrom.get("orgData.orgname").value, 
                 this.subscriptionFrom.get("orgData.usersNo").value,
@@ -51,15 +67,20 @@ export class SubscriptionComponent implements OnInit {
                 "",
                 "",
                 ""
-            )
+            ),
+            productIds
         );
 
         this.api.postSubscriptionData(this.formdata).subscribe(
             (response: any) => {
                 this.status = true;
-                this.responseStatus = JSON.parse(response._body);
+                this.loader = false;
+                this.setStatusVal(response);
             },
-            error => { return; }
+            error => { 
+                this.loader = false;
+                return; 
+            }
         );
     }
   
@@ -69,7 +90,7 @@ export class SubscriptionComponent implements OnInit {
             'userData': new FormGroup({
                 'name': new FormControl(null, Validators.required),            
                 'email': new FormControl(null, [Validators.required, Validators.email]),            
-                'phone': new FormControl(null, [Validators.required, Validators.pattern("^[a-z0-9_-]{8,15}$")])            
+                'mobile': new FormControl(null, [Validators.required, Validators.pattern("^[a-z0-9_-]{8,15}$")])            
             }),
             'orgData': new FormGroup({
                 'orgname': new FormControl(null, Validators.required),
@@ -97,8 +118,13 @@ export class SubscriptionComponent implements OnInit {
             var current_fs, next_fs, previous_fs; //fieldsets
             var left, opacity, scale; //fieldset properties which we will animate
             var animating; //flag to prevent quick multi-click glitches
-
+         
             $(".next").click(function(){
+               
+                $('html,body').animate({
+                    scrollTop: $("#msform").offset().top},
+                    'slow');
+
                 if(animating) return false;
                 animating = true;
                 
@@ -192,7 +218,14 @@ export class SubscriptionComponent implements OnInit {
                 })
             });
         });
+        
     }
+
+
+
+
+
+
 
 
 

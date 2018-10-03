@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
-import { ModuleService } from './model/module.service';
+import { ApiService } from "./http/api.service";
 
 @Injectable()
 export class ServiceCheckService{
-    constructor(  private Modapi: ModuleService
+    constructor(  private Modapi: ApiService
     ){}
 
     ngOnInit(){

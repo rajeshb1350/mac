@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "~animate.css/animate.css";
 @import "./theme/blue/export";
 
 :root{
@@ -469,7 +469,7 @@ form.form-1{
 		}
 	
 		.action-button-previous {
-			background: var(--secondary-background-color);
+			background: var(--primary-background-color);
 			color: var(--quaternary-color);
 		}
 
@@ -567,7 +567,7 @@ form.form-1{
 		color: var(--quinary-color);
 		border: 2px solid var(--quaternary-border-color);
 		&:hover {
-			background-color: var(--secondary-background-color);
+			background-color: var(--primary-background-color);
 			color: var(--quaternary-color);
 		}
 	}
@@ -735,6 +735,11 @@ form.form-1{
 			}
 		}
 	}
+
+	.display-4{
+		font-size: 2.3rem !important;
+	}
+
 }
 
 
@@ -1171,4 +1176,106 @@ form.form-1{
             }
         }
     }
+}
+
+
+
+// FORM SP
+
+.form-sp {
+	background: var(--quaternary-background-color);
+	&::before {
+		box-shadow: 0 0 15px -5px var(--quinary-transparent-color), 
+	}
+	.form-help {
+	  	color: var(--tertiary-transparent-color);
+	}
+	.form-group .control-label {
+	 	 color: var(--tertiary-transparent-color);
+	}
+	.ng-invalid.ng-touched~i.bar {
+		border-color: #d9534f;
+		&::before {
+			background: #d9534f;
+		}
+	}
+	.form-group {
+		.bar {
+			border-color: var(--tertiary-border-color);
+			&::before {
+				background: var(--secondary-background-color);
+			}
+			&.has-error {
+				border-color: #d9534f;
+				&::before {
+					background: #d9534f;
+				}
+			}
+		}
+		select,
+		input:focus,
+		input:valid,
+		input.form-file,
+		input.has-value,
+		textarea:focus,
+		textarea:valid,
+		textarea.form-file,
+		textarea.has-value {
+			color: var(--quinary-color);
+		}
+		select ~ .control-label,
+		input:focus ~ .control-label,
+		input:valid ~ .control-label,
+		input.form-file ~ .control-label,
+		input.has-value ~ .control-label,
+		textarea:focus ~ .control-label,
+		textarea:valid ~ .control-label,
+		textarea.form-file ~ .control-label,
+		textarea.has-value ~ .control-label {
+			color: var(--tertiary-color);
+		}
+		select:focus ~ .control-label,
+		input:focus ~ .control-label,
+		textarea:focus ~ .control-label {
+			color: var(--secondary-color);
+		}
+		
+		.has-error{
+			color: #d9534f;
+		}
+	}
+	
+	.checkbox label,
+	.form-radio label {
+	  	color: var(--quinary-color);
+	}
+	.radio .helper {
+		color: var(--quinary-transparent-color);
+	}
+	.radio .helper::after {
+		background-color: var(--secondary-background-color);
+		border-color: var(--secondary-border-color);
+	}
+	.radio label:hover .helper {
+	  	color: var(--secondary-color);
+	}
+	.radio input:checked ~ .helper::before {
+	  	color: var(--secondary-color);
+	}
+	.checkbox .helper {
+	  	color: var(--quinary-transparent-color);
+	}
+	.checkbox .helper::before, .checkbox .helper::after {
+	  	background-color: var(--secondary-background-color);
+	}
+	.checkbox .helper::before {
+	  	box-shadow: 0 0 0 0.0625rem var(--quaternary-transparent-color);
+	}
+	.checkbox label:hover .helper,
+	.checkbox input:checked ~ .helper {
+		color: var(--secondary-color);
+	}
+	.has-error .bar::before {
+		background: #d9534f;
+	}
 }

@@ -1,0 +1,75 @@
+<form class="form-sp form-login" (ngSubmit)="onLoginSubmit(f)" #f="ngForm">
+
+        <div class="form-group">
+
+
+            <input type="email" class="form-control" id="inputEmail" placeholder="Username">
+
+        </div>
+
+        <div class="form-group">
+
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+
+        </div>
+    
+        <button type="submit" class="button button-s">Login</button>
+
+    </form>
+
+   <!--<form class="form-sp form-login" (ngSubmit)="onLoginSubmit(f)" #f="ngForm">
+    <div class="row" *ngIf="tryonce">
+    
+
+
+
+
+        
+      <div class="col-md-12 col-sm-12 col-12 form-group">
+            <input 
+                type="text"
+                ngModel="userName"
+                name="userName"
+                #userName="ngModel"
+                required
+            />
+            <label for="input" class="control-label">User Name</label>
+            <i class="bar"></i>
+            <p class="has-error" *ngIf="userName.invalid && userName.touched"><small>Enter first user eg. Karan</small></p>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-12 form-group">
+            <input 
+                type="password"
+                name="password"
+                ngModel="password"
+                minlength="8"
+                #password="ngModel"
+                required
+            />
+            <label for="password" class="control-label">Password</label>
+            <i class="bar"></i>
+            <p class="has-error" *ngIf="password.invalid && password.touched"><small>The password must contain atleast 8 chatacters eg. User@1234</small></p>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-12">
+            <button 
+                type="submit" 
+                class="button button-s" 
+                [ngClass]="!f.valid?'disabled':''"
+                [disabled]="!f.valid"
+            >Login</button>
+        </div>
+    </div>
+    <div class="row" *ngIf="!tryonce">
+        <div class="col-md-12 col-sm-12 col-12 status">
+            <!-- <i class="fa fa-check" aria-hidden="true"></i> 
+            <img src="/assets/images/icons/crossicon.png" alt="Info-icons" class="img-fluid">
+            <div class="space-30"></div>
+            <h4>Oops! something went wrong</h4>
+            <h6>Please refresh page and try again.</h6>
+            <div class="space-20"></div>
+            <a (click)="tryAgain()" class="button button-s">Try Again</a>
+        </div>
+    </div>
+</form> -->

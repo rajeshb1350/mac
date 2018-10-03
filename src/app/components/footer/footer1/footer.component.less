@@ -42,13 +42,27 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         align-items: center;
-        a, a:hover{
+        a{
             color: var(--quaternary-color);
+            &:hover{
+                color: var(--primary-color);
+            }
         }
         span{
             font-size: 13px;
             margin: 0px;
         }  
+    }
+}
+
+.ftr_ancr {
+    p{
+        a{
+            color: var(--quaternary-color);
+            &:hover{
+                color: var(--primary-color);
+            }
+        }
     }
 }
 
@@ -58,12 +72,17 @@
         .footer-bar{
             justify-content: space-between;
             a, a:hover{
-                color: var(--quaternary-color);
+                color: var(--primary-color);
             }
         }
 .ul_footer{
     li{
-        a{ font-size: 0.8rem !important;}
+        a{ font-size: 0.8rem !important;
+        
+            &:hover{
+                color:var(--primary-color);
+            } 
+        }
     }
 }
 .footer_border{
@@ -72,6 +91,9 @@
         i{
             font-size: 18px;
         }
+     &:hover{
+         color:var(--primary-color);
+     }   
     }
 }
 }

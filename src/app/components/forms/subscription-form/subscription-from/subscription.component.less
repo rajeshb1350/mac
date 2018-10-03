@@ -1,3 +1,14 @@
+.display-4 {
+
+    color: #fff;
+}
+.media-heading{text-align: left; font-size: 1rem;}
+
+
+
+
+
+
 #msform {
 	text-align: center;
     position: relative;
@@ -112,7 +123,7 @@ margin: 60px 0 0;
             list-style-type: none;
             text-transform: uppercase;
             font-size: 9px;
-            width: 33.33%;
+            width: 24%;
             float: left;
             position: relative;
             letter-spacing: 1px;
@@ -145,83 +156,25 @@ margin: 60px 0 0;
             }
         }
     }
-}
-
-@media only screen and (min-width: 1020px){
-    #msform {
-        fieldset {
-            width: 80%; 
-            margin: 0 10%;
-            a.qmark{
-                position: absolute;
-                top: 50%;
-                right: 10px;
-            }
-        }
-    }
-
-
-
-    #progressbar {
-        margin-bottom: 30px;
-        overflow: hidden;
-        counter-reset: step;
-        padding: 0;
-        li {
-            list-style-type: none;
-            text-transform: uppercase;
-            font-size: 12px !important;
-            width: 33.33%;
-            float: left;
-            position: relative;
-            letter-spacing: 1px;
-    
-            &:before {
-                content: counter(step);
-                counter-increment: step;
-                width: 24px;
-                height: 24px;
-                line-height: 26px;
-                display: block;
-                font-size: 12px;
-                border-radius: 5px;
-                margin: 0 auto 10px auto;
-                box-sizing: content-box;
-            }
-            
-            &:after {
-                content: '';
-                width: 100%;
-                height: 2px;
-                position: absolute;
-                left: -50%;
-                top: 9px;
-                z-index: -1;
-            }
-            
-            &:first-child:after {
-                content: none;
-            }
-        }
-    }
-
 }
 
 .prdname{
+    text-align: left;
     label{
         display: block;
         margin-bottom: 0rem;
-        padding: 5px 2px; 
+        padding: 0px; 
+       
     }
 }
 
 .bg_yellow{border: 1px solid var(--quaternary-color); border-radius:5px;}
 .mar_l5{margin-left:15px;}
-#msform,.serpro,.dispnone{display: none;}
+//#msform,.serpro,.dispnone{display: none;}
 .dispblk{display:block !important;}
 .disblk{display:inline-block;}
 .bg_none{background: transparent;}
-
+.subpro_bg{background: var(--quaternary-color); }
 
 .clear{clear: both;}
 
@@ -256,6 +209,14 @@ margin: 60px 0 0;
                 color: #002c4e;
                 .prdname{
                     font-size: 15px;
+                    .clr_bgfor{
+                        width: 90%;
+                        float: left;
+                    }
+                    .clr_bglast{
+                        width: 10%;
+                        float: left;
+                    }
                     }
                 .sub-ttl{
                     font-size:11px; margin-top:5px;
@@ -272,10 +233,10 @@ margin: 60px 0 0;
         font-weight: bold;
         padding: 10px 5px;
         background: var(--quaternary-background-color);
-        border-left: 6px var(--primary-color) solid;
+    //    border-left: 6px var(--primary-color) solid;
         bottom: 100%;
         width: 100%;
-        color: var(--primary-color);
+        color: #242424;
         border-radius: 7px;
             
                 &::before {
@@ -369,13 +330,13 @@ margin: 60px 0 0;
 
 .glyph {
     display: inline-block;
-     margin: 6px  0px;
+     margin: 2px  0px;
     text-align: center;
     vertical-align: top;
     background: transparent;
     svg.icon {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
     }
     .glyph-icon {
         padding: 10px;
@@ -390,21 +351,254 @@ margin: 60px 0 0;
         }
     }
     use{
-        fill: var(--primary-color);
+        fill: var(--quaternary-color);
     }
 }
 .iconica span {
     display: inline-block;
     float: left;
-    width: 50px;
-    height: 50px;
-    //border-radius: 50% 1px 50%;
-    //background: var(--quaternary-background-color);
-    text-align: center;
-    margin-right: 15px;
-    border-right: 1px var(--primary-color) solid;
+    width: 35px;
+    height: 36px;
+    border-radius: 50% 1px 50%;
+    background: var(--primary-background-color);
+   // text-align: center;
+    margin-right: 1px;
+   // border-right: 1px var(--primary-color) solid;
     i{
-       color: var(--primary-color);
-       line-height: 40px;
+       color: var(--quaternary-color);
+       line-height: 32px;
    }
 }
+
+
+
+
+
+
+
+    .checkbox label {
+      display: inline-block;
+      position: relative;
+      padding-left: 5px; }
+      .checkbox label::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            top: -23px;
+            // left: 0;
+            // margin-left: -20px;
+            border: 1px solid #f07615;
+            border-radius: 3px;
+            background-color: #fff;
+            transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+         }
+      .checkbox label::after {
+        display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 24px;
+    top: -23px;
+    margin-left: -20px;
+    padding-left: 4px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #555555; }
+    .checkbox input[type="checkbox"] {
+      opacity: 0; }
+      .checkbox input[type="checkbox"]:focus + label::before {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px; }
+      .checkbox input[type="checkbox"]:checked + label::after {
+        font-family: 'FontAwesome';
+        content: "\f00c"; }
+      .checkbox input[type="checkbox"]:disabled + label {
+        opacity: 0.65; }
+        .checkbox input[type="checkbox"]:disabled + label::before {
+          background-color: #eeeeee;
+          cursor: not-allowed; }
+    .checkbox.checkbox-circle label::before {
+      border-radius: 30%; }
+    .checkbox.checkbox-inline {
+      margin-top: 0; }
+
+  .checkbox-warning input[type="checkbox"]:checked + label::before {
+    background-color: var(--primary-background-color);
+    border-color: var(--primary-color); }
+  .checkbox-warning input[type="checkbox"]:checked + label::after {
+    color: #fff; border-color: var(--primary-color); }
+
+
+
+
+
+    .checkbox {
+        margin-top: 10px;
+    }
+  
+    .animationload {
+        background-color: #fff;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10000;
+    }
+    .osahanloading {
+        animation: 1.5s linear 0s normal none infinite running osahanloading;
+        background: #fed37f none repeat scroll 0 0;
+        border-radius: 50px;
+        height: 50px;
+        left: 50%;
+        margin-left: -25px;
+        margin-top: -25px;
+        position: absolute;
+        top: 50%;
+        width: 50px;
+    }
+    .osahanloading::after {
+        animation: 1.5s linear 0s normal none infinite running osahanloading_after;
+        border-color: #85d6de transparent;
+        border-radius: 80px;
+        border-style: solid;
+        border-width: 10px;
+        content: "";
+        height: 80px;
+        left: -15px;
+        position: absolute;
+        top: -15px;
+        width: 80px;
+    }
+    @keyframes osahanloading {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        background: #85d6de none repeat scroll 0 0;
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+
+
+
+    
+
+@media only screen and (min-width: 375px){
+    .brdbttm li .prod-style .prdname .clr_bgfor {
+        width: 85%;
+        float: left;
+    }
+
+
+
+    
+#subscription-form{
+    h2{
+        .display-4 {
+            color: #fff !important;
+        }
+    } 
+}
+
+}
+
+
+
+@media only screen and (min-width: 768px){
+
+#subscription-form{
+    h2{
+        color: #fff !important;
+    }
+}
+
+.display-4 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #fff !important;
+}
+}
+
+@media only screen and (min-width: 1020px){
+
+    .checkbox {
+        margin-top:-15px; }
+    #msform {
+        fieldset {
+            width: 100%; 
+          //  margin: 0 10%;
+            a.qmark{
+                position: absolute;
+                top: 50%;
+                right: 10px;
+            }
+        }
+    }
+
+.form-group{
+    label{
+padding-top:15px;
+    }
+}
+
+.subpro_bg {
+.bor_rtg{    border-right: 1px #f076158c solid;
+&:last-child{
+    border-right: 0px;
+}
+}
+}    
+#progressbar {
+        margin-bottom: 30px;
+        overflow: hidden;
+        counter-reset: step;
+        padding: 0;
+        li {
+            list-style-type: none;
+            text-transform: uppercase;
+            font-size: 12px !important;
+            width: 24%;
+            float: left;
+            position: relative;
+            letter-spacing: 1px;
+    
+            &:before {
+                content: counter(step);
+                counter-increment: step;
+                width: 24px;
+                height: 24px;
+                line-height: 26px;
+                display: block;
+                font-size: 12px;
+                border-radius: 5px;
+                margin: 0 auto 10px auto;
+                box-sizing: content-box;
+            }
+            
+            &:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                left: -50%;
+                top: 9px;
+                z-index: -1;
+            }
+            
+            &:first-child:after {
+                content: none;
+            }
+        }
+    }
+
+}
+
+    

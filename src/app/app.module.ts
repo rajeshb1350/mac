@@ -107,7 +107,13 @@ import { AboutComponent } from './components/blocks/about/about.component';
 import { ServicesAllComponent } from './components/blocks/services-all/services-all.component';
 import { CheckColorChangeDirective } from './directive/check-color-change.directive';
 import { CareersComponent } from 'src/app/components/blocks/careers/careers.component';
-
+import { AppDevelopmentComponent } from 'src/app/components/blocks/accordian/accordian2/app-development/app-development.component';
+import { BusinessReEngineeringComponent } from 'src/app/components/blocks/accordian/accordian2/business-re-engineering/business-re-engineering.component';
+import { EGovernenceComponent } from 'src/app/components/blocks/accordian/accordian2/e-governence/e-governence.component';
+import { FinanceAccountServiceComponent } from 'src/app/components/blocks/accordian/accordian2/finance-account-service/finance-account-service.component';
+import { SmartEmployeeServiceComponent } from 'src/app/components/blocks/accordian/accordian2/smart-employee-service/smart-employee-service.component';
+import { TechnologyConsultingServiceComponent } from 'src/app/components/blocks/accordian/accordian2/technology-consulting-service/technology-consulting-service.component';
+import { Login1Component } from './components/forms/login-form/login1/login1.component';
 
 @NgModule({
   declarations: [
@@ -191,6 +197,16 @@ import { CareersComponent } from 'src/app/components/blocks/careers/careers.comp
     AboutComponent,
     ServicesAllComponent,
     CheckColorChangeDirective,
+    AppDevelopmentComponent,
+    BusinessReEngineeringComponent,
+    EGovernenceComponent,
+    FinanceAccountServiceComponent,
+    SmartEmployeeServiceComponent,
+    TechnologyConsultingServiceComponent,
+    Login1Component
+    
+    
+
   ],
   imports: [
     BrowserModule,

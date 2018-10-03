@@ -1,5 +1,5 @@
 import { Injectable, OnInit } from "@angular/core";
-import { Http, Response } from "@angular/http";
+import { Http, Response, Headers } from "@angular/http";
 import { map } from "rxjs/operators";
 
 @Injectable() 
@@ -16,6 +16,8 @@ export class ApiService implements OnInit{
         //     error=>error
         // );
     }
+
+    
 
     ngOnInit(){}
 
@@ -39,11 +41,17 @@ export class ApiService implements OnInit{
     }
 
     postSubscriptionData(data){
-        return this.http.post("http://183.82.117.232:8085/lms-web/data/organization/registration", data);
+        return this.http.post("http://183.82.117.232:8088/riteerp/data/registration", data)
+        .pipe(map((response: Response)=> response.json()));
     }
 
     getSlotBookData(){
         return this.http.get("http://183.82.117.232:8085/lms-web/data/get/latest-trainings")
+        .pipe(map((response: Response)=> response.json()));
+    }
+
+    getModules(){
+        return this.http.get("http://183.82.117.232:8088/riteerp/data/getProducts")
         .pipe(map((response: Response)=> response.json()));
     }
 }
