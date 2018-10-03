@@ -1,123 +1,308 @@
-form.form-1{
-    width: 100%;
-    .group {
-        position: relative;
-        margin-bottom: 45px;
+// <div class="form-sp">
+// <form>
+//   <h1>Material Design formular</h1>
+//   <div class="form-group">
+//     <select>
+//       <option>Value 1</option>
+//       <option>Value 2</option>
+//     </select>
+//     <label for="select" class="control-label">Selectbox</label><i class="bar"></i>
+//   </div>
+//   <div class="form-group">
+//     <input type="text" required="required"/>
+//     <label for="input" class="control-label">Textfield</label><i class="bar"></i>
+//   </div>
+//   <div class="form-group">
+//     <textarea required="required"></textarea>
+//     <label for="textarea" class="control-label">Textarea</label><i class="bar"></i>
+//   </div>
+//   <div class="checkbox">
+//     <label>
+//       <input type="checkbox" checked="checked"/><i class="helper"></i>I'm the label from a checkbox
+//     </label>
+//   </div>
+//   <div class="checkbox">
+//     <label>
+//       <input type="checkbox"/><i class="helper"></i>I'm the label from a checkbox
+//     </label>
+//   </div>
+//   <div class="form-radio">
+//     <div class="radio">
+//       <label>
+//         <input type="radio" name="radio" checked="checked"/><i class="helper"></i>I'm the label from a radio button
+//       </label>
+//     </div>
+//     <div class="radio">
+//       <label>
+//         <input type="radio" name="radio"/><i class="helper"></i>I'm the label from a radio button
+//       </label>
+//     </div>
+//   </div>
+//   <div class="checkbox">
+//     <label>
+//       <input type="checkbox"/><i class="helper"></i>I'm the label from a checkbox
+//     </label>
+//   </div>
+// </form>
+// <div class="button-container">
+//   <button type="button" class="button"><span>Submit</span></button>
+// </div>
+// </div>
 
-        input {
-            font-size: 14px !important;
-            padding: 10px 10px 10px 5px;
-            display: block;
-            width: 100%;
-            border: none;
-            &:focus {
-                outline: none;
-            }
-            &:focus ~ label,
-            &:valid ~ label {
-                top: -10px;
-                font-size: 11px;
-            }
-            
-            &:focus ~ .bar
-            {
-                &:before, &:after {
-                    width: 50%;
-                }
-            }
-            &:focus ~ .highlight {
-                animation: inputHighlighter 0.3s ease;
-            }
-        }
-        
-        label {
-            font-size: 14px;
-            font-weight: normal;
-            position: absolute;
-            pointer-events: none;
-            left: 5px;
-            top: 10px;
-            transition: 0.2s ease all;
-        }
-
-        .bar {
-            position: relative;
-            display: block;
-            width: 100%;
-            &:before,
-            &:after {
-                content: '';
-                height: 2px;
-                width: 0;
-                bottom: 1px;
-                position: absolute;
-                transition: 0.2s ease all;
-            }
-            &:before {
-                left: 50%;
-            }
-            &:after {
-                right: 50%;
-            }
-        }
-
-        .highlight {
-            position: absolute;
-            height: 60%;
-            width: 100px;
-            top: 25%;
-            left: 0;
-            pointer-events: none;
-            opacity: 0.5;
-        }
+.form-sp {
+    position: relative;
+    margin: 5rem auto;
+    padding: 3rem 1rem;
+    border-radius: 1px;
+  
+    &::before {
+    content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scale(1);
+      transition: transform 0.28s ease-in-out;
+      z-index: -1;
     }
-}
-
-// <label class="switch">
-// <input type="checkbox" checked>
-// <span class="slider round"></span>
-// </label>
-.switches{
-    &.switch1 {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
-        
-        input {
-            display:none;
-            &:checked + .slider:before {
-                transform: translateX(26px);
-            }
-        }
-        
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-transition: .4s;
-            transition: .4s;
-
-                &:before {
-                position: absolute;
-                content: "";
-                height: 26px;
-                width: 26px;
-                left: 4px;
-                bottom: 4px;
-                -webkit-transition: .4s;
-                transition: .4s;
-            }
-
-            &.round {
-            border-radius: 34px;
-            &:before {
-                border-radius: 50%;
-            }
-            }
-        }
+  
+    .button-container {
+      text-align: center;
     }
-}
+    
+    fieldset {
+      margin: 0 0 3rem;
+      padding: 0;
+      border: none;
+    }
+    
+    .form-radio,
+    .form-group {
+        position: relative;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .form-inline > .form-group,
+    .form-inline > .btn {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    
+    .form-help {
+      margin-top: 0.125rem;
+      margin-left: 0.125rem;
+      font-size: 0.8rem;
+    }
+    .checkbox .form-help, .form-radio .form-help, .form-group .form-help {
+      position: absolute;
+      width: 100%;
+    }
+    .checkbox .form-help {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    .form-radio .form-help {
+      padding-top: 0.25rem;
+      margin-top: -1rem;
+    }
+    
+    .form-group {
+      input {
+        height: 1.9rem;
+      }
+      textarea {
+        resize: none;
+      }
+      select {
+        width: 100%;
+        font-size: 1rem;
+        height: 2rem;
+        padding: 0.125rem 0.125rem 0.0625rem;
+        background: none;
+        border: none;
+        line-height: 1.6;
+        box-shadow: none;
+      }
+      .control-label {
+        position: absolute;
+        top: 0.25rem;
+        pointer-events: none;
+        padding-left: 1.125rem;
+        z-index: 1;
+        font-size: 1rem;
+        font-weight: normal;
+        transition: all 0.28s ease;
+      }
+      .bar {
+        position: relative;
+        display: block;
+              border-bottom: 0.0625rem solid;
+      }
+      .bar::before {
+        content: '';
+        height: 0.125rem;
+        width: 0;
+        left: 50%;
+        bottom: -0.0625rem;
+        position: absolute;
+        transition: left 0.28s ease, width 0.28s ease;
+        z-index: 2;
+      }
+      input,
+      textarea {
+        display: block;
+        background: none;
+        padding: 0.125rem 0.125rem 0.0625rem;
+        font-size: 1rem;
+        border-width: 0;
+        border-color: transparent;
+        line-height: 1.9;
+        width: 100%;
+        color: transparent;
+        transition: all 0.28s ease;
+        box-shadow: none;
+      }
+      input[type="file"] {
+        line-height: 1;
+      }
+      input[type="file"] ~ .bar {
+        display: none;
+      }
+      select ~ .control-label,
+      input:focus ~ .control-label,
+      input:valid ~ .control-label,
+      input.form-file ~ .control-label,
+      input.has-value ~ .control-label,
+      textarea:focus ~ .control-label,
+      textarea:valid ~ .control-label,
+      textarea.form-file ~ .control-label,
+      textarea.has-value ~ .control-label {
+        font-size: 0.8rem;
+        top: -1rem;
+        left: 0;
+      }
+      select:focus,
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+      select:focus ~ .bar::before,
+      input:focus ~ .bar::before,
+      textarea:focus ~ .bar::before {
+        width: 100%;
+        left: 0;
+      }
+    }
+    
+    .checkbox label,
+    .form-radio label {
+      position: relative;
+      cursor: pointer;
+      padding-left: 2rem;
+      text-align: left;
+      display: block;
+    }
+    .checkbox input,
+    .form-radio input {
+      width: auto;
+      opacity: 0.00000001;
+      position: absolute;
+      left: 0;
+    }
+    
+    .radio {
+      margin-bottom: 1rem;
+      .helper {
+        position: absolute;
+        top: 0rem;
+        left: -0.25rem;
+        cursor: pointer;
+        display: block;
+        font-size: 1rem;
+        user-select: none;
+      }
+      .helper::before, .helper::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0.25rem;
+        width: 1rem;
+        height: 1rem;
+        transition: transform 0.28s ease;
+        border-radius: 50%;
+        border: 0.125rem solid currentColor;
+      }
+      .helper::after {
+        transform: scale(0);
+      }
+      input:checked ~ .helper::after {
+        transform: scale(0.5);
+      }
+    }
+    
+    .checkbox {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      .helper {
+        position: absolute;
+        top: calc( 50% - 10px );
+        left: 0;
+        width: 1rem;
+        height: 1rem;
+        z-index: 0;
+        border: 0.125rem solid currentColor;
+        border-radius: 0.0625rem;
+        transition: border-color 0.28s ease;
+      }
+      .helper::before, .helper::after {
+        position: absolute;
+        height: 0;
+        width: 0.2rem;
+        display: block;
+        transform-origin: left top;
+        border-radius: 0.25rem;
+        content: '';
+        transition: opacity 0.28s ease, height 0s linear 0.28s;
+        opacity: 0;
+      }
+      .helper::before {
+        top: 0.65rem;
+        left: 0.38rem;
+        transform: rotate(-135deg);
+      }
+      .helper::after {
+        top: 0.3rem;
+        left: 0;
+        transform: rotate(-45deg);
+      }
+      input:checked ~ .helper::after, input:checked ~ .helper::before {
+        opacity: 1;
+        transition: height 0.28s ease;
+      }
+      input:checked ~ .helper::after {
+        height: 0.5rem;
+      }
+      input:checked ~ .helper::before {
+        height: 1.2rem;
+        transition-delay: 0.28s;
+      }
+    }
+    
+    .radio + .radio,
+    .checkbox + .checkbox {
+      margin-top: 1rem;
+    }
+    .has-error .bar::before {
+      left: 0;
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px){
+    .form-sp {
+      padding: 3rem 5rem;
+    }
+  }

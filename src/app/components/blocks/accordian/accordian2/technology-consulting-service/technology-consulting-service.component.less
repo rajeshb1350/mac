@@ -1,0 +1,125 @@
+.parallax-banner {
+	background-image: url(../../../../../../assets/images/whyMactec/technologyAndAccounting.jpg);
+	width: 100%;
+	height: 300px;
+	background-attachment: inherit;
+	background-position: 100% 20%;
+	background-size: cover;
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: #00000073;
+	/* opacity: 0.5; */
+}
+.viewServices {
+	p {
+		font-size: 14px;
+	}
+	.checklist {
+		padding: 0;
+		margin: 0;
+		li {
+			list-style-type: none;
+			font-size: 14px;
+			margin-bottom: 14px;
+		}
+		li:before {
+			content: '\f00c';
+			font-family: FontAwesome;
+			color: #f07615;
+			font-size: 10px;
+			margin-right: 5px;
+			border: 1px solid;
+			border-radius: 50%;
+			padding: 2px;
+		}
+	}
+	.workList {
+		padding: 0;
+		list-style-type: none;
+		li {
+			float: left;
+			width: 48%;
+			margin: 1%;
+			text-align: center;
+			background: #f1f1f1;
+			padding: 30px 0px 0px 0;
+			height: 150px;
+		}
+	}
+	.serviceInfo {
+		//   border-bottom: 1px solid #f07615;
+		padding: 20px 0;
+		/*  box-shadow: 0px 2px #ddd; */
+		& :last-child {
+			border-bottom: 0px;
+		}
+	}
+	h5 {
+		color: #212529;
+		font-size: 20px;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+}
+.modal.show .modal-dialog {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+	margin-top: 8%;
+}
+.modal-body {
+	position: relative;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	padding: 1rem;
+	min-height: 200px;
+	overflow-y: auto;
+	height: 350px;
+}
+
+
+.slide-content {
+	color: #fff;
+	text-align: center;
+	width: 315px;
+	margin: 0 auto;
+	padding: 35% 0;
+  
+  }
+  
+  
+  @media only screen and (min-width:768px){
+	.slide-content {
+		color: #fff;
+		text-align: center;
+		width: 420px;
+		margin: 0 auto;
+		padding: 15% 0;
+	
+	}
+	}
+  @media only screen and (min-width:1024px){
+	.parallax-banner {
+		background-image: url(../../../../../../assets/images/whyMactec/technologyAndAccounting.jpg);
+		width: 100%;
+		height: 500px;
+		background-attachment: inherit;
+		background-position: 100% 20%;
+		background-size: cover;
+	}
+	.slide-content {
+	  text-align: center;
+	  color: #fff;
+	  text-align: center;
+	  width: 70%;
+	  margin: 0 auto;
+	  padding: 16% 0;
+  
+  }
+  
+  
+  .h2, h2 {
+  font-size: 4rem;
+  }
+  }  

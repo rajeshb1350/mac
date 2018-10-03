@@ -8,6 +8,8 @@
     img{
         transition: 0.3s all ease-in-out;
         width: 200px;
+        filter: brightness(7) contrast(4);
+        
     }
 }
 
@@ -21,18 +23,44 @@
         .logo-img{
           //  filter: brightness(1) grayscale(0) contrast(1);
             width: 160px;
+            filter: initial;
         }
     }
 }
+
+@media only screen and (min-width: 320px) {
+    .mainHeader{   
+        img{
+            width: 135px;
+            margin-top: 9px;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width: 375px) {
+    .mainHeader{   
+        img{
+            width: 155px; margin-top:7px;
+        }
+    }
+
+
+}
+
 @media only screen and (min-width: 1024px) {
     .mainHeader{    
         z-index: 99;
-        top: 20px;
-        transition: 0.3s all ease-in-out;
+        top: 0px;
+        transition: 0.2s all ease-in-out;
+        //background: #fff;
+        padding: 10px 0;
+border-radius: 35px 0px;
         img{
-            transition: 0.3s all ease-in-out;
+            transition: 0.2s all ease-in-out;
             width: 250px;
-            filter: brightness(99%);
+      
             // box-shadow: 0px 0px 10px #fff;
             // background: #ffffff7d;
             border-radius: 60px;
@@ -40,7 +68,7 @@
     }
     .sticky{
         .mainHeader{
-            top: 15px;
+            top: 6px;
             img{
                 width: 160px;
             }

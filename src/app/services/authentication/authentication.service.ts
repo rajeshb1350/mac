@@ -5,7 +5,8 @@ export class AuthenticationService{
         return this.loginStatus;
     }
 
-    doLogin(){
+    doLogin(data: any){
+        console.table(data);
         this.loginStatus = true;
     }
 

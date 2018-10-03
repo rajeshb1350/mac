@@ -29,58 +29,80 @@ import { ServiceResolverService } from "./services/resolver/serviceCheck-resolve
 import { AboutComponent } from "../app/components/blocks/about/about.component";
 import { ServicesAllComponent } from '../app/components/blocks/services-all/services-all.component';
 import { CareersComponent } from './components/blocks/careers/careers.component';
+import { AppDevelopmentComponent } from '../app/components/blocks/accordian/accordian2/app-development/app-development.component';
+import { BusinessReEngineeringComponent } from '../app/components/blocks/accordian/accordian2/business-re-engineering/business-re-engineering.component';
+import { EGovernenceComponent } from '../app/components/blocks/accordian/accordian2/e-governence/e-governence.component';
+import { FinanceAccountServiceComponent } from '../app/components/blocks/accordian/accordian2/finance-account-service/finance-account-service.component';
+import { SmartEmployeeServiceComponent } from '../app/components/blocks/accordian/accordian2/smart-employee-service/smart-employee-service.component';
+import { TechnologyConsultingServiceComponent } from '../app/components/blocks/accordian/accordian2/technology-consulting-service/technology-consulting-service.component';
+
 
 const appRoutes: Routes = [
     // { path: "", component: IndexComponent, resolve: {server: SlotbookResolverService} },
-    { 
+    {
         // path: "feature", 
-        path: "", 
-        component: FeaturesComponent, 
+        path: "",
+        component: FeaturesComponent,
         resolve: {
             server: SlotbookResolverService,
             serviceData: ServiceResolverService
-        } 
+        }
 
     },
-    { 
+    {
         path: "courses", children: [
-            { path: "", component: CoursesComponent },  
-            { path: "section", component: CoursesComponent }  
-        ] 
+            { path: "", component: CoursesComponent },
+            { path: "section", component: CoursesComponent }
+        ]
     },
     { path: "support", component: SupportpageComponent },
-    { path: "allProducts", component: ServicesAllComponent },
-    { path: "dashboard", 
-        canActivate:[GuardService], 
+    {
+        path: "allProducts", component: ServicesAllComponent,
+        resolve: {
+            serviceData: ServiceResolverService
+        }
+    },
+    {
+        path: "dashboard",
+        canActivate: [GuardService],
         component: DashboardComponent,
         children: [
             { path: "", component: HomeComponent },
-            { path: "setting", component: SettingComponent, children: [
-                { path: "", component: SpSetupStartComponent },
-                { path: "sp-setup-form", component: SpSetupFormComponent }
-            ] },
+            {
+                path: "setting", component: SettingComponent, children: [
+                    { path: "", component: SpSetupStartComponent },
+                    { path: "sp-setup-form", component: SpSetupFormComponent }
+                ]
+            },
             { path: "software", component: SoftwareComponent }
-        ] 
+        ]
     },
     { path: "study-programs", component: StudyProgramsComponent },
     { path: "apply", component: ApplyComponent },
+
     { path: "blogs", component: BlogsComponent },
-    { path: "services", component: AboutComponent },    
+    { path: "services", component: AboutComponent },
     { path: "careers", component: CareersComponent },
     { path: "aboutUs", component: AboutUsComponent },
     { path: "contact", component: ContactUsComponent },
+    { path: "appdevelopment", component: AppDevelopmentComponent },
+    { path: "business", component: BusinessReEngineeringComponent },
+    { path: "e-governence", component: EGovernenceComponent },
+    { path: "finance-accounts", component: FinanceAccountServiceComponent },
+    { path: "smartEmployee", component: SmartEmployeeServiceComponent },
+    { path: "technoconsult", component: TechnologyConsultingServiceComponent },
     { path: "study-programs/card1", component: StudyProgramDetailsComponent },
     { path: "suscribe", component: SubscriptionComponent },
     { path: "verifydash", component: EmailverificationComponent },
     { path: "pagenotfound", component: PagenotfoundComponent },
     { path: "**", redirectTo: "/pagenotfound" }
 ];
-  
+
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes, {useHash: true})
+        RouterModule.forRoot(appRoutes, { useHash: true })
     ],
-    exports: [ RouterModule ]
+    exports: [RouterModule]
 })
-export class AppRoutingModule{
+export class AppRoutingModule {
 }

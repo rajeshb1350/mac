@@ -1,6 +1,7 @@
 import { Component, OnInit, DoCheck} from '@angular/core';
+import * as $ from 'jquery';
 import { AuthenticationService } from '../../../services/authentication/authentication.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-topbar',
   templateUrl: './topbar.component.html',
@@ -13,7 +14,8 @@ export class TopbarComponent implements OnInit, DoCheck {
   days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   
   constructor(
-    private authService: AuthenticationService
+    private authService: AuthenticationService,
+    private router: Router
   ) { }
   
   ngOnInit() {
@@ -38,14 +40,33 @@ export class TopbarComponent implements OnInit, DoCheck {
     ,1000);
   }
 
+  consecMethod() {
+    return new Promise((resolve, reject) => {
+      this.router.navigate(["/"]);
+      resolve();
+    });
+  }
+
+  consecMethod1() {
+    return new Promise((resolve, reject) => {
+      this.router.navigate(["/services"]);
+      resolve();
+    });
+  }
+
+  startTrialBtn() {
+    this.consecMethod().then(
+      () => {
+        setTimeout(() => {
+          $('html,body').animate({ scrollTop: $("#section-9").offset().top }, 'slow');
+        }, 200);
+      }
+    );
+  }
+
+
   ngDoCheck() {
     this.loginStatus = this.authService.getLoginStatus();
-  }
-  
-  login(){
-    this.authService.doLogin();
-    this.loginStatus = this.authService.getLoginStatus();
-    console.log(this.loginStatus);
   }
   
   logout(){
