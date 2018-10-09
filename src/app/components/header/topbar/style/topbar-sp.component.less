@@ -1,163 +1,50 @@
-.topbar-sp{
-    float: right;
-    margin: 10px 0px 10px;
-    width: 100%;
-    ul.links {
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin-bottom:0px;
-        li{
-            display: flex;
-            align-items: center;
-            list-style-type: none;
-            a.link{
-                margin-right: 15px;
-                font-size: 13px;
-            }
-            // &:not(:last-child)::after{
-            //     content: "|";
-            //     font-size: 10px;
-            //     margin: 0px 7px;
-            // }
-        }
-
-    }
+.container {
+	position: relative;
 }
-.sticky{
-    .topbar-sp{
-        display: none;
+
+.topbar-sp {
+    position: absolute;
+    right: 4.5rem;
+    top: 1.2rem;
+	z-index: 100;
+	ul.links {
+		display: flex;
+		justify-content: flex-end;
+		padding: 0;
+		li {
+			display: flex;
+			align-items: center;
+			list-style-type: none;
+			a.link {
+				margin-right: 0.7rem;
+				font-size: 0.7rem;
+			}
+			&.sbusarw {
+				display: none;
+			}
+		}
     }
 }
 
-.button.button-s {
+
+.button {
     font-size: 0.7rem;
     font-weight: bold;
-    padding: 3px 7px;
-    border-radius: 5px;
-}
-.topbar-sp:after{
-    content:"";
-    border: 1px #fff solid;
-    display: block;
-    width: 11rem;
-    float: right;
-    margin-top: 5px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
 }
 
-
-.sbusarw{
-    margin-right: 20px;     
+.sticky {
+	.topbar-sp {
+		display: none;
+	}
 }
 
-.sbusarw a {
-    position: relative;
-    color: #fff;
-    text-decoration: none;
- //   background-color: #f07615;
-    border: 1px solid #f07615; padding: 0 5px;
-}
-.sbusarw a:after, .sbusarw a:before {
-    position: absolute;
-    top: -2px;
-    width: 0;
-    height: 0;
-    content: '';
-    border-top: 14px solid transparent;
-    border-bottom: 14px solid transparent;
-}
-.sbusarw a:before {
-    right: -10px;
-    z-index: 3;
-    border-left-color: #f07615;
-    border-left-style: solid;
-    border-left-width: 11px;
-}
-.sbusarw a:after {
-    right: -11px;
-    z-index: 2;
-    border-left: 11px solid #f07615;
-}
-
-
-.login-container{
-    position: relative;
-    a{
-        cursor: pointer;
-    }
-    a .login-box{
-        position: absolute;
-        visibility: hidden;
-        color: #444;
-        opacity: 0;
-        right: -10px;
-        top: 33px;
-        width: 350px;
-        transition: 0.1s all ease-in;
-        transition-delay: 0.2s;
-        z-index: 99999;
-        right:5px;
-        &:before{
-            content: "";
-            border: 12px solid;
-            border-color: transparent transparent white transparent;
-            width: 25px;
-            height: 25px;
-            display: block;
-            position: absolute;
-            top: -20px;
-            right: 130px;
-            z-index: 99999;
-        }
-    }
-    a:hover .login-box{
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-
-@media only screen and ( max-width: 320px ){
-    .topbar-sp {
-        float: right;
-        margin: 17px 0px 10px;
-    }
-    .topbar-sp ul.links {
-        /* display: flex; */
-        justify-content: center;
-        padding: 0;
-        margin-bottom: 0px;
-        float: right;
-        display: block;
-    }
-    .topbar-sp ul.links li {
-        /* align-items: center; */
-        list-style-type: none;
-        display: block;
-        /* width: 15%; */
-        float: inherit;
-        clear: both;
-        margin-right: 45px;
-    }
-    .topbar-sp ul.links li a.link {
-        /* margin-right: 15px; */
-        font-size: 13px;
-        display: block;
-        /* width: 63%; */
-        margin-bottom: 1px;
-        margin-top: -15px;
-        text-align: center;
-    }
-
-    }
-
-    @media only screen and ( max-width: 375px ){
-        .topbar-sp {
-            float: right;
-            margin: 19px 0px 10px;
-            width: 55%  !important;
-        }
-        .login-container a .login-box {
+.login-container {
+	position: relative;
+	a {
+		cursor: pointer;
+        .login-box {
             position: absolute;
             visibility: hidden;
             color: #444;
@@ -168,69 +55,49 @@
             transition: 0.1s all ease-in;
             transition-delay: 0.2s;
             z-index: 99999;
-            right: -125px;
-        }
-     .links .sbusarw{
-display: none !important;
-      }  
-        }
-    
-    @media only screen and ( min-width: 425px ){
-    .topbar-sp {
-        margin: 19px 0px 10px;
-        width: 60% !important;
-    }
-    
-    .login-container a .login-box {
-        position: absolute;
-        visibility: hidden;
-        color: #444;
-        opacity: 0;
-        right: -10px;
-        top: 33px;
-        width: 350px;
-        transition: 0.1s all ease-in;
-        transition-delay: 0.2s;
-        z-index: 99999;
-        right: -110px;
-    }
-  
-
-    }
-
-    @media only screen and ( max-width: 768px ){
-        .topbar-sp{
-            margin: 20px 20px 0px;
-            width:30%;
-        }
-
-        .topbar-sp:after{
-            content:'';
-            border:0px;
-        }
-    }
-@media only screen and ( min-width: 1024px ){
-    .topbar-sp{
-        margin: 10px 20px 0px;
-        ul.links {
-            justify-content: flex-end;
-         
-            li{
-                &:not(:last-child)::after{
-                    margin: 0px 10px;
-                }
+            right: 5px;
+            &:before {
+                content: "";
+                border: 12px solid;
+                border-color: transparent transparent white transparent;
+                width: 25px;
+                height: 25px;
+                display: block;
+                position: absolute;
+                top: -20px;
+                right: 130px;
+                z-index: 99999;
             }
-    
         }
-    }
-
-
-
-
-    .sticky{
-        .topbar-sp{
-            display: none;
+        &:hover .login-box {
+            visibility: visible;
+            opacity: 1;
         }
-    }
+	}
 }
 
+
+@media only screen and ( min-width: 1024px) {
+	.sticky {
+		.topbar-sp {
+			display: none;
+		}
+	}
+	
+	.topbar-sp {
+	    right: 2.8rem;
+    	top: 0.6rem;
+		ul.links {
+			justify-content: flex-end;
+			li {
+				&:not(:last-child)::after {
+					margin: 0px 10px;
+				}
+			
+				&.sbusarw {
+					display: block;
+				}
+			}
+		}
+	}
+}

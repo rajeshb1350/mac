@@ -3,10 +3,7 @@ import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import * as $ from 'jquery';
 import { SubscriptionFrom, OrganizeInfo, UserAddress } from '../../../../services/model/subscriptionForm.model';
 import { ApiService } from '../../../../services/http/api.service';
-import { Response } from '@angular/http';
 import { ModuleService } from '../../../../services/model/module.service';
-import { Location } from '@angular/common';
-
 
 @Component({
   selector: 'app-subscription',
@@ -36,10 +33,6 @@ export class SubscriptionComponent implements OnInit {
 // {"status":"OK","message":"Success","response":{"id":12,"registrationId":"GP-210818100033","organizationName":"org","firstName":"Admin","lastName":"Admin","emailId":"admin@mail.com","mobile":1231231231,"type":"General"}}
 // ALREADY_REPORTED
 // {"status":"ALREADY_REPORTED","message":"Already Exist","response":"This email id is already registered.Please give another email"}
-
-
-
-
 
     onFormSubmit(){
         this.loader = true;
@@ -186,7 +179,8 @@ export class SubscriptionComponent implements OnInit {
                         opacity = 1 - now;
                         current_fs.css({'left': left});
                         previous_fs.css({'transform': 'scale('+scale+')',
-                        'opacity': opacity
+                        'opacity': opacity,
+                        'position': 'relative'
                         });
                     }, 
                     duration: 800, 
@@ -217,17 +211,34 @@ export class SubscriptionComponent implements OnInit {
                     }
                 })
             });
+
+            (function(){
+                const $tabs = $(".subpro_bg .nav-tabs");
+                const $tab = $(".subpro_bg .nav-tabs .nav-item");
+                var step = 0;
+                const $ctr = $(".controls"); 
+                const $ctrl = $(".controls.left"); 
+                const $ctrr = $(".controls.right");
+                const totalSlides = Math.floor($tabs.width()/$tab.width());
+
+                $ctrl.on("click", function(){
+                    $tabs.children(".nav-item").animate({left: checkConditions(false)+'%'}, 400)
+                });
+                $ctrr.on("click", function(){
+                    $tabs.children(".nav-item").animate({left: checkConditions(true)+'%'}, 400)
+                });
+                (totalSlides==0)?$ctr.addClass("d-none"):$ctr.addClass("d-none");
+                function checkConditions(stepdir){
+                    if(stepdir==false){
+                        if(step <= 0) return 0;
+                        else return 100;
+                    }
+                    else 
+                        return -100;
+                }
+            })();
         });
-        
     }
-
-
-
-
-
-
-
-
 
     onfree(){
         let elements = document.querySelectorAll(".serpro");
@@ -240,22 +251,17 @@ export class SubscriptionComponent implements OnInit {
     }
        
     onsubmit(){
-        var fram = setInterval(frames, 5);
+        var frame = setInterval(frames, 5);
         let subscrp = document.querySelector("#msform");
         let pronone = document.querySelector("#section-9");
         pronone.classList.add("dispnone");
         subscrp.classList.add("dispblk");
-       
 
         window.scrollBy({
             top: 0, 
             left: 0, 
             behavior: 'smooth' 
         });
-     //   window.location.reload(true);
     }
-
-
-
 
 }

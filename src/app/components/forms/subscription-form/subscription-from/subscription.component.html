@@ -1,12 +1,9 @@
 <!-- MultiStep Form -->
 <div id="section-9" class="container clr-white">
-
 	<!-- <h3 class="text-center">List of Products we provide</h3> -->
 	<!-- <p class="text-center ">Select one or more products with nominal charges and flexi pay.</p> -->
 	<!-- <label> Select All : <input type="checkbox" name="check"  data-toggle="toggle" /> </label>
-		  <br/> -->
-
-
+			<br/> -->
 </div>
 <div class="clear"></div>
 <div class="flex-container flex-jc-c row">
@@ -19,64 +16,75 @@
 				<li>Organization Details</li>
 				<li>Done</li>
 			</ul>
-
 			<!-- fieldsets -->
 			<fieldset formGroupName="proData">
 				<div class="subpro_bg">
-					<div class="row">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs">
+						<li class="nav-item" *ngFor="let mod of services; let i = index">
+							<a class="nav-link" [ngClass]="i==0?'active':''" data-toggle="tab" href="#{{i}}">
+								<i aria-hidden="true" class="fa fa fa-money fa-fw"></i>
+								{{mod.productCategory}}
+							</a>
+						</li>
+					</ul>
+					<li class="controls left">
+						<span><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+					</li>
+					<li class="controls right">
+						<span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+					</li>
 
-									
-						
-
-					 <div class="col-md-3 bor_rtg" *ngFor="let mod of services">
-							<div>
-								<h2 class="done panel-title" aria-hidden="true">{{mod.productCategory}}</h2>
-								<div>
-									<ul class="listrap" class="brdbttm">
-										<li *ngFor="let modsub of mod.productDetails">
-											<div class="listrap-toggle iconica">
-												<span>
-													<div class="glyph">
-														<i aria-hidden="true" class="fa {{modsub.icon}}"></i>
-														<!-- <svg class="icon">
-															<use attr.xlink:href="#{{modsub.icon}}"></use>
-														</svg>  -->
-																										</div>
-												</span>
-											</div>
-											<div class="prod-style">
-												<div class="prdname">
-													<label>
-														<span class="clr_bgfor">{{modsub.productName}}
-<br>
-																<span class="sub-ttl"><i class="fa fa-inr" aria-hidden="true"></i> {{modsub.price }}</span>	
-														</span>
-														<span class="pull-right clr_bglast">
-
-															<div class="checkbox checkbox-warning checkbox-circle">
-																<input id="{{modsub.productId}}" class="productCheckbox" type="checkbox" value='{{modsub.productId}}'>
-																<label for="{{modsub.productId}}"></label>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane" [ngClass]="i==0?'active':'fade'"  id="{{i}}" *ngFor="let mod of services; let i = index" >
+							
+							<div class="row">
+								<div class="col-md-12 bor_rtg">
+									<div>
+										<h2 class="done panel-title" aria-hidden="true">{{mod.productCategory}}</h2>
+										<div>
+											<ul class="brdbttm">
+												<li *ngFor="let modsub of mod.productDetails" class="checkbox">
+													<input id="{{modsub.productId}}" class="productCheckbox" type="checkbox" value='{{modsub.productId}}'>
+													<label for="{{modsub.productId}}">
+														<div class="listrap-toggle iconica">
+															<span>
+																<div class="glyph">
+																	<i aria-hidden="true" class="fa {{modsub.icon}}"></i>
+																	<!-- <svg class="icon">
+																		<use attr.xlink:href="#{{modsub.icon}}"></use>
+																		</svg>  -->
+																</div>
+															</span>
+														</div>
+														<div class="prod-style">
+															<div class="prdname">
+																{{modsub.productName}}
+																<br>
+																<span class="sub-ttl"><i class="fa fa-inr" aria-hidden="true"></i> {{modsub.price }}</span>
 															</div>
-														</span>
+														</div>
 													</label>
-													
-												</div>
-											</div>
-										</li>
-									</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div> 
+							
+						</div>
 					</div>
+
+
+
 				</div>
 				<div class="space-10"></div>
-				<input type="button" name="next" class="next action-button"  value="Next" />
+				<input type="button" name="next" class="next action-button" value="Next" />
 				<!-- <a routerLink="allProducts"  class="button button-s"  id="prosearchall" title="submit">View All</a> -->
 				<!-- <a  class="button button-s mar_l5" (click)="onfree()" id="prosearch" title="submit">Start Trail</a> -->
 				<!-- <a  class="button button-s mar_l5 serpro" (click)="onsubmit()"  id="prosubmit" title="submit">Next</a> -->
 			</fieldset>
-
-
 			<fieldset formGroupName="userData">
 				<div class="space-20"></div>
 				<h2 class="fs-title">Your Information</h2>
@@ -85,43 +93,46 @@
 					<div class="row">
 						<label class="col-md-2 control-label" for="name">Contact Name</label>
 						<div class="col-md-9">
-							<input type="text" class="frm-cntrl" tabindex = "1" formControlName="name" placeholder="Enter Contact Name" />
-							<p *ngIf="subscriptionFrom.get('userData.name').invalid && subscriptionFrom.get('userData.name').touched" class="warn-text">Enter a valid name eg. JohnDoe</p>
+							<input type="text" class="frm-cntrl" tabindex="1" formControlName="name" placeholder="Enter Contact Name" />
+							<p *ngIf="subscriptionFrom.get('userData.name').invalid && subscriptionFrom.get('userData.name').touched" class="warn-text">Enter
+								a valid name eg. JohnDoe</p>
 						</div>
 					</div>
 					<div class="row">
 						<label class="col-md-2 control-label" for="name">Email ID</label>
 						<div class="col-md-9">
 							<input type="email" class="frm-cntrl" formControlName="email" placeholder=" Enter Email id" />
-							<p *ngIf="subscriptionFrom.get('userData.email').invalid && subscriptionFrom.get('userData.email').touched" class="warn-text">Enter a valid email eg. johndoe@example.com</p>
+							<p *ngIf="subscriptionFrom.get('userData.email').invalid && subscriptionFrom.get('userData.email').touched" class="warn-text">Enter
+								a valid email eg. johndoe@example.com</p>
 						</div>
 					</div>
 					<div class="row">
 						<label class="col-md-2 control-label" for="name">Mobile No.</label>
 						<div class="col-md-9">
 							<input type="tel" class="frm-cntrl" formControlName="mobile" placeholder=" Enter Mobile no." />
-							<p *ngIf="subscriptionFrom.get('userData.mobile').invalid && subscriptionFrom.get('userData.mobile').touched" class="warn-text">Enter a valid mobile number eg. 9000090000</p>
+							<p *ngIf="subscriptionFrom.get('userData.mobile').invalid && subscriptionFrom.get('userData.mobile').touched" class="warn-text">Enter
+								a valid mobile number eg. 9000090000</p>
 						</div>
 					</div>
 				</div>
+				<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
 				<input type="button" name="next" class="next action-button" [ngClass]="subscriptionFrom.get('userData').invalid?'disabled':''"
 				 value="Next" [disabled]="subscriptionFrom.get('userData').invalid" />
 			</fieldset>
-
 			<fieldset formGroupName="orgData">
 				<div class="space240"></div>
 				<h2 class="fs-title">Organization Details</h2>
 				<div class="space240"></div>
 				<div class="form-group">
-
 					<div class="row">
 						<label class="col-md-2 control-label" for="name">Organization Name</label>
 						<div class="col-md-9">
 							<input type="text" class="frm-cntrl" formControlName="orgname" placeholder=" Enter Organization Name" />
-							<p *ngIf="subscriptionFrom.get('orgData.orgname').invalid && subscriptionFrom.get('orgData.orgname').touched" class="warn-text">Enter a valid Organization number eg. Johndoe Inc.</p>
+							<p *ngIf="subscriptionFrom.get('orgData.orgname').invalid && subscriptionFrom.get('orgData.orgname').touched" class="warn-text">Enter
+								a valid Organization number eg. Johndoe Inc.</p>
 							<!-- <a data-toggle="tooltip" class="qmark" title="Users inclusive students, trainers and employers">
-											<i class="fa fa-info-circle" aria-hidden="true"></i>
-										</a> -->
+								<i class="fa fa-info-circle" aria-hidden="true"></i>
+								</a> -->
 						</div>
 					</div>
 					<div class="row">
@@ -129,45 +140,47 @@
 						<div class="col-md-9">
 							<input type="number" class="frm-cntrl" formControlName="usersNo" min="1" max="1000" placeholder=" Enter Number of Users"
 							/>
-							<p *ngIf="subscriptionFrom.get('orgData.usersNo').invalid && subscriptionFrom.get('orgData.usersNo').touched" class="warn-text">Enter a valid users value eg. 200</p>
+							<p *ngIf="subscriptionFrom.get('orgData.usersNo').invalid && subscriptionFrom.get('orgData.usersNo').touched" class="warn-text">Enter
+								a valid users value eg. 200</p>
 						</div>
 					</div>
 					<div class="row">
 						<label class="col-md-2 control-label" for="name">GST Number</label>
 						<div class="col-md-9">
-							<input type="text" class="frm-cntrl" formControlName="gstin" min="1" max="1000" placeholder="Enter you GST number" /> </div>
+							<input type="text" class="frm-cntrl" formControlName="gstin" min="1" max="1000" placeholder="Enter you GST number" />
+						</div>
 					</div>
-
 				</div>
 				<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
 				<input type="submit" name="submit" class="next action-button" value="submit" [ngClass]="subscriptionFrom.get('orgData').invalid?'disabled':''"
 				 [disabled]="subscriptionFrom.get('orgData').invalid" />
 			</fieldset>
-
 			<fieldset>
-				<div class="loader-container" *ngIf="loader">
+				<div class="loader-container padding-50" *ngIf="loader">
 					<div class="loader">
 						<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
 						<span>Please wait...</span>
 					</div>
 				</div>
-				<div class="status" *ngIf="!loader">
+				<div class="status padding-50" *ngIf="!loader">
 					<div *ngIf="status==true; else undone" class="done">
-						<!-- <i class="fa fa-check" aria-hidden="true"></i> -->
-						<img *ngIf="responseStatus.status=='Success'" src="/assets/images/icons/tickicon.png" alt="Info-icons" class="img-fluid">
-						<h4 *ngIf="responseStatus.status=='Success'">Success</h4>
-						<h6 *ngIf="responseStatus.status=='Success'">We have sent an email to {{responseStatus.response.email}}. Please validate your email to get access.</h6>
-						<!-- <i class="fa fa-check" aria-hidden="true"></i> -->
-						<img *ngIf="responseStatus.status=='ALREADY_REPORTED'" src="/assets/images/icons/crossicon.png" alt="Info-icons" class="img-fluid">
-						<h4 *ngIf="responseStatus.status=='ALREADY_REPORTED'">Already Exist</h4>
-						<h6 *ngIf="responseStatus.status=='ALREADY_REPORTED'">{{responseStatus.response}}</h6>
+						<ng-template [ngIf]="responseStatus.status=='Success'">
+							<img src="/assets/images/icons/tickicon.png" alt="Info-icons" class="img-fluid">
+							<h4>Success</h4>
+							<h6>We have sent an email to {{responseStatus.response.email}}. Please validate
+							your email to get access.</h6>
+						</ng-template>
+						<ng-template [ngIf]="responseStatus.status=='ALREADY_REPORTED'">
+							<img src="/assets/images/icons/crossicon.png" alt="Info-icons" class="img-fluid">
+							<h4>{{responseStatus.message}}</h4>
+							<h6>{{responseStatus.response}}</h6>
+						</ng-template>
 					</div>
-					 <ng-template class="undone" #undone>
-						 <!-- <i class="fa fa-check" aria-hidden="true"></i>  -->
-						<img src="/assets/images/icons/crossicon.png" alt="Info-icons" class="img-fluid">
+					<ng-template class="undone" #undone>
+						<!-- <i class="fa fa-check" aria-hidden="true"></i>  -->
 						<h4>Oops! something went wrong</h4>
 						<h6>Please refresh page and try again.</h6>
-					</ng-template> 
+					</ng-template>
 				</div>
 			</fieldset>
 		</form>

@@ -41,7 +41,7 @@ export class ApiService implements OnInit{
     }
 
     postSubscriptionData(data){
-        return this.http.post("http://183.82.117.232:8088/riteerp/data/registration", data)
+        return this.http.post("http://183.82.117.232:8088/SBuS/data/registration", data)
         .pipe(map((response: Response)=> response.json()));
     }
 
@@ -51,7 +51,7 @@ export class ApiService implements OnInit{
     }
 
     getModules(){
-        return this.http.get("http://183.82.117.232:8088/riteerp/data/getProducts")
+        return this.http.get("http://183.82.117.232:8088/SBuS/data/getProducts")
         .pipe(map((response: Response)=> response.json()));
     }
 }

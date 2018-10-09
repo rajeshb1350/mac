@@ -69,15 +69,40 @@ body, .body {
 	transition: 0.1s all linear; 
 }
 
+
 // Buttons
 .button{
-    background-color: var(--primary-background-color);
 	color: var(--quaternary-color) !important;
+	background-color: var(--primary-background-color);
 	&:hover{
-        background-color: var(--primary-background-color);
+		background-color: var(--primary-transparent-color);
 	}
 	&.disabled {
-		background-color: var(--primary-transparent-color);
+		background-color: var(--secondary-transparent-color);
+	}
+	&.primary{
+		background-color: var(--primary-background-color);
+		&:hover{
+			background-color: var(--primary-transparent-color);
+		}
+		&.disabled {
+			background-color: var(--primary-transparent-color);
+		}
+	}
+	&.secondary{
+		background-color: var(--quinary-background-color);
+		&:hover{
+			background-color: var(--quinary-transparent-color);
+		}
+		&.disabled {
+			background-color: var(--quinary-transparent-color);
+		}
+	}
+	&.inverse{	
+		background-color: transparent;
+		&:hover{
+			background-color: var(--primary-background-color);
+		}
 	}
 }
 

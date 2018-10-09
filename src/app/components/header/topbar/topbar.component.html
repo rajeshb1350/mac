@@ -1,30 +1,27 @@
 <div class="container">
-    <nav class="topbar topbar-sp">
-      <ul class="links">
-        <li *ngIf="loginStatus"><a class="link">{{currentTime}}</a></li>
-        <!-- <li *ngIf="!loginStatus"><a href="https://skillpassport.in/corporate-connect.html" target="_blank" class="link" aria-haspopup="false" title="employer-connect"> Employer Connect</a></li>
+  <nav class="topbar topbar-sp">
+    <ul class="links">
+      <li *ngIf="loginStatus"><a class="link">{{currentTime}}</a></li>
+      <!-- <li *ngIf="!loginStatus"><a href="https://skillpassport.in/corporate-connect.html" target="_blank" class="link" aria-haspopup="false" title="employer-connect"> Employer Connect</a></li>
         <li *ngIf="!loginStatus"><a href="https://skillpassport.in/become-trainer.html" target="_blank" class="link" aria-haspopup="false" title="trainer-connect"> Trainer Connect</a></li>
         <li *ngIf="!loginStatus"><a href="http://183.82.117.232:8085/lms-web/" target="_blank" class="link" aria-haspopup="false" title="login">Student Login</a></li> -->
       <!--   <li *ngIf="!loginStatus"><a href="http://183.82.117.232:8085/lms-web/admin-login" target="_blank" class="link" aria-haspopup="false" title="login">Organization Login</a></li> -->
-     <!--    <li *ngIf="!loginStatus"><a  (click)="login()" class="link">Dashboard Login</a></li> -->
-    
-     <li class="sbusarw">
-        <a >SBuS</a>  
+      <!--    <li *ngIf="!loginStatus"><a  (click)="login()" class="link">Dashboard Login</a></li> -->
+
+      <li *ngIf="!loginStatus" class="login-container">
+        <a class="link button inverse" href="http://183.82.117.232:8088/SBuS/college-login" target="_blank" >
+          SBuS Login
+          <!-- <div class="login-box">
+            <app-login1 class="login-form-box"></app-login1>
+          </div> -->
+        </a>
       </li>
-     <li *ngIf="!loginStatus" class="login-container">
-          <a class="link"> Login
-            <div class="login-box">
-                <app-login1 class="login-form-box"></app-login1>
-            </div>
-          </a>
-        </li> 
-      
-        <li>
-            <a id="scrollToSubscriptionform"  class=" button button-s" href="#"  (click)="startTrialBtn()">Start Trial</a>
-        </li>
-        <li *ngIf="loginStatus"><a [routerLink]="['/']" (click)="logout()" class="link"> Logout</a></li>
-      </ul>
-   
-    </nav>
- 
-  </div>
+      <li>
+        <a id="scrollToSubscriptionform" class="button button-s" href="#" (click)="startTrialBtn()">Start Trial</a>
+      </li>
+      <li *ngIf="loginStatus">
+        <a [routerLink]="['/']" (click)="logout()" class="link">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</div>
