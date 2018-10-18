@@ -12,97 +12,96 @@
                 <div class="contact-us-form">
                     <h3>Send A Message</h3>
                     <form [formGroup]="contactUsForm" (ngSubmit)="submitForm()" class="form-validation" autocomplete="off" novalidate="novalidate">
-                            <div class="row">
+                        <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
-                                    <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <input formControlName="name" id="userName" placeholder="Name" type="text">
-                                                <small *ngIf="name.invalid && (name.dirty || name.touched)">
-                                                    <div *ngIf="name.errors.required" class="warn-text">
-                                                        * Name cannot be empty.
-                                                    </div>
-                                                </small>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <input formControlName="name" id="userName" placeholder="Name" type="text">
+                                        <small *ngIf="name.invalid && (name.dirty || name.touched)">
+                                            <div *ngIf="name.errors.required" class="warn-text">
+                                                * Name cannot be empty.
                                             </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                
-                                                    <input formControlName="subject" placeholder="Designation" type="text">
-                                                    <small *ngIf="subject.invalid && (subject.dirty || subject.touched)">
-                                                        <div *ngIf="subject.errors.required" class="warn-text">
-                                                            * Designation cannot be empty.
-                                                        </div>
-                                                    </small>
-                                                </div>
-                                          
-                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                
-                                                <input formControlName="email" placeholder="Email (please enter your official email id)*" type="email">
-                                                <small *ngIf="email.invalid && (email.dirty || email.touched)">
-                                                    <div *ngIf="email.errors.required" class="warn-text">
-                                                        * Email cannot be empty.
-                                                    </div>
-                                                    <div *ngIf="email.errors.email" class="warn-text">
-                                                        * Email should be in xyz@sdf.abc
-                                                    </div>
-                                                </small>
+                                        </small>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                        <input formControlName="subject" placeholder="Designation" type="text">
+                                        <small *ngIf="subject.invalid && (subject.dirty || subject.touched)">
+                                            <div *ngIf="subject.errors.required" class="warn-text">
+                                                * Designation cannot be empty.
                                             </div>
-                
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                
-                                                    <input formControlName="subject" placeholder="Contact number" type="text">
-                                                    <small *ngIf="subject.invalid && (subject.dirty || subject.touched)">
-                                                        <div *ngIf="subject.errors.required" class="warn-text">
-                                                            * Contact number cannot be empty.
-                                                        </div>
-                                                    </small>
-                                                </div>
-                                          
-                                           
-                                        </div>
+                                        </small>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                        <input formControlName="email" placeholder="Email (please enter your official email id)*" type="email">
+                                        <small *ngIf="email.invalid && (email.dirty || email.touched)">
+                                            <div *ngIf="email.errors.required" class="warn-text">
+                                                * Email cannot be empty.
+                                            </div>
+                                            <div *ngIf="email.errors.email" class="warn-text">
+                                                * Email should be in xyz@sdf.abc
+                                            </div>
+                                        </small>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                        <input formControlName="subject" placeholder="Contact number" type="text">
+                                        <small *ngIf="subject.invalid && (subject.dirty || subject.touched)">
+                                            <div *ngIf="subject.errors.required" class="warn-text">
+                                                * Contact number cannot be empty.
+                                            </div>
+                                        </small>
+                                    </div>
+
+
+                                </div>
 
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
-                                    <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <select class="form-control" formControlName="subject" >
-                <option>Size of business</option>
-                <option>100-500</option>
-                <option>500-1000</option>
-                <option>1000-5000</option>
-                <option>5000+</option>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <select class="form-control" formControlName="subject">
+                                            <option>Size of business</option>
+                                            <option>100-500</option>
+                                            <option>500-1000</option>
+                                            <option>1000-5000</option>
+                                            <option>5000+</option>
+                                        </select>
 
-                </select>
-                                             
-                                                    <small *ngIf="subject.invalid && (subject.dirty || subject.touched)">
-                                                        <div *ngIf="subject.errors.required" class="warn-text">
-                                                            * Size of business cannot be empty.
-                                                        </div>
-                                                    </small>
-                                                  <br>
-                                                </div>
-                                               
-                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    
-                                                    <textarea formControlName="message" placeholder="Write Message"></textarea>
-                                                    <small *ngIf="message.invalid && (message.dirty || message.touched)">
-                                                        <div *ngIf="message.errors.required" class="warn-text">
-                                                            * Message cannot be empty.
-                                                        </div>
-                                                    </small>
-                                                </div>
+                                        <small *ngIf="subject.invalid && (subject.dirty || subject.touched)">
+                                            <div *ngIf="subject.errors.required" class="warn-text">
+                                                * Size of business cannot be empty.
+                                            </div>
+                                        </small>
+                                        <br>
+                                    </div>
 
-                                        </div>
-<div class="row">
-        <div class="col-md-6">
-                <button class="button button-s" title="Send">send message</button>
-            </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-</div>
+                                        <textarea formControlName="message" placeholder="Write Message"></textarea>
+                                        <small *ngIf="message.invalid && (message.dirty || message.touched)">
+                                            <div *ngIf="message.errors.required" class="warn-text">
+                                                * Message cannot be empty.
+                                            </div>
+                                        </small>
+                                    </div>
 
-                                        </div>
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="button button-s" title="Send">send message</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <!-- /.contact-us-form -->
@@ -168,60 +167,86 @@
 
 
 
-<div class="col-md-12">
-<img src="/assets/images/banner/map.jpg" class="img-fluid">
-        
+            <div class="col-md-12">
+                <img src="/assets/images/banner/map.jpg" class="img-fluid">
 
 
-<div class="row">
-<div class="col-md-3">
-        <b>INDIA OFFICE :</b> <br />
-        <i class="fa fa-home" aria-hidden="true"></i> 2nd Floor and 5th Floor,<br />
-        1-98/K/15,  Krithika Layout,
-        Madhapur, Hyderabad,<br />
-          Telangana 500081<br />
-          <i class="fa fa-phone-square" aria-hidden="true"></i> +91 40 6514 2434<br />
-          <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@mactecit.com"> info@mactecit.com</a><br />
-        <br /><br />
 
-        <i class="fa fa-home" aria-hidden="true"></i>  1st Floor, No. 110 Luxury Village,<br />
-        Mangalagiri Road, Vijayawada, AP<br />
-        <i class="fa fa-phone-square" aria-hidden="true"></i> + 91 798-942-3589<br />
-        <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@mactecit.com"> info@mactecit.com</a><br />
-       <br /><br />
+                <div class="row">
+                    <div class="col-md-3">
+                        <b>INDIA OFFICE :</b>
+                        <br />
+                        <i class="fa fa-home" aria-hidden="true"></i> 2nd Floor and 5th Floor,
+                        <br /> 1-98/K/15, Krithika Layout, Madhapur, Hyderabad,
+                        <br /> Telangana 500081
+                        <br />
+                        <i class="fa fa-phone-square" aria-hidden="true"></i> +91 40 6514 2434
+                        <br />
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:info@mactecit.com"> info@mactecit.com</a>
+                        <br />
+                        <br />
+                        <br />
 
-    </div>  
-    <div class="col-md-3">
-        <b>US OFFICE :</b><br />
-        <i class="fa fa-home" aria-hidden="true"></i> 74 Dublin Road. Skillman <br/>
-        New Jersey – 08558 USA<br/>
-        <i class="fa fa-phone-square" aria-hidden="true"></i> +1 703-665-4255<br/>
-        <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@mactecit.com"> info@mactecit.com</a><br />
-        <br /><br />
-    
-      </div>
+                        <i class="fa fa-home" aria-hidden="true"></i> 1st Floor, No. 110 Luxury Village,
+                        <br /> Mangalagiri Road, Vijayawada, AP
+                        <br />
+                        <i class="fa fa-phone-square" aria-hidden="true"></i> + 91 798-942-3589
+                        <br />
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:info@mactecit.com"> info@mactecit.com</a>
+                        <br />
+                        <br />
+                        <br />
 
-      <div class="col-md-3">
-            <b>AUSTRALIA OFFICE :</b><br />
-            <i class="fa fa-home" aria-hidden="true"></i>     74 Dublin Road. Skillman <br/>
-            New Jersey – 08558 USA<br/>
-            <i class="fa fa-phone-square" aria-hidden="true"></i> +1 703-665-4255<br/>
-            <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@mactecit.com"> info@mactecit.com</a><br />
-            <br /><br />
-        
-          </div>
+                    </div>
+                    <div class="col-md-3">
+                        <b>US OFFICE :</b>
+                        <br />
+                        <i class="fa fa-home" aria-hidden="true"></i> 74 Dublin Road. Skillman
+                        <br/> New Jersey – 08558 USA
+                        <br/>
+                        <i class="fa fa-phone-square" aria-hidden="true"></i> +1 703-665-4255
+                        <br/>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:info@mactecit.com"> info@mactecit.com</a>
+                        <br />
+                        <br />
+                        <br />
 
-          <div class="col-md-3">
-                <b>AFRICA OFFICE :</b><br />
-                <i class="fa fa-home" aria-hidden="true"></i>     74 Dublin Road. Skillman <br/>
-                New Jersey – 08558 USA<br/>
-                <i class="fa fa-phone-square" aria-hidden="true"></i> +1 703-665-4255<br/>
-                <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@mactecit.com"> info@mactecit.com</a>
-              </div>         
+                    </div>
 
-    </div>
+                    <div class="col-md-3">
+                        <b>AUSTRALIA OFFICE :</b>
+                        <br />
+                        <i class="fa fa-home" aria-hidden="true"></i> 74 Dublin Road. Skillman
+                        <br/> New Jersey – 08558 USA
+                        <br/>
+                        <i class="fa fa-phone-square" aria-hidden="true"></i> +1 703-665-4255
+                        <br/>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:info@mactecit.com"> info@mactecit.com</a>
+                        <br />
+                        <br />
+                        <br />
 
-</div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <b>AFRICA OFFICE :</b>
+                        <br />
+                        <i class="fa fa-home" aria-hidden="true"></i> 74 Dublin Road. Skillman
+                        <br/> New Jersey – 08558 USA
+                        <br/>
+                        <i class="fa fa-phone-square" aria-hidden="true"></i> +1 703-665-4255
+                        <br/>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:info@mactecit.com"> info@mactecit.com</a>
+                    </div>
+
+                </div>
+
+            </div>
 
 
 

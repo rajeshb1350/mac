@@ -20,13 +20,38 @@
 		 text-align: center; 
 		}
 }
+.techno-img{
+	background: url(../../../../../../assets/images/services/techno/techno.png);
+	width: 100%; 
+	height: 100%;
+	background-position: 37% 100%;
+	background-size: cover;
+	min-height: 200px;
+}
+// .technology-img{
+// 	background: url(../../../../../../assets/images/services/techno/technolys.png);
+// 	width: 100%; 
+// 	height: 100%;
+// 	background-position: 37% 100%;
+// 	background-size: cover;
+// 	min-height: 200px;
+// }
+
 .modal-open .modal {
 	overflow-x: hidden;
 	overflow-y: auto;
 	background: #00000073;
 	/* opacity: 0.5; */
 }
-
+.col-count{
+	p{
+		column-count: 2;
+		column-gap: 2rem;
+	}
+}
+.mar_bbm{
+	margin-bottom: 4rem;
+}
 .mhalf {
 	margin-left: calc(50% + 1.5rem);
 }
@@ -39,6 +64,7 @@
 		li{
 			list-style: none; 
 			margin-bottom: 10px;
+			font-size: 0.906rem;
 			.fa-fw{
 margin-left: -10px;
 			}
@@ -66,8 +92,8 @@ margin-left: -10px;
 
 .how-section1 h4{
     color: #212529;
-    font-weight: bold;
-    font-size: 25px;
+  //  font-weight: bold;
+    font-size: 22px;
 }
 .how-section1 .subheading{
     color: #3931af;
@@ -162,24 +188,66 @@ height:100%; width:100%;
   
   }
   
-  
+  @media screen and (min-width:320px) and (max-width:425px) {
+
+	.mhalf {
+		margin-left: 0;
+	}
+	.mainHeader[_ngcontent-c5] {
+	
+		top: 2.5rem;
+	
+	}
+	.somclient{
+		ul{
+			display: flex;
+			flex-wrap: wrap;
+		li{
+		
+			flex:0 0 calc(50% - 0.5rem);
+
+		}
+		}
+	}
+	.col-count{
+		p{
+			column-count: 1;
+			column-gap: 2rem;
+		}
+	}	
+	.parallax-banner{
+		h2 {
+			font-size: 2rem;
+			}
+	} 
+}
   @media only screen and (min-width:768px){
 	.slide-content {
 		color: #fff;
 		text-align: center;
-		width: 420px;
+		width: 70%;
 		margin: 0 auto;
 	
 	}
+	.parallax-banner{
+		h2 {
+			font-size: 2rem;
+			}
+	} 
 	}
   @media only screen and (min-width:1024px){
 	.parallax-banner {
 		background-image: url(../../../../../../assets/images/whyMactec/technologyAndAccounting.jpg);
 		width: 100%;
-		height: 500px;
+		height: 400px;
 		background-attachment: inherit;
 		background-position: 100% 20%;
 		background-size: cover;
+		h2 {
+			font-size: 3rem;
+			position: relative;
+			top: -17px;
+			}
 	}
 	.slide-content {
 	  text-align: center;

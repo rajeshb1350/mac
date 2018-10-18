@@ -21,24 +21,27 @@
 				<div class="subpro_bg">
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs">
-						<li class="nav-item" *ngFor="let mod of services; let i = index">
-							<a class="nav-link" [ngClass]="i==0?'active':''" data-toggle="tab" href="#{{i}}">
-								<i aria-hidden="true" class="fa fa fa-money fa-fw"></i>
-								{{mod.productCategory}}
+						<li class="nav-item subitemr" *ngFor="let mod of services; let i = index">
+							<a class="nav-link flex-container flex-pc" [ngClass]="i==0?'active':''" data-toggle="tab" href="#{{mod.icon}}">
+								<img src="/assets/images/product/{{mod.icon}}.png" class="img-fluid" style=" width: 27px; margin-right: 5px;"> {{mod.productCategory}}
 							</a>
 						</li>
 					</ul>
 					<li class="controls left">
-						<span><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+						<span>
+							<i class="fa fa-angle-left" aria-hidden="true"></i>
+						</span>
 					</li>
 					<li class="controls right">
-						<span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+						<span>
+							<i class="fa fa-angle-right" aria-hidden="true"></i>
+						</span>
 					</li>
 
 					<!-- Tab panes -->
 					<div class="tab-content">
-						<div class="tab-pane" [ngClass]="i==0?'active':'fade'"  id="{{i}}" *ngFor="let mod of services; let i = index" >
-							
+						<div class="tab-pane" [ngClass]="i==0?'active':'fade'" id="{{mod.icon}}" *ngFor="let mod of services; let i = index">
+
 							<div class="row">
 								<div class="col-md-12 bor_rtg">
 									<div>
@@ -51,7 +54,8 @@
 														<div class="listrap-toggle iconica">
 															<span>
 																<div class="glyph">
-																	<i aria-hidden="true" class="fa {{modsub.icon}}"></i>
+																	<img src="./../../assets/images/product/{{modsub.icon}}.png" class="img-fluid">
+																	<!-- <i aria-hidden="true" class="fa {{modsub.icon}}"></i> -->
 																	<!-- <svg class="icon">
 																		<use attr.xlink:href="#{{modsub.icon}}"></use>
 																		</svg>  -->
@@ -62,7 +66,7 @@
 															<div class="prdname">
 																{{modsub.productName}}
 																<br>
-																<span class="sub-ttl"><i class="fa fa-inr" aria-hidden="true"></i> {{modsub.price }}</span>
+																<!-- <span class="sub-ttl"><i class="fa fa-inr" aria-hidden="true"></i> {{modsub.price }}</span> -->
 															</div>
 														</div>
 													</label>
@@ -72,7 +76,7 @@
 									</div>
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
 
@@ -91,27 +95,30 @@
 				<div class="space-20"></div>
 				<div class="form-group">
 					<div class="row">
-						<label class="col-md-2 control-label" for="name">Contact Name</label>
+						<label class="col-md-2 control-label" for="name">Contact Name
+							<span class="red">*</span>
+						</label>
 						<div class="col-md-9">
 							<input type="text" class="frm-cntrl" tabindex="1" formControlName="name" placeholder="Enter Contact Name" />
-							<p *ngIf="subscriptionFrom.get('userData.name').invalid && subscriptionFrom.get('userData.name').touched" class="warn-text">Enter
-								a valid name eg. JohnDoe</p>
+							<p *ngIf="subscriptionFrom.get('userData.name').invalid && subscriptionFrom.get('userData.name').touched" class="warn-text">Enter a valid name eg. JohnDoe</p>
 						</div>
 					</div>
 					<div class="row">
-						<label class="col-md-2 control-label" for="name">Email ID</label>
+						<label class="col-md-2 control-label" for="name">Email ID
+							<span class="red">*</span>
+						</label>
 						<div class="col-md-9">
 							<input type="email" class="frm-cntrl" formControlName="email" placeholder=" Enter Email id" />
-							<p *ngIf="subscriptionFrom.get('userData.email').invalid && subscriptionFrom.get('userData.email').touched" class="warn-text">Enter
-								a valid email eg. johndoe@example.com</p>
+							<p *ngIf="subscriptionFrom.get('userData.email').invalid && subscriptionFrom.get('userData.email').touched" class="warn-text">Enter a valid email eg. johndoe@example.com</p>
 						</div>
 					</div>
 					<div class="row">
-						<label class="col-md-2 control-label" for="name">Mobile No.</label>
+						<label class="col-md-2 control-label" for="name">Mobile No.
+							<span class="red">*</span>
+						</label>
 						<div class="col-md-9">
 							<input type="tel" class="frm-cntrl" formControlName="mobile" placeholder=" Enter Mobile no." />
-							<p *ngIf="subscriptionFrom.get('userData.mobile').invalid && subscriptionFrom.get('userData.mobile').touched" class="warn-text">Enter
-								a valid mobile number eg. 9000090000</p>
+							<p *ngIf="subscriptionFrom.get('userData.mobile').invalid && subscriptionFrom.get('userData.mobile').touched" class="warn-text">Enter a valid mobile number eg. 9000090000</p>
 						</div>
 					</div>
 				</div>
@@ -125,29 +132,68 @@
 				<div class="space240"></div>
 				<div class="form-group">
 					<div class="row">
-						<label class="col-md-2 control-label" for="name">Organization Name</label>
+						<label class="col-md-2 control-label" for="name">Organization Name
+							<span class="red">*</span>
+						</label>
 						<div class="col-md-9">
 							<input type="text" class="frm-cntrl" formControlName="orgname" placeholder=" Enter Organization Name" />
-							<p *ngIf="subscriptionFrom.get('orgData.orgname').invalid && subscriptionFrom.get('orgData.orgname').touched" class="warn-text">Enter
-								a valid Organization number eg. Johndoe Inc.</p>
+							<p *ngIf="subscriptionFrom.get('orgData.orgname').invalid && subscriptionFrom.get('orgData.orgname').touched" class="warn-text">Enter a valid Organization number eg. Johndoe Inc.</p>
 							<!-- <a data-toggle="tooltip" class="qmark" title="Users inclusive students, trainers and employers">
 								<i class="fa fa-info-circle" aria-hidden="true"></i>
 								</a> -->
 						</div>
 					</div>
 					<div class="row">
-						<label class="col-md-2 control-label" for="name">Number of Users</label>
+						<label class="col-md-2 control-label" for="name">Number of Users
+							<span class="red">*</span>
+						</label>
 						<div class="col-md-9">
 							<input type="number" class="frm-cntrl" formControlName="usersNo" min="1" max="1000" placeholder=" Enter Number of Users"
 							/>
-							<p *ngIf="subscriptionFrom.get('orgData.usersNo').invalid && subscriptionFrom.get('orgData.usersNo').touched" class="warn-text">Enter
-								a valid users value eg. 200</p>
+							<p *ngIf="subscriptionFrom.get('orgData.usersNo').invalid && subscriptionFrom.get('orgData.usersNo').touched" class="warn-text">Enter a valid users value eg. 200</p>
 						</div>
 					</div>
 					<div class="row">
-						<label class="col-md-2 control-label" for="name">GST Number</label>
+						<label class="col-md-2 control-label" for="name">GST Number
+							<span class="red">*</span>
+						</label>
 						<div class="col-md-9">
 							<input type="text" class="frm-cntrl" formControlName="gstin" min="1" max="1000" placeholder="Enter you GST number" />
+						</div>
+					</div>
+					<div class="row">
+						<label class="col-md-2 control-label" for="name">Organization Type
+							<span class="red">*</span>
+						</label>
+						<div class="col-md-9">
+							<div class="row">
+
+								<div class="col-md-2">
+									<div class="form-check">
+										<label class="flex-container flex-ai-c">
+											<input type="radio" name="radio" value="University" formControlName="organizationType">
+											<span class="label-text"> University</span>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-check">
+										<label class="flex-container flex-ai-c">
+											<input type="radio" name="radio" value="College" formControlName="organizationType">
+											<span class="label-text"> College</span>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-check">
+										<label class="flex-container flex-ai-c">
+											<input type="radio" name="radio" value="School" formControlName="organizationType">
+											<span class="label-text"> School</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -167,8 +213,7 @@
 						<ng-template [ngIf]="responseStatus.status=='Success'">
 							<img src="/assets/images/icons/tickicon.png" alt="Info-icons" class="img-fluid">
 							<h4>Success</h4>
-							<h6>We have sent an email to {{responseStatus.response.email}}. Please validate
-							your email to get access.</h6>
+							<h6>We have sent an email to {{responseStatus.response.email}}. Please validate your email to get access.</h6>
 						</ng-template>
 						<ng-template [ngIf]="responseStatus.status=='ALREADY_REPORTED'">
 							<img src="/assets/images/icons/crossicon.png" alt="Info-icons" class="img-fluid">

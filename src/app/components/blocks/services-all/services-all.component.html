@@ -4,11 +4,14 @@
     <div class="slide-content">
         <h2 class="slide-heading">OUR PRODUCTS</h2>
         <p>
+                Enterprise Tool and Transformation services
+        </p>
+        <!-- <p>
             SBUS
             <sup>&reg;</sup> ERP is a comprehensive EAS (Enterprise Application Software) that aims at encompassing varied
             functions in an ERP giving them complete control and flexibility to managing 360
             <sup>o</sup> functions and end-to-end operations.
-        </p>
+        </p> -->
     </div>
 
 </div>
@@ -32,7 +35,8 @@
                                                     <div class="col-md-6 col-lg-4" *ngFor="let modsub of mod.productDetails">
                                                         <div class="spacious">
                                                             <span class="bg_rng">
-                                                                <i class="fa {{modsub.icon}}" aria-hidden="true">&nbsp;</i>
+                                                                    <img  src="./../../assets/images/product/{{modsub.icon}}.png" class="img-fluid">
+                                                                <!-- <i class="fa {{modsub.icon}}" aria-hidden="true">&nbsp;</i> -->
                                                             </span>
                                                             <div class="list-cont">
                                                                 <h3>{{modsub.productName}}</h3>
@@ -59,7 +63,7 @@
 
 
 
-    <div id="demo" class="carousel slide" data-ride="carousel">
+    <div id="demo" class="carousel slide container" data-ride="carousel">
 
         <!-- Indicators -->
         <ul class="carousel-indicators mb-0 pb-0">
@@ -72,7 +76,7 @@
             <div class="carousel-item active">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <a href="https://skillpassport.in" target="_blank" onclick=abc(this) class="slider_info">
+                        <a  target="_blank" onclick=abc(this) class="slider_info">
                             <img class="img-fluid card-img-top" src="assets/images/banner/eazy.jpg">
                             <div class="card-img-overlay t_img">
                                 <div class="float-right text-uppercase eazy_len row">
@@ -93,18 +97,18 @@
             <div class="carousel-item ">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <a href="#" onclick=abc(this) class="slider_info">
+                        <a  onclick=abc(this) class="slider_info">
                             <img class="img-fluid card-img-top" src="assets/images/banner/skillbanner.jpg">
                             <div class="card-img-overlay t_img">
 
-                                <span class="float-right text-uppercase text_len"><span class="skillpassportDesc">Skill Passport®
+                                <div class="float-right text-uppercase text_len"><span class="skillpassportDesc">Skill Passport®
                                         is the gateway to a career that every student aspires for. It’s an intuitive digital
                                         platform that leverages result driven assessment and sustainable learning.</span>
 
                                     <br>
-                                    <a href="http://skillpassport.in" class="button button-s">Know More</a>
+                                    <a href="https://skillpassport.in" class="button button-s">Know More</a>
 
-                                </span>
+                                </div>
                             </div>
                         </a>
 

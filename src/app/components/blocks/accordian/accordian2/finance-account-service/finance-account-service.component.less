@@ -1,80 +1,239 @@
 .parallax-banner {
 	background-image: url(../../../../../../assets/images/whyMactec/financeAndAccounts.jpg);
-	width: 100%; 
+	width: 100%;
 	height: 400px;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	color: white;
 	display: flex;
-	justify-content: center; 
+	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	filter: grayscale(0.4);
-
-	h4{ text-shadow: 0px 0px 10px #444444; text-align: center; }
-	h2{ text-shadow: 0px 0px 10px #444444; font-size: 3rem;  
+	h4 {
+		text-shadow: 0px 0px 10px #444444;
+		text-align: center;
+	}
+	h2 {
+		text-shadow: 0px 0px 10px #444444;
+		font-size: 3rem;
 		text-transform: capitalize;
-		font-weight: bolder; 
-		 padding: 0 30px;
-		 text-align: center; 
-		}
+		font-weight: bolder;
+		padding: 0 30px;
+		text-align: center;
+	}
+}
+.just_adj{   flex: 0 0 4%;}
+.fa-img {
+	background: url(../../../../../../assets/images/services/finance/faacnt.jpg);
+	width: 100%;
+	height: 100%;
+	background-position: 3% 100%;
+	background-size: cover;
+	min-height: 200px;
+}
+
+.fawwd-img {
+	background: url(../../../../../../assets/images/services/finance/fawwd.jpg);
+	width: 100%;
+	height: 100%;
+	background-position: 3% 100%;
+	background-size: cover;
+	min-height: 200px;
+}
+
+// .aoa-img{
+// 	background: url(../../../../../../assets/images/services/finance/fao.jpg);
+// 	width: 100%; 
+// 	height: 100%;
+// 	background-position: 49% 100%;
+// 	background-size: cover;
+// 	min-height: 200px;
+// }
+.fpa-img {
+	background: url(../../../../../../assets/images/services/finance/budget.jpg);
+	width: 100%;
+	height: 100%;
+	background-position: 50% 100%;
+	background-size: cover;
+	min-height: 200px;
+}
+
+.offshore-img {
+	background: url(../../../../../../assets/images/services/finance/offshore.png);
+	width: 100%;
+	height: 100%;
+	background-position: 50% 100%;
+	background-size: cover;
+	min-height: 200px;
+}
+
+// .payroll-img{
+// 	background: url(../../../../../../assets/images/services/finance/payrolll.png);
+// 	width: 100%; 
+// 	height: 100%;
+// 	background-position: 50% 100%;
+// 	background-size: cover;
+// 	min-height: 200px;
+// }
+.payable-img {
+	background: url(../../../../../../assets/images/services/finance/payable.png);
+	width: 100%;
+	height: 100%;
+	background-position: 100% 10%;
+	background-size: cover;
+	min-height: 200px;
 }
 
 .mhalf {
-	margin-left: calc(50% + 1.5rem);
+	margin-left: calc(30% + 3rem);
 }
-.mhalf1 {
-  margin-left: calc(30% + 3rem);
-}
-.bg_services{
-	ul{
-		padding-left: 0px;
-		li{
-			list-style: none; 
-			margin-bottom: 10px;
-			.fa-fw{
-margin-left: -10px;
-			}
 
+.mhalf1 {
+	margin-left: calc(65% + 2rem);
 }
+
+.mhalf2 {
+	margin-left: calc(50% + 1rem);
+}
+
+.col-count {
+	p {
+		column-count: 2;
+		column-gap: 2rem;
 	}
 }
 
-
-.how-section1{
-.container{
-	margin-bottom:4rem;
-
-
-
+.bg_services {
+	ul {
+		padding-left: 0px;
+		margin-bottom: 0px;
+		li {
+			list-style: none;
+			margin-bottom: 10px;
+			font-size: 0.906rem;
+			.fa-fw {
+				margin-left: -10px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+		b {
+			display: block;
+		}
+	}
 }
+
+.mar_bbm {
+	margin-bottom: 4rem;
 }
 
-.how-section1 h4{
-    color: #212529;
-    font-weight: bold;
-    font-size: 25px;
+.border_stylng {
+	border-right: 1px #f07615 solid;
+	border-bottom: 1px #f07615 solid;
+	padding: 25px;
+	border-bottom-style: dashed;
+	border-right-style: dashed;
+	&:last-child {
+		border-right: 0px;
+	}
+	b,
+	strong {
+		font-weight: bolder;
+		display: block;
+		margin-bottom: 15px;
+	}
 }
-.how-section1 .subheading{
-    color: #3931af;
-    font-size: 20px;
+
+.bordbtm_stylng {
+	border-right: 1px #f07615 solid;
+	border-right-style: dashed;
+	padding: 25px;
+	&:last-child {
+		border-right: 0px;
+	}
+	b,
+	strong {
+		font-weight: bolder;
+		display: block;
+		margin-bottom: 15px;
+	}
 }
-.bg_services{
+
+.somclient {
+	padding: 0.8rem;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0;
+		li {
+			list-style: none;
+			margin-bottom: 10px;
+			flex: 0 0 calc(33.3% - 0.5rem);
+			border: 1px #ffe0c7 solid;
+			background: #fff;
+			margin: 0.25rem;
+			padding: 1.5rem 0.6rem;
+			list-style-type: none;
+			min-height: 106px;
+			color: #3a3a3a;
+			display: flex;
+			padding: 0.7rem;
+			flex-direction: column;
+			margin-bottom: 5px;
+			b {
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+.how-section1 {
+	.container {
+		margin-bottom: 4rem;
+	}
+}
+
+.how-section1 h4 {
+	color: #212529;
+	//  font-weight: bold;
+	font-size: 22px;
+}
+
+.how-section1 .subheading {
+	color: #3931af;
+	font-size: 20px;
+}
+
+.bg_services {
 	background: #f9f9f9;
-    padding: 1rem;
-}
-.how-img 
-{
-background:	linear-gradient(45deg,#848484,#dadada);  
-height:100%; width:100%;
-    text-align: center;
-}
-.how-img img{
-    width: 100%;
+	padding: 1rem;
 }
 
+.bg_servicescap {
+	background: #f9f9f9;
+	padding: 0 1rem;
+	border: 1px #f07615 solid;
+	border-style: dashed;
+}
 
+.how-img {
+	background: linear-gradient(45deg, #848484, #dadada);
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.how-img img {
+	width: 100%;
+}
 
 .viewServices {
 	p {
@@ -112,45 +271,170 @@ height:100%; width:100%;
 	}
 }
 
-
 .slide-content {
 	color: #fff;
 	text-align: center;
 	width: 315px;
 	margin: 0 auto;
-  
-  }
-  
-  
-  @media only screen and (min-width:768px){
+}
+
+@media screen and (min-width:320px) and (max-width:425px) {
+
+	.somclient {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				flex: 0 0 calc(50% - 0.5rem);
+			}
+		}
+	}
+	.mhalf, .mhalf1, .mhalf2 {
+		margin-left: 0rem;
+	}
+	.border_stylng {
+		border-right: 0px;
+		border-bottom: 1px #f07615 solid;
+		padding: 25px;
+		border-bottom-style: dashed;
+		border-right-style: dashed;
+		&:last-child {
+			border-right: 0px;
+		}
+		b,
+		strong {
+			font-weight: bolder;
+			display: block;
+			margin-bottom: 15px;
+		}
+	}
+	.bordbtm_stylng {
+		border-right: 0px;
+		border-bottom: 1px #f07615 solid;
+		border-bottom-style: dashed;
+		padding: 25px;
+		&:last-child {
+			border-right: 0px;
+		}
+		b,
+		strong {
+			font-weight: bolder;
+			display: block;
+			margin-bottom: 15px;
+		}
+	}
+	.col-count {
+		p {
+			column-count: 1;
+			column-gap: 2rem;
+		}
+	}
+	.parallax-banner{
+		h2 {
+			font-size: 2rem;
+			}
+	} 
+}
+
+@media only screen and (min-width:768px) {
 	.slide-content {
 		color: #fff;
 		text-align: center;
-		width: 420px;
+		width: 70%;
 		margin: 0 auto;
-	
 	}
+	.border_stylng {
+		border-right: 1px #f07615 solid;
+		border-bottom: 1px #f07615 solid;
+		padding: 25px;
+		border-bottom-style: dashed;
+		border-right-style: dashed;
+		&:last-child {
+			border-right: 0px;
+		}
+		b,
+		strong {
+			font-weight: bolder;
+			display: block;
+			margin-bottom: 15px;
+		}
 	}
-  @media only screen and (min-width:1024px){
+	.bordbtm_stylng {
+		border-right: 1px #f07615 solid;
+		border-right-style: dashed;
+		padding: 25px;
+		border-bottom: 0;
+		&:last-child {
+			border-right: 0px;
+		}
+		b,
+		strong {
+			font-weight: bolder;
+			display: block;
+			margin-bottom: 15px;
+		}
+	}
+	.parallax-banner{
+		h2 {
+			font-size: 2rem;
+			}
+	} 
+}
+
+@media only screen and (min-width:1024px) {
 	.parallax-banner {
 		background-image: url(../../../../../../assets/images/whyMactec/financeAndAccounts.jpg);
 		width: 100%;
-		height: 500px;
+		height: 400px;
 		background-attachment: inherit;
 		background-position: 100% 13%;
 		background-size: cover;
+		h2 {
+			font-size: 3rem;
+			position: relative;
+			top: -17px;
+			}
 	}
 	.slide-content {
-	  text-align: center;
-	  color: #fff;
-	  text-align: center;
-	  width: 70%;
-	  margin: 0 auto;
-  
-  }
-  
-  
-  .h2, h2 {
-  font-size: 4rem;
-  }
-  }  
+		text-align: center;
+		color: #fff;
+		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+	}
+	.border_stylng {
+		border-right: 1px #f07615 solid;
+		border-bottom: 1px #f07615 solid;
+		padding: 25px;
+		border-bottom-style: dashed;
+		border-right-style: dashed;
+		&:last-child {
+			border-right: 0px;
+		}
+		b,
+		strong {
+			font-weight: bolder;
+			display: block;
+			margin-bottom: 15px;
+		}
+	}
+	.bordbtm_stylng {
+		border-right: 1px #f07615 solid;
+		border-right-style: dashed;
+		padding: 25px;
+		border-bottom: 0;
+		&:last-child {
+			border-right: 0px;
+		}
+		b,
+		strong {
+			font-weight: bolder;
+			display: block;
+			margin-bottom: 15px;
+		}
+	}
+	.h2,
+	h2 {
+		font-size: 4rem;
+	}
+}

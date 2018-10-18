@@ -1,77 +1,164 @@
 .parallax-banner {
 	background-image: url(../../../../../../assets/images/whyMactec/services.jpg);
-	width: 100%; 
+	width: 100%;
 	height: 400px;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	color: white;
 	display: flex;
-	justify-content: center; 
+	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	filter: grayscale(0.4);
-
-	h4{ text-shadow: 0px 0px 10px #444444; text-align: center; }
-	h2{ text-shadow: 0px 0px 10px #444444; font-size: 3rem;  
+	h4 {
+		text-shadow: 0px 0px 10px #444444;
+		text-align: center;
+	}
+	h2 {
+		text-shadow: 0px 0px 10px #444444;
+		font-size: 3rem;
 		text-transform: capitalize;
-		font-weight: bolder; 
-		 padding: 0 30px;
-		 text-align: center; 
-		}
-}
-.mhalf {
-	margin-left:calc(33% + 1rem);
-}
-.mhalf1 {
-  margin-left: calc(30% + 3rem);
-}
-.mhalf2 {
-    margin-left: calc(67% + 1rem);
-}
-.bg_services{
-	ul{
-		padding-left: 0px;
-		li{
-			list-style: none; 
-			margin-bottom: 10px;
-			.fa-fw{
-margin-left: -10px;
-			}
-
-}
+		font-weight: bolder;
+		padding: 0 30px;
+		text-align: center;
 	}
 }
 
+.howdoes-img {
+	background: url(../../../../../../assets/images/services/governence/automate.png);
+	width: 100%;
+	height: 100%;
+	background-position: 100% 45%;
+	background-size: cover;
+	min-height: 160px;
+}
 
-.how-section1{
-.container{
-	margin-bottom:4rem;
-}
+.gov-img {
+	background: url(../../../../../../assets/images/services/governence/govern.jpg);
+	width: 100%;
+	height: 100%;
+	background-position: 50% 100%;
+	background-size: cover;
+	min-height: 200px;
 }
 
-.how-section1 h4{
-    color: #212529;
-    font-weight: bold;
-    font-size: 25px;
+.digi-img {
+	background: url(../../../../../../assets/images/services/governence/digitize.png);
+	width: 100%;
+	height: 100%;
+	background-position: 45% 100%;
+	background-size: cover;
+	min-height: 200px;
 }
-.how-section1 .subheading{
-    color: #3931af;
-    font-size: 20px;
+
+.data-img {
+	background: url(../../../../../../assets/images/services/governence/bigdata.png);
+	width: 100%;
+	height: 100%;
+	background-position: 100% 65%;
+	background-size: cover;
+	min-height: 200px;
 }
-.bg_services{
+.just_adj{
+	flex: 0 0 8%;
+}
+.mar_bbm {
+	margin-bottom: 4rem;
+}
+
+.somclient {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			list-style: none;
+			margin-bottom: 10px;
+			flex: 0 0 calc(33% - 0.5rem);
+			border: 1px #ffe0c7 solid;
+			background: #fff;
+			margin: 0.25rem;
+			padding: 1.5rem 0.6rem;
+			list-style-type: none;
+			min-height: 106px;
+			color: #3a3a3a;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+		}
+	}
+}
+
+.mhalf {
+	margin-left: calc(33% + 1rem);
+}
+
+.mhalf1 {
+	margin-left: calc(30% + 3rem);
+}
+
+.mhalf2 {
+	margin-left: calc(67% + 1rem);
+}
+
+.bg_services {
+	ul {
+		padding-left: 0px;
+		margin-bottom: 0px;
+		li {
+			list-style: none;
+			margin-bottom: 10px;
+			font-size: 0.906rem;
+			.fa-fw {
+				margin-left: -10px;
+				margin-top: 4px;
+			}
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}
+
+.col-count {
+	column-count: 2;
+	-webkit-column-gap: 2rem;
+	column-gap: 2rem;
+}
+
+.how-section1 {
+	.container {
+		margin-bottom: 4rem;
+	}
+}
+
+.how-section1 h4 {
+	color: #212529;
+	//  font-weight: bold;
+	font-size: 22px;
+}
+
+.how-section1 .subheading {
+	color: #3931af;
+	font-size: 20px;
+}
+
+.bg_services {
 	background: #f9f9f9;
 	padding: 1rem;
 }
-.how-img 
-{
-background:	linear-gradient(45deg,#848484,#dadada);  
-    text-align: center; height:100%; width:100%;
-}
-.how-img img{
-    width: 100%;
+
+.how-img {
+	background: linear-gradient(45deg, #848484, #dadada);
+	text-align: center;
+	height: 100%;
+	width: 100%;
 }
 
+.how-img img {
+	width: 100%;
+}
 
 .viewServices {
 	p {
@@ -112,46 +199,80 @@ background:	linear-gradient(45deg,#848484,#dadada);
 	}
 }
 
-
-
 .slide-content {
 	color: #fff;
 	text-align: center;
 	width: 315px;
 	margin: 0 auto;
-  
-  }
-  
-  
-  @media only screen and (min-width:768px){
+}
+
+@media screen and (min-width:320px) and (max-width:425px) {
+
+	.mhalf, .mhalf1, .mhalf2 {
+		margin-left: 0;
+	}
+	.mainHeader[_ngcontent-c5] {
+		top: 2.5rem;
+	}
+	.somclient {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				flex: 0 0 calc(50% - 0.5rem);
+			}
+		}
+	}
+	.col-count {
+		p {
+			column-count: 1;
+			column-gap: 2rem;
+		}
+	}
+	.parallax-banner{
+		h2 {
+			font-size: 2rem;
+			}
+	} 
+}
+
+@media only screen and (min-width:768px) {
 	.slide-content {
 		color: #fff;
 		text-align: center;
-		width: 420px;
+		width: 70%;
 		margin: 0 auto;
-	
 	}
-	}
-  @media only screen and (min-width:1024px){
+	.parallax-banner{
+		h2 {
+			font-size: 2rem;
+			}
+	} 
+}
+
+@media only screen and (min-width:1024px) {
 	.parallax-banner {
 		background-image: url(../../../../../../assets/images/whyMactec/services.jpg);
 		width: 100%;
-		height: 500px;
+		height: 400px;
 		background-attachment: inherit;
 		background-position: 79% 51%;
 		background-size: cover;
+		h2 {
+			font-size: 3rem;
+			position: relative;
+			top: -17px;
+			}
 	}
 	.slide-content {
-	  text-align: center;
-	  color: #fff;
-	  text-align: center;
-	  width: 70%;
-	  margin: 0 auto;
-  
-  }
-  
-  
-  .h2, h2 {
-  font-size: 4rem;
-  }
-  }  
+		text-align: center;
+		color: #fff;
+		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+	}
+	.h2,
+	h2 {
+		font-size: 4rem;
+	}
+}

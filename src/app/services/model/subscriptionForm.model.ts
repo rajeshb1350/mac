@@ -13,7 +13,8 @@ export class OrganizeInfo {
     constructor(
         public orgname: string ,
         public usersNo: number,
-        public gstin: number
+        public gstin: number,
+        public organizationType: string
     ){}
 }
 

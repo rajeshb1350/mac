@@ -1,6 +1,7 @@
 import { Component, OnInit, DoCheck} from '@angular/core';
 import * as $ from 'jquery';
 import { AuthenticationService } from '../../../services/authentication/authentication.service';
+import { urlPortService } from '../../../services/http/url-port.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-topbar',
@@ -15,7 +16,8 @@ export class TopbarComponent implements OnInit, DoCheck {
   
   constructor(
     private authService: AuthenticationService,
-    private router: Router
+    private router: Router,
+    private porturl: urlPortService
   ) { }
   
   ngOnInit() {

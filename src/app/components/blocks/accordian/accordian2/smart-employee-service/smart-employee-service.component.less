@@ -1,79 +1,191 @@
 .parallax-banner {
 	background-image: url(../../../../../../assets/images/whyMactec/smartEmployee.jpg);
-	width: 100%; 
+	width: 100%;
 	height: 400px;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	color: white;
 	display: flex;
-	justify-content: center; 
+	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	filter: grayscale(0.4);
-
-	h4{ text-shadow: 0px 0px 10px #444444; text-align: center; }
-	h2{ text-shadow: 0px 0px 10px #444444; font-size: 3rem;  
+	h4 {
+		text-shadow: 0px 0px 10px #444444;
+		text-align: center;
+	}
+	h2 {
+		text-shadow: 0px 0px 10px #444444;
+		font-size: 3rem;
 		text-transform: capitalize;
-		font-weight: bolder; 
-		 padding: 0 30px;
-		 text-align: center; 
-		}
-}
-
-.mhalf {
-	margin-left: calc(50% + 1.5rem);
-}
-.mhalf1 {
-  margin-left: calc(30% + 3rem);
-}
-.bg_services{
-	ul{
-		padding-left: 0px;
-		li{
-			list-style: none; 
-			margin-bottom: 10px;
-			.fa-fw{
-margin-left: -10px;
-			}
-
-}
+		font-weight: bolder;
+		padding: 0 30px;
+		text-align: center;
 	}
 }
 
-.how-section1{
-.container{
-	margin-bottom:4rem;
-
-
-
-}
+.mar_bbm {
+	margin-bottom: 4rem;
 }
 
-.how-section1 h4{
-    color: #212529;
-    font-weight: bold;
-    font-size: 25px;
+.ses {
+	background: url(../../../../../../assets/images/services/SmartEmployee/ses2.jpg);
+	width: 100%;
+	height: 100%;
+	background-position: 37% 100%;
+	background-size: cover;
+	min-height: 170px;
 }
-.how-section1 .subheading{
-    color: #3931af;
-    font-size: 20px;
+
+.wwd {
+	background: url(../../../../../../assets/images/services/SmartEmployee/wwd.jpg);
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	min-height: 170px;
 }
-.bg_services{
+
+.sol-img {
+	background: url(../../../../../../assets/images/services/SmartEmployee/solution.jpg);
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	min-height: 170px;
+}
+
+.hilight-img {
+	background: url(../../../../../../assets/images/services/SmartEmployee/hilite.jpg);
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	min-height: 170px;
+}
+
+.smartb-img {
+	background: url(../../../../../../assets/images/services/SmartEmployee/smartb.png);
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	min-height: 170px;
+}
+
+.space-img {
+	background: url(../../../../../../assets/images/services/SmartEmployee/space.jpg);
+	width: 100%;
+	height: 100%;
+	background-position: 100% 100%;
+	background-size: cover;
+	min-height: 100px;
+}
+
+.somclient {
+	padding: 0.8rem;
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0;
+		li {
+			list-style: none;
+			margin-bottom: 10px;
+			flex: 0 0 calc(33.3% - 0.5rem);
+			border: 1px #ffe0c7 solid;
+			background: #fff;
+			margin: 0.25rem;
+			padding: 1.5rem 0.6rem;
+			list-style-type: none;
+			min-height: 106px;
+			color: #3a3a3a;
+			display: flex;
+			padding: 0.7rem;
+			flex-direction: column;
+			margin-bottom: 5px;
+			b {
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+.col-count {
+	p {
+		column-count: 2;
+		column-gap: 2rem;
+	}
+}
+
+.mhalf {
+	margin-left: calc(30% + 3rem);
+}
+
+.wehalf {
+	margin-left: calc(30% + 3rem);
+}
+
+.mhalf1 {
+	margin-left: calc(30% + 3rem);
+}
+
+.bg_services {
+	ul {
+		padding-left: 0px;
+		li {
+			list-style: none;
+			margin-bottom: 5px;
+			font-size: 0.906rem;
+			.fa-fw {
+				margin-left: -10px;
+			}
+		}
+	}
+	p {
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.how-section1 {
+	//	display: flex;
+	.container {
+		margin-bottom: 4rem;
+	}
+}
+
+p {
+	font-size: 0.9rem;
+}
+
+.how-section1 h4 {
+	color: #212529;
+	//  font-weight: bold;
+	font-size: 22px;
+}
+
+.how-section1 .subheading {
+	color: #3931af;
+	font-size: 20px;
+}
+
+.bg_services {
 	background: #f9f9f9;
-	padding: 1rem;
-}
-.how-img 
-{
-background:	linear-gradient(45deg,#848484,#dadada); 
-height:100%; width:100%; 
-    text-align: center;
-}
-.how-img img{
-    width: 100%;
+	padding: 0.8rem;
 }
 
+.how-img {
+	background: linear-gradient(45deg, #848484, #dadada);
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
 
+.how-img img {
+	width: 100%;
+}
 
 .viewServices {
 	p {
@@ -123,6 +235,7 @@ height:100%; width:100%;
 		margin-bottom: 0;
 	}
 }
+
 .box {
 	background: #fff;
 	transition: all 0.2s ease;
@@ -150,7 +263,8 @@ height:100%; width:100%;
 		background-clip: padding-box;
 		box-sizing: border-box;
 		text-align: justify;
-		.h1, h1 {
+		.h1,
+		h1 {
 			font-size: 1.1rem;
 			text-align: center;
 		}
@@ -160,6 +274,7 @@ height:100%; width:100%;
 		}
 	}
 }
+
 .box:hover {
 	border: 2px solid var(--primary-color);
 	//background: var(--primary-color);
@@ -175,44 +290,89 @@ height:100%; width:100%;
 	}
 }
 
-
 .slide-content {
 	color: #fff;
 	text-align: center;
 	width: 315px;
 	margin: 0 auto;
-  
-  }
-  
-  
-  @media only screen and (min-width:768px){
+}
+
+@media screen and (min-width:320px) and (max-width:425px) {
+	.mhalf,
+	.wehalf {
+		margin-left: 0;
+	}
+	.parallax-banner h2 {
+		font-size: 2rem;
+	}
+	.mainHeader {
+		top: 2.5rem;
+	}
+	.parallax-banner h2 {
+		font-size: 2rem;
+	}
+	.somclient {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				flex: 0 0 calc(50% - 0.5rem);
+			}
+		}
+	}
+	.ses {
+		min-height: 200px;
+	}
+	.col-count {
+		p {
+			column-count: 1;
+			column-gap: 2rem;
+		}
+	}
+	.parallax-banner{
+		h2{
+		font-size: 2rem;
+	}
+	
+	}
+}
+
+@media only screen and (min-width:768px) {
 	.slide-content {
 		color: #fff;
 		text-align: center;
-		width: 420px;
+		width: 70%;
 		margin: 0 auto;
-	
 	}
-	}
-  @media only screen and (min-width:1024px){
+	.parallax-banner{
+		h2 {
+			font-size: 2rem;
+			}
+	} 
+}
+
+@media only screen and (min-width:1024px) {
 	.parallax-banner {
 		background-image: url(../../../../../../assets/images/whyMactec/smartEmployee.jpg);
 		width: 100%;
-		height: 500px;
+		height: 400px;
 		background-attachment: inherit;
 		background-size: cover;
+		h2 {
+			font-size: 3rem;
+			position: relative;
+			top: -17px;
+			}
 	}
 	.slide-content {
-	  text-align: center;
-	  color: #fff;
-	  text-align: center;
-	  width: 70%;
-	  margin: 0 auto;
-  
-  }
-  
-  
-  .h2, h2 {
-  font-size: 4rem;
-  }
-  }  
+		text-align: center;
+		color: #fff;
+		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+	}
+	.h2,
+	h2 {
+		font-size: 4rem;
+	}
+}

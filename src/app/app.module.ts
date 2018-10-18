@@ -77,6 +77,7 @@ import { WorkflowComponent } from './components/blocks/workflow/workflow.compone
 import { TopbarComponent } from './components/header/topbar/topbar.component';
 import { NavMenuComponent } from './components/header/nav-menu/nav-menu.component';
 import { ApiService } from './services/http/api.service';
+import { urlPortService } from './services/http/url-port.service';
 import { Accordian1Component } from './components/blocks/accordian/accordian1/accordian1.component';
 import { AccordianService } from './services/accordian.service';
 import { Accordian2Component } from './components/blocks/accordian/accordian2/accordian2.component';
@@ -230,7 +231,9 @@ import { Login1Component } from './components/forms/login-form/login1/login1.com
     SlotserviceService,
     ModuleService,
     ServiceCheckService,
-    ServiceResolverService
+    ServiceResolverService,
+    urlPortService
+
   ],
   bootstrap: [AppComponent],
 })
