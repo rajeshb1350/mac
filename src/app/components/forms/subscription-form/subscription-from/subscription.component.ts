@@ -30,9 +30,9 @@ export class SubscriptionComponent implements OnInit {
 
 // Responses GET--------------------------------
 // OK Responses
-// {"status":"OK","message":"Success","response":{"id":12,"registrationId":"GP-210818100033","organizationName":"org","firstName":"Admin","lastName":"Admin","emailId":"admin@mail.com","mobile":1231231231,"type":"General"}}
+// {'status':'OK','message':'Success','response':{'id':12,'registrationId':'GP-210818100033','organizationName':'org','firstName':'Admin','lastName':'Admin','emailId':'admin@mail.com','mobile':1231231231,'type':'General'}}
 // ALREADY_REPORTED
-// {"status":"ALREADY_REPORTED","message":"Already Exist","response":"This email id is already registered.Please give another email"}
+// {'status':'ALREADY_REPORTED','message':'Already Exist','response':'This email id is already registered.Please give another email'}
 
     onFormSubmit(){
         this.loader = true;
@@ -40,26 +40,26 @@ export class SubscriptionComponent implements OnInit {
         var productIds=[]; 
      
       
-        $(".productCheckbox").each(function() {
+        $('.productCheckbox').each(function() {
 			if($(this).is(':checked')==true){
 				productIds.push($(this).val());
 			}
         });
         this.formdata = new SubscriptionFrom(
-            this.subscriptionFrom.get("userData.name").value,
-            this.subscriptionFrom.get("userData.email").value,
-            this.subscriptionFrom.get("userData.mobile").value,
+            this.subscriptionFrom.get('userData.name').value,
+            this.subscriptionFrom.get('userData.email').value,
+            this.subscriptionFrom.get('userData.mobile').value,
             new OrganizeInfo(
-                this.subscriptionFrom.get("orgData.orgname").value, 
-                this.subscriptionFrom.get("orgData.usersNo").value,
-                this.subscriptionFrom.get("orgData.gstin").value
+                this.subscriptionFrom.get('orgData.orgname').value, 
+                this.subscriptionFrom.get('orgData.usersNo').value,
+                this.subscriptionFrom.get('orgData.gstin').value
             ),
             new UserAddress(
-                "",
-                "",
-                "",
-                "",
-                ""
+                '',
+                '',
+                '',
+                '',
+                ''
             ),
             productIds
         );
@@ -83,15 +83,17 @@ export class SubscriptionComponent implements OnInit {
             'userData': new FormGroup({
                 'name': new FormControl(null, Validators.required),            
                 'email': new FormControl(null, [Validators.required, Validators.email]),            
-                'mobile': new FormControl(null, [Validators.required, Validators.pattern("^[a-z0-9_-]{8,15}$")])            
+                'mobile': new FormControl(null, [Validators.required, Validators.pattern('^[a-z0-9_-]{8,15}$')])            
             }),
             'orgData': new FormGroup({
                 'orgname': new FormControl(null, Validators.required),
                 'usersNo': new FormControl(null, Validators.required),
                 'gstin': new FormControl(null)
+            }),
+            'proData': new FormGroup({
+                'product': new FormControl(null)
             })
         });
-        
         
         $.easing.jswing = $.easing.swing;
         $.extend($.easing, {
@@ -112,10 +114,10 @@ export class SubscriptionComponent implements OnInit {
             var left, opacity, scale; //fieldset properties which we will animate
             var animating; //flag to prevent quick multi-click glitches
          
-            $(".next").click(function(){
+            $('.next').click(function(){
                
                 $('html,body').animate({
-                    scrollTop: $("#msform").offset().top},
+                    scrollTop: $('#msform').offset().top},
                     'slow');
 
                 if(animating) return false;
@@ -125,18 +127,18 @@ export class SubscriptionComponent implements OnInit {
                 next_fs = $(this).parent().next();
                 
                 //activate next step on progressbar using the index of next_fs
-                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                $('#progressbar li').eq($('fieldset').index(next_fs)).addClass('active');
                 
                 //show the next fieldset
                 next_fs.show(); 
                 //hide the current fieldset with style
                 current_fs.animate({opacity: 0}, {
                     step: function(now, mx) {
-                        //as the opacity of current_fs reduces to 0 - stored in "now"
+                        //as the opacity of current_fs reduces to 0 - stored in 'now'
                         //1. scale current_fs down to 80%
                         scale = 1 - (1 - now) * 0.2;
                         //2. bring next_fs from the right(50%)
-                        left = (now * 50)+"%";
+                        left = (now * 50)+'%';
                         //3. increase opacity of next_fs to 1 as it moves in
                         opacity = 1 - now;
                         current_fs.css({
@@ -155,7 +157,7 @@ export class SubscriptionComponent implements OnInit {
                 });
             });
 
-            $(".previous").click(function(){
+            $('.previous').click(function(){
                 if(animating) return false;
                 animating = true;
                 
@@ -163,18 +165,18 @@ export class SubscriptionComponent implements OnInit {
                 previous_fs = $(this).parent().prev();
                 
                 //de-activate current step on progressbar
-                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+                $('#progressbar li').eq($('fieldset').index(current_fs)).removeClass('active');
                 
                 //show the previous fieldset
                 previous_fs.show(); 
                 //hide the current fieldset with style
                 current_fs.animate({opacity: 0}, {
                     step: function(now, mx) {
-                        //as the opacity of current_fs reduces to 0 - stored in "now"
+                        //as the opacity of current_fs reduces to 0 - stored in 'now'
                         //1. scale previous_fs from 80% to 100%
                         scale = 0.8 + (1 - now) * 0.2;
                         //2. take current_fs to the right(50%) - from 0%
-                        left = ((1-now) * 50)+"%";
+                        left = ((1-now) * 50)+'%';
                         //3. increase opacity of previous_fs to 1 as it moves in
                         opacity = 1 - now;
                         current_fs.css({'left': left});
@@ -193,41 +195,41 @@ export class SubscriptionComponent implements OnInit {
                 });
             });
 
-            $(".submit").click(function(){
+            $('.submit').click(function(){
                 return false;
             })
             // --------------------------------------------------
             // --------------------------------------------------
-            let checkpert = $(".perchecknan");
-            let clr_bg = $(".prdname");
+            let checkpert = $('.perchecknan');
+            let clr_bg = $('.prdname');
 
             checkpert.each((id, element) => {
-                $(element).on("click", (elem)=>{
-                    const $this = $($(elem)[0].target).parents(".prdname");
+                $(element).on('click', (elem)=>{
+                    const $this = $($(elem)[0].target).parents('.prdname');
                     if(this.trailactive) {
-                        $this.hasClass("bg_yellow")?
-                        $this.removeClass("bg_yellow"):
-                        $this.addClass("bg_yellow");
+                        $this.hasClass('bg_yellow')?
+                        $this.removeClass('bg_yellow'):
+                        $this.addClass('bg_yellow');
                     }
                 })
             });
 
             (function(){
-                const $tabs = $(".subpro_bg .nav-tabs");
-                const $tab = $(".subpro_bg .nav-tabs .nav-item");
+                const $tabs = $('.subpro_bg .nav-tabs');
+                const $tab = $('.subpro_bg .nav-tabs .nav-item');
                 var step = 0;
-                const $ctr = $(".controls"); 
-                const $ctrl = $(".controls.left"); 
-                const $ctrr = $(".controls.right");
+                const $ctr = $('.controls'); 
+                const $ctrl = $('.controls.left'); 
+                const $ctrr = $('.controls.right');
                 const totalSlides = Math.floor($tabs.width()/$tab.width());
 
-                $ctrl.on("click", function(){
-                    $tabs.children(".nav-item").animate({left: checkConditions(false)+'%'}, 400)
+                $ctrl.on('click', function(){
+                    $tabs.children('.nav-item').animate({left: checkConditions(false)+'%'}, 400)
                 });
-                $ctrr.on("click", function(){
-                    $tabs.children(".nav-item").animate({left: checkConditions(true)+'%'}, 400)
+                $ctrr.on('click', function(){
+                    $tabs.children('.nav-item').animate({left: checkConditions(true)+'%'}, 400)
                 });
-                (totalSlides==0)?$ctr.addClass("d-none"):$ctr.addClass("d-none");
+                (totalSlides==0)?$ctr.addClass('d-none'):$ctr.addClass('d-none');
                 function checkConditions(stepdir){
                     if(stepdir==false){
                         if(step <= 0) return 0;
@@ -241,21 +243,21 @@ export class SubscriptionComponent implements OnInit {
     }
 
     onfree(){
-        let elements = document.querySelectorAll(".serpro");
-        let freetrail = document.querySelector("#prosearch");
+        let elements = document.querySelectorAll('.serpro');
+        let freetrail = document.querySelector('#prosearch');
         this.trailactive = !this.trailactive;
         Array.from(elements).forEach(element => {
-            element.classList.add("disblk");
+            element.classList.add('disblk');
         });
-        freetrail.classList.add("serpro");
+        freetrail.classList.add('serpro');
     }
        
     onsubmit(){
         var frame = setInterval(frames, 5);
-        let subscrp = document.querySelector("#msform");
-        let pronone = document.querySelector("#section-9");
-        pronone.classList.add("dispnone");
-        subscrp.classList.add("dispblk");
+        let subscrp = document.querySelector('#msform');
+        let pronone = document.querySelector('#section-9');
+        pronone.classList.add('dispnone');
+        subscrp.classList.add('dispblk');
 
         window.scrollBy({
             top: 0, 

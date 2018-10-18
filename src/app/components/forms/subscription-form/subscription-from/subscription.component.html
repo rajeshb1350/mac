@@ -46,12 +46,12 @@
 										<div>
 											<ul class="brdbttm">
 												<li *ngFor="let modsub of mod.productDetails" class="checkbox">
-													<input id="{{modsub.productId}}" class="productCheckbox" type="checkbox" value='{{modsub.productId}}'>
+													<input id="{{modsub.productId}}" class="productCheckbox" formControlName="product" type="checkbox" value="{{modsub.productId}}">
 													<label for="{{modsub.productId}}">
 														<div class="listrap-toggle iconica">
 															<span>
 																<div class="glyph">
-																	<i aria-hidden="true" class="fa {{modsub.icon}}"></i>
+																	<i aria-hidden="true" class="fa fa-{{modsub.icon}}"></i>
 																	<!-- <svg class="icon">
 																		<use attr.xlink:href="#{{modsub.icon}}"></use>
 																		</svg>  -->
