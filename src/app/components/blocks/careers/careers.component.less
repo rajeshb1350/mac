@@ -19,6 +19,9 @@
 		 padding: 0 30px;
 		 text-align: center; 
 		}
+	p{
+		text-align: center;
+	}	
 }
 
 .our-team-main
@@ -109,7 +112,13 @@
 	padding: 35% 0;
   
   }
-  
+  @media screen and (min-width:320px) and (max-width:425px) {
+	.parallax-banner{
+		h2 {
+			font-size: 2rem;
+			}
+	} 
+  }
   
   @media only screen and (min-width:768px){
 	.slide-content {
@@ -120,15 +129,21 @@
 		padding: 15% 0;
 	
 	}
+	.parallax-banner {
+		h2{
+		  font-size: 2rem;
+		}
+	  }
 	}
   @media only screen and (min-width:1024px){
 	.parallax-banner{
 		background-image: url(../../../../assets/images/whyMactec/career4.jpg);
 		width: 100%;
-		height: 500px;
+		height: 400px;
 		background-attachment: inherit;
 		background-position: center;
 		background-size: cover; 
+	
 	}
 	.slide-content {
 	  text-align: center;
@@ -140,11 +155,13 @@
   
   }
   
-  
-  .h2, h2 {
-  font-size: 4rem;
+  .parallax-banner {
+	h2{
+	  font-size: 3rem;
+	}
   }
+
   .slide-content p {
-	  font-size: 1.5rem;
+	  font-size: 1.1rem;
   }
 }

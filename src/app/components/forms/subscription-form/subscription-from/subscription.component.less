@@ -201,16 +201,22 @@ label {
 			flex: 0 0 auto;
 			position: relative;
 			z-index: 30;
-			left: 20px;
+			left: 0px;
 			a {
 				color: #646464;
+				width: 215px;
 				&.active{
 					color: #ffffff;
 					background-color: #f07615;
 					border-color: #dee2e6 #dee2e6 #fff;
+					img{
+						filter: brightness(0) contrast(4) invert(100%);
+						width: 22px;
+					}
 				}
 			}
 		}
+		&::-webkit-scrollbar {    width: 2px;    height: 7px}
     }
 	.controls {    
 		display: none;
@@ -269,17 +275,22 @@ label {
         {
             margin: 0 auto 1rem;  
             span {
-                width: 36px;
-                height: 36px;
+				width: 45px;
+				height: 40px;
                 border-radius: 5px;
                 background: var(--primary-background-color);
                 display: flex;
                 justify-content: center;
-                align-items: center;
+				align-items: center;
+				padding: 8px;
                 i {
                     color: var(--quaternary-color);
                     line-height: 32px;
-                }
+				}
+				img{
+					filter: brightness(0) contrast(4) invert(100%);
+					width: 24px;
+				}
             }
         }
         
@@ -482,7 +493,7 @@ input {
 	}
 	.subpro_bg {
 		.nav-tabs {
-			overflow-x: hidden;
+			overflow-x: auto;
 			width: 95%;
 		}
 		.controls {
@@ -558,3 +569,5 @@ input {
         }
     }
 }
+
+
