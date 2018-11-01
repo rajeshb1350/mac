@@ -3,7 +3,7 @@
     z-index: 0;
     transition: 0.3s all ease-in-out;
     top: 0.5rem;
-    right: 3rem;
+    right: 7.5rem;
     position: relative;
     transform: scale(0.8);
     img{
@@ -19,7 +19,7 @@
         right: 1rem;
         width: 50%;
         .logo-img{
-            width: 135px;
+          //  width: 135px;
             filter: initial;
         }
     }
@@ -51,13 +51,26 @@
         top: 1rem;
         right: 1rem;
         width: 50%;
+        .logo-img {
+            -webkit-filter: initial;
+            filter: initial;
+            position: relative;
+            left: 0;
+            top: 0rem;
+        }
     }
     .mainHeader{   
         top:4rem;
         img{
-                   width: 155px;
+            width: 155px;
+            position: relative;
+            left: 6rem;
+            top: -1rem;
+
                }
         }
+
+   
 
 }    
 @media only screen and (min-width: 425px) {
@@ -65,35 +78,49 @@
         top: 1rem;
         right: 1rem;
         width: 50%;
+        img{
+            width: 155px;
+            position: relative;
+            left: 0rem;
+               }
     }
     .mainHeader{   
         top:1rem;
         img{
-                   width: 155px;
+            width: 155px;
+            position: relative;
+            left: 6rem;
                }
         }
 }
 @media screen and (min-width: 426px) and (max-width: 768px) {
     .sticky .mainHeader {
         top: 1.2rem;
-        right: 1rem;
+        right: 2rem;
         width: 50%;
+        img{
+            width: 155px;
+            left: 0rem;
+               }
     }
     .mainHeader{    
         margin: 0;
         z-index: 0;
         transition: 0.3s all ease-in-out;
         top: 1rem;
-        right: 1rem;
+        right: 4rem;
         position: relative;
         img{
             transition: 0.3s all ease-in-out;
             width: 200px;
             filter: brightness(0) contrast(4) invert(100%);
+           
+            position: relative;
+            left: 0rem;
         }
     }
 } 
-@media only screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width:3000px){
     .mainHeader{    
         z-index: 99;
         top: 0.5rem;
@@ -108,14 +135,20 @@
             // box-shadow: 0px 0px 10px #fff;
             // background: #ffffff7d;
             border-radius: 60px;
+            position: relative;
+            left: 0rem;
         }
     }
     .sticky{
         .mainHeader{
             top: 6px;
+            right: 4rem;
             img{
                 width: 160px;
             }
+        }
+        .navbar{
+            margin-top: 0rem;
         }
     }
 }

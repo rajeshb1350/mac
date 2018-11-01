@@ -19,7 +19,7 @@ export class SubscriptionComponent implements OnInit {
     responseStatus: any;
     status: boolean;
     subscriptionFrom: FormGroup;
-
+    sprodlen: number = 0;
     constructor(
         private api: ApiService, private moduleser: ModuleService
     ) { }
@@ -34,17 +34,25 @@ export class SubscriptionComponent implements OnInit {
     // ALREADY_REPORTED
     // {"status":"ALREADY_REPORTED","message":"Already Exist","response":"This email id is already registered.Please give another email"}
 
+getSelectedProd(){
+
+    var productIds = [];
+    var productDetails =[];
+    $('.productCheckbox').each(function () {
+        if ($(this).is(':checked') == true) {
+            productIds.push($(this).val());
+            
+        }
+    });
+    console.log(productIds.pop);
+    this.sprodlen = productIds.length;
+}
+
     onFormSubmit() {
         this.loader = true;
 
-        var productIds = [];
 
 
-        $('.productCheckbox').each(function () {
-            if ($(this).is(':checked') == true) {
-                productIds.push($(this).val());
-            }
-        });
         this.formdata = new SubscriptionFrom(
             this.subscriptionFrom.get('userData.name').value,
             this.subscriptionFrom.get('userData.email').value,

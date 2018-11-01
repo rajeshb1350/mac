@@ -125,23 +125,23 @@ export class SlotserviceService{
     ]
   };
   
-  public getData(){
-    return new Promise(
-      (resolve, reject) => {
-        this.api.getSlotBookData().subscribe(
-          (apidata: any) =>{
-            try {
-              resolve(JSON.parse(apidata.response));
-            }
-            catch(e){
-              resolve(this.data);
-            }
-          }, 
-          error => resolve(this.data)
-        );
-      }
-    );
-  }
+  // public getData(){
+  //   return new Promise(
+  //     (resolve, reject) => {
+  //       this.api.getSlotBookData().subscribe(
+  //         (apidata: any) =>{
+  //           try {
+  //             resolve(JSON.parse(apidata.response));
+  //           }
+  //           catch(e){
+  //             resolve(this.data);
+  //           }
+  //         }, 
+  //         error => resolve(this.data)
+  //       );
+  //     }
+  //   );
+  // }
 
   public setData(data){
     this.data = data;

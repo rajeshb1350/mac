@@ -70,10 +70,6 @@ export class NavMenuComponent implements OnInit, AfterContentInit, DoCheck {
     );
   }
 
-
-
-
-
   ngAfterContentInit() {
     (function () {
       $('[id^="nav-icon"]').on("click", function () {
@@ -94,19 +90,23 @@ export class NavMenuComponent implements OnInit, AfterContentInit, DoCheck {
         $this.addClass("active");
         // e.target.classList.toggle("active");
       });
-
     })();
 
-
-
-
-
-
-    $(document).ready(function () { 
+    $(document).ready(function () {
       const $cardHeader = $(".accordion2 .card .card-header");
-      var $ele = $cardHeader.children("a.card-link.active").parent();
-      var eletop = $ele.offset().top;
-
+      if ($cardHeader.length!=0) {
+        var $ele = $cardHeader.children("a.card-link.active").parent();
+        var eletop = $ele.offset().top;
+        $(document).on("scroll", debounce(checkSlide));
+        $cardHeader.each(function (val, element) {
+          $(this).on("click", () => {
+            $ele = $(this);
+            eletop = $ele.offset().top;
+            console.log(eletop);
+            setTimeout(animatehead, 700);
+          });
+        });
+      }
       function debounce(func) {
         var wait = 10;
         var immediate = true;
@@ -133,17 +133,6 @@ export class NavMenuComponent implements OnInit, AfterContentInit, DoCheck {
           $ele.removeClass("sticky");
         }
       }
-
-      $(document).on("scroll", debounce(checkSlide));
-
-      $cardHeader.each(function (val, element) {
-        $(this).on("click", () => {
-          $ele = $(this);
-          eletop = $ele.offset().top;
-          console.log(eletop);
-          setTimeout(animatehead, 700);
-        });
-      });
 
       function animatehead() {
         $cardHeader.removeClass("sticky").children("a.card-link").removeClass("active");

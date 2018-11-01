@@ -15,6 +15,6 @@ export class SlotbookResolverService implements Resolve<any>{
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): Observable<any> | Promise<any> | any {
-        return this.slotservice.getData().then( ( data: any )=> data.response );
+      //  return this.slotservice.getData().then( ( data: any )=> data.response );
     }
 }

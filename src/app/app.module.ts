@@ -81,7 +81,7 @@ import { urlPortService } from './services/http/url-port.service';
 import { Accordian1Component } from './components/blocks/accordian/accordian1/accordian1.component';
 import { AccordianService } from './services/accordian.service';
 import { Accordian2Component } from './components/blocks/accordian/accordian2/accordian2.component';
-import { ChatAppComponent } from './components/blocks/chat-app/chat-app.component';
+//import { ChatAppComponent } from './components/blocks/chat-app/chat-app.component';
 
 // For Routing files imports and exports
 import { AppRoutingModule } from './app-routing.module';
@@ -181,8 +181,8 @@ import { Login1Component } from './components/forms/login-form/login1/login1.com
     NavMenuComponent,
     Accordian1Component,
     Accordian2Component,
-    ChatAppComponent,
-    ShopComponent,
+    //ChatAppComponent ,
+    ShopComponent, 
     DashboardComponent,
     HomeComponent,
     SettingComponent,
