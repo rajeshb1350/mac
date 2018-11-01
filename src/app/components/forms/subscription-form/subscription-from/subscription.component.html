@@ -1,500 +1,242 @@
-<!-- MultiStep Form
-<div id="section-9" class="container clr-white">
-	<! <h3 class="text-center">List of Products we provide</h3> >
-
-</div>
+<!-- MultiStep Form -->
+<div id="section-9" class="container clr-white"></div>
 <div class="clear"></div>
 <div class="flex-container flex-jc-c row">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<form id="msform" (ngSubmit)="onFormSubmit()" [formGroup]="subscriptionFrom">
-			<! progressbar >
-			<ul id="progressbar">
-				<li class="active">Choose Products</li>
-				<li>Personal Details</li>
-				<li>Organization Details</li>
-				<li>Done</li>
-			</ul>
-			<! fieldsets >
-			<! <fieldset formGroupName="proData"> >
-					<fieldset>
-				<div class="subpro_bg">
-					<! Nav tabs >
-					<ul class="nav nav-tabs">
-						<li class="nav-item subitemr" *ngFor="let mod of services; let i = index">
-							<a class="nav-link flex-container flex-pc" [ngClass]="i==0?'active':''" data-toggle="tab" href="#{{mod.icon}}">
-								<img src="/assets/images/product/{{mod.icon}}.png" class="img-fluid" alt="Module icons" style=" width: 27px; margin-right: 5px;"> {{mod.productCategory}}
-							</a>
-						</li>
-					</ul>
-					<li class="controls left">
-						<span>
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
-						</span>
-					</li>
-					<li class="controls right">
-						<span>
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
-						</span>
-					</li>
-
-					<! Tab panes >
-					<div class="tab-content">
-						<div class="tab-pane" [ngClass]="i==0?'active':'fade'" id="{{mod.icon}}" *ngFor="let mod of services; let i = index">
-
-							<div class="row">
-								<div class="col-md-12 bor_rtg">
-									<div>
-										<h2 class="done panel-title" aria-hidden="true">{{mod.productCategory}}</h2>
-										<div>
+		<!-- progressbar -->
+		<ul id="progressbar">
+			<li class="active">Choose Products</li>
+			<li>Personal Details</li>
+			<li>Organization Details</li>
+			<li>Done</li>
+		</ul>
+		<!-- fieldsets -->
+		<!-- <fieldset formGroupName="proData"> -->
+		<fieldset>
+			<div class="subpro_bg">
+				<!-- Nav tabs -->
+				<!-- Tab panes -->
+				<div class="product group">
+					<div class="row">
+						<div class="col-md-9 product-image">
+							<div>
+								<h3 class="text_left">Smart Business Solutions Pricing</h3>
+								<!-- <h5  class="text_right">Total Products :  </h5> -->
+							</div>
+							<div id="accordion">
+								<div class="card" *ngFor="let mod of services; let i=index;">
+									<div class="card-header">
+										<a class="card-link" data-toggle="collapse" href="#{{mod.icon}}">
+										{{mod.productCategory}}
+										</a>
+									</div>
+									<div id="{{mod.icon}}" class="collapse" [ngClass]="i==0?'show':''" data-parent="#accordion">
+										<div class="card-body">
 											<ul class="brdbttm">
 												<li *ngFor="let modsub of mod.productDetails" class="checkbox">
-													<input id="{{modsub.productId}}" class="productCheckbox"  name="product" type="checkbox" value="{{modsub.productId}}">
-													<label for="{{modsub.productId}}">
-														<div class="listrap-toggle iconica">
-															<span>
-																<div class="glyph">
-																	<img src="./../../assets/images/product/{{modsub.icon}}.png" alt="product icons" class="img-fluid">
-																	<! <i aria-hidden="true" class="fa {{modsub.icon}}"></i> >
-																	<! <svg class="icon">
-																		<use attr.xlink:href="#{{modsub.icon}}"></use>
-																		</svg>  >
-																</div>
-															</span>
-														</div>
-														<div class="prod-style">
-															<div class="prdname">
-																{{modsub.productName}}
-																<br>
-																<! <span class="sub-ttl"><i class="fa fa-inr" aria-hidden="true"></i> {{modsub.price }}</span> >
+												<input id="{{modsub.productId}}" (change)="getSelectedProd($event)" class="productCheckbox" name="product" type="checkbox" value="{{modsub.productId}}">
+												<label for="{{modsub.productId}}">
+													<div class="listrap-toggle iconica">
+														<span>
+															<div class="glyph">
+																<img src="./../../assets/images/product/{{modsub.icon}}.png" alt="product icons" class="img-fluid">
 															</div>
+														</span>
+													</div>
+													<div class="prod-style">
+														<div class="prdname">
+															{{modsub.productName}}
+															<br>
+															<span>
+															<i class="fa fa-inr"></i> {{modsub.price}} </span>
+															<br>
 														</div>
-													</label>
+													</div>
+												</label>
 												</li>
 											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
-
 						</div>
-					</div>
-
-
-
-				</div>
-				<div class="space-10"></div>
-				<input type="button" name="next" class="next action-button" value="Next" />
-				<! <a routerLink="allProducts"  class="button button-s"  id="prosearchall" title="submit">View All</a> >
-				<! <a  class="button button-s mar_l5" (click)="onfree()" id="prosearch" title="submit">Start Trail</a> >
-				<! <a  class="button button-s mar_l5 serpro" (click)="onsubmit()"  id="prosubmit" title="submit">Next</a> >
-			</fieldset>
-			<fieldset formGroupName="userData">
-				<div class="space-20"></div>
-				<h2 class="fs-title">Your Information</h2>
-				<div class="space-20"></div>
-				<div class="form-group">
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Contact Name
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="text" class="frm-cntrl" tabindex="1" formControlName="name" placeholder="Enter Contact Name" />
-							<p *ngIf="subscriptionFrom.get('userData.name').invalid && subscriptionFrom.get('userData.name').touched" class="warn-text">Enter a valid name eg. JohnDoe</p>
-						</div>
-					</div>
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Email ID
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="email" class="frm-cntrl" formControlName="email" placeholder=" Enter Email id" />
-							<p *ngIf="subscriptionFrom.get('userData.email').invalid && subscriptionFrom.get('userData.email').touched" class="warn-text">Enter a valid email eg. johndoe@example.com</p>
-						</div>
-					</div>
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Mobile No.
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="tel" class="frm-cntrl" formControlName="mobile" placeholder=" Enter Mobile no." />
-							<p *ngIf="subscriptionFrom.get('userData.mobile').invalid && subscriptionFrom.get('userData.mobile').touched" class="warn-text">Enter a valid mobile number eg. 9000090000</p>
-						</div>
-					</div>
-				</div>
-				<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-				<input type="button" name="next" class="next action-button" [ngClass]="subscriptionFrom.get('userData').invalid?'disabled':''"
-				 value="Next" [disabled]="subscriptionFrom.get('userData').invalid" />
-			</fieldset>
-			<fieldset formGroupName="orgData">
-				<div class="space240"></div>
-				<h2 class="fs-title">Organization Details</h2>
-				<div class="space240"></div>
-				<div class="form-group">
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Organization Name
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="text" class="frm-cntrl" formControlName="orgname" placeholder=" Enter Organization Name" />
-							<p *ngIf="subscriptionFrom.get('orgData.orgname').invalid && subscriptionFrom.get('orgData.orgname').touched" class="warn-text">Enter a valid Organization number eg. Johndoe Inc.</p>
-							<!<a data-toggle="tooltip" class="qmark" title="Users inclusive students, trainers and employers">
-								<i class="fa fa-info-circle" aria-hidden="true"></i>
-								</a> >
-						</div>
-					</div>
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Number of Users
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="number" class="frm-cntrl" formControlName="usersNo" min="1" max="1000" placeholder=" Enter Number of Users"
-							/>
-							<p *ngIf="subscriptionFrom.get('orgData.usersNo').invalid && subscriptionFrom.get('orgData.usersNo').touched" class="warn-text">Enter a valid users value eg. 200</p>
-						</div>
-					</div>
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">GST Number
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="text" class="frm-cntrl" formControlName="gstin" name="gstin" min="1" max="1000" placeholder="Enter you GST number" />
-						</div>
-					</div>
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Organization Type
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
+						<div class="col-md-3 product-info">
+							<h3 class="text_left">Product Cart</h3>
 							<div class="row">
-
-								<div class="col-md-2">
-									<div class="form-check">
-										<label class="flex-container flex-ai-c">
-											<input type="radio" name="organizationType" value="University" formControlName="organizationType">
-											<span class="label-text"> University</span>
-										</label>
-									</div>
+								<div class="col-md-12">
+									Products Selected: {{sprodlen}}
 								</div>
-								<div class="col-md-2">
-									<div class="form-check">
-										<label class="flex-container flex-ai-c">
-											<input type="radio" name="organizationType" value="College" formControlName="organizationType">
-											<span class="label-text"> College</span>
-										</label>
-									</div>
-								</div>
-								<div class="col-md-2">
-									<div class="form-check">
-										<label class="flex-container flex-ai-c">
-											<input type="radio" name="organizationType" value="School" formControlName="organizationType">
-											<span class="label-text"> School</span>
-										</label>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-				<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-				<input type="submit" name="submit" class="next action-button" value="submit" [ngClass]="subscriptionFrom.get('orgData').invalid?'disabled':''"
-				 [disabled]="subscriptionFrom.get('orgData').invalid" />
-			</fieldset>
-			<fieldset>
-				<div class="loader-container padding-50" *ngIf="loader">
-					<div class="loader">
-						<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
-						<span>Please wait...</span>
-					</div>
-				</div>
-				<div class="status padding-50" *ngIf="!loader">
-					<div *ngIf="status==true; else undone" class="done">
-						<ng-template [ngIf]="responseStatus.status=='Success'">
-							<img src="/assets/images/icons/tickicon.png" alt="Info-icons" class="img-fluid">
-							<h4>Success</h4>
-							<h6>We have sent an email to {{responseStatus.response.email}}. Please validate your email to get access.</h6>
-						</ng-template>
-						<ng-template [ngIf]="responseStatus.status=='ALREADY_REPORTED'">
-							<img src="/assets/images/icons/crossicon.png" alt="Info-icons" class="img-fluid">
-							<h4>{{responseStatus.message}}</h4>
-							<h6>{{responseStatus.response}}</h6>
-						</ng-template>
-					</div>
-					<ng-template class="undone" #undone>
-						<! <i class="fa fa-check" aria-hidden="true"></i>  >
-						<h4>Oops! something went wrong</h4>
-						<h6>Please refresh page and try again.</h6>
-					</ng-template>
-				</div>
-			</fieldset>
-		</form>
-	</div>
-</div> -->
-
-
-<!-- MultiStep Form -->
-<div id="section-9" class="container clr-white">
-	<!-- <h3 class="text-center">List of Products we provide</h3> -->
-	<!-- <p class="text-center ">Select one or more products with nominal charges and flexi pay.</p> -->
-	<!-- <label> Select All : <input type="checkbox" name="check"  data-toggle="toggle" /> </label>
-				<br/> -->
-</div>
-<div class="clear"></div>
-<div class="flex-container flex-jc-c row">
-	<div class="col-md-12 col-sm-12 col-xs-12">
-		<form id="msform" (ngSubmit)="onFormSubmit()" [formGroup]="subscriptionFrom">
-			<!-- progressbar -->
-			<ul id="progressbar">
-				<li class="active">Choose Products</li>
-				<li>Personal Details</li>
-				<li>Organization Details</li>
-				<li>Done</li>
-			</ul>
-			<!-- fieldsets -->
-			<!-- <fieldset formGroupName="proData"> -->
-			<fieldset>
-				<div class="subpro_bg">
-					<!-- Nav tabs -->
-
-
-					<!-- Tab panes -->
-
-			
-					<div class="product group">
-							
-						<div class="row">
-							<div class="col-md-9 product-image">
-									<div>
-											<h3 class="text_left">Smart Business Solutions Pricing</h3>
-											<!-- <h5  class="text_right">Total Products :  </h5> -->
-										</div>
-
-								<div>
-
-									<div class="">
-
-										<div id="accordion">
-											<div class="card" *ngFor="let mod of services; let i=index;">
-												<div class="card-header">
-													<a class="card-link" data-toggle="collapse" href="#{{mod.icon}}" >
-														{{mod.productCategory}}
-													</a>
-												</div>
-												<div id="{{mod.icon}}" class="collapse" [ngClass]="i==0?'show':''" data-parent="#accordion">
-													<div class="card-body">
-														<ul class="brdbttm">
-															<li *ngFor="let modsub of mod.productDetails" class="checkbox" (click)="getSelectedProd()">
-																<input  id="{{modsub.productId}}" class="productCheckbox" name="product" type="checkbox" value="{{modsub.productId}}">
-																<label for="{{modsub.productId}}">
-																	<div class="listrap-toggle iconica">
-																		<span>
-																			<div class="glyph">
-																				<img src="./../../assets/images/product/{{modsub.icon}}.png" alt="product icons" class="img-fluid">
-
-																			</div>
-																		</span>
-																	</div>
-																	<div class="prod-style">
-																		<div class="prdname">
-																			{{modsub.productName}}
-																			<br>
-																			<span>
-																				<i class="fa fa-inr"></i> {{modsub.price}} </span>
-																			<br>
-																		</div>
-																	</div>
-																</label>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-
-										</div>
-
-
-							
-									</div>
-
-								</div>
-
-							</div>
-							<div class="col-md-3 product-info">
-								<h3 class="text_left">Product Cart</h3>
+								<p *ngFor="let data of selectedProd">{{data.productName}}</p>
+								<!-- <div class="col-md-12">
 									<div class="row">
-											<div class="col-md-12">
-										Products Selected: 	{{sprodlen}}
-											
-											</div>
-											<!-- <div class="col-md-12">
-												<div class="row">
-													<div class="col-sm-12  col-md-6">
-														<button class="btn btn-block btn-light">Continue Shopping</button>
-													</div>
-													<div class="col-sm-12 col-md-6 text-right">
-														<button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
-													</div>
-												</div>
-											</div> -->
+										<div class="col-sm-12  col-md-6">
+											<button class="btn btn-block btn-light">Continue Shopping</button>
 										</div>
+										<div class="col-sm-12 col-md-6 text-right">
+											<button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+										</div>
+									</div>
+									</div> -->
 							</div>
 						</div>
 					</div>
-
-
-
-
-
-
-
 				</div>
-
-				<div class="space-10 clear "></div>
-				<input type="button" name="next" class="next action-button" value="Next" />
-				<!-- <a routerLink="allProducts"  class="button button-s"  id="prosearchall" title="submit">View All</a> -->
-				<!-- <a  class="button button-s mar_l5" (click)="onfree()" id="prosearch" title="submit">Start Trail</a> -->
-				<!-- <a  class="button button-s mar_l5 serpro" (click)="onsubmit()"  id="prosubmit" title="submit">Next</a> -->
-			</fieldset>
-			<fieldset formGroupName="userData">
-				<div class="space-20"></div>
-				<h2 class="fs-title">Your Information</h2>
-				<div class="space-20"></div>
-				<div class="form-group">
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Contact Name
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="text" class="frm-cntrl" tabindex="1" formControlName="name" placeholder="Enter Contact Name" />
-							<p *ngIf="subscriptionFrom.get('userData.name').invalid && subscriptionFrom.get('userData.name').touched" class="warn-text">Enter a valid name eg. JohnDoe</p>
-						</div>
-					</div>
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Email ID
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="email" class="frm-cntrl" formControlName="email" placeholder=" Enter Email id" />
-							<p *ngIf="subscriptionFrom.get('userData.email').invalid && subscriptionFrom.get('userData.email').touched" class="warn-text">Enter a valid email eg. johndoe@example.com</p>
-						</div>
-					</div>
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Mobile No.
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="tel" class="frm-cntrl" formControlName="mobile" placeholder=" Enter Mobile no." />
-							<p *ngIf="subscriptionFrom.get('userData.mobile').invalid && subscriptionFrom.get('userData.mobile').touched" class="warn-text">Enter a valid mobile number eg. 9000090000</p>
-						</div>
+			</div>
+			<div class="space-10 clear "></div>
+			<input type="button" name="next" class="next action-button" value="Next" />
+			<!-- <a routerLink="allProducts"  class="button button-s"  id="prosearchall" title="submit">View All</a> -->
+			<!-- <a  class="button button-s mar_l5" (click)="onfree()" id="prosearch" title="submit">Start Trail</a> -->
+			<!-- <a  class="button button-s mar_l5 serpro" (click)="onsubmit()"  id="prosubmit" title="submit">Next</a> -->
+		</fieldset>
+		<fieldset formGroupName="userData">
+			<div class="space-20"></div>
+			<h2 class="fs-title">Your Information</h2>
+			<div class="space-20"></div>
+			<div class="form-group">
+				<div class="row">
+					<label class="col-md-2 control-label" for="name">Contact Name
+					<span class="red">*</span>
+					</label>
+					<div class="col-md-9">
+						<input type="text" class="frm-cntrl" tabindex="1" formControlName="name" placeholder="Enter Contact Name" />
+						<p *ngIf="subscriptionFrom.get('userData.name').invalid && subscriptionFrom.get('userData.name').touched" class="warn-text">Enter
+							a valid name eg. JohnDoe
+						</p>
 					</div>
 				</div>
-				<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-				<input type="button" name="next" class="next action-button" [ngClass]="subscriptionFrom.get('userData').invalid?'disabled':''"
-				 value="Next" [disabled]="subscriptionFrom.get('userData').invalid" />
-			</fieldset>
-			<fieldset formGroupName="orgData">
-				<div class="space240"></div>
-				<h2 class="fs-title">Organization Details</h2>
-				<div class="space240"></div>
-				<div class="form-group">
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Organization Name
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="text" class="frm-cntrl" formControlName="orgname" placeholder=" Enter Organization Name" />
-							<p *ngIf="subscriptionFrom.get('orgData.orgname').invalid && subscriptionFrom.get('orgData.orgname').touched" class="warn-text">Enter a valid Organization number eg. Johndoe Inc.</p>
-							<!-- <a data-toggle="tooltip" class="qmark" title="Users inclusive students, trainers and employers">
-									<i class="fa fa-info-circle" aria-hidden="true"></i>
-									</a> -->
-						</div>
+				<div class="row">
+					<label class="col-md-2 control-label" for="name">Email ID
+					<span class="red">*</span>
+					</label>
+					<div class="col-md-9">
+						<input type="email" class="frm-cntrl" formControlName="email" placeholder=" Enter Email id" />
+						<p *ngIf="subscriptionFrom.get('userData.email').invalid && subscriptionFrom.get('userData.email').touched" class="warn-text">Enter
+							a valid email eg. johndoe@example.com
+						</p>
 					</div>
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Number of Users
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="number" class="frm-cntrl" formControlName="usersNo" min="1" max="1000" placeholder=" Enter Number of Users"
+				</div>
+				<div class="row">
+					<label class="col-md-2 control-label" for="name">Mobile No.
+					<span class="red">*</span>
+					</label>
+					<div class="col-md-9">
+						<input type="tel" class="frm-cntrl" formControlName="mobile" placeholder=" Enter Mobile no." />
+						<p *ngIf="subscriptionFrom.get('userData.mobile').invalid && subscriptionFrom.get('userData.mobile').touched" class="warn-text">Enter
+							a valid mobile number eg. 9000090000
+						</p>
+					</div>
+				</div>
+			</div>
+			<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+			<input type="button" name="next" class="next action-button" [ngClass]="subscriptionFrom.get('userData').invalid?'disabled':''"
+			value="Next" [disabled]="subscriptionFrom.get('userData').invalid" />
+		</fieldset>
+		<fieldset formGroupName="orgData">
+			<div class="space240"></div>
+			<h2 class="fs-title">Organization Details</h2>
+			<div class="space240"></div>
+			<div class="form-group">
+				<div class="row">
+					<label class="col-md-2 control-label" for="name">Organization Name
+					<span class="red">*</span>
+					</label>
+					<div class="col-md-9">
+						<input type="text" class="frm-cntrl" formControlName="orgname" placeholder=" Enter Organization Name" />
+						<p *ngIf="subscriptionFrom.get('orgData.orgname').invalid && subscriptionFrom.get('orgData.orgname').touched" class="warn-text">Enter
+							a valid Organization number eg. Johndoe Inc.
+						</p>
+						<!-- <a data-toggle="tooltip" class="qmark" title="Users inclusive students, trainers and employers">
+							<i class="fa fa-info-circle" aria-hidden="true"></i>
+							</a> -->
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-md-2 control-label" for="name">Number of Users
+					<span class="red">*</span>
+					</label>
+					<div class="col-md-9">
+						<input type="number" class="frm-cntrl" formControlName="usersNo" min="1" max="1000" placeholder=" Enter Number of Users"
 							/>
-							<p *ngIf="subscriptionFrom.get('orgData.usersNo').invalid && subscriptionFrom.get('orgData.usersNo').touched" class="warn-text">Enter a valid users value eg. 200</p>
-						</div>
+						<p *ngIf="subscriptionFrom.get('orgData.usersNo').invalid && subscriptionFrom.get('orgData.usersNo').touched" class="warn-text">Enter
+							a valid users value eg. 200
+						</p>
 					</div>
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">GST Number
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<input type="text" class="frm-cntrl" formControlName="gstin" name="gstin" min="1" max="1000" placeholder="Enter you GST number"
+				</div>
+				<div class="row">
+					<label class="col-md-2 control-label" for="name">GST Number
+					<span class="red">*</span>
+					</label>
+					<div class="col-md-9">
+						<input type="text" class="frm-cntrl" formControlName="gstin" name="gstin" min="1" max="1000" placeholder="Enter you GST number"
 							/>
-						</div>
 					</div>
-					<div class="row">
-						<label class="col-md-2 control-label" for="name">Organization Type
-							<span class="red">*</span>
-						</label>
-						<div class="col-md-9">
-							<div class="row">
-
-								<div class="col-md-2">
-									<div class="form-check">
-										<label class="flex-container flex-ai-c">
-											<input type="radio" name="organizationType" value="University" formControlName="organizationType">
-											<span class="label-text"> University</span>
-										</label>
-									</div>
-								</div>
-								<div class="col-md-2">
-									<div class="form-check">
-										<label class="flex-container flex-ai-c">
-											<input type="radio" name="organizationType" value="College" formControlName="organizationType">
-											<span class="label-text"> College</span>
-										</label>
-									</div>
-								</div>
-								<div class="col-md-2">
-									<div class="form-check">
-										<label class="flex-container flex-ai-c">
-											<input type="radio" name="organizationType" value="School" formControlName="organizationType">
-											<span class="label-text"> School</span>
-										</label>
-									</div>
+				</div>
+				<div class="row">
+					<label class="col-md-2 control-label" for="name">Organization Type
+					<span class="red">*</span>
+					</label>
+					<div class="col-md-9">
+						<div class="row">
+							<div class="col-md-2">
+								<div class="form-check">
+									<label class="flex-container flex-ai-c">
+									<input type="radio" name="organizationType" value="University" formControlName="organizationType">
+									<span class="label-text"> University</span>
+									</label>
 								</div>
 							</div>
-
+							<div class="col-md-2">
+								<div class="form-check">
+									<label class="flex-container flex-ai-c">
+									<input type="radio" name="organizationType" value="College" formControlName="organizationType">
+									<span class="label-text"> College</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-md-2">
+								<div class="form-check">
+									<label class="flex-container flex-ai-c">
+									<input type="radio" name="organizationType" value="School" formControlName="organizationType">
+									<span class="label-text"> School</span>
+									</label>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-				<input type="submit" name="submit" class="next action-button" value="submit" [ngClass]="subscriptionFrom.get('orgData').invalid?'disabled':''"
-				 [disabled]="subscriptionFrom.get('orgData').invalid" />
-			</fieldset>
-			<fieldset>
-				<div class="loader-container padding-50" *ngIf="loader">
-					<div class="loader">
-						<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
-						<span>Please wait...</span>
-					</div>
+			</div>
+			<input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+			<input type="submit" name="submit" class="next action-button" value="submit" [ngClass]="subscriptionFrom.get('orgData').invalid?'disabled':''"
+			[disabled]="subscriptionFrom.get('orgData').invalid" />
+		</fieldset>
+		<fieldset>
+			<div class="loader-container padding-50" *ngIf="loader">
+				<div class="loader">
+					<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+					<span>Please wait...</span>
 				</div>
-				<div class="status padding-50" *ngIf="!loader">
-					<div *ngIf="status==true; else undone" class="done">
-						<ng-template [ngIf]="responseStatus.status=='Success'">
-							<img src="/assets/images/icons/tickicon.png" alt="Info-icons" class="img-fluid">
-							<h4>Success</h4>
-							<h6>We have sent an email to {{responseStatus.response.email}}. Please validate your email to get access.</h6>
-						</ng-template>
-						<ng-template [ngIf]="responseStatus.status=='ALREADY_REPORTED'">
-							<img src="/assets/images/icons/crossicon.png" alt="Info-icons" class="img-fluid">
-							<h4>{{responseStatus.message}}</h4>
-							<h6>{{responseStatus.response}}</h6>
-						</ng-template>
-					</div>
-					<ng-template class="undone" #undone>
-						<!-- <i class="fa fa-check" aria-hidden="true"></i>  -->
-						<h4>Oops! something went wrong</h4>
-						<h6>Please refresh page and try again.</h6>
+			</div>
+			<div class="status padding-50" *ngIf="!loader">
+				<div *ngIf="status==true; else undone" class="done">
+					<ng-template [ngIf]="responseStatus.status=='Success'">
+						<img src="/assets/images/icons/tickicon.png" alt="Info-icons" class="img-fluid">
+						<h4>Success</h4>
+						<h6>We have sent an email to {{responseStatus.response.email}}. Please validate your email to get access.</h6>
+					</ng-template>
+					<ng-template [ngIf]="responseStatus.status=='ALREADY_REPORTED'">
+						<img src="/assets/images/icons/crossicon.png" alt="Info-icons" class="img-fluid">
+						<h4>{{responseStatus.message}}</h4>
+						<h6>{{responseStatus.response}}</h6>
 					</ng-template>
 				</div>
-			</fieldset>
+				<ng-template class="undone" #undone>
+					<!-- <i class="fa fa-check" aria-hidden="true"></i>  -->
+					<h4>Oops! something went wrong</h4>
+					<h6>Please refresh page and try again.</h6>
+				</ng-template>
+			</div>
+		</fieldset>
 		</form>
 	</div>
 </div>
