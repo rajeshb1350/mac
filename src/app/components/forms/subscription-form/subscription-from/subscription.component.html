@@ -67,7 +67,11 @@
 								<div class="col-md-12">
 									Products Selected: {{sprodlen}}
 								</div>
-								<p *ngFor="let data of selectedProd">{{data.productName}}</p>
+								<div *ngFor="let data of selectedProd">
+									<p>{{data.productName}}</p>
+								</div>
+								<br>
+								<h4>{{totalPrice}}</h4>
 								<!-- <div class="col-md-12">
 									<div class="row">
 										<div class="col-sm-12  col-md-6">
