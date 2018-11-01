@@ -36,7 +36,7 @@ export class SubscriptionComponent implements OnInit {
 
 getSelectedProd(){
 
-    var productIds = [];
+    
     var productDetails =[];
     $('.productCheckbox').each(function () {
         if ($(this).is(':checked') == true) {
