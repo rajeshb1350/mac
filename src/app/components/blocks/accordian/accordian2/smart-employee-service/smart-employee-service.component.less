@@ -282,6 +282,26 @@ p {
 	margin: 0 auto;
 }
 
+
+.oth_services{
+	div{
+		flex:0 0 100%;
+		text-align: left;
+		background: #f07615;
+		a{
+			color: #fff;
+		}
+		margin-bottom: 0.8rem;
+		padding: 0.5rem 0.5rem;
+		border-radius: 5px;
+		.h-image{
+			display: none;
+		}
+	}
+	.serviceIcons{
+		display: none;
+	}
+}
 @media screen and (min-width:320px) and (max-width:425px) {
 	.mhalf,
 	.wehalf {
@@ -360,5 +380,50 @@ p {
 	.h2,
 	h2 {
 		font-size: 4rem;
+	}
+
+	.oth_services{
+		div{
+			flex:0 0 33.3%;
+			text-align: center;
+			background:transparent;
+			cursor: pointer;
+			margin-bottom: 2.8rem;
+			a{
+				color: #f07615;
+				cursor: pointer;
+			}
+			
+			.serviceIcons{
+				display: block;
+				margin: auto;
+				width: 25%;
+				margin-bottom: 0.7rem;
+				cursor: pointer;
+			}
+			.h-image{
+				display: none;
+			}
+			transition:0.3s linear;
+		}
+		div:hover{
+			background: #f07615;
+			.h-image{
+				display: block;
+			}
+			.d-image{
+				display: none;
+			}
+			a{
+				color:#fff;
+			}
+		}
+		div:nth-child(4){
+			flex:0 0 50%;
+		}
+		div:nth-child(5){
+			flex:0 0 50%;
+		}
+		
 	}
 }

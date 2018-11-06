@@ -5,7 +5,8 @@ export class SubscriptionFrom {
         public mobile: number ,
         public organizeInfo: OrganizeInfo ,
         public userAddress: UserAddress,
-        public productIds: any
+        public productIds: any,
+       // public subscriptionType:string,
     ){}
 }
 

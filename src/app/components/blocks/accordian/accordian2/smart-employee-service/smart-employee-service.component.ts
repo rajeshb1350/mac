@@ -11,5 +11,4 @@ export class SmartEmployeeServiceComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

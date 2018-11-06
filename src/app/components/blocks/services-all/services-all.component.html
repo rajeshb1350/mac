@@ -34,15 +34,16 @@
                                                 <div class="row alter_check">
                                                     <div class="col-md-6 col-lg-4" *ngFor="let modsub of mod.productDetails">
                                                         <div class="spacious">
-                                                            <span class="bg_rng">
-                                                                    <img  src="./../../assets/images/product/{{modsub.icon}}.png" class="img-fluid">
-                                                                <!-- <i class="fa {{modsub.icon}}" aria-hidden="true">&nbsp;</i> -->
-                                                            </span>
                                                             <div class="list-cont">
-                                                                <h3>{{modsub.productName}}</h3>
+                                                                <div>
+                                                                    <span class="bg_rng">
+                                                                        <img  src="./../../assets/images/product/{{modsub.icon}}.png" class="img-fluid">
+                                                                        <!-- <i class="fa {{modsub.icon}}" aria-hidden="true">&nbsp;</i> -->
+                                                                    </span>
+                                                                    <h3>{{modsub.productName}}</h3>
+                                                                </div>
                                                                 <p>{{modsub.description}}</p>
                                                             </div>
-                                                            
                                                         </div>
                                                     </div>
                                                 </div>

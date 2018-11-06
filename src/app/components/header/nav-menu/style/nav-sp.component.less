@@ -138,6 +138,9 @@
                 // perspective-origin: top;
                 a{
                     padding: 0px 10px;
+                    .sub-menu{
+                        margin-left: 15%;
+                    }
                 }
                 .dropdown-menu {
                     top: calc(100% + -5px);
@@ -155,6 +158,13 @@
                     &.show{
                         transform: rotate3d(1,0,0,0deg);
                         visibility: visible;
+
+                        .sub-menu{
+                            position: absolute;
+                            left: -100%;
+                            top: -1px;
+                            transform: scale(0.8);
+                        }
                     }
 
                     ul.list-group.list-item-screen {
@@ -177,6 +187,7 @@
                         display: flex;
                         justify-content: space-between;
                         border-radius: 0px;
+                        align-items: center;
                     }
                 }
             }
@@ -254,5 +265,6 @@
         }
     }
 }
+
 
 
