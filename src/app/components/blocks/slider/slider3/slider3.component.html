@@ -2,21 +2,49 @@
 <div id="demo" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ul class="carousel-indicators">
-      <li data-target="#demo" data-slide-to="0" class="active"></li>
-      <li data-target="#demo" data-slide-to="1"></li>
-      <li data-target="#demo" data-slide-to="2"></li>
+      <!-- <li data-target="#demo" data-slide-to="{{i}}" [ngClass]="i==0?'active':''" *ngFor="let pdata of bannerContent; let i = index;"></li> -->
     </ul>
     
     <!-- The slideshow -->
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://www.w3schools.com/bootstrap/la.jpg" alt="Los Angeles" width="1100" height="500">
-      </div>
-      <div class="carousel-item">
-        <img src="https://www.w3schools.com/bootstrap/chicago.jpg" alt="Chicago" width="1100" height="500">
-      </div>
-      <div class="carousel-item">
-        <img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-item" [ngClass]="i==0?'active':''" *ngFor="let pdata of sliderContent; let i = index;">
+        <div class="container banner-content">
+          <div class="row">
+            <div class="col-md-8 col-sm-8 col-12 slide-content">
+              <h2 [innerHTML]="pdata.heading"></h2>
+              <h5 class="subheading">{{pdata.subheading}}</h5>
+              <p class="content" [innerHTML]="pdata.content"></p>
+              <h6 class="text-center" *ngIf="pdata.secheading">
+                <i>
+                  {{pdata.secheading}}  
+                </i>
+                <br>
+              </h6>
+              <p class="text-center">
+                <i>
+                  {{pdata.seccontent}}  
+                </i>
+              </p>
+              <ul class="slide-features" *ngIf="pdata.seclist">
+                <li *ngFor="let data of pdata.seclist">
+                  <h6>{{data.heading}}</h6>
+                  <p>{{data.content}}</p>
+                </li>
+              </ul>
+              <ul class="slide-list fa-ul">
+                <li *ngFor="let data of pdata.feature">
+                  <i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>
+                  {{data}}
+                </li>
+              </ul>
+              <a routerLink="{{pdata.link}}" *ngIf="pdata.type=='page'" class="button button-s">Read More</a>
+              <a href="{{pdata.link}}" *ngIf="pdata.type=='web'" target="_blank" class="button button-s">Visit now</a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-12 slide-img">
+              <img alt="First slide" src="{{pdata.imagepath}}">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     

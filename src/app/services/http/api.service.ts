@@ -16,15 +16,12 @@ export class ApiService implements OnInit {
     private GETFAQLIST: string = this.portUrl + "/data/get/faq/list";
     private GETMODULES: string = this.portUrl + "/data/getProducts";
     private POSTSUBSCRIPTIONDATA: string = this.portUrl + "/data/registration";
-   // private GETSOLTBOOKDATA: string = this.portUrl + "/data/get/latest-trainings";
 
+    // private GETSOLTBOOKDATA: string = this.portUrl + "/data/get/latest-trainings";
 
     constructor(private http: Http) { }
 
-
-
     ngOnInit() { }
-
 
     postSubscriptionData(data: SubscriptionFrom): Observable<any> {
         return this.http.post(this.POSTSUBSCRIPTIONDATA, data).pipe(
@@ -34,21 +31,13 @@ export class ApiService implements OnInit {
         );
     }
 
-
-
-
-
-
-
-
-
     getModules() {
         return this.http.get(this.GETMODULES).pipe(map((response: Response) => response.json()));
     }
 
-   // getSlotBookData() {
-     //   return this.http.get(this.GETSOLTBOOKDATA).pipe(map((response: Response) => response.json()));
-   // }
+    // getSlotBookData() {
+    //   return this.http.get(this.GETSOLTBOOKDATA).pipe(map((response: Response) => response.json()));
+    // }
 
     // getApi(){
     //     return this.http.get("http://skpass.com/data/data1.json").pipe(map( (response: Response) => response.json()));

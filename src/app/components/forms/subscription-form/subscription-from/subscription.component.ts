@@ -39,25 +39,28 @@ export class SubscriptionComponent implements OnInit {
     selectedProd = [];
     totalPrice: number = 0;
     totalPriceInDollers: number = 0;
-    rupee:any;dollar:any;buy:any;klkl:any;
+    rupee: any; 
+    dollar: any; 
+    buy: any; 
+    klkl: any;
     @Input() services: any;
     formdata: SubscriptionFrom;
     responseStatus: any;
     status: boolean;
     subscriptionFrom: FormGroup;
     sprodlen: number = 0;
+
     constructor(
         private api: ApiService, private moduleser: ModuleService
     ) {
         localStorage.removeItem('BUY');
-
-        this.rupee=true;
+        this.dollar = true;
     }
 
     setStatusVal(statusval: any) {
         this.responseStatus = statusval;
-        console.log(this.responseStatus );
-      
+        console.log(this.responseStatus);
+
     }
 
     // Responses GET--------------------------------
@@ -67,7 +70,7 @@ export class SubscriptionComponent implements OnInit {
     // {"status":"ALREADY_REPORTED","message":"Already Exist","response":"This email id is already registered.Please give another email"}
 
     productIds = [];
-    subscriptionType="Trial";
+    subscriptionType = "Trial";
     getSelectedProd(data) {
         if (data.target.checked) {
             this.prodSet.add(data.target.value);
@@ -85,38 +88,38 @@ export class SubscriptionComponent implements OnInit {
                     if (data.productId == parseInt(cdata)) {
                         newdata.push(data);
                         // console.log(data);
-                        price+=data.price;
-                        priceInDoller+=3;
+                        price += data.price;
+                        priceInDoller += 3;
                     }
                 }
             )
         })
         this.selectedProd = newdata;
         this.totalPrice = price;
-        this.totalPriceInDollers=priceInDoller;
+        this.totalPriceInDollers = priceInDoller;
+    }
 
-    
+    rupeeClik() {
+        this.rupee = true;
+        this.dollar = false;
+        document.getElementById("colls").style.color = "var(--primary-background-color)";
+        document.getElementById("colla").style.color = "black";
     }
- 
-    rupeeClik(){
-       this.rupee=true;
-       this.dollar=false;
-       document.getElementById("colls").style.color = "var(--primary-background-color)";
-       document.getElementById("colla").style.color = "black";
-    }
-    dollerClik(){
-        this.rupee=false;
-        this.dollar=true;
+
+    dollerClik() {
+        this.rupee = false;
+        this.dollar = true;
         document.getElementById("colls").style.color = "black";
         document.getElementById("colla").style.color = "var(--primary-background-color)";
-     }
-     buyNOW(){
-       //  console.log('llll')
-    localStorage.setItem('BUY','BUY');
-   this.subscriptionType="Paid";
-     }
+    }
+
+    buyNOW() {
+        //  console.log('llll')
+        localStorage.setItem('BUY', 'BUY');
+        this.subscriptionType = "Paid";
+    }
     onFormSubmit() {
-  
+
         this.loader = true;
 
         this.formdata = new SubscriptionFrom(
@@ -137,7 +140,7 @@ export class SubscriptionComponent implements OnInit {
                 ''
             ),
             this.productIds
-         //   this.subscriptionType
+            //   this.subscriptionType
         );
 
         this.api.postSubscriptionData(this.formdata).subscribe(
@@ -145,15 +148,15 @@ export class SubscriptionComponent implements OnInit {
                 this.status = true;
                 this.loader = false;
                 console.log(response);
-                this.klkl=localStorage.getItem('BUY');
+                this.klkl = localStorage.getItem('BUY');
                 console.log(this.klkl)
-                if(response.status="Success"){
-                    if(this.klkl=="BUY"){
-                        response.buy='buy';
+                if (response.status = "Success") {
+                    if (this.klkl == "BUY") {
+                        response.buy = 'buy';
                         console.log('buied')
                     }
                 }
-               
+
                 this.setStatusVal(response);
             },
             error => {
@@ -194,13 +197,6 @@ export class SubscriptionComponent implements OnInit {
                 return i / 2 * ((f -= 2) * f * (((g *= (1.525)) + 1) * f + g) + 2) + a
             }
         });
-
-
-
-
-
-
-
 
         $(document).ready(() => {
             //$ time
@@ -347,37 +343,6 @@ export class SubscriptionComponent implements OnInit {
                 }
             })();
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         $(document).ready(() => {
             //$ time
