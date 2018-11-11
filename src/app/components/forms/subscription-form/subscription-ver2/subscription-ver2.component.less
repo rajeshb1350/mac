@@ -1,0 +1,91 @@
+
+button {
+    background: #444;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 6px 0 30px 0;
+    :hover {
+    background: #333;
+    }
+}
+
+.container {
+    max-width: 400px;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+    height: 20rem;
+}
+
+.form-container {
+    flex: none;
+    background: white;
+    width: 400px;
+    padding: 25px 35px 10px 35px;
+    margin: 60px auto;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    position: absolute;
+    transition: all 0.6s;
+    &.form-done {
+        transform: translate(-500px);
+        opacity: 0;
+    }
+    &.form-to-go {
+        transform: translate(500px);
+        opacity: 0;
+    }
+
+    .form-label, .form-input {
+        display: block;
+        width: 100%;
+        padding: 6px;
+    }
+    
+    .form-label {
+        margin: 12px 0 0 0;
+    }
+    
+    .form-input {
+        margin: 0 0 12px 0;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        &:focus {
+            outline: none;
+            border: 1px solid #bc340f;
+        }
+    }
+    
+    
+    .form-button {
+        &.button-next {
+            background: #bc340f;
+            float: right;
+            &:hover {
+                background: #a82e0d;
+            }
+        }
+        &.button-previous {
+            color: #333;
+            background: #f0f0f0;
+            float: left;
+            &:hover {
+                background: #eaeaea;
+            }
+        }
+        &.button-learn-more {
+            background: #bc340f;
+            width: 100%;
+            &:hover {
+                background: #a82e0d;
+            }
+        }
+    }
+}
+

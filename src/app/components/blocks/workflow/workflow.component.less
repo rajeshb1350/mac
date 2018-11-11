@@ -1,10 +1,103 @@
-.workbook{
-    margin: 50px 0;
-    h2{
-        margin-bottom: 30px;
+.workflow {
+    margin: 5rem auto;
+    .heading {
+        color: var(--primary-color);
+        margin-bottom: 0rem;
     }
-    h4{
-        margin: 0 auto 30px;
-        width: 80%;
+    .sub-heading {
+        color: var(--quinary-transparent-color);
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+    .sub-content {
+        color: var(--secondary-color);
+        i {
+            font-size: 0.9rem;
+            color: var(--quinary-color);
+        }
+    }
+    .feature-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        display: flex;
+        flex-wrap: wrap;
+        
+        li {
+            flex: 0 0 calc(33.33% - 1rem);
+            margin: 0.5rem;
+            h6 {
+                font-size: 1.25rem;
+                line-height: 1.25rem;
+                margin-bottom: 0.25rem;
+            }
+            p {
+                font-size: 0.8rem;
+                line-height: 1rem;
+                text-align: left;
+            }
+        }
+    }
+    .content {
+        line-height: 1.25rem;
+        background-color: var(--secondary-background-color);
+        color: var(--quaternary-color);
+        position: relative;
+        margin-top: 1rem; 
+        &::before {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 200%;
+            position: absolute;
+            background: var(--secondary-background-color);
+            z-index: 0;
+        }
+
+        .slide-list {
+            font-size: 0.9rem;    
+            margin-bottom: 0rem;
+        }
+    }
+
+    .img-box {
+        img {
+            transform: scale(1.3);
+        }
+    }
+
+    &:nth-child(odd) {
+        .content-box {
+            order: 0;
+        }
+        .img-box {
+            order: 1;
+        }
+        .content {
+            padding: 2rem 7.5rem 2.5rem 0;
+            border-radius: 0 17.5rem 17.5rem 0;
+            &::before {
+                left: -200%;
+                top: 0rem;
+            }
+        }
+    }
+    
+    &:nth-child(even) {
+        .content-box {
+            order: 1;
+        }
+        .img-box {
+            order: 0;
+        }
+        .content {
+            padding: 2rem 0 2.5rem 7.5rem;
+            border-radius: 17.5rem 0 0 17.5rem;
+            &::before {
+                right: -200%;
+                top: 0rem;
+            }
+        }
     }
 }

@@ -2,20 +2,21 @@
     margin: 0;
     z-index: 0;
     transition: 0.3s all ease-in-out;
-    top: 0.5rem;
-    right: 7.5rem;
+    top: 1rem;
+    width: 50%;
+    right: 1rem;
     position: relative;
     transform: scale(0.8);
     img{
         transition: 0.3s all ease-in-out;
-        width: 200px;
+        width: 10rem;
         filter: brightness(0) contrast(4) invert(100%);
     }
 }
 
 .sticky{
     .mainHeader{
-        top: 10px;
+        top: 1rem;
         right: 1rem;
         width: 50%;
         .logo-img{
@@ -46,90 +47,87 @@
 
 // }
 
-@media screen and (min-width: 320px) and (max-width: 424px) {
-    .sticky .mainHeader {
-        top: 1rem;
-        right: 1rem;
-        width: 50%;
-        .logo-img {
-            -webkit-filter: initial;
-            filter: initial;
-            position: relative;
-            left: 0;
-            top: 0rem;
-        }
-    }
-    .mainHeader {   
-        top:4rem;
-        img {
-            width: 155px;
-            position: relative;
-            left: 8rem;
-            top: 0rem;
-        }
-    }
-}    
-@media only screen and (min-width: 425px) {
-    .sticky .mainHeader {
-        top: 1rem;
-        right: 1rem;
-        width: 50%;
-        img{
-            width: 155px;
-            position: relative;
-            left: 0rem;
-               }
-    }
-    .mainHeader{   
-        top:1rem;
-        img{
-            width: 155px;
-            position: relative;
-            left: 6rem;
-               }
-        }
-}
-@media screen and (min-width: 426px) and (max-width: 768px) {
-    .sticky .mainHeader {
-        top: 1.2rem;
-        right: 2rem;
-        width: 50%;
-        img{
-            width: 155px;
-            left: 0rem;
-               }
-    }
-    .mainHeader{    
-        margin: 0;
-        z-index: 0;
-        transition: 0.3s all ease-in-out;
-        top: 1rem;
-        right: 4rem;
-        position: relative;
-        img{
-            transition: 0.3s all ease-in-out;
-            width: 200px;
-            filter: brightness(0) contrast(4) invert(100%);
+// @media screen and (min-width: 320px) and (max-width: 424px) {
+//     .sticky .mainHeader {
+//         top: 1rem;
+//         right: 1rem;
+//         width: 50%;
+//         .logo-img {
+//             -webkit-filter: initial;
+//             filter: initial;
+//             position: relative;
+//             left: 0;
+//             top: 0rem;
+//         }
+//     }
+//     .mainHeader {   
+//         top:4rem;
+//         img {
+//             width: 155px;
+//             position: relative;
+//             left: 8rem;
+//             top: 0rem;
+//         }
+//     }
+// }    
+// @media only screen and (min-width: 425px) {
+//     .sticky .mainHeader {
+//         top: 1rem;
+//         right: 1rem;
+//         width: 50%;
+//         img{
+//             width: 155px;
+//             position: relative;
+//             left: 0rem;
+//                }
+//     }
+//     .mainHeader{   
+//         top:1rem;
+//         img{
+//             width: 155px;
+//             position: relative;
+//             left: 6rem;
+//                }
+//         }
+// }
+// @media screen and (min-width: 426px) and (max-width: 768px) {
+//     .sticky .mainHeader {
+//         top: 1.2rem;
+//         right: 2rem;
+//         width: 50%;
+//         img{
+//             width: 155px;
+//             left: 0rem;
+//                }
+//     }
+//     .mainHeader{    
+//         margin: 0;
+//         z-index: 0;
+//         transition: 0.3s all ease-in-out;
+//         top: 1rem;
+//         right: 4rem;
+//         position: relative;
+//         img{
+//             transition: 0.3s all ease-in-out;
+//             width: 200px;
+//             filter: brightness(0) contrast(4) invert(100%);
            
-            position: relative;
-            left: 0rem;
-        }
-    }
-} 
-@media screen and (min-width: 1024px) and (max-width:3000px){
+//             position: relative;
+//             left: 0rem;
+//         }
+//     }
+// } 
+@media screen and (min-width: 1024px){
     .mainHeader{    
         z-index: 99;
         top: 0.5rem;
         transition: 0.2s all ease-in-out;
-        //background: #fff;
         padding: 10px 0;
+        width: 0%;
         border-radius: 35px 0px;
         img{
             transition: 0.2s all ease-in-out;
             width: 250px;
-      
-            // box-shadow: 0px 0px 10px #fff;
-            // background: #ffffff7d;
             border-radius: 60px;
             position: relative;
             left: 0rem;
@@ -137,7 +135,7 @@
     }
     .sticky{
         .mainHeader{
-            top: 6px;
+            top: 0px;
             right: 4rem;
             img{
                 width: 160px;

@@ -1,5 +1,5 @@
 .header-sp{
-    height: 92px;
+    height: 5rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -10,9 +10,16 @@
     &.sticky{
         position: fixed;
         top: 0;
-        height: 70px;
-        background: white;
-        border-bottom: 2px solid #f07615;
-        box-shadow: 0px 0px 50px 0px #44444421;
+        height: 4.5rem;
+        background: var(--quaternary-background-color);
+        box-shadow: 0px 0px 50px 0px var(--quinary-transparent-color);
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    .header-sp{
+        &.sticky{
+            height: 3.5rem;
+        }
     }
 }
