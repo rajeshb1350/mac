@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { TabModule } from 'angular-tabs-component';
+// import { TabModule } from 'angular-tabs-component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -115,6 +115,8 @@ import { FinanceAccountServiceComponent } from 'src/app/components/blocks/accord
 import { SmartEmployeeServiceComponent } from 'src/app/components/blocks/accordian/accordian2/smart-employee-service/smart-employee-service.component';
 import { TechnologyConsultingServiceComponent } from 'src/app/components/blocks/accordian/accordian2/technology-consulting-service/technology-consulting-service.component';
 import { Login1Component } from './components/forms/login-form/login1/login1.component';
+import { SubscriptionVer2Component } from './components/forms/subscription-form/subscription-ver2/subscription-ver2.component';
+import { Footer2Component } from './components/footer/footer2/footer2.component';
 
 @NgModule({
   declarations: [
@@ -204,7 +206,9 @@ import { Login1Component } from './components/forms/login-form/login1/login1.com
     FinanceAccountServiceComponent,
     SmartEmployeeServiceComponent,
     TechnologyConsultingServiceComponent,
-    Login1Component
+    Login1Component,
+    SubscriptionVer2Component,
+    Footer2Component
     
     
 
@@ -213,7 +217,7 @@ import { Login1Component } from './components/forms/login-form/login1/login1.com
     BrowserModule,
     Ng2CarouselamosModule,
     HttpClientModule,    
-    TabModule,
+    // TabModule,
     HttpModule,
     FormsModule,
     ReactiveFormsModule,

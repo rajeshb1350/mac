@@ -15,7 +15,7 @@ export class Slider3Component implements OnInit {
         subheading: 'Uberization of workforce and Connecting the world through technology',
         content: 'Smart Business Solutions as service is a pivotal expertise service delivery and niche consulting service under the umbrella that caters Smart Employee Services and Smart Technology Products.<br>SBuS as service is a gamut strategic operation that provides smart workforce services to unleash the territorial boundaries and scarcity in talent. Our talent bank in leading service portfolios and skillset supports client’s operational and technological requirements.',
         secheading: 'Engage a Smart Employee in Any Domain',
-        seccontent: 'Just for Only $ 999 - $ 2999 per month or $ 9 - $ 18 per hour',
+        seccontent: 'Hire for Only $ 999 - $ 2999 per month or $ 9 - $ 18 per hour',
         seclist: [
           {
           heading: 'Reduce your cost',
@@ -46,7 +46,7 @@ export class Slider3Component implements OnInit {
         subheading: 'Reliable Solutions for all your Finance & Accounting Offshoring',
         content: 'Begun the ideology of offshoring the operations with finance and accounting, with rich experience in end to end process of finance and accounting we aim at managing the vertical through our robust operations. We have certified and qualified accounts for each process and function in finance and accounting.',
         secheading: 'Engage Finance & Accounting Resources',
-        seccontent: 'Just for Only $ 999 - $ 2999 per month or $ 6 - $ 18 per hour',
+        seccontent: 'Hire for Only $ 999 - $ 2999 per month or $ 6 - $ 18 per hour',
         feature: [
           'Choose and Employ',
           'Highly skilled employee repository',
@@ -63,7 +63,7 @@ export class Slider3Component implements OnInit {
         subheading: 'Cutting edge technology solutions and workforce for your business needs.',
         content: 'Our foundation of efficiency is robust and apprised state of technological solutions that brings quantifiable value to our customers. We have more than 500+ highly skilled and certified resources supporting our IT and ITES CoE.  Ready to deploy for all your technology development support and resource engagement.',
         secheading: 'Engage Finance & Accounting Resources',
-        seccontent: 'Just for Only $ 999 - $ 2999 per month or $ 6 - $ 18 per hour',
+        seccontent: 'Hire for Only $ 999 - $ 2999 per month or $ 6 - $ 18 per hour',
         feature: [
           'Skilled to Work and Engaged to Deliver',
           'Certified and Experience Resources',

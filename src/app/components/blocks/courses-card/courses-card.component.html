@@ -1,136 +1,25 @@
 <section class="team card1">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-        <h2 class="display-4">Our Capabilities</h2>
+      <div class="col-12 col-sm-12 col-md-12 flex-container flex-jc-c">
+        <h2 class="heading">Our Capabilities</h2>
+      </div>
+      <div class="col-lg-12">
+        <div class="row pt-md">
+          <div *ngFor="let data of carddata" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 profile">
+            <div class="img-box">
+              <div class="text-box flex-container flex-pc flex-d-c">
+                <h4 class="text-center" [innerHTML]="data.heading"></h4>
+                <img src="{{data.img}}" class="img-fluid d-desk-none" alt="card image for component">
+                <p>{{data.content}}</p>
+                <h5><a routerLink="data.link">Learn More</a></h5>
+              </div>
+              <img src="{{data.img}}" class="img-fluid d-mobi-none" alt="card image for component">
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-
-    <div class="row pt-md space-20">
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 profile">
-        <div class="container1">
-          <div class="">
-            <!-- <h4 class="text-center">Finance & Accounting</h4> -->
-            <img src="/assets/images/coursesImages/resume.PNG" class="img-fluid d-desk-none w-100 image" alt="card image for component">
-            <div class="overlay overlayBottom">
-              <h4 class="text-center">Finance & Accounting</h4>
-              <p class="text">We leverage our deep F&A functional expertise through Operational Excellence and efficient
-                delivery model.
-                <br>
-                <a routerLink="/finance-accounts">Learn more</a>
-              </p>
-            </div>
-          </div>
-          <!--  <img src="/assets/images/coursesImages/resume.jpg" class="img-fluid d-mobi-none w-100" alt="card image for component"> -->
-        </div>
-      </div>
- 
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 addbutone">
-        <div class="container1">
-          <div class="">
-            <!--   <h4 class="text-center">Administration</h4> -->
-            <img src="/assets/images/coursesImages/admin.jpg" class="img-fluid d-desk-none w-100 image" alt="card image for component">
-            <div class="overlay overlayBottom">
-              <h4 class="text-center">SBuS Products</h4>
-              <p class="text">Collections of best SBuS Products
-                <br>
-                <a routerLink="/allProducts">Learn more</a>
-              </p>
-            </div>
-          </div>
-          <!-- <img src="/assets/images/coursesImages/body-language.jpg" class="img-fluid d-mobi-none w-100" alt="card image for component"> -->
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 profile">
-
-            <div class="container1">
-              <div class="">
-                <!--   <h4 class="text-center">Web Development</h4> -->
-                <img src="/assets/images/coursesImages/mis.jpg" class="img-fluid d-desk-none w-100 image" alt="card image for component">
-                <div class="overlay overlayBottom">
-                  <h4 class="text-center">Product Development</h4>
-                  <p class="text">Our technical expertise lies in state
-                    <br>
-                    <a routerLink="/appdevelopment">Learn more</a>
-                  </p>
-                </div>
-              </div>
-              <!-- <img src="/assets/images/coursesImages/mis.jpg" class="img-fluid d-mobi-none  w-100" alt="card image for component"> -->
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 profile">
-            <div class="container1">
-              <div class="">
-                <!--    <h4 class="text-center">Software Testing</h4> -->
-                <img src="/assets/images/coursesImages/testing.png" class="img-fluid d-desk-none w-100 image" alt="card image for component">
-                <div class="overlay overlayBottom">
-                  <h4 class="text-center">Business Process Re-engineering</h4>
-                  <p class="text"> We’re a team of business process development and engineering 
-                    <br>
-                    <a routerLink="/technoconsult">Learn more</a>
-                  </p>
-                </div>
-              </div>
-              <!--  <img src="/assets/images/coursesImages/gst.jpg" class="img-fluid d-mobi-none w-100" alt="card image for component"> -->
-            </div>
-          </div>
-        </div>
-        <div class="row space-20">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 profile">
-            <div class="container1">
-              <div class="">
-                <!--  <h4 class="text-center">Mobile Application Development</h4> -->
-                <img src="/assets/images/coursesImages/itcomp.jpg" style="width:100%;" class="img-fluid d-desk-none w-100 image" alt="card image for component">
-                <div class="overlay overlayBottom">
-                  <h4 class="text-center">Technology Support</h4>
-                  <p class="text">Team of experienced ...
-                    <br>
-                    <a routerLink="/business">Learn more</a>
-                  </p>
-                </div>
-              </div>
-              <!--   <img src="/assets/images/coursesImages/itcomp.jpg" class="img-fluid d-mobi-none w-100" alt="card image for component"> -->
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 profile">
-            <div class="container1">
-              <div class="">
-                <!--   <h4 class="text-center">App Development</h4> -->
-                <img src="/assets/images/coursesImages/quantitative-aptitude.jpg" class="img-fluid d-desk-none w-100 image" alt="card image for component">
-                <div class="overlay overlayBottom">
-                  <h4 class="text-center">Skill Development</h4>
-                  <p class="text">A platform that gives the...
-                    <br>
-                    <a target="_blank" href="http://www.skillpassport.in">Visit Now</a>
-                  </p>
-                </div>
-              </div>
-              <!-- <img src="/assets/images/coursesImages/quantitative-aptitude.jpg" class="img-fluid d-mobi-none w-100" alt="card image for component"> -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 lastbutone">
-        <div class="container1">
-          <div class="">
-            <!--   <h4 class="text-center">Administration</h4> -->
-            <img src="/assets/images/coursesImages/Products.jpg" class="img-fluid d-desk-none w-100 image" alt="card image for component">
-            <div class="overlay overlayBottom">
-              <h4 class="text-center">SBuS Products</h4>
-              <p class="text">Collections of best SBuS Products
-                <br>
-                <a routerLink="/allProducts">Learn more</a>
-              </p>
-            </div>
-          </div>
-          <!-- <img src="/assets/images/coursesImages/body-language.jpg" class="img-fluid d-mobi-none w-100" alt="card image for component"> -->
-        </div>
-
-      </div>
-    </div>
-
   </div>
 </section>

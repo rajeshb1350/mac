@@ -4,34 +4,28 @@
 
 .topbar-sp {
     position: absolute;
-    right: 4.5rem;
-    top: 1.2rem;
+    right: 5.5rem;
+    top: 0.5rem;
 	z-index: 100;
 	ul.links {
 		display: flex;
-		justify-content: flex-end;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		padding: 0;
 		li {
 			display: flex;
 			align-items: center;
 			list-style-type: none;
 			a.link {
-				margin-right: 0.7rem;
+				margin: 0.25rem 1rem;
 				font-size: 0.7rem;
-			}
-			&.sbusarw {
-				display: none;
+				&:hover {
+					color: var(--primary-color);
+				}
 			}
 		}
     }
-}
-
-
-.button {
-    font-size: 0.7rem;
-    font-weight: bold;
-    padding: 0.4rem 0.8rem;
-    border-radius: 1rem;
 }
 
 .sticky {
@@ -86,17 +80,27 @@
 	
 	.topbar-sp {
 	    right: 1.5rem;
-    	top: 0.6rem;
+		top: 0.6rem;
+		height: 2rem;
+		z-index: 9999;
 		ul.links {
 			justify-content: flex-end;
+			flex-direction: row;
 			li {
 				&:not(:last-child)::after {
 					margin: 0px 10px;
 				}
-			
+				a.link {
+					margin: 0rem 0rem 0rem 0rem;
+					font-size: 0.7rem;
+				}
 				&.sbusarw {
 					display: block;
 				}
+				
+				&:not(:last-child)::after {
+					content: "|";
+				} 
 			}
 		}
 	}
