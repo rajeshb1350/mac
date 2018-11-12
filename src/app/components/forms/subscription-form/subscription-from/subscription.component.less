@@ -348,6 +348,7 @@ label {
 		}
 		&.checkbox {
 			input[type="checkbox"] {
+				display: none;
 				position: absolute;
 				top: 11px;
 				z-index: 1000;
@@ -721,14 +722,15 @@ input {
 	.brdbttm {
 		li {
 			// flex: 0 0 calc(20% - 0.8rem);
-			flex: 0 0 calc(34% - 0.8rem);
-			margin:0.4rem 0.4rem 0 0;
+			flex: 0 0 calc(25% - 0.8rem);
+			margin: 0.4rem;
 			position: relative;
 			transform: scale(0.95);
 		}
 	}
 }
-.card_custom{border: 0px;
+.card_custom{
+	border: 0px;
 	a{
 		color: var(--secondary-color);
 	}
@@ -740,17 +742,17 @@ input {
 	.card-header {    
 		padding: 0.5rem 1rem;
 		margin-bottom: 0;
-		background-color: transparent;
+		background: #fafafa;
 		font-size: 0.8rem;
 		font-weight: bold;
 		border-bottom: 1px solid var(--quinary-transparent-color);
 	}
 	.card-body{
-	padding: 1rem 0;
+		padding: 1rem 0;
 	}
 }
 .bg_ttlamt{
-	background: #f7f7f7;
+	background: #fafafa;
 	padding: 1rem;
     position: sticky;
     top: 4rem;

@@ -7,7 +7,7 @@ import { Observable } from "rxjs/internal/Observable";
 import { Resolve } from "@angular/router/src/interfaces";
 
 
-@Injectable()
+@Injectable()   
 export class ApiService implements OnInit {
     private globalData: any;
     private portUrl: string =
