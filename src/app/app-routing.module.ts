@@ -27,14 +27,14 @@ import { SlotbookResolverService } from "./services/resolver/slotbook-resolver.s
 import { FeaturesComponent } from "./webpages/features/features.component";
 import { ServiceResolverService } from "./services/resolver/serviceCheck-resolver.service";
 import { AboutComponent } from "../app/components/blocks/about/about.component";
-import { ServicesAllComponent } from '../app/components/blocks/services-all/services-all.component';
+import { ServicesAllComponent } from './components/blocks/services-all/services-all.component';
 import { CareersComponent } from './components/blocks/careers/careers.component';
-import { AppDevelopmentComponent } from '../app/components/blocks/accordian/accordian2/app-development/app-development.component';
-import { BusinessReEngineeringComponent } from '../app/components/blocks/accordian/accordian2/business-re-engineering/business-re-engineering.component';
-import { EGovernenceComponent } from '../app/components/blocks/accordian/accordian2/e-governence/e-governence.component';
-import { FinanceAccountServiceComponent } from '../app/components/blocks/accordian/accordian2/finance-account-service/finance-account-service.component';
-import { SmartEmployeeServiceComponent } from '../app/components/blocks/accordian/accordian2/smart-employee-service/smart-employee-service.component';
-import { TechnologyConsultingServiceComponent } from '../app/components/blocks/accordian/accordian2/technology-consulting-service/technology-consulting-service.component';
+import { AppDevelopmentComponent } from './webpages/services/app-development/app-development.component';
+import { BusinessReEngineeringComponent } from './webpages/services/business-re-engineering/business-re-engineering.component';
+import { EGovernenceComponent } from './webpages/services/e-governence/e-governence.component';
+import { FinanceAccountServiceComponent } from './webpages/services/finance-account-service/finance-account-service.component';
+import { SmartEmployeeServiceComponent } from './webpages/services/smart-employee-service/smart-employee-service.component';
+import { TechnologyConsultingServiceComponent } from './webpages/services/technology-consulting-service/technology-consulting-service.component';
 
 
 const appRoutes: Routes = [

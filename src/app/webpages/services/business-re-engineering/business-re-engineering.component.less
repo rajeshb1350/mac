@@ -1,0 +1,236 @@
+
+
+// .innov-img {
+// 	background: url(/assets/images/services/application_develop/innov.png);
+// 	width: 100%;
+// 	height: 100%;
+// 	background-position: 100% 45%;
+// 	background-size: cover;
+// 	min-height: 160px;
+// }
+
+.col-count {
+	p {
+		column-count: 1;
+		column-gap: 2rem;
+		font-size: 1rem;
+		line-height: 1.25rem;
+	}
+}
+.app_does{
+	ul{
+    column-count: 2;
+    column-gap: 2rem;
+	}
+}
+.bg_services {
+	ul {
+		padding-left: 0px;
+		margin-bottom: 0px;
+		li {
+			list-style: none;
+			margin-bottom: 10px;
+			font-size: 0.906rem;
+			.fa-fw {
+				margin-left: -10px;
+				margin-top: 3px;
+			}
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}
+	p {
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}
+.somclient {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			list-style: none;
+			margin-bottom: 10px;
+			flex: 0 0 calc(33% - 0.5rem);
+			border: 1px #ffe0c7 solid;
+			background: #fff;
+			margin: 0.25rem;
+			padding: 1.5rem 0.6rem;
+			list-style-type: none;
+			min-height: 106px;
+			color: #3a3a3a;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+		}
+	}
+}
+
+.how-section1 {
+	.container {
+		margin-bottom: 3rem;
+	}
+}
+
+.how-section1 h4 {
+	color: #212529;
+	// font-weight: bold;
+	font-size: 22px;
+}
+
+.how-section1 .subheading {
+	color: #3931af;
+	font-size: 20px;
+}
+
+.bg_services {
+	background: #f9f9f9;
+	padding: 2rem 1.5rem;
+}
+
+.how-img {
+	background: linear-gradient(45deg, #848484, #dadada);
+	height: 100%;
+	width: 100%;
+	text-align: center;
+}
+
+.how-img img {
+	width: 100%;
+}
+
+.viewServices {
+	p {
+		font-size: 14px;
+	}
+	.checklist {
+		padding: 0;
+		margin: 0;
+		li {
+			list-style-type: none;
+			font-size: 14px;
+			margin-bottom: 14px;
+		}
+		li:before {
+			content: '\f00c';
+			font-family: FontAwesome;
+			color: #f07615;
+			font-size: 10px;
+			margin-right: 5px;
+			border: 1px solid;
+			border-radius: 50%;
+			padding: 2px;
+		}
+	}
+	.serviceInfo {
+		& :last-child {
+			border-bottom: 0px;
+		}
+		//   border-bottom: 1px solid #f07615;
+		padding: 20px 0;
+		/*  box-shadow: 0px 2px 7px #ddd; */
+	}
+	h5 {
+		color: #212529;
+		font-size: 20px;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+}
+
+.slide-content {
+	color: #fff;
+	text-align: center;
+	width: 315px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width:320px) and (max-width:425px) {
+	.somclient {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				flex: 0 0 calc(50% - 0.5rem);
+			}
+		}
+	}
+	.col-count {
+		p {
+			column-count: 1;
+			column-gap: 2rem;
+		}
+	}
+	.parallax-banner{
+		h2 {
+			font-size: 2rem;
+			}
+	} 
+}
+
+@media only screen and (min-width:768px) {
+	.somclient {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				flex: 0 0 calc(50% - 0.5rem);
+			}
+		}
+	}
+	.slide-content{
+		width: 70%;
+	}
+	.parallax-banner{
+		h2 {
+			font-size: 2rem;
+			}
+	} 
+}
+
+@media screen and (min-width:1024px) and (max-width:2084px) {
+	.somclient {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				list-style: none;
+				margin-bottom: 10px;
+				flex: 0 0 calc(25% - 0.5rem);
+				border: 1px #eaeaea solid;
+				margin: 0.25rem;
+				padding: 1.5rem 0.6rem;
+				list-style-type: none;
+				min-height: 106px;
+				color: #3a3a3a;
+			}
+		}
+	}
+	.parallax-banner {
+		background-image: url(/assets/images/whyMactec/app-dev.png);
+		width: 100%;
+		height: 400px;
+		background-attachment: inherit;
+		background-position: 100% 30%;
+		background-size: cover;
+		h2 {
+			font-size: 3rem;
+			position: relative;
+			top: -17px;
+			}
+	}
+	.slide-content {
+		text-align: center;
+		color: #fff;
+		text-align: center;
+		width: 75%;
+		margin: 0 auto;
+	}
+	.h2,
+	h2 {
+		font-size: 4rem;
+	}
+}

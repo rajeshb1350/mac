@@ -6,9 +6,6 @@
         width: 100%; 
         height: auto;
         min-height: 100vh;
-        background: linear-gradient(-45deg
-        ,var(--secondary-background-color)
-        ,var(--quinary-background-color));
         padding: 1rem 1rem 2.5rem;
         .banner-content {
             color: var(--quaternary-color);
@@ -80,7 +77,7 @@
                 }
             }
             .slide-img {
-                display: flex;
+                display: none;
                 justify-content: center;
                 align-items: center;                    
                 height: auto;
@@ -94,40 +91,20 @@
             }
         }
         &:nth-child(1) {
-            img {
-                height: 29rem;
-                top: calc(50% - 11rem);
-                left: 1.5rem;
-            }
-        }
+            background: linear-gradient(45deg, #312a6c, #852d91);
+        }        
         &:nth-child(2) {
-            img {
-                height: 31rem;
-                top: calc(50% - 11rem);
-                left: -17.5rem;
-            }
-        }
+            background: linear-gradient(45deg, #3a3897, #a3a1ff);
+        }        
         &:nth-child(3) {
-            img {
-                height: 35rem;
-                top: calc(50% - 12rem);
-                left: -23.5rem;
-            }
-        }
+            background: linear-gradient(-45deg, #662D8C, #ED1E79);
+        }        
         &:nth-child(4) {
-            img {
-                height: 31rem;
-                top: calc(50% - 11rem);
-                left: -8.5rem;
-            }
-        }
+            background: linear-gradient(45deg, #4f00bc, #29abe2);
+        }        
         &:nth-child(5) {
-            img {
-                height: 31rem;
-                top: calc(50% - 11rem);
-                left: -6.5rem;
-            }
-        }
+            background: linear-gradient(45deg, #3222c4, #382e8f);
+        }        
     }
 }
 
@@ -166,10 +143,47 @@
                     }
                 }
                 .slide-img {
+                    display: flex;
                     height: 35rem;
                     img {
                         // position: relative;
                     }
+                }
+            }
+
+            &:nth-child(1) {
+                img {
+                    height: 29rem;
+                    top: calc(50% - 11rem);
+                    left: 1.5rem;
+                }
+            }
+            &:nth-child(2) {
+                img {
+                    height: 21rem;
+                    top: calc(50% - 11rem);
+                    left: -1.5rem;
+                }
+            }
+            &:nth-child(3) {
+                img {
+                    height: 28rem;
+                    top: calc(50% - 12rem);
+                    left: -5.5rem;
+                }
+            }
+            &:nth-child(4) {
+                img {
+                    height: 27rem;
+                    top: calc(50% - 11rem);
+                    left: -4.5rem;
+                }
+            }
+            &:nth-child(5) {
+                img {
+                    height: 27rem;
+                    top: calc(50% - 11rem);
+                    left: -4.5rem;
                 }
             }
         }
