@@ -1326,3 +1326,46 @@ form.form-1 {
 	}
   }
   
+
+.page-banner {
+	background-color: var(--secondary-background-color);
+	.banner-content {
+		width: 100%;
+		height: 20rem;
+		color: var(--quaternary-color);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		z-index: 10;
+		.banner-heading {
+			font-size: 2.5rem;
+			font-weight: 300;
+			line-height: 2.5rem;
+			margin: 0;
+			&::after {
+				content: "";
+				display: block;
+				margin: 0.5rem 0;
+				width: 3rem;
+				height: 0.25rem;
+				background-color: var(--quaternary-background-color);
+			}
+		}
+		.banner-subheading{
+			margin: 0;
+			font-size: 1rem;
+		}
+	}
+	&::after {    
+		content: "";
+		display: block;
+		width: 20rem;
+		height: 20rem;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: rgba(0,0,0,0.2);
+		border-radius: 0 0rem 20rem 0;
+	}
+}

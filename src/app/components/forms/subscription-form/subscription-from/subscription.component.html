@@ -20,22 +20,30 @@
 					<div class="product group">
 						<div class="row">
 							<div class="col-lg-9 col-md-12 col-sm-12  col-xs-12  product-image">
+								<div class="row">
+									<div class="col-md-12">
 
-<div class="row"> 
-<div class="col-md-12">
+										<h5 class="text_left">Choose the number of
+											<b>Users</b>
+										</h5>
+										<div class="user_option">
+											<input type="number">
+											<label>
+												<b>Users x $6.00 USD/Month </b>
+												<b>
+													<del class="text-danger"> $8.00 USD/Months</del>
+												</b>
+											</label>
+										</div>
+									</div>
 
-		<h5 class="text_left">Choose the number of <b>Users</b></h5>
-		<div class="user_option">
-			<input type="number">
-			<label><b>Users x $6.00 USD/Month </b>   <b><del class="text-danger"> $8.00 USD/Months</del></b> </label>
-		</div>
-</div>
-
-</div>
+								</div>
 
 								<div class="row">
 									<div class="col-md-8">
-										<h5 class="text_left">Smart Business Solutions <b>Pricing </b></h5>
+										<h5 class="text_left">Smart Business Solutions
+											<b>Pricing </b>
+										</h5>
 										<!-- <h5  class="text_right">Total Products :  </h5> -->
 									</div>
 									<div class="col-md-4">
@@ -80,7 +88,8 @@
 																			{{modsub.price}} / Month
 																		</span>
 																		<!-- <span *ngIf="dollar"><i class="fa fa-usd"></i> 	{{modsub.price/70.00 | number}} USD/ Month </span> -->
-																		<span *ngIf="dollar" class="prdd_pricess"><i class="fa fa-usd"></i>
+																		<span *ngIf="dollar" class="prdd_pricess">
+																			<i class="fa fa-usd"></i>
 																			{{3}} / Month
 																		</span>
 																	</div>
@@ -99,7 +108,8 @@
 								<div class="bg_ttlamt">
 									<div class="col-md-12">
 										<div class="text-left row prod_selected">
-											<b>Products Selected </b><b> {{sprodlen}}</b>
+											<b>Products Selected </b>
+											<b> {{sprodlen}}</b>
 										</div>
 									</div>
 									<div class="prodList_height">
@@ -159,9 +169,7 @@
 						</label>
 						<div class="col-md-9">
 							<input type="text" class="frm-cntrl" tabindex="1" formControlName="name" placeholder="Enter Contact Name" />
-							<p *ngIf="subscriptionFrom.get('userData.name').invalid && subscriptionFrom.get('userData.name').touched" class="warn-text">Enter
-								a valid name eg. JohnDoe
-							</p>
+							
 						</div>
 					</div>
 					<div class="row">
@@ -170,9 +178,7 @@
 						</label>
 						<div class="col-md-9">
 							<input type="email" class="frm-cntrl" formControlName="email" placeholder=" Enter Email id" />
-							<p *ngIf="subscriptionFrom.get('userData.email').invalid && subscriptionFrom.get('userData.email').touched" class="warn-text">Enter
-								a valid email eg. johndoe@example.com
-							</p>
+							
 						</div>
 					</div>
 					<div class="row">
@@ -181,9 +187,7 @@
 						</label>
 						<div class="col-md-9">
 							<input type="tel" class="frm-cntrl" formControlName="mobile" placeholder=" Enter Mobile no." />
-							<p *ngIf="subscriptionFrom.get('userData.mobile').invalid && subscriptionFrom.get('userData.mobile').touched" class="warn-text">Enter
-								a valid mobile number eg. 9000090000
-							</p>
+							
 						</div>
 					</div>
 				</div>
@@ -202,9 +206,7 @@
 						</label>
 						<div class="col-md-9">
 							<input type="text" class="frm-cntrl" formControlName="orgname" placeholder=" Enter Organization Name" />
-							<p *ngIf="subscriptionFrom.get('orgData.orgname').invalid && subscriptionFrom.get('orgData.orgname').touched" class="warn-text">Enter
-								a valid Organization number eg. Johndoe Inc.
-							</p>
+							
 							<!-- <a data-toggle="tooltip" class="qmark" title="Users inclusive students, trainers and employers">
 							<i class="fa fa-info-circle" aria-hidden="true"></i>
 							</a> -->
@@ -217,9 +219,7 @@
 						<div class="col-md-9">
 							<input type="number" class="frm-cntrl" formControlName="usersNo" min="1" max="1000" placeholder=" Enter Number of Users"
 							/>
-							<p *ngIf="subscriptionFrom.get('orgData.usersNo').invalid && subscriptionFrom.get('orgData.usersNo').touched" class="warn-text">Enter
-								a valid users value eg. 200
-							</p>
+							
 						</div>
 					</div>
 					<div class="row">
@@ -281,8 +281,7 @@
 						<ng-template [ngIf]="responseStatus.status=='Success'">
 							<img src="/assets/images/icons/tickicon.png" alt="Info-icons" class="img-fluid">
 							<h4>Success</h4>
-							<h6 *ngIf="responseStatus.buy !='buy'">We have sent an email to {{responseStatus.response.email}}. Please validate
-								your email to get access.</h6>
+							<h6 *ngIf="responseStatus.buy !='buy'">We have sent an email to {{responseStatus.response.email}}. Please validate your email to get access.</h6>
 						</ng-template>
 						<ng-template [ngIf]="responseStatus.buy=='buy'">
 

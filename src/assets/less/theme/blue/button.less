@@ -23,10 +23,11 @@
 	position: relative;
 	font-size: 1rem;
 	user-select: none;
-	cursor: pointer;
+    cursor: pointer;
+    
     &.button-1{
-		border-radius: 2rem;
-		font-weight: 500;
+		border-radius: 0rem;
+		font-weight: 400;
 		padding: 0.7rem 1.5rem;
 		transition: 0.1s all ease-in;
 		background-color: transparent;
@@ -45,7 +46,7 @@
 		padding: 0.7rem 0.4rem 0.7rem 1.5rem;
 		text-transform: capitalize;
 		background-color: var(--primary-background-color);
-		font-weight: 600;
+		font-weight: 400;
 		border: none;
 		color: var(--quaternary-color); 
 		margin-top: 1rem;
@@ -91,6 +92,20 @@
 		}
     }
     
+    &.button-3 {
+        padding: 0.8rem 1.5rem;
+        background-color: var(--primary-background-color);
+		transition: 0.15s all ease-in;
+		font-weight: 400;
+		border: none;
+		color: var(--quaternary-color); 
+        margin-top: 1rem;
+        
+        &:hover {
+            background-color: var(--primary-background-color);
+        }        
+    }
+
     &:hover{
         text-decoration: none;
     }
