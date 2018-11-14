@@ -117,6 +117,8 @@ import { TechnologyConsultingServiceComponent } from 'src/app/components/blocks/
 import { Login1Component } from './components/forms/login-form/login1/login1.component';
 import { SubscriptionVer2Component } from './components/forms/subscription-form/subscription-ver2/subscription-ver2.component';
 import { Footer2Component } from './components/footer/footer2/footer2.component';
+import { SbusServicesComponent } from './webpages/sbus/sbus-services/sbus-services.component';
+import { FinanceAccountingComponent } from './webpages/sbus/sbus-services/finance-accounting/finance-accounting.component';
 
 @NgModule({
   declarations: [
@@ -208,7 +210,9 @@ import { Footer2Component } from './components/footer/footer2/footer2.component'
     TechnologyConsultingServiceComponent,
     Login1Component,
     SubscriptionVer2Component,
-    Footer2Component
+    Footer2Component,
+    SbusServicesComponent,
+    FinanceAccountingComponent
     
     
 

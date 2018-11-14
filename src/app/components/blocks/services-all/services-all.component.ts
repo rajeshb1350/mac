@@ -28,11 +28,10 @@ export class ServicesAllComponent implements OnInit {
   finalStatus: number = 1;
   statusMessage: string = "Please wait...";
   formstep: number = 1;
-
   // Form
   subscriptionFrom: FormGroup;
   formdata: SubscriptionFrom;
-
+  subscriptiontype: string = '';
 
   // Product
   totalPrice: number = 0;
@@ -59,6 +58,11 @@ export class ServicesAllComponent implements OnInit {
         this.services = data.serviceData
       }
     );
+  }
+
+  setSubcriptionType(data: string){
+    this.subscriptiontype = data;
+    console.log(this.subscriptiontype);
   }
 
   ngOnInit() {
@@ -162,7 +166,8 @@ export class ServicesAllComponent implements OnInit {
         '',
         ''
       ),
-      this.productIds
+      this.productIds,
+      this.subscriptiontype
     );
 
     this.api.postSubscriptionData(this.formdata).subscribe(
@@ -170,7 +175,7 @@ export class ServicesAllComponent implements OnInit {
         if(response['status'] == "ALREADY_REPORTED") {
           this.finalStatus = 3;
           this.statusMessage = response['message'];
-        } else if(response['status'] == "SUCCESS") {
+        } else if(response['status'] == "Success") {
           this.finalStatus = 2;
           this.statusMessage = response['message'];
         } else {

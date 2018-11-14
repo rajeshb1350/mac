@@ -1,0 +1,46 @@
+.sbus-tabs {
+    .nav-tabs {
+        justify-content: space-around;
+        border-bottom: none;
+        flex-wrap: nowrap;
+
+        .nav-item {
+            a {
+                color: #ababab;
+                font-size: 0.65rem;
+                text-align: center;
+                &.active {
+                    color: #002c4e;
+                    background-color: #fff;
+                    border: none;
+                    display: block;
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 60%;
+                        height: 0.15rem;
+                        margin: 0.5rem auto;
+                        background-color: #002c4e;
+                    }
+                }
+                &:hover {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and ( min-width: 980px) {
+    .sbus-tabs {
+        .nav-tabs {
+            flex-wrap: wrap;
+            .nav-item {
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

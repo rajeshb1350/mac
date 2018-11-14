@@ -35,6 +35,7 @@ import { EGovernenceComponent } from '../app/components/blocks/accordian/accordi
 import { FinanceAccountServiceComponent } from '../app/components/blocks/accordian/accordian2/finance-account-service/finance-account-service.component';
 import { SmartEmployeeServiceComponent } from '../app/components/blocks/accordian/accordian2/smart-employee-service/smart-employee-service.component';
 import { TechnologyConsultingServiceComponent } from '../app/components/blocks/accordian/accordian2/technology-consulting-service/technology-consulting-service.component';
+import { SbusServicesComponent } from "./webpages/sbus/sbus-services/sbus-services.component";
 
 
 const appRoutes: Routes = [
@@ -81,7 +82,7 @@ const appRoutes: Routes = [
     { path: "apply", component: ApplyComponent },
 
     { path: "blogs", component: BlogsComponent },
-    { path: "services", component: AboutComponent },
+    { path: "sbus-service", component: SbusServicesComponent },
     { path: "careers", component: CareersComponent },
     { path: "aboutUs", component: AboutUsComponent },
     { path: "contact", component: ContactUsComponent },
