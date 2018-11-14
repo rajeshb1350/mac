@@ -15,19 +15,66 @@
           <i class="fa fa-home fa-1x f_20 fa-fw" aria-hidden="true"></i> Home
         </a>
       </li>
-      <li routerLinkActive="active" class="nav-item">
-        <a routerLink="/aboutUs">About us</a>
-      </li>
+     
+   
+
+        <li class="dropdown appdropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About us
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu sm-menu" role="menu">
+                <li routerLinkActive="active" class="nav-item">
+                    <a routerLink="/aboutUs">About us</a>
+                  </li>
+              
+              <li  class="dropdown appdropdown">
+                <a routerLink="/">Leadership</a>
+              </li>
+              <li  class="nav-item">
+                  <a routerLink="/why-mactec">Why MacTec</a>
+                </li>
+            </ul>
+        </li>
+
       <li class="dropdown appdropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">SBuS Services
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Smart Business Solutions
           <span class="caret"></span>
         </a>
         <ul class="dropdown-menu sm-menu" role="menu">
-          <li routerLinkActive="active" class="dropdown appdropdown">
-            <a routerLink="/technoconsult">Technology Services</a>
-          </li>
 
+
+
+            <li routerLinkActive="active" class="nav-item">
+                <a routerLink="/">SBuS Strategy</a>
+              </li>
+          
+          <li  class="dropdown appdropdown">
+            <a routerLink="/">SBuS Services</a>
+          </li>
+          <li  class="nav-item">
+              <a routerLink="/">SBuS Products</a>
+            </li>
+
+
+
+
+
+
+          <!-- <li routerLinkActive="active" class="nav-item">
+            <a routerLink="/finance-accounts">Finance & Accounting</a>
+          </li>
+          
+          <li routerLinkActive="active" class="dropdown appdropdown">
+            <a routerLink="/technoconsult">Information Technology</a>
+          </li>
           <li routerLinkActive="active" class="nav-item">
+              <a routerLink="/process-excellence">Process Excellence</a>
+            </li> -->
+
+
+
+
+          <!-- <li routerLinkActive="active" class="nav-item">
             <a routerLink="/e-governence">e-Governance</a>
           </li>
 
@@ -37,11 +84,9 @@
 
           <li routerLinkActive="active" class="nav-item">
             <a routerLink="/business">Business Re-Engineering</a>
-          </li>
+          </li> -->
 
-          <li routerLinkActive="active" class="nav-item">
-            <a routerLink="/finance-accounts">Finance & Accounting</a>
-          </li>
+         
           <!-- <li routerLinkActive="active" class="nav-item">
             <a routerLink="/technoconsult">Technology Services</a>
           </li>

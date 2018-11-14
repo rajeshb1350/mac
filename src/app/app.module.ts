@@ -82,6 +82,9 @@ import { Accordian1Component } from './components/blocks/accordian/accordian1/ac
 import { AccordianService } from './services/accordian.service';
 import { Accordian2Component } from './components/blocks/accordian/accordian2/accordian2.component';
 //import { ChatAppComponent } from './components/blocks/chat-app/chat-app.component';
+import { SbusComponent } from './webpages/sbus/sbus.component';
+import { SbusStrategyComponent } from './webpages/sbus/sbus-strategy/sbus-strategy.component';
+import { OperationalExcellenceComponent } from './webpages/sbus/operational-excellence/operational-excellence.component';
 
 // For Routing files imports and exports
 import { AppRoutingModule } from './app-routing.module';
@@ -117,6 +120,8 @@ import { TechnologyConsultingServiceComponent } from './webpages/services/techno
 import { Login1Component } from './components/forms/login-form/login1/login1.component';
 import { SubscriptionVer2Component } from './components/forms/subscription-form/subscription-ver2/subscription-ver2.component';
 import { Footer2Component } from './components/footer/footer2/footer2.component';
+import { WhymactecComponent } from './webpages/whymactec/whymactec.component';
+import { ProcessExcellenceComponent } from './webpages/services/process-excellence/process-excellence.component';
 
 @NgModule({
   declarations: [
@@ -208,7 +213,12 @@ import { Footer2Component } from './components/footer/footer2/footer2.component'
     TechnologyConsultingServiceComponent,
     Login1Component,
     SubscriptionVer2Component,
-    Footer2Component
+    Footer2Component,
+    WhymactecComponent,
+    ProcessExcellenceComponent,
+    SbusComponent,
+    SbusStrategyComponent,
+    OperationalExcellenceComponent
     
     
 

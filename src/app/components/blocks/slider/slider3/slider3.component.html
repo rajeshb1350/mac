@@ -10,38 +10,51 @@
       <div class="carousel-item" [ngClass]="i==0?'active':''" *ngFor="let pdata of sliderContent; let i = index;">
         <div class="container banner-content">
           <div class="row">
-            <div class="col-md-8 col-sm-8 col-12 slide-content">
+            <div class="col-lg-8 col-md-12 col-sm-12 col-12 slide-content">
+              <h6 class="subheading">{{pdata.subheading}}</h6>
               <h2 [innerHTML]="pdata.heading"></h2>
-              <h5 class="subheading">{{pdata.subheading}}</h5>
               <p class="content" [innerHTML]="pdata.content"></p>
-              <h6 class="text-center" *ngIf="pdata.secheading">
+             <!--  <h6 class="text-center" *ngIf="pdata.secheading">
                 <i>
                   {{pdata.secheading}}  
                 </i>
                 <br>
-              </h6>
-              <p class="text-center">
+              </h6> -->
+              <!-- <p class="text-center">
                 <i>
                   {{pdata.seccontent}}  
                 </i>
-              </p>
-              <ul class="slide-features" *ngIf="pdata.seclist">
+              </p> -->
+             <ul class="slide-features" *ngIf="pdata.seclist">
                 <li *ngFor="let data of pdata.seclist">
                   <h6>{{data.heading}}</h6>
                   <p>{{data.content}}</p>
                 </li>
               </ul>
-              <ul class="slide-list fa-ul">
+             <!--  <ul class="slide-list fa-ul">
                 <li *ngFor="let data of pdata.feature">
                   <i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>
                   {{data}}
                 </li>
-              </ul>
-              <a routerLink="{{pdata.link}}" *ngIf="pdata.type=='page'" class="button button-3">Read More</a>
-              <a href="{{pdata.link}}" *ngIf="pdata.type=='web'" target="_blank" class="button button-3">Visit now</a>
+              </ul>  -->
+              <a routerLink="{{pdata.link}}" *ngIf="pdata.type=='page'" class="button button-2">Learn more</a>
+                <a href="{{pdata.link}}" *ngIf="pdata.type=='web'" target="_blank" class="button button-2">Learn more</a>
             </div>
-            <div class="col-md-4 col-sm-4 col-12 slide-img">
-              <img alt="First slide" src="{{pdata.imagepath}}">
+            <div class="col-lg-4 col-md-12 col-sm-4 col-12 slide-img">
+             <!--  <img alt="First slide" src="{{pdata.imagepath}}"> -->
+             <div class="mobileEmphasixed">
+               <div class="emphasizeContent">
+                  <ul class="slide-list fa-ul">
+                      <li *ngFor="let data of pdata.feature">
+                        <i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>
+                        {{data}}
+                      </li>
+                    </ul>
+               </div>
+              <div class="emphasizeContent">
+                  <p>{{pdata.empSizeText}}</p>
+             </div>
+             </div>
             </div>
           </div>
         </div>

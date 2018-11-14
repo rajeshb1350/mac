@@ -12,7 +12,8 @@
                 <h4 class="text-center" [innerHTML]="data.heading"></h4>
                 <img src="{{data.img}}" class="img-fluid d-desk-none" alt="card image for component">
                 <p>{{data.content}}</p>
-                <h5><a routerLink="data.link">Learn More</a></h5>
+                <h5 *ngIf="data.type=='page'"><a routerLink="{{data.link}}">{{data.readLink}}</a></h5>
+                <h5 *ngIf="data.type=='web'"><a href="{{data.link}}" target="_blank">{{data.readLink}} <img src="{{data.redirect}}" style="width: 12px;"/></a></h5>
               </div>
               <img src="{{data.img}}" class="img-fluid d-mobi-none" alt="card image for component">
             </div>

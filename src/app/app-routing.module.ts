@@ -35,8 +35,8 @@ import { EGovernenceComponent } from './webpages/services/e-governence/e-governe
 import { FinanceAccountServiceComponent } from './webpages/services/finance-account-service/finance-account-service.component';
 import { SmartEmployeeServiceComponent } from './webpages/services/smart-employee-service/smart-employee-service.component';
 import { TechnologyConsultingServiceComponent } from './webpages/services/technology-consulting-service/technology-consulting-service.component';
-
-
+import { WhymactecComponent } from './webpages/whymactec/whymactec.component';
+import { ProcessExcellenceComponent } from './webpages/services/process-excellence/process-excellence.component';
 const appRoutes: Routes = [
     // { path: "", component: IndexComponent, resolve: {server: SlotbookResolverService} },
     {
@@ -84,6 +84,7 @@ const appRoutes: Routes = [
     { path: "services", component: AboutComponent },
     { path: "careers", component: CareersComponent },
     { path: "aboutUs", component: AboutUsComponent },
+    { path: "why-mactec", component: WhymactecComponent },
     { path: "contact", component: ContactUsComponent },
     { path: "appdevelopment", component: AppDevelopmentComponent },
     { path: "business", component: BusinessReEngineeringComponent },
@@ -95,6 +96,8 @@ const appRoutes: Routes = [
     { path: "suscribe", component: SubscriptionComponent },
     { path: "verifydash", component: EmailverificationComponent },
     { path: "pagenotfound", component: PagenotfoundComponent },
+    { path: "process-excellence", component: ProcessExcellenceComponent },
+    
     { path: "**", redirectTo: "/pagenotfound" }
 ];
 

@@ -12,8 +12,8 @@ export class Slider3Component implements OnInit {
   sliderContent = [
       {
         heading: 'Smart Business Solutions SBuS<sup>®</sup>',
-        subheading: 'Uberization of workforce and Connecting the world through technology',
-        content: 'Smart Business Solutions as service is a pivotal expertise service delivery and niche consulting service under the umbrella that caters Smart Employee Services and Smart Technology Products.<br>SBuS as service is a gamut strategic operation that provides smart workforce services to unleash the territorial boundaries and scarcity in talent. Our talent bank in leading service portfolios and skillset supports client’s operational and technological requirements.',
+        subheading: 'Brand for uberization of workforce and Connecting the world through technology',
+        content: 'Smart Business Solutions as service is a pivotal expertise service delivery and niche consulting service under the umbrella that caters Smart Employee Services and Smart Technology Products.<br><br>SBuS as service is a gamut strategic operation that provides smart workforce services to unleash the territorial boundaries and scarcity in talent. Our talent bank in leading service portfolios and skillset supports client’s operational and technological requirements.<br><br>“Uberization” of the workforce provides the flexibility many skilled workforces seek and helps lessen the cost of reskilling employees in an industry where technology is rapidly changing.',
         secheading: 'Engage a Smart Employee in Any Domain',
         seccontent: 'Hire for Only $ 999 - $ 2999 per month or $ 9 - $ 18 per hour',
         seclist: [
@@ -38,8 +38,9 @@ export class Slider3Component implements OnInit {
           'Best in class processes for accelerated success'
         ],
         type: 'page',
-        link: 'appProducts',
-        imagepath: '/assets/images/banner/slide-2.png'
+        link: 'allProducts',
+        imagepath: '/assets/images/banner/slide-2.png',
+        empSizeText:'Uberize IT & ITES Workforce Engage for Only $ 999 - $ 2999 per month or $ 6 - $ 18 per hour'
       },
       {
         heading: 'Finance and Accounting CoE Solutions',
@@ -56,7 +57,8 @@ export class Slider3Component implements OnInit {
         ],
         type: 'page',
         link: 'finance-accounts',
-        imagepath: '/assets/images/banner/slide-5.png'
+        imagepath: '/assets/images/banner/slide-5.png',
+        empSizeText:'Uberize IT & ITES Workforce Engage for Only $ 999 - $ 2999 per month or $ 6 - $ 18 per hour'
       },
       {
         heading: 'IT and ITES CoE Solutions',
@@ -73,12 +75,13 @@ export class Slider3Component implements OnInit {
         ],
         type: 'page',
         link: 'technoconsult',
-        imagepath: '/assets/images/banner/slide-1.png'
+        imagepath: '/assets/images/banner/slide-1.png',
+        empSizeText:'Uberize IT & ITES Workforce Engage for Only $ 999 - $ 2999 per month or $ 6 - $ 18 per hour'
       },
       {
         heading: 'Skill Passport',
         subheading: 'A platform that gives the touch of machine learning and a gate way for self-assessment, continues skilling and upskilling.',
-        content: 'Our Smart Employee data factory is the resultant out come of skill passport. We diagnose, design and deliver the necessary skill for the workforce that we intend to engage for our client needs. Skill Passport is an intuitive digital platform that leverages result driven assessment and sustainable learning at every stage of employment.',
+        content: 'Skill Passport ® is a product of MacTec, which is the backbone of highly skilled workforce data bank. Since the Uberization of Workforce has evolved, we started identifying the need for skilling to meet the requirements of our global clients. Therefore, we have come up with an open source tool that helps the prospects to assess, coach and examine the skills as per the market.<br><br> Our Smart Employee data factory is the resultant out come of skill passport. We diagnose, design and deliver the necessary skill for the workforce that we intend to engage for our client needs. Skill Passport is an intuitive digital platform that leverages result driven assessment and sustainable learning at every stage of employment.',
         secheading: 'We allow our clients to test the required skills through Skill Passport',
         feature: [
           'Pre-assessments',
@@ -90,7 +93,8 @@ export class Slider3Component implements OnInit {
         ],
         type: 'web',
         link: 'https://www.skillpassport.in',
-        imagepath: '/assets/images/banner/slide-4.png'
+        imagepath: '/assets/images/banner/slide-4.png',
+        empSizeText:'Early on we took the bold step of identifying the resources in open market to meet our client requirement, assess and evaluate the necessary skills through Skill Passport ® - setting a new industry standard in choosing employee and helping clients to pick right man at the right place.'
       },
       {
         heading: 'Smart Business Solutions Product.',
@@ -105,7 +109,8 @@ export class Slider3Component implements OnInit {
         ],
         type: 'page',
         link: 'allProducts',
-        imagepath: '/assets/images/banner/slide-3.png'
+        imagepath: '/assets/images/banner/slide-3.png',
+        empSizeText:'Uberize IT & ITES Workforce Engage for Only $ 999 - $ 2999 per month or $ 6 - $ 18 per hour'
       },
     ];
 

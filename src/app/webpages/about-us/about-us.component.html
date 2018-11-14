@@ -1,22 +1,29 @@
 <div class="about-section">
-	<div class="page-banner" style="background-color: var(--quinary-background-color)">
+	<div class="page-banner" style="background-color: var(--secondary-background-color)">
 		<div class="banner-content container">
 			<h2 class="banner-heading">About us</h2>
+			<p>Smart Business Solutions… Powered by Intelligent Technologies</p>
 		</div>
 	</div>
 	<div class="space-40"></div>
-	<div class="">
+	<div>
 		<section class="about_sec">
 			<div class="container">
 				<!-- <h3 class="display-4 text-center">About Us</h3> -->
 				<div class="row">
 
 					<div class="col-lg-6 col-md-12 text-center">
-						<img src="/assets/images/banner/service.png" alt="About-us banner" class="img-fluid" />
+						<img src="/assets/images/banner/service.png" alt="About-us banner" class="img-fluid" style="height:325px;" />
 					</div>
 					<div class="col-lg-6 col-md-12 statmnet">
+						<p> At MacTec we understand that truly innovative ideas come from a smart employee and inspired workforce. We exceed the
+							day to day work experience to achieve excellence through our Smart People ( SPpL<sup>®</sup>) . Process (SOpX<sup>®</sup>) . Technology
+							(STeH<sup>®</sup>)
+							<!-- 		
+									<br>
+									<button class="btn  custbtn">Try us now &#62;</button> -->
 
-						We nuture passion to add value and provide the Best-in-Class Operational & Technological Sloutions
+						</p>
 					</div>
 
 				</div>
@@ -32,13 +39,36 @@
 						<h3>Introductions</h3>
 
 						<p>
-							MacTec Solutions, the name stands for Management and Technology Solutions, is a leading smart employee services company,
-							operating from Hyderabad, India and New Jersey, USA.</p>
-						<p>
-							Founded in 2012 with a passion to provide best in class virtual employee services for Operations and Technology. Our smart
-							employee solutions from India to our global customers is primarily in the areas of Finance & Accounting (SFaS) and
-							Technology (STeH).
+							MacTec Solutions, the name stands for management (MAC) and Technology (TEC) Solutions, is a leading smart business solutions
+							services provider, operating from India, USA and Australia. Globalization of talent through Uberization of Workforce
+							Smart Technologies. We aim at our clients’ success by optimization of people process and technology.
 						</p>
+						<p>
+							Founded in 2012 with a passion to provide best in class smart employee consulting services for operations and technology,
+							our smart employee solutions from India to our global customers is primarily in the areas of Technology, ITES, Finance
+							and Accounting and process re-engineering.
+						</p>
+
+						<p> Why Smart Employee Engagement is so important?</p>
+						<p>
+							We attempt to create an inviting culture and work environment that's encouraging to the spirit of Uberization of workforce.
+							Recent studies reveal that while only 33.33 percent of the total employees say they are ‘engaged productively’, nearly
+							66.66 percent employees are ‘not productively engaged’, and over 25 percent are ‘actively disengaged’. Inspired leadership
+							will consider for the effective engagement of smart and skilled workforce. Uberization of workforce will helps drive
+							skilled workforce engagement. Here’s why it’s such a smart strategy for our business — and for yours as well:</p>
+						<ul class="abt_intro fa-ul">
+							<li>
+								<i aria-hidden="true" class="fa fa-angle-right fa-li fa-fw"></i>
+								Organizations with highly smart employee engagement experience 50 percent greater productivity</li>
+
+							<li>
+								<i aria-hidden="true" class="fa fa-angle-right fa-li fa-fw"></i> Companies with sustained employee engagement have shown operating margins three times higher than those of companies
+								with the lowest levels of engagement</li>
+
+							<li>
+								<i aria-hidden="true" class="fa fa-angle-right fa-li fa-fw"></i> Smart employee engagement and retention cultivate an ethos of mission and purpose</li>
+
+						</ul>
 						<p>
 							Our success has been built upon having the best software developers, testers and accounting professionals in the industry
 							to deliver a set of services tailored to what our clients want and need. We are pioneering industry-specific Smart
@@ -51,47 +81,152 @@
 						</p>
 					</div>
 					<div class="col-lg-6 col-md-12 text-center">
-						<img src="/assets/images/banner/team.png" alt="About-us banner" class="img-fluid" />
+						<div class="abtus_img">
+							<img src="/assets/images/banner/team.png" alt="About-us banner" class="img-fluid" />
+						</div>
 					</div>
 
 				</div>
 			</div>
 		</section>
+
+
+
+
+		<section class="padd_same">
+			<div class="container" *ngFor="let sdata of servOffer;">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="heading" [innerHTML]="sdata.heading"></h2>
+					</div>
+					<div class="col-md-3" *ngFor="let siner of sdata.seclist;">
+						<div class="card card-default cld_servce sbus_btmt">
+							<!-- <div class="card-header" [ngStyle]="{backgroundColor: siner.color} ">
+								
+							</div> -->
+							<div class="card-block">
+									<h5 [innerHTML]="siner.header"></h5>
+								<ul class="slide-list fa-ul">
+									<li *ngFor="let listdata of siner.feature">
+
+										{{listdata}}
+									</li>
+								</ul>
+							</div>
+						</div>
+
+
+
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<section class="padd_same bg_grey">
+				<div class="container">
+		<div class="row">
+				<div class="col-md-6 col-lg-3 space-20" style="margin-top: 47px !important;">
+						<div class="card integratecrd" >
+						   <div class="card-header" >integrate</div>
+						   <div class="card-body" >
+							  pre-Hire Orientation Buddy Program
+						   </div>
+						</div>
+					 </div>
+				<div class="col-md-6 col-lg-3 space-20" style="margin-top: 47px !important;">
+				   <div class="card engagecrd" >
+					  <div class="card-header" >Engage</div>
+					  <div class="card-body">
+						 1-on-1 with Supervisor High Impact Touch Points "Connect" -Family Day 
+					  </div>
+				   </div>
+				</div>
+				<div class="col-md-6 col-lg-3 space-20" style="margin-top: 47px !important;">
+				   <div class="card communicrd" >
+					  <div class="card-header" >Communicate</div>
+					  <div class="card-body">
+						 Straight Talk -Q&A Monthly All Associate Townhall Monthly All Manager Meet
+					  </div>
+				   </div>
+				</div>
+				<div class="col-md-6 col-lg-3 space-20" style="margin-top: 47px !important;">
+				   <div class="card monitercrd" >
+					  <div class="card-header" >Moniter</div>
+					  <div class="card-body">
+						 Ealry Warning System Daily Attrition Tracker
+					  </div>
+				   </div>
+				</div>
+			
+			 </div>
+			</div>
+			</section>
+
+
+
+
+
 		<section class=" about_sec">
 			<div class="container">
 				<div class="row ">
+
+				
 					<div class="col-lg-6 col-md-12 text-center">
-						<img src="/assets/images/banner/direction.png" alt="About-us banner" class="img-fluid" />
+							<img src="/assets/images/whyMactec/why.png" alt="About-us banner" class="img-fluid" />
+
 					</div>
-					<div class="col-md-6">
-						<div class="visoon">
-							<h4>Our Vision</h4>
-							<p>
-								MacTec’s vision is to be the Best-in-Class and an innovative access to Talent, Processes and Technology, through Smart People
-								Solutions. We aim to position MacTec as a Global Hub and driving force for Efficiency, Reliability, Cost-Effective
-								and highly qualitative Solutions through offshore resource management processes.
-							</p>
-						</div>
-						<div class="visoon">
-							<h4>Our Mission</h4>
-							<p>
-								Our mission is to add value to our clients’ business through our services and products. Simplification of complex and deferrable
-								processes; set benchmark strategic solutions, and then drive to process excellence, for augmented ROI of time, money
-								and effort of the management. We are an opportunity and knowledge hub with an objective and reputation in People
-								Transformation, Process Enhancements and Technology Solutions.
-							</p>
-						</div>
+					<div class="col-md-6 allAbt">
+							<h2>It's all about</h2>
+							<ul>
+								<li>How all work gets done.</li>
+								<li>How we deliver value to the customer.</li>
+								<li>How we strive for continous improvement of our own process as well as our customers.</li>
+							</ul>
+						
+
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<section class=" about_sec bg_grey">
+			<div class="container">
+				<div class="row ">
+				
+					<div class="col-md-6">
+						<div class="visoon">
+							<h2>Our Vision & Mision</h2>
+							<p>
+								Uberization of Workforce through Smart Business Solutions – SBuS ®. Provide Best-in-Class and an innovative access to People,
+								Processes and Technology. We aim to position MacTec as a Global Hub and driving force for Efficiency, Reliability,
+								Cost-Effective and Highly Qualitative Solutions through onsite and offshore resource management processes.
+							</p>
+							<p>
+									Add value to our clients’ business through our services and products. Simplification of complex and deferrable processes.
+									Set benchmark strategic solutions, and then drive to process excellence, for augmented ROI of time, money and effort
+									of the management. We are an opportunity and knowledge hub with an objective and reputation in workforce transformation,
+									process enhancements and technology Solutions.
+	
+								</p>
+						</div>
 
-		<section class="about_sec bg_grey">
+					</div>
+					<div class="col-lg-6 col-md-12 text-center">
+							<img src="/assets/images/banner/direction1.png" alt="About-us banner" class="img-fluid" />
+						</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="about_sec ">
 			<div class="container">
 				<!-- <h3 class="display-4 text-center">About Us</h3> -->
 				<div>
-					<h3>Benifits of working with MacTec</h3>
+					<h2>Benifits of working with MacTec</h2>
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-12">
@@ -147,7 +282,7 @@
 										a competitive price to significantly reduce the staffing cost.</p>
 								</li>
 								<li>
-									<h6 class="iconica">Proven Succwss</h6>
+									<h6 class="iconica">Proven Success</h6>
 									<p>With a fervent partnership with our erstwhile and existing clients, we have proven track record of not just seamless
 										delivery but also adding value proposition to our clients’ business.</p>
 								</li>
@@ -161,20 +296,31 @@
 
 
 
-		<section class="our-team padding-30">
+		<section class="our-team padding-30 bg_grey">
 			<div class="container">
-				<h3 class="text-center display-4">Our team</h3>
+				<h3 class=" display-4">Our Leadership</h3>
 				<div class="row space-30">
 					<!-- Team member -->
-					<div class="col-12 col-sm-4 col-md-4 col-lg-4 team-box" *ngFor="let data of teamdata">
-						<img class="team-img img-fluid" src="{{data.img}}" alt="card image {{data.img}}">
-						<h4 class="title">{{data.name}}</h4>
-						<h5 class="desg">
-							<small>{{data.desg}}</small>
-						</h5>
-						<p class="content">
-							{{data.content}}
-						</p>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 team-box" *ngFor="let data of teamdata">
+						
+<div class="row">
+	<div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+			<img class="team-img " src={{data.img}}>
+	</div>
+	<div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+		<div class="leadershp">
+	<h4 class="title">{{data.name}}</h4>
+	<h5 class="desg">
+		<small>{{data.desg}}</small>
+	</h5>
+	<p class="content">
+		{{data.content}}
+	</p>
+</div>
+</div>
+</div>
+
+
 					</div>
 
 				</div>
@@ -189,71 +335,38 @@
 			<div class="container">
 				<div class="row padding-30">
 					<div class="col-12 col-md-5">
-						<div class="yeardata">
-							<h4>2012</h4>
-							<ul class="fa-ul">
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>The beginning of MacTec journey as partnership firm.</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Started as a garage-office with basic set-up</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Launched ‘Smart Business Solutions’ - a consulting service for India-to-India enterprises</li>
-							</ul>
-						</div>
-
-						<div class="yeardata">
-							<h4>2014</h4>
-							<ul class="fa-ul">
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Registered as Private Limited Company</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Moved to IT Hub – Hitec City facility in Hyderabad with topline infrastructure</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Launched Technology Outsourcing services through Smart Employee Services platform</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Signed-off outsourcing contract with UK based client CACI for Development and Testing portfolio</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Initiated first indigenous IT product – OrderEzi in Food Tech domain for restaurants and Order Management process</li>
-							</ul>
-						</div>
-						<div class="yeardata">
+						
+							<div class="yeardata yearsixth">
+									<h4>2017</h4>
+									<p>Product Development Support, IT & ITES consulting services offshore centre.</p>
+								</div>
+						
+						<div class="yeardata yearfifth">
 							<h4>2016</h4>
-							<ul class="fa-ul">
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Bagged major government project in Skill Development sector</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Initiated proprietary ERP development for Small & Medium Scale businesses covering 2 modules</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Payroll</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>HRMS</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Extended ERP module development to 5 modules as wholesome product – Rite ERP</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Project Management</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Asset Management</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Procurement</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Employee Self Services</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Budgeting</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Increased headcount to cater to domestic clients</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Bagged re-engineering projects for business transformation</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Launched Social Entrepreneurship projects in collaboration with state government</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Singed off QA Testing projects for domestic clients</li>
-							</ul>
+							<p>Proprietary products launch: Skill Passport, ampmdeals.com and ERP. Govt of AP Contract</p>
 						</div>
+						<div class="yeardata yearfourth">
+								<h4>2015</h4>
+								<p>New Jersey office incorporated – Process re-engineering clients, Smart Business Solutions Products launch. Finance
+									and Accounting Projects.
+								</p>
+							</div>
 					</div>
 					<div class="col-12 col-md-2"></div>
 					<div class="col-12 col-md-5">
-						<div class="yeardata">
+							<div class="yeardata yearone">
+									<h4>2012</h4>
+									<p>The beginning of MacTec journey as Partnership Firm.</p>
+								</div>
+						<div class="yeardata yearsec">
 							<h4>2013</h4>
-							<ul class="fa-ul">
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>2 client addition on India-to-India portfolio</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Launched Finance & Accounting consulting service</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Initiated Operational Excellence consulting service</li>
-							</ul>
+							<p>Smart Business Solutions launch for India to India operations and converted MacTec as a Private Limited Company</p>
 						</div>
-						<div class="yeardata">
-							<h4>2015</h4>
-							<ul class="fa-ul">
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Set-up office in New Jersey USA</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Initiated Smart Employee Services for domestic clients in F&A domain</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Complete 3 major Business Re-engineering consulting projects with an overall value benefit of 50 mn INR for clients</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Initiated development of proprietary products in Education and Utility service domain</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Campus Champs</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>City Blaze</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Developed e-Commerce platform for retail enterprise with customized and localized features</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Deals.com</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Added domain capability in Smart Business Services portfolio</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>Application Development</li>
-								<li><i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>QA</li>
-							</ul>
-						</div>
+						<div class="yeardata yearthrd">
+								<h4>2014</h4>
+								<p>Signed off UK based client CACI for high end development support, through Yati Solutions </p>
+							</div>
+				
 
 					</div>
 				</div>

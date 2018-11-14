@@ -1,5 +1,135 @@
+
+.abt_intro{
+  font-size: 0.9rem;
+}
 .about_sec {
 	padding: 3rem 0;
+}
+.padd_same{
+  padding: 3rem 0;
+}
+p{
+  line-height: 1rem;
+}
+.h2, h2 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+.allAbt{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: 0;
+    li{
+      margin-bottom: 0.7rem;
+  list-style: none;
+    }
+}
+}
+
+.integratecrd{
+  border-radius: 0 0 9rem 0 !important;
+  height: 160px;
+  background: #002c4e70 !important;
+  .card-header{
+    margin: -25px -13px 17px 16px;background: #002C4E;color: white;height: 54px;padding: 15px;
+  }
+  .card-body{
+    padding: 0px 19px;
+  }
+} 
+
+.engagecrd{
+  border-radius: 0 0 9rem 0 !important;
+  height: 160px;
+  background: #f076156e !important;
+  .card-header{
+    margin: -25px -13px 17px 16px;background: #F07615;color: white;height: 54px;padding: 15px;
+  }
+  .card-body{
+    padding: 0px 19px;
+  }
+} 
+
+
+
+.communicrd{
+  border-radius: 0 0 9rem 0 !important;
+  height: 160px;
+  background: #33333373 !important;
+  .card-header{
+    margin: -25px -13px 17px 16px;background: #333333;color: white;height: 54px;padding: 15px;
+  }
+  .card-body{
+    padding: 0px 19px;
+  }
+} 
+
+
+.monitercrd{
+  border-radius: 0 0 9rem 0 !important;
+  height: 160px;
+  background: #38c1ec87 !important;
+  .card-header{
+    margin: -25px -13px 17px 16px;background: #38C1EC;color: white;height: 54px;padding: 15px;
+  }
+  .card-body{
+    padding: 0px 19px;
+  }
+} 
+
+
+
+
+
+.card {
+  border-radius: 0px;
+  min-height: 206px;
+  margin-bottom: 1.5rem;
+  background: #eee;
+  // .card-header{
+  //   padding: .3rem 1rem;
+  //   h5{
+  //     color: #fff;
+  //   }
+  // }
+  .card-block{
+    padding: 1rem;
+    font-size: 0.9rem;
+    text-align: justify;
+
+h5{
+  color: #002c4e;
+  &:after{
+    content: "";
+    width: 2rem;
+    height: 0.2rem;
+    display: block;
+    margin: 0.2rem 0 0.3rem;
+    background: #002c4e;
+  }
+}
+
+    .fa-ul {
+      padding-left: 0;
+      list-style-type: none;
+    //  padding: 1rem;
+      margin-left: 0;
+      margin-bottom: 0;
+      li{
+        margin-bottom: 0.7rem;
+        line-height: 1rem;
+        &:last-child{
+          margin-bottom: 0rem;
+        }
+      }
+  }
+  }
 }
 
 .statmnet {
@@ -8,7 +138,13 @@
 	font-size: 1.5rem;
 	justify-content: center;
 }
-
+.abtus_img{
+  position:sticky;
+  top: 6rem;
+}
+.padding-30{
+  padding: 50px 0px;
+}
 .display-4 {
 	font-size: 2.3rem;
 	font-weight: 300;
@@ -18,26 +154,29 @@
 .bg_grey {
 	background: #fafafa;
 }
-
+.leadershp{
+  margin-top: 4.5rem;
+}
 
 .our-team {
   .team-box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
     .team-img {
+  
       height: 12rem;
       width: auto;
-      margin-bottom: 1rem;
+   
+      height:200px;
     }
     .title {
-      text-align: center;
       text-transform: capitalize;
       margin-bottom: 0.5rem;
       line-height: 1.5rem;
     }
     .desg {
-      text-align: center;
       line-height: 1.25rem;
       margin-bottom: 0.5rem;
     }
@@ -99,15 +238,182 @@
   background-color: var(--secondary-background-color);
   position: relative;
   .yeardata {
-    color: white;
+    color: #002c4e;
+    margin-top: 1rem;
+    background: #fff;
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    text-align: center;
+    padding: 1rem;
+
     li {
       font-size: 0.8rem;
     }
+    p{
+      line-height: 1rem;
+      text-align: center;
+    }
+  }
+.yearone{
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  left: 3rem;
+}
+  .yearsec{
+    top: 12rem;
+    position: absolute;
+    left: 14rem;
+    
+  }
+  .yearthrd{
+    top: 25rem;
+    position: absolute;
+    left: 4rem;
+
+  }
+  .yearfourth{
+    top: 27rem;
+    position: absolute;
+    left: 10rem;
+  }
+  .yearfifth{
+    top: 13rem;
+    position: absolute;
+  }
+  .yearsixth{
+    top: 0rem;
+    position: absolute;
+    left: 10rem;
+  }
+
+}
+
+@media only screen and (min-width:1024px) {
+  .benifitsList li {
+    width: 94%;
+		float: left;
+		padding: 5px 0;
+		display: flex;
+		flex-wrap: wrap;
+		h6 {
+      font-weight: bold;
+		}
+  }
+
+  .leadershp[_ngcontent-c7] {
+    margin-top: 3.5rem;
+}
+  .yearsec{
+    margin-top: 2rem;
+  }
+  .yearthrd{
+    margin-top: 4rem;
+  }
+  .yearfourth{
+    margin-top: 3rem;
+  }
+  .yearfifth{
+    margin-top: 6rem;
+  }
+
+  .rocket {
+    position: relative;
+    .rocket-bg {
+      background-image: url(/assets/images/banner/rocket.png);
+      width: 100%;
+      height: 130%;
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-size: cover;
+      background-position: top;
+    }
+    .yeardata {
+    }
+  }
+}
+@media screen and (min-width:320px) and (max-width:425px){
+  .rocket{
+    height: 48rem;
+     .yearsixth {
+      top: 1rem;
+      position: absolute;
+      left: 14rem;
+  }
+  .yearsec{
+    top: 14rem;
+    position: absolute;
+    left: 14rem;
+}
+ .yearfourth {
+  top: 32rem;
+  position: absolute;
+  left: 14rem;
+}
   }
 }
 
-@media only screen and (min-width:960px) {
-  .benifitsList li {
+
+
+
+@media screen and (min-width:650px) and (max-width:780px){
+  .rocket{
+    background-color: var(--secondary-background-color);
+    position: relative;
+    height: 45rem;
+
+ .yearsec {
+      top: 12rem;
+      position: absolute;
+      left: 8rem;
+  }
+
+}
+.leadershp{
+  margin-top: 0.5rem;
+}
+
+.our-team {
+  .team-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    .team-img {
+  
+      height: 12rem;
+      width: auto;
+   
+      height:150px;
+    }
+    .title {
+      text-transform: capitalize;
+      margin-bottom: 0.5rem;
+      line-height: 1.5rem;
+    }
+    .desg {
+      line-height: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .content {
+      font-size: 0.8rem;
+      color: #777777;
+      line-height: 1rem;
+    }
+  }
+}
+}
+
+
+
+
+
+@media screen and (min-width:960px) {
+.benifitsList li {
     width: 94%;
 		float: left;
 		padding: 5px 0;
@@ -119,19 +425,58 @@
   }
   .rocket {
     position: relative;
+    height: 800px;
     .rocket-bg {
       background-image: url(/assets/images/banner/rocket.png);
       width: 100%;
-      height: 130%;
+      height: 165%;
       position: absolute;
-      top: -6rem;
+      top: -2rem;
       left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       background-size: cover;
       background-position: top;
     }
-    .yeardata {
+ 
+  }
+}
+
+@media screen and (min-width:1100px) and (max-width:1500px) {
+  
+  .rocket {
+    position: relative;
+    height: 700px;
+    .rocket-bg {
+      background-image: url(/assets/images/banner/rocket.png);
+      width: 100%;
+      height: 55rem;
+      position: absolute;
+      top: -2rem;
+      left: 47%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-size: cover;
+      background-position: top;
     }
   }
 }
+@media screen and (min-width:1500px) and (max-width:3000px) {
+        
+  .rocket{
+    position: relative;
+     height: 745px;
+    .rocket-bg{
+      background-image: url(/assets/images/banner/rocket.png);
+      width: 83%;
+      height: 73rem;
+      position: absolute;
+      top: 2rem;
+      left: 48%;
+      background-size: contain;
+      background-position: top;
+      background-repeat: no-repeat;
+    } 
+}
+
+} 
