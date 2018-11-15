@@ -62,7 +62,6 @@ export class ServicesAllComponent implements OnInit {
 
   setSubcriptionType(data: string){
     this.subscriptiontype = data;
-    console.log(this.subscriptiontype);
   }
 
   ngOnInit() {
@@ -105,18 +104,15 @@ export class ServicesAllComponent implements OnInit {
   }
 
   productAccUser(val) {
-    console.log(val)
     this.totalPrice*=parseInt(val.target.value);
   }
 
   nextStep() {
     this.formstep += 1;
-    console.log("next");
   }
 
   prevStep() {
     this.formstep -= 1;
-    console.log("prev");
   }
 
   getSelectedProd(data) {

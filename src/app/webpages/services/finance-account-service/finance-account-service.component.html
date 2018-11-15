@@ -1,0 +1,228 @@
+<div class="page-banner" style="background-color: var(--quinary-background-color)">
+    <div class="banner-content container">
+        <h2 class="banner-heading">Finance &amp; Accounts</h2>
+    </div>
+</div>
+<div class="space-40"></div>
+<div class="how-section1 container-fluid">
+
+        <div class="container workflow" *ngFor="let pdata of content;">
+                <div class="row">
+                  <div class="col-12 col-md-7 col-sm-7 col-lg-7 content-box">
+                    <h2 class="heading" [innerHTML]="pdata.heading"></h2>
+                    <!-- <h4 class="sub-heading">{{pdata.subheading}}</h4> -->
+                    <!-- <h5 class="sub-content" *ngIf="pdata.secheading">
+                      {{pdata.secheading}}
+                      <br>
+                      <i>
+                        {{pdata.seccontent}}
+                      </i>
+                    </h5>
+                    <ul class="feature-list" *ngIf="pdata.seclist">
+                      <li *ngFor="let data of pdata.seclist">
+                        <h6> {{data.heading}}</h6>
+                        <p>
+                          {{data.content}}
+                        </p>
+                      </li>
+                    </ul> -->
+              
+                    <div class="content">
+                      <p [innerHTML]="pdata.content"></p>
+
+                      <p [innerHTML]="pdata.content1"></p>
+                      <p [innerHTML]="pdata.content2"></p>
+                      <p [innerHTML]="pdata.content3"></p>
+                      <p [innerHTML]="pdata.content4"></p>
+                      <p [innerHTML]="pdata.content5"></p>
+              
+                      <ul class="slide-list fa-ul">
+                        <li *ngFor="let data of pdata.feature">
+                          <i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>
+                          {{data}}
+                        </li>
+                      </ul>
+                      <!-- <div class="link">
+                        <a href="{{pdata.link}}" class="button button-3">Read more</a>
+                      </div> -->
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-5 col-sm-5 col-lg-5 flex-container flex-pc img-box">
+                    <img class="img-fluid" src="{{pdata.imagepath}}" alt="slide-7 image">
+                  </div>
+                </div>
+              </div>
+       
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div class="container">
+    <div class="viewServices">
+        <div class="row">
+            <div class="col-md-12">
+                    <h5>Finance & Accounting</h5>
+                <div class="serviceInfo">
+                    <p>MacTec allows you to focus on your Core Business, while we assure Cost Effective Offshore Support – Optimum
+                        Resource Utilization – Best in Class Delivery Model – Benchmarked Accounting Processes.</p>
+                    <p>‘Cost’ – one word that always gets undivided attention of any business head or stakeholders. The constant
+                        pressures to bring down the cost coupled with increasing need for regulatory compliance and demands
+                        for a closer alignment to the business are driving organizations towards new Finance and Accounting
+                        Operating models. Chief Financial Officers (CFO) of leading organizations are incorporating Finance
+                        and Accounting services outsourcing as a strategy to change their operating models. MacTec offers
+                        industry recognized Financial Services Offshoring Solutions that support end-to-end functions.</p>
+                    <p>MacTec leverages its deep Finance and Accounting functional expertise, industry familiarity, operational
+                        excellence and efficient delivery model with innovative Technology. MacTec offshoring model has the
+                        aptitude to deliver the solutions that standardizes finance and accounting processes, transforms
+                        operations and lowers costs.</p>
+                    <p>Choose our Finance & Accounting Offshoring Solutions to reach Operational Excellence</p>
+                    <p>Accounting: Book Keeping, Accounts Payable, Order to Cash. Managed by dedicated accounting experts who
+                        will represent and work closely with onsite controllership team.</p>
+                    <p>General Ledger: Review and interpretation of data to produce journal entries, Accounting books closing,
+                        reconciliations and periodic accounting summaries, our experts with exceptional quality of services,
+                        exposed to domain specific software, ERP and Other tools like, SAP, Oracle, JDE, Black Line, Quick
+                        Books, Tally, Sage Accounting, MYOB, BOBJ, and other business intelligence tools.</p>
+                    <p>Payroll Accounting: Trained and well versed with employee benefits and compensation working process.
+                        Grater offshore experience in payroll cycle management, issuing tax forms – Preparing work schedules
+                        – Proper allotment of funds, Employee Insurance and other benefits. Exposure to time sheet based,
+                        work order based and other industry specific wage/salary/ compensation workings.</p>
+                    <p>Financial Planning & Analysis: Expertise in planning and consolidation of financial reports, budget /
+                        forecast submissions, business and leadership interactions and liaison with business and management
+                        to formulate right reports, executive summaries and periodic management information system reports.
+                        Our team has rich experience in utilization & operational metrics, financial and non-financial reporting.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row space-20">
+            <div class="col-md-12">
+                <h5>What we Do?</h5>
+                <div class="serviceInfo">
+                    <ul class="checklist">
+                        <li> Responsive team structure</li>
+                        <li>KPI Reporting</li>
+                        <li>SLA & Process Management Controls</li>
+                        <li>Critical to Quality Reviews</li>
+                        <li>Periodic Stakeholder Reviews</li>
+                        <li>Leadership Governance Meetings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row space-20">
+            <div class="col-md-12">
+                <h5>ACCOUNTING @ OFFSHORE CAPABILITIES OVERVIEW:</h5>
+                <div class="serviceInfo">
+                    <p>
+                        <b>GL Accounting:</b> 60% to 80 % of the activities can be managed from offshore</p>
+                    <p>Key Activities: Monthly Books Closing, Journal entry postings, Reconciliations, Fixed Assets Accounting,
+                        Intercompany Accounting, Sub-ledger balancing, GL maintenance, Cost, inventory, and management accounting,
+                        Audit support and Escheatment Accounting Process</p>
+                    <p>
+                        <b>Management Reporting:</b> 30% to 60 % of the activities can be managed from offshore</p>
+                    <p>Key Activities: Reporting by business line/CC/Location, etc. Budget and rolling forecasting, Cost management
+                        and analysis, set up indirect cost allocation rules, Budget consolidation, Expense budgeting, Revenue,
+                        cost, P&L, balance sheet, and cash flow variance analysis</p>
+                    <p>
+                        <b>Fixed Assets:</b> 30% to 60 % of the activities can be managed from offshore</p>
+                    <p>Key Activities: Capital project setup and maintenance, Budget, CWIP, spending tracking Asset setup and
+                        capitalization, Disposal of assets: Sales, scrapping, transfers, Depreciation Reconciliations and
+                        reporting.</p>
+                    <p>
+                        <b>Intercompany:</b> 60% to 80 % of the activities can be managed from offshore</p>
+                    <p>Key Activities: AP, AR and miscellaneous invoicing, Balance confirmation process, Settlement of dues,
+                        Accruals for mismatches and timing difference, Inter-company reconciliations, Support resolution
+                        of open items, Track and report process performance</p>
+                    <p>
+                        <b>External Reporting:</b> 20% to 60 % of the activities of the activities can be managed from offshore</p>
+                    <p>Key Activities: US GAAP, IFRS, and STAT reporting, Management discussion and analysis Stat books (yellow
+                        book, green book, and blue book) BS analysis and commentary, SEC filings such as10-K and 10-Q</p>
+                    <p>
+                        <b>Treasury:</b> 20% to 40% of the activities can be managed from offshore</p>
+                    <p>Key Activities: Bank accounting and reconciliation, Fund matching, Cash flow forecast, Cash management,
+                        Debt and derivative accounting, Foreign currency conversions and hedging, reporting on capital models,
+                        treasury reporting and working capital forecasts</p>
+                </div>
+                <h5 class="space-20">PAYABLES @ OFFSHORE CAPABILITIES OVERVIEW:</h5>
+                <div class="serviceInfo">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Commonly Offshored:</p>
+                            <ul class="checklist">
+                                <li>Document Management</li>
+                                <li>Invoice Processing</li>
+                                <li>Payment Processing</li>
+                                <li>Help Desk and Others AP activities</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Insights</p>
+                            <ul class="checklist">
+                                <li>An estimated 90–95% of AP processes are outsourced</li>
+                                <li>Increased focus on e-invoicing initiatives across customers</li>
+                                <li>Focus on effectiveness along with efficiency</li>
+                                <li>System-based preventive controls are very effective: ID-driven access restrictions, preventive
+                                    duplicate payment control, etc.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="space-20">FP&A CAPABILITIES OVERVIEW</h5>
+                <div class="serviceInfo">
+                    <p>
+                        <b>Budgeting & Planning:</b>
+                    </p>
+                    <p>Key Activities: Budgeting and forecasting, Budget file and model management, Uploading models into financial
+                        systems, True-up of budget assumptions, Data inputs for expense estimates, Variance analysis</p>
+
+                    <p>
+                        <b>Management Reporting:</b>
+                    </p>
+                    <p>Key Activities: Base cost reporting, Sales to contribution margin analysis, Product and channel analysis,
+                        Price / volume mix, Sales estimates, Sales and Marketing expense analysis, Commission analysis, Royalty,
+                        collaboration agreements, Customer review packs, Balance sheet walk, Property, plant and equipment
+                        analysis, Working capital analysis , Program expenses and investments, Variance analysis, Ad-hoc
+                        requests, Region analysis, Product/ business line analysis, Transfer price margin analysis, Inter-company
+                        profit tracking, Preliminary management commentary, Headcount reporting, Legal financial planning
+                        and analysis, vendor analysis, travel and living expense analysis, Contract vs. Actual analysis</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="space-60"></div>

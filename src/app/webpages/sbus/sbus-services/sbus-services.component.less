@@ -1,4 +1,19 @@
 .sbus-tabs {
+    .sbus-controls{
+        position: sticky;
+        background: white;
+        display: flex;
+        justify-content: center;
+        z-index: 1000;
+        box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.3);
+        transition: 0.1s all linear;
+        &.up {
+            top: 100vh;
+        }
+        &.down {
+            top: calc( 100vh - 3rem );
+        }
+    }
     .nav-tabs {
         justify-content: space-around;
         border-bottom: none;

@@ -1,0 +1,58 @@
+<div class="page-banner" style="background-color: var(--quinary-background-color)">
+    <div class="banner-content container">
+        <h2 class="banner-heading">E-governance</h2>
+    </div>
+</div>
+<div class="space-40"></div>
+<div class="how-section1 container-fluid">
+
+
+
+        <div class="container workflow" *ngFor="let pdata of content">
+                <div class="row">
+                  <div class="col-12 col-md-7 col-sm-7 col-lg-7 content-box">
+                    <h2 class="heading" [innerHTML]="pdata.heading"></h2>
+                    <!-- <h4 class="sub-heading">{{pdata.subheading}}</h4> -->
+                    <!-- <h5 class="sub-content" *ngIf="pdata.secheading">
+                      {{pdata.secheading}}
+                      <br>
+                      <i>
+                        {{pdata.seccontent}}
+                      </i>
+                    </h5>
+                    <ul class="feature-list" *ngIf="pdata.seclist">
+                      <li *ngFor="let data of pdata.seclist">
+                        <h6> {{data.heading}}</h6>
+                        <p>
+                          {{data.content}}
+                        </p>
+                      </li>
+                    </ul> -->
+              
+                    <div class="content">
+                      <p [innerHTML]="pdata.content"></p>
+
+                      <p [innerHTML]="pdata.content1"></p>
+              
+                      <ul class="slide-list fa-ul">
+                        <li *ngFor="let data of pdata.feature">
+                          <i class="fa fa-angle-right fa-li fa-fw" aria-hidden="true"></i>
+                          {{data}}
+                        </li>
+                      </ul>
+                      <!-- <div class="link">
+                        <a href="{{pdata.link}}" class="button button-3">Read more</a>
+                      </div> -->
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-5 col-sm-5 col-lg-5 flex-container flex-pc img-box">
+                    <img class="img-fluid" src="{{pdata.imagepath}}" alt="slide-7 image">
+                  </div>
+                </div>
+              </div>
+
+
+
+</div>
+
+<div class="space-60"></div>

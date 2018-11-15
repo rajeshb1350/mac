@@ -1,137 +1,167 @@
-.about_sec {
-	padding: 3rem 0;
+p {
+	font-size: 0.8rem;
+	line-height: 1rem;
+	text-align: left;
+	margin-bottom: 0rem;
 }
 
-.statmnet {
-	display: flex;
-	align-items: center;
-	font-size: 1.5rem;
-	justify-content: center;
-}
-
-.display-4 {
-	font-size: 2.3rem;
-	font-weight: 300;
-	line-height: 1.2;
-}
-
-.bg_grey {
-	background: #fafafa;
-}
-
-
-.our-team {
-  .team-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .team-img {
-      height: 12rem;
-      width: auto;
-      margin-bottom: 1rem;
+section {
+    padding: 2rem 0;
+    &:nth-child(odd){
+        background-color: #f1f1f1;
     }
-    .title {
-      text-align: center;
-      text-transform: capitalize;
-      margin-bottom: 0.5rem;
-      line-height: 1.5rem;
+}
+
+.about_sec1 {
+}
+.about_sec2 {
+    .abtus_img {
+        position: sticky;
+        top: 6rem;
     }
-    .desg {
-      text-align: center;
-      line-height: 1.25rem;
-      margin-bottom: 0.5rem;
+}
+.about_sec3 {
+    .block-container {
+        background-color: white;
+        padding: 1.5rem 1rem;
+        .heading {
+            font-size: 1.25rem;
+        }
+        .slide-list {
+            margin: 0;
+            padding: 0;
+        }
     }
-    .content {
-      font-size: 0.8rem;
-      color: #777777;
-      line-height: 1rem;
+}
+.about_sec4 {
+    .box-container {
+        padding: 1.5rem 1rem;
+        background-color: #f1f1f1;
     }
-  }
 }
 
-.benifitsList {
-	padding: 0;
-	list-style-type: none;
-  li {
-    width: 100%;
-    text-align: left;
-    h6 {
-      font-weight: bold;
+.about_sec7 {
+    .benifitsList {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin-bottom: 1rem;
+        }
+        .iconica {
+            font-size: 1rem;
+            margin:0;
+        }
     }
-  }
-  i.fa.fa-check {
-    color: green;
-    padding: 2px;
-    border: 2px dotted green;
-    margin-right: 4px;
-  }
 }
 
-
-.our-services-text {
-	p {
-		padding-right: 25px;
-	}
-}
-
-
-.iconica span {
-	display: inline-block;
-	float: left;
-	width: 40px;
-	height: 40px;
-	border-radius: 50% 1px 50%;
-	background: var(--primary-background-color);
-	text-align: center;
-	margin-right: 15px;
-	i {
-		color: #ffffff;
-		line-height: 40px;
-	}
-}
-
-.benfit_cont {
-	padding: 60px 0px;
-}
-
-
-.rocket {
-  background-color: var(--secondary-background-color);
-  position: relative;
-  .yeardata {
-    color: white;
-    li {
-      font-size: 0.8rem;
+.about_sec8 {
+    .team-box {
+        margin: 1.5rem 0;
+        .team-img {
+            margin-bottom: 1rem;
+            height: 10rem;
+        }
+        .leadership {
+            .title {
+                font-size: 1.25rem;
+                margin: 0rem;
+                line-height: 1.25rem;
+            }
+            .dsg {
+                font-size: 1rem;
+                margin: 0rem;
+            }
+            .content {
+                font-size: 0.7rem;
+            }
+        }
     }
-  }
 }
 
-@media only screen and (min-width:960px) {
-  .benifitsList li {
-    width: 94%;
-		float: left;
-		padding: 5px 0;
-		display: flex;
-		flex-wrap: wrap;
-		h6 {
-      font-weight: bold;
-		}
-  }
-  .rocket {
+.about_sec9 {
+    background-color: var(--secondary-color);
     position: relative;
     .rocket-bg {
-      background-image: url(/assets/images/banner/rocket.png);
-      width: 100%;
-      height: 130%;
-      position: absolute;
-      top: -6rem;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
-      background-size: cover;
-      background-position: top;
+        position: absolute;
+        background-size: cover;
+        background-image: url(/assets/images/banner/rocket.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        left: calc(50%);
+        transform: translateX(-50%);
     }
-    .yeardata {
+    .about_years {
+        position: relative;
+        .yeardata {
+            background-color: rgba(255,255,255,0.7);
+            padding: 1rem;
+            text-align: center;
+            &>*{
+                text-align: center;
+            }
+        }
     }
-  }
+}
+
+@media only screen and ( min-width: 960px ){
+    .about_sec8 {
+        .team-box {
+            .team-img {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .about_sec9 {
+        padding: 0;
+        .rocket-bg {
+            height: 40rem;
+            background-position: -0.5rem -2rem;
+        }
+        .about_years {
+            height: 40rem;
+            .yeardata {
+                background-color: white;
+                position: absolute;
+                width: 12rem;
+                height: 12rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 50%;
+                padding: 1rem;
+                text-align: center;
+                &>*{
+                    text-align: center;
+                }
+                &:nth-child(1) {
+                    top: 2rem;
+                    left: 13rem;
+                }
+                &:nth-child(2) {
+                    top: 13rem;
+                    left: 6rem;
+                }
+                &:nth-child(3) {
+                    top: 26rem;
+                    left: 8rem;
+                }
+                &:nth-child(4) {
+                    top: 26rem;
+                    right: 8rem;
+                }
+                &:nth-child(5) {
+                    top: 13rem;
+                    right: 6rem;
+                }
+                &:nth-child(6) {
+                    top: 2rem;
+                    right: 13rem;
+                }
+            }
+        }
+    }
 }

@@ -27,17 +27,17 @@ import { SlotbookResolverService } from "./services/resolver/slotbook-resolver.s
 import { FeaturesComponent } from "./webpages/features/features.component";
 import { ServiceResolverService } from "./services/resolver/serviceCheck-resolver.service";
 import { AboutComponent } from "../app/components/blocks/about/about.component";
-import { ServicesAllComponent } from '../app/components/blocks/services-all/services-all.component';
+import { ServicesAllComponent } from './components/blocks/services-all/services-all.component';
 import { CareersComponent } from './components/blocks/careers/careers.component';
-import { AppDevelopmentComponent } from '../app/components/blocks/accordian/accordian2/app-development/app-development.component';
-import { BusinessReEngineeringComponent } from '../app/components/blocks/accordian/accordian2/business-re-engineering/business-re-engineering.component';
-import { EGovernenceComponent } from '../app/components/blocks/accordian/accordian2/e-governence/e-governence.component';
-import { FinanceAccountServiceComponent } from '../app/components/blocks/accordian/accordian2/finance-account-service/finance-account-service.component';
-import { SmartEmployeeServiceComponent } from '../app/components/blocks/accordian/accordian2/smart-employee-service/smart-employee-service.component';
-import { TechnologyConsultingServiceComponent } from '../app/components/blocks/accordian/accordian2/technology-consulting-service/technology-consulting-service.component';
+import { AppDevelopmentComponent } from './webpages/services/app-development/app-development.component';
+import { BusinessReEngineeringComponent } from './webpages/services/business-re-engineering/business-re-engineering.component';
+import { EGovernenceComponent } from './webpages/services/e-governence/e-governence.component';
+import { FinanceAccountServiceComponent } from './webpages/services/finance-account-service/finance-account-service.component';
+import { SmartEmployeeServiceComponent } from './webpages/services/smart-employee-service/smart-employee-service.component';
+import { WhymactecComponent } from './webpages/whymactec/whymactec.component';
+import { ProcessExcellenceComponent } from './webpages/services/process-excellence/process-excellence.component';
 import { SbusServicesComponent } from "./webpages/sbus/sbus-services/sbus-services.component";
-
-
+import { SbusStrategyComponent } from "./webpages/sbus/sbus-strategy/sbus-strategy.component";
 const appRoutes: Routes = [
     // { path: "", component: IndexComponent, resolve: {server: SlotbookResolverService} },
     {
@@ -50,12 +50,12 @@ const appRoutes: Routes = [
         }
 
     },
-    {
-        path: "courses", children: [
-            { path: "", component: CoursesComponent },
-            { path: "section", component: CoursesComponent }
-        ]
-    },
+    // {
+    //     path: "courses", children: [
+    //         { path: "", component: CoursesComponent },
+    //         { path: "section", component: CoursesComponent }
+    //     ]
+    // },
     { path: "support", component: SupportpageComponent },
     {
         path: "allProducts", component: ServicesAllComponent,
@@ -63,39 +63,43 @@ const appRoutes: Routes = [
             serviceData: ServiceResolverService
         }
     },
-    {
-        path: "dashboard",
-        canActivate: [GuardService],
-        component: DashboardComponent,
-        children: [
-            { path: "", component: HomeComponent },
-            {
-                path: "setting", component: SettingComponent, children: [
-                    { path: "", component: SpSetupStartComponent },
-                    { path: "sp-setup-form", component: SpSetupFormComponent }
-                ]
-            },
-            { path: "software", component: SoftwareComponent }
-        ]
-    },
+    // {
+    //     path: "dashboard",
+    //     canActivate: [GuardService],
+    //     component: DashboardComponent,
+    //     children: [
+    //         { path: "", component: HomeComponent },
+    //         {
+    //             path: "setting", component: SettingComponent, children: [
+    //                 { path: "", component: SpSetupStartComponent },
+    //                 { path: "sp-setup-form", component: SpSetupFormComponent }
+    //             ]
+    //         },
+    //         { path: "software", component: SoftwareComponent }
+    //     ]
+    // },
     { path: "study-programs", component: StudyProgramsComponent },
     { path: "apply", component: ApplyComponent },
-
-    { path: "blogs", component: BlogsComponent },
+    // { path: "blogs", component: BlogsComponent },
     { path: "sbus-service", component: SbusServicesComponent },
+    { path: "sbus-service/:path", component: SbusServicesComponent },
+    { path: "sbus-strategy", component: SbusStrategyComponent },
     { path: "careers", component: CareersComponent },
-    { path: "aboutUs", component: AboutUsComponent },
+    { path: "aboutus", component: AboutUsComponent },
+    { path: "aboutus/:path", component: AboutUsComponent },
+    { path: "why-mactec", component: WhymactecComponent },
     { path: "contact", component: ContactUsComponent },
-    { path: "appdevelopment", component: AppDevelopmentComponent },
-    { path: "business", component: BusinessReEngineeringComponent },
-    { path: "e-governence", component: EGovernenceComponent },
-    { path: "finance-accounts", component: FinanceAccountServiceComponent },
-    { path: "smartEmployee", component: SmartEmployeeServiceComponent },
-    { path: "technoconsult", component: TechnologyConsultingServiceComponent },
-    { path: "study-programs/card1", component: StudyProgramDetailsComponent },
-    { path: "suscribe", component: SubscriptionComponent },
-    { path: "verifydash", component: EmailverificationComponent },
+    // { path: "appdevelopment", component: AppDevelopmentComponent },
+    // { path: "business", component: BusinessReEngineeringComponent },
+    // { path: "e-governence", component: EGovernenceComponent },
+    // { path: "finance-accounts", component: FinanceAccountServiceComponent },
+    // { path: "smart-employee", component: SmartEmployeeServiceComponent },
+    // { path: "study-programs/card1", component: StudyProgramDetailsComponent },
+    // { path: "suscribe", component: SubscriptionComponent },
+    // { path: "verifydash", component: EmailverificationComponent },
+    // { path: "process-excellence", component: ProcessExcellenceComponent },
     { path: "pagenotfound", component: PagenotfoundComponent },
+    
     { path: "**", redirectTo: "/pagenotfound" }
 ];
 

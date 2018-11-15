@@ -15,79 +15,49 @@
           <i class="fa fa-home fa-1x f_20 fa-fw" aria-hidden="true"></i> Home
         </a>
       </li>
-      <li routerLinkActive="active" class="nav-item">
-        <a routerLink="/aboutUs">About Us</a>
+
+      <li class="dropdown appdropdown">
+        <a class="dropdown-toggle" [routerLink]="['/aboutus']" data-toggle="dropdown" role="button" aria-expanded="false">About us
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu sm-menu" role="menu">
+          <li routerLinkActive="active" class="nav-item">
+            <a [routerLink]="['/aboutus', 'vision']">Vision</a>
+          </li>
+
+          <li class="dropdown appdropdown">
+            <a [routerLink]="['/aboutus', 'leadership']">Leadership</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/aboutus', 'whyMacTec']">Why MacTec</a>
+          </li>
+        </ul>
       </li>
+
       <li class="dropdown appdropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Smart Business Solutions
           <span class="caret"></span>
         </a>
         <ul class="dropdown-menu sm-menu" role="menu">
-          <li class="dropdown appdropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">SBuS Services</a>
-            <ul class="dropdown-menu sm-menu  sub-menu" role="menu">
-
-              <li routerLinkActive="active" class="dropdown appdropdown">
-                <a routerLink="/technoconsult">Technology Services</a>
-              </li>
-
-              <li routerLinkActive="active" class="nav-item">
-                <a routerLink="/e-governence">e-Governance</a>
-              </li>
-
-              <li routerLinkActive="active" class="nav-item">
-                <a routerLink="/appdevelopment">Application Development</a>
-              </li>
-
-              <li routerLinkActive="active" class="nav-item">
-                <a routerLink="/business">Business Re-Engineering</a>
-              </li>
-
-              <li routerLinkActive="active" class="nav-item">
-                <a routerLink="/finance-accounts">Finance & Accounting</a>
-              </li>
-
-              <!-- <li routerLinkActive="active" class="nav-item">
-                  <a routerLink="/technoconsult">Technology Services</a>
-                </li>
-                <li routerLinkActive="active" class="nav-item">
-                  <a routerLink="/e-governence">e-Governance</a>
-                </li>
-                <li routerLinkActive="active" class="nav-item">
-                  <a routerLink="/appdevelopment">Application Development</a>
-                </li>
-                <li routerLinkActive="active" class="nav-item">
-                  <a routerLink="/business">Business Re-Engineering</a>
-                </li> -->
-            </ul>
-
+          <li routerLinkActive="active" class="nav-item">
+            <a routerLink="/sbus-strategy">SBuS Strategy</a>
+          </li>
+          <li routerLinkActive="active" class="nav-item">
+            <a routerLink="/sbus-service">SBuS Services</a>
           </li>
           <li routerLinkActive="active" class="nav-item">
             <a routerLink="/allProducts">SBuS Products</a>
           </li>
-          <!-- <li routerLinkActive="active" class="nav-item">
-            <a routerLink="/technoconsult">Technology Services</a>
-          </li>
-          <li routerLinkActive="active" class="nav-item">
-            <a routerLink="/e-governence">e-Governance</a>
-          </li>
-          <li routerLinkActive="active" class="nav-item">
-            <a routerLink="/appdevelopment">Application Development</a>
-          </li>
-          <li routerLinkActive="active" class="nav-item">
-            <a routerLink="/business">Business Re-Engineering</a>
-          </li> -->
-        </ul>
+          </ul>
       </li>
 
-      <!-- <li routerLinkActive="active" class="nav-item">
-        <a routerLink="/allProducts">Products</a>
-      </li> -->
+
       <li routerLinkActive="active" class="nav-item">
         <a routerLink="/careers">Career</a>
       </li>
+      
       <li routerLinkActive="active" class="nav-item">
-        <a routerLink="/contact">Contact</a>
+        <a routerLink="/contact">Contact us</a>
       </li>
     </ul>
   </nav>

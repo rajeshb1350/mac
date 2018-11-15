@@ -23,11 +23,49 @@
         text-align: center;
       }
   }
+  .form-validation{
+    margin-bottom: 3rem;
+  }
+  .send_btn{
+    color: var(--quaternary-color) !important;
+    background-color: var(--primary-background-color);
+    padding: 0;
+    border: 0;
+    border-radius: 2px;
+    &:hover{
+      color: var(--quaternary-color) !important;
+      background-color: var(--primary-background-color);
+      padding: 0;
+      border: 0;
+      border-radius: 2px;
+    }
+  }
+
+  .list-group{
+    display: block;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
 .brd_cnt{
   border-bottom: 1px #ccc solid;
   margin-bottom: 15px;
 }
 .float-left { float: left;}
+.pull-left {
+  float: left;
+  width: 50%;
+}
+
+@media (min-width: 375px) and (max-width: 425px)
+   {
+    .pull-left {
+      float: left;
+      width: 100%;
+    }
+   }
+
 
 .contact-us-page{    margin: 60px 0;}
 
@@ -48,15 +86,14 @@
     color: #525252;
 }
 
-.contact-us-page .contact-us-form input,
+.contact-us-page .contact-us-form .macon,
 .contact-us-page .contact-us-form textarea {
-    background: #fff;
-    border: 1px solid #cac6c6;
-    width: 100%;
-    font-size: 13px;
-    padding: 10px 20px 10px 10px;
-    margin-bottom: 17px;
-    border-radius: 5px;
+  background: #fff;
+  border: 1px solid #666;
+  width: 100%;
+  font-size: 13px;
+  padding: 14px 10px 14px 10px;
+  margin-bottom: 11px;
 }
 
 /* .contact-us-page .contact-us-form input {
@@ -66,7 +103,7 @@
 } */
 .mr_l0 ul{padding-left:0px;}
 .contact-us-page .contact-us-form textarea {
-  height:156px;
+  height:75px;
   max-width: 100%;
   padding: 20px 20px 15px 10px;
 }
@@ -217,3 +254,50 @@ textarea:focus, input:focus{
 
 
   }
+
+
+  .class_h3{
+
+    color: #373737;
+    margin-bottom: 0px;
+    position: relative;
+    margin-bottom: 30px;
+    padding: 0;
+    border-bottom: 0;
+    text-align: left;
+    font-size: 37px;
+    font-weight: 1000;
+    text-transform: uppercase;
+  }
+.class_para {
+    font-size: 21px;
+    font-weight: lighter;
+}
+
+.slect_css {
+  border: 1px solid #666666;
+  border-radius: 0px;
+  height: 49px;
+  padding: 8px 8px 11px 9px;
+}
+
+.mar_bottom{
+  margin-bottom: 11px;
+}
+@media only screen and (max-width: 375px) {
+  .bg_grey {
+    padding: 2rem 0rem;
+  }
+}
+
+.css_fields {
+  padding: 14px 10px 14px 10px;
+  height: 49px;
+  border: 1px solid #666;
+  border-radius: 0;
+}
+
+.font_csss {
+  font-weight: 1000;
+  /* font-size: 12px; */
+}

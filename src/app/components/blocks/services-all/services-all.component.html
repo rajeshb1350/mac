@@ -10,9 +10,13 @@
 <div class="space-30"></div>
 <div class="container">
     <div class="row">
+
+
+
+
         <div class="col-md-8 col-sm-8 col-12">
             <div class="product-container" *ngFor="let mod of services">
-                <h2 class="heading">{{mod.productCategory}}</h2>
+                <h4 class="heading">{{mod.productCategory}}</h4>
 
                 <ul class="list-container">
                     <li class="product-list" *ngFor="let data of mod.productDetails">
@@ -24,7 +28,7 @@
                             </div>
                             <p class="product-price">
                                 <span>Price: </span>
-                                <span>{{data.price | currency}}</span>
+                                <span>{{data.price/70 | currency}}</span>
                                 / month
                             </p>
                         </label>
@@ -57,7 +61,7 @@
                             <tr *ngFor="let data of selectedList; let i = index;">
                                 <td>{{i+1}}</td>
                                 <td>{{data.productName}}</td>
-                                <td>{{data.price | currency}}</td>
+                                <td>{{data.price/70 | currency}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -74,7 +78,7 @@
                         Total
                         <small>( including 18% GST )</small>
                     </h5>
-                    <h2>{{totalPrice | currency}}</h2>
+                    <h2>{{totalPrice/70 | currency}}</h2>
                 </div>
                 <div class="submit-section">
                     <a href="" data-toggle="modal" data-target="#subform" (click)="setSubcriptionType('Trial')" class="btns btn-p">Free Trial</a>

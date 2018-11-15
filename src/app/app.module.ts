@@ -19,7 +19,7 @@ import { ApplyComponent } from './webpages/apply/apply.component';
 import { StudyProgramsComponent } from './webpages/study-programs/study-programs.component';
 import { EmailverificationComponent } from './webpages/emailverification/emailverification.component';
 import { SupportpageComponent } from './webpages/support/supportpage/supportpage.component';
-import { CoursesComponent } from 'src/app/webpages/courses/courses.component';
+import { CoursesComponent } from './webpages/courses/courses.component';
 import { PagenotfoundComponent } from './webpages/pagenotfound/pagenotfound.component';
 import { StudyProgramDetailsComponent } from './webpages/study-program-details/study-program-details.component';
 import { SubscriptionComponent } from './components/forms/subscription-form/subscription-from/subscription.component';
@@ -58,7 +58,7 @@ import { UniversityComponent } from './components/blocks/university/university1/
 import { UpcomingEventsComponent } from './components/blocks/upcoming-events/upcoming-events1/upcoming-events.component';
 import { ShopComponent } from './components/blocks/shop/shop1/shop.component';
 import { GotopComponent } from './components/blocks/gotop/gototop1/gotop.component';
-import { TestimonialComponent } from 'src/app/components/blocks/testimonial/testimonial.component';
+import { TestimonialComponent } from './components/blocks/testimonial/testimonial.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu/sidemenu.component';
 import { StudyProgramDescComponent } from './webpages/study-program-details/study-program-desc/study-program-desc.component';
 import { StudyProgramInfoComponent } from './webpages/study-program-details/study-program-info/study-program-info.component';
@@ -82,6 +82,8 @@ import { Accordian1Component } from './components/blocks/accordian/accordian1/ac
 import { AccordianService } from './services/accordian.service';
 import { Accordian2Component } from './components/blocks/accordian/accordian2/accordian2.component';
 //import { ChatAppComponent } from './components/blocks/chat-app/chat-app.component';
+import { SbusComponent } from './webpages/sbus/sbus.component';
+import { SbusStrategyComponent } from './webpages/sbus/sbus-strategy/sbus-strategy.component';
 
 // For Routing files imports and exports
 import { AppRoutingModule } from './app-routing.module';
@@ -107,18 +109,21 @@ import { CareerIndexComponent } from './components/blocks/career-index/career-in
 import { AboutComponent } from './components/blocks/about/about.component';
 import { ServicesAllComponent } from './components/blocks/services-all/services-all.component';
 import { CheckColorChangeDirective } from './directive/check-color-change.directive';
-import { CareersComponent } from 'src/app/components/blocks/careers/careers.component';
-import { AppDevelopmentComponent } from 'src/app/components/blocks/accordian/accordian2/app-development/app-development.component';
-import { BusinessReEngineeringComponent } from 'src/app/components/blocks/accordian/accordian2/business-re-engineering/business-re-engineering.component';
-import { EGovernenceComponent } from 'src/app/components/blocks/accordian/accordian2/e-governence/e-governence.component';
-import { FinanceAccountServiceComponent } from 'src/app/components/blocks/accordian/accordian2/finance-account-service/finance-account-service.component';
-import { SmartEmployeeServiceComponent } from 'src/app/components/blocks/accordian/accordian2/smart-employee-service/smart-employee-service.component';
-import { TechnologyConsultingServiceComponent } from 'src/app/components/blocks/accordian/accordian2/technology-consulting-service/technology-consulting-service.component';
+import { CareersComponent } from './components/blocks/careers/careers.component';
+import { AppDevelopmentComponent } from './webpages/services/app-development/app-development.component';
+import { BusinessReEngineeringComponent } from './webpages/services/business-re-engineering/business-re-engineering.component';
+import { EGovernenceComponent } from './webpages/services/e-governence/e-governence.component';
+import { FinanceAccountServiceComponent } from './webpages/services/finance-account-service/finance-account-service.component';
+import { SmartEmployeeServiceComponent } from './webpages/services/smart-employee-service/smart-employee-service.component';
 import { Login1Component } from './components/forms/login-form/login1/login1.component';
 import { SubscriptionVer2Component } from './components/forms/subscription-form/subscription-ver2/subscription-ver2.component';
 import { Footer2Component } from './components/footer/footer2/footer2.component';
+import { WhymactecComponent } from './webpages/whymactec/whymactec.component';
+import { ProcessExcellenceComponent } from './webpages/services/process-excellence/process-excellence.component';
 import { SbusServicesComponent } from './webpages/sbus/sbus-services/sbus-services.component';
 import { FinanceAccountingComponent } from './webpages/sbus/sbus-services/finance-accounting/finance-accounting.component';
+import { OperationalExcellenceComponent } from './webpages/sbus/sbus-services/operational-excellence/operational-excellence.component';
+import { TechnologyConsultingServiceComponent } from './webpages/sbus/sbus-services/technology-consulting-service/technology-consulting-service.component';
 
 @NgModule({
   declarations: [
@@ -212,7 +217,12 @@ import { FinanceAccountingComponent } from './webpages/sbus/sbus-services/financ
     SubscriptionVer2Component,
     Footer2Component,
     SbusServicesComponent,
-    FinanceAccountingComponent
+    FinanceAccountingComponent,
+    WhymactecComponent,
+    ProcessExcellenceComponent,
+    SbusComponent,
+    SbusStrategyComponent,
+    OperationalExcellenceComponent
     
     
 
