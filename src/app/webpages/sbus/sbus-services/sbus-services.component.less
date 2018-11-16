@@ -1,18 +1,31 @@
+p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    text-align: left;
+}
+
 .sbus-tabs {
     .sbus-controls{
         position: sticky;
         background: white;
         display: flex;
         justify-content: center;
-        z-index: 1000;
+        z-index: 1000;    
+        min-height: 2.5rem;
         box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.3);
         transition: 0.1s all linear;
         &.up {
             top: 100vh;
         }
         &.down {
-            top: calc( 100vh - 3rem );
+            top: calc( 100vh - 2.5rem );
         }
+    }
+    .sales-img {
+        padding:  3rem 0 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .nav-tabs {
         justify-content: space-around;
@@ -46,14 +59,19 @@
     }
 }
 
-
+.dummy-container {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    background-color: #ffffff;
+}
 @media only screen and ( min-width: 980px) {
     .sbus-tabs {
         .nav-tabs {
             flex-wrap: wrap;
             .nav-item {
                 a {
-                    font-size: 1rem;
+                    font-size: 0.8rem;
                 }
             }
         }

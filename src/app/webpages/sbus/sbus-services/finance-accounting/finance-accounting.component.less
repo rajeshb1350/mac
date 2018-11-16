@@ -2,7 +2,9 @@ p {
     font-size: 0.8rem;
     line-height: 1rem;
     text-align: left;
+    margin-bottom: 0rem;
 }
+
 
 .banner {
     display: flex;
@@ -12,7 +14,7 @@ p {
     background-color: #f1f1f1;
     padding: 1rem;
     img {
-        height: 20rem;
+        height: 10rem;
     }
 }
 
@@ -26,7 +28,7 @@ section {
     color: #555555;
     font-size: 1.25rem;
     margin: 1rem auto;
-    width: 50%;
+    width: 80%;
     text-align: center;
 }
 
@@ -35,9 +37,10 @@ section {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
+        padding: 0rem;
         .block {
-            flex: 0 0 calc(50% - 2rem);
-            margin: 0.5rem;
+            flex: 0 0 calc(100% - 2rem);
+            margin: 1rem 0rem 1rem;
             h5 {
                 font-weight: bold;
                 font-size: 1rem;
@@ -51,8 +54,49 @@ section {
     }
 }
 
-.sales-img {
-    margin: 2rem auto;
+.data-section {
+    .data-container {
+        .list-container {
+            display: flex;
+            flex-wrap: wrap;
+            .list-box {
+                flex: 0 0 calc(100% - 1rem);
+                margin: 0.5rem;
+                background-color: #f1f1f1;
+                padding: 1rem;
+                .sub-heading {
+                    font-size: 1.25rem;
+                    &::after {
+                        content: "";
+                        margin: 0.5rem 0 1rem;
+                        background-color: #444444;
+                        width: 2rem;
+                        height: 0.25rem;
+                        display: block;
+                    }
+                }
+                .list-heading {
+                    font-weight: 600;
+                }
+                .slide-list {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .data-heading {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        &:nth-child(even){
+            background-color: #f1f1f1;
+            padding: 1.5rem 0;
+            .list-container {
+                .list-box {
+                    background-color: #ffffff;
+                }
+            }
+        }
+    }
 }
 
 .fin-data-list {
@@ -75,8 +119,8 @@ section {
         li {
             padding: 1rem 0.75rem;
             background-color: #f1f1f1;
-            flex: 0 0 calc(33.33% - 1rem);
-            margin: 0.5rem;
+            flex: 0 0 100%;
+            margin: 0.5rem 0;
         }
     }
     .title::after {
@@ -87,5 +131,42 @@ section {
         background-color: #444444;
         margin: 0.5rem 0;
     }
-    .sub-title {}
+}
+
+@media only screen and ( min-width: 980px) {
+    .banner {
+        img {
+            height: 20rem;
+        }
+    }
+    .heading {
+        width: 50%;
+    }
+    .data-section {
+        .data-container {
+            .list-container {
+                .list-box {
+                    flex: 0 0 calc(33.33% - 1rem);
+                }
+            }
+        }
+    }
+    
+    .block-box1 {
+        .block-list {
+            .block {
+                flex: 0 0 calc(50% - 2rem);
+                margin: 0.5rem;
+           }   
+        }   
+    }   
+    
+    .fin-data-list {
+        .level-1 {
+            li {
+            margin: 0.5rem;
+            flex: 0 0 calc(33.33% - 1rem);
+            }
+        }
+    }
 }

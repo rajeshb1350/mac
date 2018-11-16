@@ -27,10 +27,6 @@ section {
         .heading {
             font-size: 1.25rem;
         }
-        .slide-list {
-            margin: 0;
-            padding: 0;
-        }
     }
 }
 .about_sec4 {
@@ -88,7 +84,7 @@ section {
         background-image: url(/assets/images/banner/rocket.png);
         background-position: center;
         background-repeat: no-repeat;
-        height: 100%;
+        height: calc(100% - 2rem);
         left: calc(50%);
         transform: translateX(-50%);
     }
@@ -105,7 +101,14 @@ section {
     }
 }
 
+.img-fluid{
+    margin: 1rem 0;
+}
+
 @media only screen and ( min-width: 960px ){
+    .img-fluid{
+        margin: 0;
+    }
     .about_sec8 {
         .team-box {
             .team-img {

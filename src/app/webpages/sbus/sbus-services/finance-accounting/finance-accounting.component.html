@@ -9,7 +9,6 @@
         Choose our Finance & Accounting 
         Offshoring Solutions to reach Operational Excellence
       </h3>
-
       <p>
         MacTec allows you to focus on your Core Business, while we assure Cost Effective Offshore Support – Optimum Resource Utilization – Best in Class Delivery Model – Benchmarked Accounting Processes. 
         <br>
@@ -31,12 +30,6 @@
     <h3 class="heading">
       Market Understanding: Customers are Looking For Strategic and Sustainable Impact
     </h3>
-    <div class="sales-img container">
-      <picture>
-        <source media="(min-width: 960px)" srcset="/assets/images/banner/marketTrends.png">
-        <img src="/assets/images/banner/marketTrends-mobi.png" class="img-fluid" alt="Finance and Account Banner">
-      </picture>
-    </div>
     <div class="fin-data-list" *ngFor="let gpdata of findata.r2rcap;let i = index;">
       <h4 class="list-heading">{{gpdata.heading}}</h4>
       <ul class="level-1 container">
@@ -65,6 +58,40 @@
         <br>
         Key Activities: Base cost reporting, Sales to contribution margin analysis, Product and channel analysis, Price / volume mix, Sales estimates, Sales and Marketing expense analysis, Commission analysis, Royalty, collaboration agreements, Customer review packs, Balance sheet walk, Property, plant and equipment analysis, Working capital analysis , Program expenses and investments, Variance analysis, Ad-hoc requests, Region analysis, Product/ business line analysis, Transfer price margin analysis, Inter-company profit tracking, Preliminary management commentary, Headcount reporting, Legal financial planning and analysis, vendor analysis, travel and living expense analysis, Contract vs. Actual analysis
       </p>
+    </div>
+  </section>
+
+  <section class="data-section">
+    <div class="data-container" *ngFor="let pdata of financeData">
+      <div class="container">
+        <h4 class="data-heading">{{pdata.heading}}</h4>
+        <div class="list-container">
+          <div class="list-box" *ngFor="let data of pdata.content">
+            <h5 class="sub-heading">
+              {{data.heading}}
+            </h5>
+            <h6 class="list-heading">Commonly Outsourced Services</h6>
+            <ul class="slide-list outsource">
+                <li *ngFor="let cdata of data.outSource">
+                  <p *ngIf="!cdata.submod; else hasinnerdata;">{{cdata}}</p>
+
+                  <ng-template #hasinnerdata>
+                    <ul class="slide-list">
+                      <p><b>{{cdata.subhead}}</b></p>
+                      <li *ngFor="let gcdata of cdata.submod">
+                        <p>{{gcdata}}</p>
+                      </li>
+                    </ul>
+                  </ng-template>
+                </li>
+            </ul>
+            <h6 class="list-heading">Commonly Retained Services</h6>
+            <ul class="slide-list retain">
+              <li *ngFor="let cdata of data.retain"><p>{{cdata}}</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>

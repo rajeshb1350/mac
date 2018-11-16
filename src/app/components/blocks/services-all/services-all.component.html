@@ -10,10 +10,6 @@
 <div class="space-30"></div>
 <div class="container">
     <div class="row">
-
-
-
-
         <div class="col-md-8 col-sm-8 col-12">
             <div class="product-container" *ngFor="let mod of services">
                 <h4 class="heading">{{mod.productCategory}}</h4>
@@ -28,7 +24,7 @@
                             </div>
                             <p class="product-price">
                                 <span>Price: </span>
-                                <span>{{data.price/70 | currency}}</span>
+                                <span>{{data.price | currency: selectedCurr}}</span>
                                 / month
                             </p>
                         </label>
@@ -44,10 +40,16 @@
             </div>
             <div class="price-container">
                 <i class="fa fa-times-circle-o cart-close" aria-hidden="true"></i>
-                <h3 class="product-count">
-                    Selected Apps:
-                    <b>{{totalProduct}}</b>
-                </h3>
+                <div class="header">
+                    <h3 class="product-count">
+                        Selected Apps:
+                        <b>{{totalProduct}}</b>
+                    </h3>
+                    <div class="conversion">
+                        <h6>Change<br>Currency:</h6>
+                        <button class="curr-btn" (click)="changeConversion()"><i class="fa" [ngClass]="selectedCurr=='INR'?'fa-dollar':'fa-rupee'" aria-hidden="true"></i></button>
+                    </div>
+                </div>
                 <div class="table-price">
                     <table class="table">
                         <thead>
@@ -61,7 +63,7 @@
                             <tr *ngFor="let data of selectedList; let i = index;">
                                 <td>{{i+1}}</td>
                                 <td>{{data.productName}}</td>
-                                <td>{{data.price/70 | currency}}</td>
+                                <td>{{data.price | currency: selectedCurr}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -70,18 +72,32 @@
                     <label for="usercount">
                         Choose number of users
                     </label>
-                    <input (change)="productAccUser($event)" type="number" min="1" name="usercount" id="usercount">
+                    <input (change)="productAccUser($event)" type="number" min="1" value="1" name="usercount" id="usercount">
                     <span> / month</span>
                 </div>
                 <div class="total">
-                    <h5>
-                        Total
-                        <small>( including 18% GST )</small>
-                    </h5>
-                    <h2>{{totalPrice/70 | currency}}</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Subscription cost</td>
+                                <td>: {{totalPrice | currency: selectedCurr}} </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">
+                                    GST
+                                </td>
+                                <td>: {{totalPrice*0.18 | currency: selectedCurr}}</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Total cost</td>
+                                <td>: <b>{{totalPrice+totalPrice*0.18 | currency: selectedCurr}}</b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="submit-section">
-                    <a href="" data-toggle="modal" data-target="#subform" (click)="setSubcriptionType('Trial')" class="btns btn-p">Free Trial</a>
+                    <a href="" data-toggle="modal" data-target="#subform" (click)="setSubcriptionType('Trial')" class="btns btn-p flex-container flex-d-c">Free Trial <br> <small>7 days free trial</small> </a>
                     <a href="" data-toggle="modal" data-target="#subform" (click)="setSubcriptionType('Paid')" class="btns btn-s">Premium</a>
                 </div>
             </div>
