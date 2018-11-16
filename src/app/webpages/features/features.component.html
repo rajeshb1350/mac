@@ -33,7 +33,7 @@
         <i class="fa fa-angle-right" aria-hidden="true"></i>
         <i>Subscirbe</i>
       </p>
-      <a routerLink="/allProducts" class="button button-2">Start now</a>
+      <a routerLink="/allProducts" class="button button-3">Start trial</a>
   </div>
 </section>
 
@@ -41,10 +41,7 @@
 <section class="section flex-container flex-pc">
 </section>
 
-<section class="section  flex-container flex-pc">
-  <div class="container-fluid">
-    <div class="row">
-      <app-testimonial class="width-100"></app-testimonial>
-    </div>
-  </div>
+<section class="section  flex-container flex-pc flex-d-c padding-30">
+  <h2 class="text-center">Our Clients Speak</h2>
+  <app-testimonial [data]="testmonialdata" class="width-100"></app-testimonial>
 </section>

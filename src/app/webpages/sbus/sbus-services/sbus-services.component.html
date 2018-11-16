@@ -12,16 +12,22 @@
   <div class="sbus-controls up">
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="currentsec=='finance-accounting'?'active':''" data-toggle="tab" href="#home">Finance
-          & Accounting</a>
+        <a class="nav-link" routerLink="/finance-accounting">
+          <i class="fa fa-line-chart fa-fw" aria-hidden="true"></i>
+          Finance & Accounting
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="currentsec=='information-technology'?'active':''" data-toggle="tab" href="#menu1">Information
-          & Technology</a>
+        <a class="nav-link" routerLink="/information-technology">
+          <i class="fa fa-laptop fa-fw" aria-hidden="true"></i>
+          Information & Technology
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="currentsec=='operation-excellence'?'active':''" data-toggle="tab" href="#menu2">Operation
-          Excellence</a>
+        <a class="nav-link" routerLink="/operation-excellence">
+          <i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i>
+          Operation Excellence
+        </a>
       </li>
     </ul>
   </div>

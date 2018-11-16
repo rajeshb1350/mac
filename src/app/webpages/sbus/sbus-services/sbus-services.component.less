@@ -1,24 +1,18 @@
-p {
-    font-size: 0.8rem;
-    line-height: 1rem;
-    text-align: left;
-}
 
 .sbus-tabs {
     .sbus-controls{
         position: sticky;
-        background: white;
+        background-color: var(--secondary-color);
         display: flex;
         justify-content: center;
         z-index: 1000;    
-        min-height: 2.5rem;
-        box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.3);
+        min-height: 4rem;
         transition: 0.1s all linear;
         &.up {
             top: 100vh;
         }
         &.down {
-            top: calc( 100vh - 2.5rem );
+            top: calc( 100vh - 4rem );
         }
     }
     .sales-img {
@@ -33,26 +27,21 @@ p {
         flex-wrap: nowrap;
 
         .nav-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             a {
-                color: #ababab;
+                color: white;
                 font-size: 0.65rem;
-                text-align: center;
-                &.active {
-                    color: #002c4e;
-                    background-color: #fff;
-                    border: none;
-                    display: block;
-                    &::after {
-                        content: "";
-                        display: block;
-                        width: 60%;
-                        height: 0.15rem;
-                        margin: 0.5rem auto;
-                        background-color: #002c4e;
-                    }
-                }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 &:hover {
+                    border-radius: 0rem;
                     border: none;
+                    background-color: var(--quaternary-color);
+                    color: var(--secondary-color);
                 }
             }
         }
@@ -71,7 +60,7 @@ p {
             flex-wrap: wrap;
             .nav-item {
                 a {
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                 }
             }
         }

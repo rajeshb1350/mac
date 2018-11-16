@@ -1,7 +1,23 @@
+<section class="banner">
+  <div class="page-banner" style="background-color: var(--primary)">
+    <div class="banner-content container">
+      <h2 class="banner-heading">Finance & Accounting</h2>
+    </div>
+  </div>
+</section>
 <div class="finacc">
-  <div class="banner">
+  <div class="sub-banner">
     <img src="/assets/images/banner/financebg.png" class="img-fluid" alt="Finance and Account Banner">
     <h2>Finance & Accounting</h2>
+  </div>
+  <div>
+      <div class="container">
+          <ul class="breadcrumb">
+              <li><a routerLink="/">Home</a></li>
+              <li><a routerLink="/sbus-service">SBuS Services</a></li>
+              <li>Finance & Accounting</li>
+          </ul>
+      </div>
   </div>
   <section class="section1">
     <div class="container">
@@ -17,14 +33,15 @@
         MacTec leverages its deep Finance and Accounting functional expertise, industry familiarity, operational excellence and efficient delivery model with innovative Technology. MacTec offshoring model has the aptitude to deliver the solutions that standardizes finance and accounting processes, transforms operations and lowers costs.
       </p>
     </div>
-    <div class="block-box1 container">
+    <!-- <div class="block-box1 container">
       <ul class="block-list">
         <li class="block" *ngFor="let data of findata.flist">
-          <h5>{{data.title}}</h5>
+          <h5>{{data.heading}}</h5>
           <p>{{data.content}}</p>
         </li>
       </ul>
-    </div>
+    </div> -->
+    <app-testimonial [data]="findata.flist" class="width-100"></app-testimonial>
   </section>
   <section class="section2">
     <h3 class="heading">

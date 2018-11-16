@@ -10,16 +10,16 @@ export class FinanceAccountingComponent implements OnInit {
   findata = {
     flist: [
       {
-        title: 'Payroll Accounting',
+        heading: 'Payroll Accounting',
         content: 'Trained and well versed with employee benefits and compensation working process. Grater offshore experience in payroll cycle management, issuing tax forms – Preparing work schedules – Proper allotment of funds, Employee Insurance and other benefits. Exposure to time sheet based, work order based and other industry specific wage/salary/ compensation workings.' 
       },{
-        title: 'Financial Planning & Analysis',
+        heading: 'Financial Planning & Analysis',
         content: 'Expertise in planning and consolidation of financial reports, budget / forecast submissions, business and leadership interactions and liaison with business and management to formulate right reports, executive summaries and periodic management information system reports. Our team has rich experience in utilization & operational metrics, financial and non-financial reporting.'
       },{
-        title: 'Accounting',
+        heading: 'Accounting',
         content: 'Book Keeping, Accounts Payable, Order to Cash. Managed by dedicated accounting experts who will represent and work closely with onsite controllership team. Review and interpretation of data to produce journal entries, Accounting books closing, reconciliations and periodic accounting summaries, our experts with exceptional quality of services, exposed to domain specific software, ERP and Other tools like, SAP, Oracle, JDE, Black Line, Quick Books, Tally, Sage Accounting, MYOB, BOBJ, and other business intelligence tools. '
       },{
-        title: 'General Ledger',
+        heading: 'General Ledger',
         content: 'Review and interpretation of data to produce journal entries, Accounting books closing, reconciliations and periodic accounting summaries, our experts with exceptional quality of services, exposed to domain specific software, ERP and Other tools like, SAP, Oracle, JDE, Black Line, Quick Books, Tally, Sage Accounting, MYOB, BOBJ, and other business intelligence tools.'
       }
     ],

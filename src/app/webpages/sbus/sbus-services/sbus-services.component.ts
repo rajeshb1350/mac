@@ -37,11 +37,11 @@ export class SbusServicesComponent implements OnInit {
     });
     
     $(document).ready(()=>{
-      const $links = $('.sbus-controls .nav-link');
-      const $pathbox = $('.tab-content');
-      $links.on('click', function(e){
-        $('html,body').animate({scrollTop: $pathbox.offset().top - 70},'slow');
-      })
+    //   const $links = $('.sbus-controls .animated-link');
+    //   const $pathbox = $('.tab-content');
+    //   $links.on('click', function(e){
+    //     $('html,body').animate({scrollTop: $pathbox.offset().top - 70},'slow');
+    //   })
     });
 	}
 }

@@ -43,10 +43,6 @@ body,
 	}
 }
 
-p {
-	font-size: 0.9rem;
-}
-
 // Some default background colors
 .primary-bg-color,
 .primary-bg-hover-color:hover {
@@ -76,6 +72,21 @@ p {
 .quinary-bg-hover-color:hover {
 	background-color: var(--quinary-background-color);
 	transition: 0.1s all linear;
+}
+
+
+
+// breadcrumb
+.breadcrumb-box {
+	background-color: white;
+}
+.breadcrumb {
+	background-color: white !important;
+	a::after {
+		content: "/";
+		display: inline-block;
+		margin: 0 0.4rem;
+	}
 }
 
 // Buttons
@@ -305,19 +316,6 @@ p {
 		li.active a {
 			color: var(--primary-color) !important;
 		}
-	}
-}
-
-// FOOTER LESS--------------------------------------------------
-// Footer1
-p {
-	font-size: 0.8rem;
-}
-
-@media only screen and (min-width: 960px) {
-	p {
-		font-size: 0.9rem;
-		text-align: justify;
 	}
 }
 

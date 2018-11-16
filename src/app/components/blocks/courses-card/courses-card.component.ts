@@ -12,7 +12,7 @@ export class CoursesCardComponent implements OnInit {
       heading: "Finance &amp; Accounting",
       content: "We leverage our deep F & A functional expertise through Operational Excellence and efficient delivery model.",
       img: "/assets/images/coursesImages/accounting.jpg",
-      link: "/sbus-service/finance-accounting",
+      link: "/finance-accounting",
       readLink:'Learn more',
       type:'page'
     },
@@ -20,7 +20,7 @@ export class CoursesCardComponent implements OnInit {
       heading: "Information Technology",
       content: "Our technology consulting service not only allows our customers implement strategies...",
       img: "/assets/images/coursesImages/web_t3.jpg",
-      link: "/sbus-service/information-technology",
+      link: "/information-technology",
       readLink:'Learn more',
       type:'page'
     },
@@ -28,7 +28,7 @@ export class CoursesCardComponent implements OnInit {
       heading: "Operation Excellence",
       content: "Our technical expertise lies in state...",
       img: "/assets/images/coursesImages/software_t4.jpg",
-      link: "/sbus-service/operation-excellence",
+      link: "/operation-excellence",
       readLink:'Learn more',
       type:'page'
     },

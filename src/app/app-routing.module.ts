@@ -38,6 +38,9 @@ import { WhymactecComponent } from './webpages/whymactec/whymactec.component';
 import { ProcessExcellenceComponent } from './webpages/services/process-excellence/process-excellence.component';
 import { SbusServicesComponent } from "./webpages/sbus/sbus-services/sbus-services.component";
 import { SbusStrategyComponent } from "./webpages/sbus/sbus-strategy/sbus-strategy.component";
+import { FinanceAccountingComponent } from "./webpages/sbus/sbus-services/finance-accounting/finance-accounting.component";
+import { TechnologyConsultingServiceComponent } from "./webpages/sbus/sbus-services/technology-consulting-service/technology-consulting-service.component";
+import { OperationalExcellenceComponent } from "./webpages/sbus/sbus-services/operational-excellence/operational-excellence.component";
 const appRoutes: Routes = [
     // { path: "", component: IndexComponent, resolve: {server: SlotbookResolverService} },
     {
@@ -82,13 +85,15 @@ const appRoutes: Routes = [
     { path: "apply", component: ApplyComponent },
     // { path: "blogs", component: BlogsComponent },
     { path: "sbus-service", component: SbusServicesComponent },
-    { path: "sbus-service/:path", component: SbusServicesComponent },
-    { path: "sbus-strategy", component: SbusStrategyComponent },
+     { path: "sbus-strategy", component: SbusStrategyComponent },
     { path: "careers", component: CareersComponent },
     { path: "aboutus", component: AboutUsComponent },
     { path: "aboutus/:path", component: AboutUsComponent },
     { path: "why-mactec", component: WhymactecComponent },
     { path: "contact", component: ContactUsComponent },
+    { path: "finance-accounting", component: FinanceAccountingComponent },
+    { path: "information-technology", component: TechnologyConsultingServiceComponent },
+    { path: "operation-excellence", component: OperationalExcellenceComponent },
     // { path: "appdevelopment", component: AppDevelopmentComponent },
     // { path: "business", component: BusinessReEngineeringComponent },
     // { path: "e-governence", component: EGovernenceComponent },

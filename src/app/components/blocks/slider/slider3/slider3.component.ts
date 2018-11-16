@@ -18,14 +18,17 @@ export class Slider3Component implements OnInit {
         seccontent: 'Just for Only $ 999 - $ 2999 per month or $ 9 - $ 18 per hour',
         seclist: [
           {
+          icon: 'fa-area-chart',
           heading: 'Reduce your cost',
           content: 'Save 70% per employee cost, improve your core business.'
-          },
-          {
+        },
+        {
+          icon: 'fa-handshake-o',
           heading: 'Operation Excellence',
           content: 'Benchmark excellence engage skilled talent across.'
-          },
-          {
+        },
+        {
+          icon: 'fa-line-chart',
           heading: 'Increase your profit margins',
           content: 'Focus on business development, no employee over heads, no operational challenges.'
           }
@@ -39,7 +42,7 @@ export class Slider3Component implements OnInit {
         ],
         type: 'page',
         link: 'allProducts',
-        imagepath: '/assets/images/banner/slide-2.png'
+        imagepath: '/assets/images/banner/slide-9.png'
       },
       {
         heading: 'Finance and Accounting CoE Solutions',
@@ -90,7 +93,7 @@ export class Slider3Component implements OnInit {
         ],
         type: 'web',
         link: 'https://www.skillpassport.in',
-        imagepath: '/assets/images/banner/slide-4.png'
+        imagepath: '/assets/images/banner/slide-8.png'
       },
       {
         heading: 'Smart Business Solutions Product.',
@@ -105,7 +108,7 @@ export class Slider3Component implements OnInit {
         ],
         type: 'page',
         link: 'allProducts',
-        imagepath: '/assets/images/banner/slide-3.png'
+        imagepath: '/assets/images/banner/slide-10.png'
       },
     ];
 

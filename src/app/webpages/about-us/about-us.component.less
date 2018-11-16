@@ -1,6 +1,6 @@
 p {
-	font-size: 0.8rem;
-	line-height: 1rem;
+	font-size: 1rem;
+	line-height: auto;
 	text-align: left;
 	margin-bottom: 0rem;
 }
@@ -12,6 +12,55 @@ section {
     }
 }
 
+.page-nav {
+    position: fixed;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;;
+    ul {
+        list-style: none;
+        text-align: right;
+        li {
+            a {
+                color: white;
+                display: flex;
+                justify-content: flex-end;
+                margin: 0.2rem 0;
+                position: relative;
+                span, .fa {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 3rem;
+                    min-width: 3rem;
+                    padding: 1rem 0rem;
+                }
+                
+                span {
+                    position: absolute;
+                    padding: 0rem 1rem;
+                    background-color: var(--secondary-background-color);
+                    opacity: 0.7;
+                    right: -5rem;
+                    z-index: 10;
+                    transition: 0.2s all ease-in-out;
+                    font-size: 0.8rm;
+                    line-height: 1rem;
+                }
+                &:hover span {
+                    right: 3rem;
+                }
+                .fa {
+                    position: relative;
+                    background-color: var(--secondary-background-color);
+                    z-index: 20;
+                }
+            }
+        }
+    }
+}
+
 .about_sec1 {
 }
 .about_sec2 {
@@ -20,6 +69,7 @@ section {
         top: 6rem;
     }
 }
+
 .about_sec3 {
     .block-container {
         background-color: white;
@@ -29,13 +79,13 @@ section {
         }
     }
 }
+
 .about_sec4 {
     .box-container {
-        padding: 1.5rem 1rem;
         background-color: #f1f1f1;
+        padding: 1.5rem 1rem;
     }
 }
-
 .about_sec7 {
     .benifitsList {
         list-style: none;
@@ -57,6 +107,9 @@ section {
         .team-img {
             margin-bottom: 1rem;
             height: 10rem;
+            width: 10rem;
+            border-radius: 5rem;
+            background-color: var(--secondary-color);
         }
         .leadership {
             .title {
@@ -69,14 +122,14 @@ section {
                 margin: 0rem;
             }
             .content {
-                font-size: 0.7rem;
+                font-size: 0.9rem;
             }
         }
     }
 }
 
 .about_sec9 {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
     position: relative;
     .rocket-bg {
         position: absolute;
@@ -120,11 +173,13 @@ section {
     .about_sec9 {
         padding: 0;
         .rocket-bg {
-            height: 40rem;
-            background-position: -0.5rem -2rem;
+            background-size: 55rem;
+            height: 45rem;
+            background-position: calc(50% - 1rem) 1rem;
+            width: 39rem;
         }
         .about_years {
-            height: 40rem;
+            height: 45rem;
             .yeardata {
                 background-color: white;
                 position: absolute;
@@ -140,29 +195,36 @@ section {
                 &>*{
                     text-align: center;
                 }
+                h4 {
+                    margin-bottom: 0rem;
+                }
+                p {
+                    font-size: 0.9rem;
+                    line-height: 1rem;
+                }
                 &:nth-child(1) {
                     top: 2rem;
-                    left: 13rem;
+                    left: 20rem;
                 }
                 &:nth-child(2) {
                     top: 13rem;
-                    left: 6rem;
+                    left: 10rem;
                 }
                 &:nth-child(3) {
                     top: 26rem;
-                    left: 8rem;
+                    left: 17rem;
                 }
                 &:nth-child(4) {
                     top: 26rem;
-                    right: 8rem;
+                    right: 17rem;
                 }
                 &:nth-child(5) {
                     top: 13rem;
-                    right: 6rem;
+                    right: 10rem;
                 }
                 &:nth-child(6) {
                     top: 2rem;
-                    right: 13rem;
+                    right: 20rem;
                 }
             }
         }

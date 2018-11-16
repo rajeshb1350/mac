@@ -11,39 +11,47 @@
         <div class="container banner-content">
           <div class="row">
             <div class="col-12 col-md-12 col-sm-12"></div>
-            <div class="col-md-7 col-sm-7 col-12 slide-content flex-container flex-d-c flex-jc-c">
-              <h2 [innerHTML]="pdata.heading"></h2>
-              <h5 class="subheading">{{pdata.subheading}}</h5>
-              <p class="content" [innerHTML]="pdata.content"></p>
-              <ul class="slide-features animate a-right" *ngIf="pdata.seclist">
-                <li *ngFor="let data of pdata.seclist">
-                  <h6>{{data.heading}}</h6>
-                  <p>{{data.content}}</p>
-                </li>
-              </ul>
-              <h6 class="text-center emp-text animate a-left" *ngIf="pdata.secheading">
-                <i>
-                  {{pdata.secheading}}  
-                </i>
-                <br>
-              </h6>
-              <p class="text-center emp-text animate a-left">
-                <i>
-                  {{pdata.seccontent}}  
-                </i>
-              </p>
-              <ul class="slide-list">
-                <li *ngFor="let data of pdata.feature">
-                  {{data}}
-                </li>
-              </ul>
+            <div class="col-md-7 col-sm-7 col-12 slide-content flex-container flex-d-c flex-jc-sb">
+              <div></div>
+
+              <div>
+                <h2 [innerHTML]="pdata.heading"></h2>
+                <h5 class="subheading">{{pdata.subheading}}</h5>
+                <p class="content" [innerHTML]="pdata.content"></p>
+                <ul class="slide-features animate a-right" *ngIf="pdata.seclist">
+                  <li *ngFor="let data of pdata.seclist">
+                    <h5 class="text-center">
+                      <i class="fa {{data.icon}}" aria-hidden="true"></i>
+                    </h5>
+                    <h6>{{data.heading}}</h6>
+                    <p>{{data.content}}</p>
+                  </li>
+                </ul>
+                <h5 class="text-center emp-text animate a-left" *ngIf="pdata.secheading">
+                  <i>
+                    {{pdata.secheading}}  
+                  </i>
+                  <br>
+                </h5>
+                <p class="text-center emp-text animate a-left">
+                  <i>
+                    {{pdata.seccontent}}  
+                  </i>
+                </p>
+                <ul class="slide-list">
+                  <li *ngFor="let data of pdata.feature">
+                    {{data}}
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <a routerLink="{{pdata.link}}" *ngIf="pdata.type=='page'" class="button button-3">Learn more</a>
+                <a href="{{pdata.link}}" *ngIf="pdata.type=='web'" target="_blank" class="button button-3">Visit now</a>
+              </div>
             </div>
             <div class="offset-md-1 offset-sm-1 col-md-4 col-sm-4 col-12 slide-img animate a-top">
               <img alt="First slide" src="{{pdata.imagepath}}">
-            </div>
-            <div class="col-12 col-md-12 col-sm-12">
-                <a routerLink="{{pdata.link}}" *ngIf="pdata.type=='page'" class="button button-3">Read More</a>
-                <a href="{{pdata.link}}" *ngIf="pdata.type=='web'" target="_blank" class="button button-3">Visit now</a>
             </div>
           </div>
         </div>

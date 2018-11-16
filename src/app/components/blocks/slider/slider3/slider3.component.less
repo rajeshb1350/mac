@@ -63,9 +63,9 @@
                     display: none;
                 }
                 .content {
-                    font-size: 0.8rem;
-                    line-height: 1rem;
-                    font-weight: 400;
+                    font-size: 0.9rem;
+                    line-height: 1.3rem;
+                    font-weight: 200;
                 }
                 .slide-features {
                     display: none;
@@ -77,9 +77,13 @@
                         list-style-type: none;
                         flex: 0 0 calc(100% - 1rem);
                         margin: 0 0.5rem;
+                        h5 {
+                            margin-bottom: 0.1rem;
+                        }
                         h6 {
                             font-size: 0.9rem;
                             text-align: center;
+                            margin-bottom: 0.1rem;
                             font-weight: 600;
                         }
                         p {
@@ -90,7 +94,7 @@
                         &:not(:last-child)::after {
                             content: "";
                             width: 1px;
-                            height: 2rem;
+                            height: 4rem;
                             background-color: var(--quaternary-color);
                             display: block;
                             position: absolute;
@@ -105,7 +109,7 @@
                     flex-wrap: wrap;
                     list-style: none;
                     li {
-                        font-size: 0.8rem;
+                        font-size: 0.9rem;
                         &:not(:last-child)::after{
                             content: " | ";
                             margin: 0 0.5rem;
@@ -129,19 +133,21 @@
             }
         }
         &:nth-child(1) {
-            background: linear-gradient(45deg, #312a6c, #852d91);
+            background: linear-gradient(235deg, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
         }        
         &:nth-child(2) {
             background: linear-gradient(45deg, #3a3897, #a3a1ff);
         }        
         &:nth-child(3) {
-            background: linear-gradient(-45deg, #662D8C, #ED1E79);
+            background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
         }        
         &:nth-child(4) {
-            background: linear-gradient(45deg, #4f00bc, #29abe2);
+            background: linear-gradient(235deg, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }        
         &:nth-child(5) {
-            background: linear-gradient(45deg, #3222c4, #382e8f);
+            background: linear-gradient(45deg, #403591, #53bedf);
         }      
     }
 }
@@ -156,10 +162,10 @@
         }
         .carousel-item {
             min-height: auto;
-            height: 45rem;
+            height: 100vh;
             .banner-content {
                 .slide-content {
-                    height: 35rem;
+                    height: calc(100vh - 4rem);
                     .emp-text {
                         display: block;
                     }
@@ -182,7 +188,7 @@
                 }
                 .slide-img {
                     display: flex;
-                    height: 35rem;
+                    height: calc(100vh - 8rem);
                     img {
                         // position: relative;
                     }
@@ -191,37 +197,37 @@
 
             &:nth-child(1) {
                 img {
-                    height: 29rem;
+                    height: 33rem;
                     top: calc(50% - 11rem);
-                    left: 1.5rem;
+                    left: -7.5rem;
                 }
             }
             &:nth-child(2) {
                 img {
-                    height: 21rem;
-                    top: calc(50% - 11rem);
-                    left: -1.5rem;
+                    height: 22rem;
+                    top: calc(50% - 6rem);
+                    left: -8.5rem;
                 }
             }
             &:nth-child(3) {
                 img {
-                    height: 28rem;
-                    top: calc(50% - 12rem);
-                    left: -5.5rem;
+                    height: 29rem;
+                    top: calc(50% - 9rem);
+                    left: -8.5rem;
                 }
             }
             &:nth-child(4) {
                 img {
-                    height: 27rem;
-                    top: calc(50% - 11rem);
-                    left: -4.5rem;
+                    height: 29rem;
+                    top: calc(50% - 9rem);
+                    left: -6.5rem;
                 }
             }
             &:nth-child(5) {
                 img {
-                    height: 27rem;
-                    top: calc(50% - 11rem);
-                    left: -4.5rem;
+                    height: 29rem;
+                    top: calc(50% - 9rem);
+                    left: -5.5rem;
                 }
             }
         }

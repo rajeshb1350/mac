@@ -1,12 +1,7 @@
-p {
-    font-size: 0.8rem;
-    line-height: 1rem;
-    text-align: left;
-    margin-bottom: 0rem;
-}
-
-
 .banner {
+    padding: 0rem;
+}
+.sub-banner {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -20,7 +15,7 @@ p {
 
 section {
     padding: 1rem;
-    &:nth-child(odd){
+    &:nth-child(even){
         background-color: #f1f1f1;
     }
 }
@@ -71,7 +66,7 @@ section {
 }
 
 @media only screen and ( min-width: 980px) {
-    .banner {
+    .sub-banner {
         img {
             height: 20rem;
         }
