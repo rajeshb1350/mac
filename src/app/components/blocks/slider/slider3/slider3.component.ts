@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-slider3',
@@ -41,7 +42,7 @@ export class Slider3Component implements OnInit {
           'Best in class processes for accelerated success'
         ],
         type: 'page',
-        link: 'allProducts',
+        link: 'sbus-service',
         imagepath: '/assets/images/banner/slide-9.png'
       },
       {
@@ -58,7 +59,7 @@ export class Slider3Component implements OnInit {
           'Cross Functional and End to End Expertise'
         ],
         type: 'page',
-        link: 'sbus-service',
+        link: 'sbus-service/finance-accounting',
         imagepath: '/assets/images/banner/slide-5.png'
       },
       {
@@ -75,7 +76,7 @@ export class Slider3Component implements OnInit {
           'Data privacy and integrity established'
         ],
         type: 'page',
-        link: 'sbus-service',
+        link: 'sbus-service/technology-services',
         imagepath: '/assets/images/banner/slide-1.png'
       },
       {
@@ -112,7 +113,12 @@ export class Slider3Component implements OnInit {
       },
     ];
 
+
   ngOnInit() {
+    window.setTimeout(function(){
+      let data = $('#auto-next') as HTMLElement;
+      data.click();
+    }, 5000);
   }
 
 }

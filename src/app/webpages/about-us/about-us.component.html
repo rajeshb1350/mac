@@ -4,18 +4,23 @@
 			<h2 class="banner-heading">About us</h2>
 			<p>Smart Business Solutions… Powered by Intelligent Technologies</p>
 		</div>
+		<svg x="0px" y="0px" viewBox="0 0 1000 78" style="enable-background:new 0 0 1000 78; fill: #ffffff;">
+			<g>
+				<polygon points="1000,78 1000,0 0,78" />
+			</g>
+		</svg>
 	</div>
 
 	<div class="page-nav">
 		<ul>
+			<li> <a routerLink="/aboutus/vision"> <span>Vision& Mission</span> <i class="fa fa-eye"></i></a></li>
 			<li> <a routerLink="/aboutus/whyMacTec"> <span>Why MacTec</span> <i class="fa fa-question"></i></a></li>
-			<li> <a routerLink="/aboutus/vision"> <span>Vision</span> <i class="fa fa-eye"></i></a></li>
 			<li> <a routerLink="/aboutus/leadership"> <span>Leadership</span> <i class="fa fa-flag"></i></a></li>
 			<!-- <li> <a href="#contact"> <span>Journey</span> <i class="fa fa-map-marker"></i></a></li> -->
 		</ul>
 	</div>
 
-	<section class="about_sec1">
+	<section class="about_sec1 ">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-12 flex-container flex-pc">
@@ -30,11 +35,16 @@
 			</div>
 		</div>
 	</section>
-	<section class="about_sec2">
+	<svg style="enable-background:new 0 0 1000 78; fill: #f1f1f1;" viewBox="0 0 1000 78" x="0px" y="0px"><g>
+			<polygon points="1000,78 0,78 0,0"></polygon>
+		</g>
+	</svg>
+
+	<section class="about_sec2 gray">
 		<div class="container">
+			<h2 class="heading"><span>Introduction</span></h2>
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
-					<h3>Introductions</h3>
 					<p>
 						MacTec Solutions, the name stands for management (MAC) and Technology (TEC) Solutions, is a leading smart business solutions
 						services provider, operating from India, USA and Australia. Globalization of talent through Uberization of Workforce
@@ -92,15 +102,26 @@
 			</div>
 		</div>
 	</section>
+	<svg style="enable-background:new 0 0 1000 78; fill: #f1f1f1;" viewBox="0 0 1000 78" x="0px" y="0px"><g>
+			<polygon points="1000,0 0,78 0,0"></polygon>
+		</g>
+	</svg>
 
 
+	<section class="about_sec5" id="vision">
+		<app-testimonial [data]="visiondata" class="width-100"></app-testimonial>
+	</section>
 
 
-	<section class="about_sec3" id="whyMacTec">
+	<svg style="enable-background:new 0 0 1000 78; fill: #f1f1f1;" viewBox="0 0 1000 78" x="0px" y="0px"><g>
+			<polygon points="1000,78 0,78 0,0"></polygon>
+		</g>
+	</svg>
+	<section class="about_sec3 gray" id="whyMacTec">
 		<div class="container" *ngFor="let sdata of servOffer;">
 			<div class="row">
 				<div class="col-12 col-sm-12 col-md-12">
-					<h4 class="heading" [innerHTML]="sdata.heading"></h4>
+					<h2 class="heading"><span>Why MacTec</span></h2>
 				</div>
 				<div class="col-12 col-sm-6 col-md-3 block-container" *ngFor="let siner of sdata.seclist;">
 					<h5 class="heading" [innerHTML]="siner.header"></h5>
@@ -115,9 +136,11 @@
 			</div>
 		</div>
 	</section>
-
-
-
+	
+	<svg style="enable-background:new 0 0 1000 78; fill: #f1f1f1;" viewBox="0 0 1000 78" x="0px" y="0px"><g>
+			<polygon points="1000,0 0,78 0,0"></polygon>
+		</g>
+	</svg>
 	<section class="about_sec4">
 		<div class="container">
 			<div class="row">
@@ -174,12 +197,12 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row ">
+			<div class="row">
 				<div class="col-lg-6 col-md-12 order-1">
 					<img src="/assets/images/whyMactec/why.png" alt="About-us banner" class="img-fluid" />
 				</div>
 				<div class="col-md-6 allAbt order-0 flex-container flex-jc-c flex-d-c">
-					<h2>It's all about</h2>
+					<h3>It's all about</h3>
 					<ul class="slide-list">
 						<li>How all work gets done.</li>
 						<li>How we deliver value to the customer.</li>
@@ -188,95 +211,39 @@
 				</div>
 			</div>
 		</div>
-	</section>
-
-	<section class="about_sec5" id="vision">
-		<app-testimonial [data]="visiondata" class="width-100"></app-testimonial>
-		<!-- <img src="/assets/images/banner/direction1.png" alt="About-us banner" class="img-fluid" /> -->
-	</section>
-
-
-
-	<section class="about_sec7">
 		<div class="container">
-			<div>
-				<h2>Benifits of working with MacTec</h2>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 col-md-12">
-					<div>
-						<ul class="benifitsList">
-							<li>
-								<h6 class="iconica"><b>Operational Flexibility</b></h6>
-								<p>We are not mere a vendor providing services to marginalize your cost. We strive to be a domain expert and aim
-									to be a partner in success of our customers.</p>
-							</li>
-							<li>
-								<h6 class="iconica"><b>Certified Staff</b></h6>
-								<p>MacTec has a wide pool of highly qualified Graduates and Post Graduates with valued industry certifications who
-									have the right expertise and talent for leveraging the appropriate knowledge base.</p>
-							</li>
-							<li>
-								<h6 class="iconica"><b>Training & Development</b></h6>
-								<p>Our robust L&D mechanism is designed to deliver learning interventions that ensures enhanced execution in sync
-									with our customers’ expectations.</p>
-							</li>
-							<li>
-								<h6 class="iconica"><b>Transparency</b></h6>
-								<p>MacTec believes in Zero Surprises Operational mechanism where we keep out communication open and transparent ensuring
-									client satisfaction. Our governance process ensures clear communication.</p>
-							</li>
-							<li>
-								<h6 class="iconica"><b>Secured Operations</b></h6>
-								<p>We have a state-of-the-art surveillance mechanism and robust background check verification of our employees and
-									top notch data security protocols to safeguard client information.</p>
-							</li>
-						</ul>
+			<div class="row preety-boxes">
+				<div class="col-12 col-md-12">
+					<h3>Benefit working with us</h3>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4 p-box" *ngFor="let data of benefitdata;">
+					<div class="p-inner">
+						<div class="icon">
+							<i class="fa fa-bandcamp" aria-hidden="true"></i>
+						</div>
+						<div class="content">
+							<h5>{{data.heading}}</h5>
+							<p [innerHTML]="data.content"></p>
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-12">
-					<div>
-						<ul class="benifitsList">
-							<li>
-								<h6 class="iconica"><b>Time Zone Coverage</b></h6>
-								<p>Supporting global operations cannot have any time zone boundaries. Our services are not bound by this natural
-									limitation and hence we are open 24/7 with complete resource support.</p>
-							</li>
-							<li>
-								<h6 class="iconica"><b>Niche Skills</b></h6>
-								<p>Academic qualifications and industry certifications apart, the significant aspect of a strong pool of experts
-									in niche skill which can be leveraged for critical and high value projects.</p>
-							</li>
-							<li>
-								<h6 class="iconica"><b>Cost Reducation</b></h6>
-								<p>MacTec stands by the philosophy of marginalised cost with no compromise in quality. We provides the services at
-									a competitive price to significantly reduce the staffing cost.</p>
-							</li>
-							<li>
-								<h6 class="iconica"><b>Proven Success</b></h6>
-								<p>With a fervent partnership with our erstwhile and existing clients, we have proven track record of not just seamless
-									delivery but also adding value proposition to our clients’ business.</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-
 			</div>
 		</div>
 	</section>
-
-
-
-	<section class="about_sec8" id="leadership">
+	<svg style="enable-background:new 0 0 1000 78; fill: #f1f1f1;" viewBox="0 0 1000 78" x="0px" y="0px"><g>
+			<polygon points="1000,78 0,78 0,0"></polygon>
+		</g>
+	</svg>
+	<section class="about_sec8 gray" id="leadership">
 		<div class="container">
-			<h3>Our Leadership</h3>
+			<h2 class="heading"><span>Our Leadership</span></h2>
 			<!-- Team member -->
-			<div class="team-box" *ngFor="let data of teamdata">
+			<div class="team-box">
 				<div class="row">
-					<div class="offset-1 offset-sm-2 offset-md-1 offset-lg-1 offset-sm-2 offset-1 col-md-3 col-lg-3 col-sm-8 col-10 flex-container flex-pc">
-						<img class="team-img img-fluid">
-					</div>
-					<div class="col-md-7 col-lg-7 col-sm-12 col-12">
+					<div class="col-md-4 col-lg-4 col-sm-6 col-12 team" *ngFor="let data of teamdata">
+						<!-- <div class="text-center team-img" [ngStyle]="{backgroundImage: 'url('+data.img+')'}"> -->
+						<div class="text-center team-img">
+						</div>
 						<div class="leadership">
 							<h4 class="title">{{data.name}}</h4>
 							<h5 class="desg"><small><i>{{data.desg}}</i></small></h5>
@@ -287,9 +254,16 @@
 			</div>
 		</div>
 	</section>
-
-	<div class="container space-30">
-		<h2>Our Journey</h2>
+	<section class="gray svg-section">
+		<svg style="enable-background:new 0 0 1000 78; fill: #032d4d;" viewBox="0 0 1000 78" x="0px" y="0px"><g>
+				<polygon points="1000,78 0,78 1000,0"></polygon>
+			</g>
+		</svg>
+	</section>
+	<div class="journey-heading">
+		<div class="container">
+			<h2 class="heading inverse"><span>Our Journey</span></h2>
+		</div>
 	</div>
 	<section class="rocket about_sec9">
 		<div class="container rocket-bg"></div>

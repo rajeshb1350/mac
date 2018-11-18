@@ -1,5 +1,5 @@
 .parallax-banner{
-    background-image: url(../../../../assets/images/whyMactec/career.png);
+    background-image: url(/assets/images/whyMactec/career.png);
 	width: 100%; 
 	height: 400px;
 	background-attachment: fixed;
@@ -35,7 +35,12 @@
     position: relative;
     transition: 0.5s;
     margin-bottom: 1.5rem;
-    height: 250px;
+	height: 250px;
+	.clickToApply{
+		color: var(--primary-color);
+		font-weight: 600;
+		cursor: pointer;
+	}
 }
 
 
@@ -67,7 +72,7 @@
     background: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 100%;
     text-align: center;
 	p{
@@ -137,7 +142,7 @@
 	}
   @media only screen and (min-width:1024px){
 	.parallax-banner{
-		background-image: url(../../../../assets/images/whyMactec/career.png);
+		background-image: url(/assets/images/whyMactec/career.png);
 		width: 100%;
 		height: 400px;
 		background-attachment: inherit;
@@ -164,4 +169,23 @@
   .slide-content p {
 	  font-size: 1.1rem;
   }
+}
+//chaitu
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }

@@ -1,0 +1,99 @@
+<div class="about-section">
+  <div class="page-banner" style="background-color: var(--secondary)">
+    <div class="banner-content container">
+      <h2 class="banner-heading">Career</h2>
+      <p class="banner-subheading">
+        At MacTec, Become a stakeholder in authoring our sucess story
+      </p>
+    </div> 
+    <svg x="0px" y="0px" viewBox="0 0 1000 78" style="enable-background:new 0 0 1000 78; fill: #ffffff;">
+        <g>
+            <polygon points="1000,78 1000,0 0,78" />
+        </g>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="row space-50">
+      <div class="col-md-12">
+        <p>We aim at building a robust team that strongly believes in our philosophy of individual aspirations
+          resulting in
+          collective achievement. MacTec strives to be highly receptive in adding resources who have huge potential to
+          be
+          part of our young and dynamic family. We are looking for individuals who wish to be a stakeholder in
+          authoring
+          our success story.</p>
+        <p>If you have the zeal and believe you have the fire inside of you, we are looking for you! (Open positions
+          are mentioned
+          below)
+        </p>
+      </div>
+    </div>
+
+    <div class=" space-50"></div>
+    <div class="row">
+      <!--team-1-->
+      <div class="col-lg-4" *ngFor="let jobdata of jobs">
+        <div class="our-team-main">
+          <div class="team-front">
+            <img src="/assets/images/icons/{{jobdata.imgName}}.png" class="img-fluid" />
+            <h3>{{jobdata.title}}</h3>
+            <p>FullTime, Hyderabad </p>
+          </div>
+          <div class="team-back">
+           <p>No. of positions: {{jobdata.noOfPositions}}</p>
+           <p>Required Experience: {{jobdata.experiencelevel}}</p>
+           <p>Skill Required: {{jobdata.skill_set}}</p>
+           <a (click)="viewjob(jobdata)" class="clickToApply">Apply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" space-50"></div>
+  </div>
+</div>
+<!-- <div class="row">
+  
+  <div   class="column" style="background-color:#bbb;">
+    <h2>{{jobdata.title}}</h2>
+    <h1>  experiencelevel:{{jobdata.experiencelevel}}</h1>
+    <h1>  skill_set:{{jobdata.skill_set}}</h1>
+    <h1>  title:{{jobdata.title}}</h1>
+    <h1>  job_location:{{jobdata.job_location}}</h1>
+    <h1>  job_due:{{jobdata.job_due}}</h1>
+    <button (click)="viewjob(c)"></button>
+  </div>
+  
+</div> -->
+
+
+<!-- <div class=" space-50"></div>
+<div class="container">
+  <div class="row">
+    
+    <div class="col-lg-4" *ngFor="let jobdata of jobs">
+      <div class="our-team-main">
+        <div class="team-front">
+          <img src="/assets/images/icons/java.PNG" class="img-fluid" /> 
+          <h3>{{jobdata.title}}</h3>
+          <p>{{jobdata.job_location}} </p>
+
+          <p>{{jobdata.noOfPositions}} Vacancy </p>
+        </div>
+        <div class="team-back">
+          <h6>
+            <b>Job Description</b>
+          </h6>
+          <p>{{jobdata.skill_set}}</p>
+          <button (click)="viewjob(jobdata)">view full details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<svg x="0px" y="0px" viewBox="0 0 1000 78" style="enable-background:new 0 0 1000 78; fill: var(--secondary-color);">
+    <g>
+        <polygon points="1000,78 0,0 0,78" />
+    </g>
+</svg>

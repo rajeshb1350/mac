@@ -1,4 +1,4 @@
-<section class="team card1">
+<!-- <section class="team card1">
   <div class="container">
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 flex-container flex-jc-c">
@@ -23,4 +23,20 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+<div class="container boxes">
+  <h2 class="heading text-center">Our Capabilities</h2>
+  <div class="row">
+    <div *ngFor="let data of carddata" class="col-6 col-sm-6 col-sm-4 col-lg-4 out-box">
+      <div class="box" [ngStyle]="{backgroundImage: 'url('+data.img+')'}">
+        <div class="box-overlay" style="background-color: var(--secondary-color);"></div>
+        <div class="text-content">
+          <h3 [innerHTML]="data.heading"></h3>
+          <p [innerHTML]="data.content"></p>
+          <a routerLink="{{data.link}}" *ngIf="data.type!='none'">Learn more <i class="fa fa-external-link" *ngIf="data.type!='page'" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

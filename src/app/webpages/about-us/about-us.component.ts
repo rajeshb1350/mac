@@ -12,14 +12,14 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   teamdata = [
     {
       name: 'Ravi Krovvidi',
-      desg: 'Director - Strategic Planning',
+      desg: 'Founder and CEO',
       content: `Ravi is at the helm of Strategic Planning of MacTec. With an astounding career spanning over 20 years in the areas
       of Finance & Accounting and Project Management, he is a Chartered Accountant with a varied industry experience
       with global Pharma, IT and Service companies. He is a Subject Matter Expert on Financial Planning & Analysis
       process equipped with wide and extensive insight on F&A domain coupled with business acumen on Service Delivery
       and Process Transformation. Ravi is instrumental in building MacTec IT Solutions as a brand that envisions partnering
       for success.`,
-      img: '/assets/images/whyMactec/ravi.png'
+      img: '/assets/images/leads/ravi.png'
     },
     {
       name: 'Sumanthi Parakala',
@@ -30,18 +30,42 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
       execute and accomplish. Sumanthi role entails Business Development, Product Development, Technical consultation
       and strategy. She holds a Masters Degree from Scotland in Information Technology with major specialization in
       Computer Aided Engineering.`,
-      img: '/assets/images/whyMactec/sumanthi.png'
+      img: '/assets/images/leads/sumanthi.jpg'
 
     },
     {
       name: 'Rajeev Dubey',
-      desg: 'Chief Technical Officer',
+      desg: 'Chief Technology Officer',
       content: `Rajeev is a certified expert in Adobe AEM with a strong experience in varied technological platforms for over
       17 years. As the CTO, Rajeev is the key member of MacTec being the design head for the state-of-the-art
       products Order Ezi <sup>®</sup>, Campus Champs <sup>®</sup>, City Blaze <sup>®</sup>, SmartOpx <sup>®</sup>, SBuS <sup>®</sup> and SkillPassport <sup>®</sup> .Rajeev is chief contributor in expansion of the
       technology portfolio of MacTec for the client servicing businesses in the areas of product design and development.
       Being the lead, he is the mentor and the guide of the development team in MacTec.`,
-      img: '/assets/images/whyMactec/rajeev.png'
+      img: '/assets/images/leads/rajeev.jpg'
+    },
+    {
+      name: 'Ron (Ramakrishnan)',
+      desg: 'L & D | Operations',
+      content: `Ron is an expert in Learning & Development and Customer Service Operations domain with career spanning over 14 years specializing in Training functions. He is a Certified Trainer on array of Soft-skills and Behavioural interventions.Besides, he brings in rich experience in business transitions and knowledge transfer practices. Ron’s core expertise lies in human development & transformation and client service management.As a key member of MacTec, Ron plays a pivotal role in expansion of the L&D functions and product operations.`,
+      img: '/assets/images/leads/rajeev.jpg'
+    },
+    {
+      name: 'Abhishek Jangid',
+      desg: 'Head UX Design',
+      content: `---`,
+      img: '/assets/images/leads/rajeev.jpg'
+    },
+    {
+      name: 'Swaroop Suravarapu',
+      desg: 'Head of Operation',
+      content: `Swaroop leads the Operations at MacTec by the virtue of his long drawn experience in Operations Management. He holds a Master’s degree in Technology and Electronics from a premier university in India. With a industry experience  of over 6 years, Swaroop has extensive field operations expertise as well as infra management.`,
+      img: '/assets/images/leads/rajeev.jpg'
+    },
+    {
+      name: 'Ramakrishna',
+      desg: 'Head Frontend Development',
+      content: `Ramakrishna is the engine of sorts of the development vertical of MacTec IT Solutions. He is the most significant contributory force for the development and implementation of the technology products that we have built. With a Bachelors Degree in Engineering, Ramakrishna’s core competency lies in mobile technologies and building cross platform applications through Phone Gap technology. His keen eye on emerging trends and platforms gives him the added advantage that makes the vertical stronger. His role and contribution creates the key differentiator for MacTec products which sets us apart from the competition.`,
+      img: '/assets/images/leads/rajeev.jpg'
     }
   ];
 
@@ -125,24 +149,33 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     }
   ];
 
-  visiondata = [
+  visiondata =
     {
-      heading: 'vision',
-      content: `Uberization of Workforce through Smart Business Solutions – SBuS ®. Provide Best-in-Class and an innovative access to People,
-      Processes and Technology. We aim to position MacTec as a Global Hub and driving force for Efficiency, Reliability,
-      Cost-Effective and Highly Qualitative Solutions through onsite and offshore resource management processes.`
-    }, {
-      heading: 'values',
-      content: `Our values are Accountability, Collaboration, Customer-Centric, Integrity, Innovation, and Pursuit of Excellence.`
-    }, {
-      heading: 'Mission',
-      content: `Add value to our clients’ business through our services and products. Simplification of complex and deferrable processes.
-      Set benchmark strategic solutions, and then drive to process excellence, for augmented ROI of time, money and effort
-      of the management.
-      We are an opportunity and knowledge hub with an objective and reputation in workforce transformation, process
-      enhancements and technology Solutions.`
-    }
-  ];
+      id: 'vision',
+      height: 'medium',
+      listdata:
+        [
+          {
+            heading: 'Vision',
+            img: '/assets/images/vision/vision.png',
+            content: `Uberization of Workforce through Smart Business Solutions – SBuS ®. Provide Best-in-Class and an innovative access to People,
+          Processes and Technology. We aim to position MacTec as a Global Hub and driving force for Efficiency, Reliability,
+          Cost-Effective and Highly Qualitative Solutions through onsite and offshore resource management processes.`
+          }, {
+            heading: 'Values',
+            img: '/assets/images/vision/values.png',
+            content: `Our values are Accountability, Collaboration, Customer-Centric, Integrity, Innovation, and Pursuit of Excellence.`
+          }, {
+            heading: 'Mission',
+            img: '/assets/images/vision/mission.png',
+            content: `Add value to our clients’ business through our services and products. Simplification of complex and deferrable processes.
+          Set benchmark strategic solutions, and then drive to process excellence, for augmented ROI of time, money and effort
+          of the management.
+          We are an opportunity and knowledge hub with an objective and reputation in workforce transformation, process
+          enhancements and technology Solutions.`
+          }
+        ]
+    };
 
   benefitdata = [
     {
@@ -190,7 +223,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
       content: `With a fervent partnership with our erstwhile and existing clients, we have proven track record of not just seamless
       delivery but also adding value proposition to our clients’ business.`
     }
-  ]
+  ];
 
   private currentsec = '';
 
@@ -205,9 +238,41 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
         this.scrolltopath(this.currentsec);
       }
     );
+
+    function debounce(func) {
+      var wait = 50;
+      var immediate = true;
+      var timeout;
+      return function () {
+        var context = this, args = arguments;
+        var later = function () {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      }
+    }
+
+    $(document).ready(function (e) {
+      const $journey = $('.about_sec9');
+      const $jcircle = $('.about_sec9 .yeardata');
+      const journeytop = $journey.offset().top - $journey.height() / 3;
+      console.log($journey);
+      window.addEventListener('scroll', debounce(function () {
+        var currpos = window.scrollY;
+        if (currpos + 20 > journeytop) {
+          console.log(currpos, journeytop);
+          $jcircle.addClass('active');
+        }
+      }));
+    });
   }
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() {
+  }
 
   scrolltopath(path) {
     if (this.currentsec != undefined) {

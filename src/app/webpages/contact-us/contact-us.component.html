@@ -5,118 +5,125 @@
             Feel free to contact us any time
         </p>
     </div>
+    <svg x="0px" y="0px" viewBox="0 0 1000 78" style="enable-background:new 0 0 1000 78; fill: #FFFFFF;">
+        <g>
+            <polygon points="1000,78 1000,0 0,78" />
+        </g>
+    </svg>
 </div>
 <div class="contact-us-page">
     <div class="container">
 
-          <h2 class="text-center font_csss">  WHAT'S YOUR BUSINESS CHALLENGE?</h2>
-          <p class="text-center font_csss">Request a POC today</p>
-          <h5 class="text-center">Got an interesting business case? We will be happy to invest in it, along with you, to work out a solution. We will go on to co-develop the first-level Proof of Concept.</h5>
+        <h2 class="text-center font_csss"> WHAT'S YOUR BUSINESS CHALLENGE?</h2>
+        <p class="text-center font_csss">Request a POC today</p>
+        <h5 class="text-center">Got an interesting business case? We will be happy to invest in it, along with you, to work
+            out a solution. We will go on to co-develop the first-level Proof of Concept.</h5>
 
-            <form name="form" (ngSubmit)="f.form.valid &&  onSubmit4th()" #f="ngForm" novalidate>
+        <form name="form" (ngSubmit)="f.form.valid &&  onSubmit4th()" #f="ngForm" novalidate>
 
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-                            <div class="form-group">
-                               
-                                   <input placeholder="Name*" type="text" class="form-control css_fields" name="fromContactName" [(ngModel)]="model.fromContactName"
-                                    #fromContactName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fromContactName.invalid }"
-                                    required />
-                                <div *ngIf="f.submitted && fromContactName.invalid" class="invalid-feedback">
-                                    <div *ngIf="fromContactName.errors.required"> Name required</div>
-                                </div>
-                            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                    <div class="form-group">
+
+                        <input placeholder="Name*" type="text" class="form-control css_fields" name="fromContactName"
+                            [(ngModel)]="model.fromContactName" #fromContactName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fromContactName.invalid }"
+                            required />
+                        <div *ngIf="f.submitted && fromContactName.invalid" class="invalid-feedback">
+                            <div *ngIf="fromContactName.errors.required"> Name required</div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-                            <div class="form-group">
-                                
-                                  
-                                  <input placeholder="Email*" type="email" class="form-control css_fields" name="toContactName" [(ngModel)]="model.toContactName"
-                                    #toContactName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && toContactName.invalid }"
-                                    required />
-                
-                                <div *ngIf="f.submitted && fromContactNumber.invalid" class="invalid-feedback">
-                                    <div *ngIf="fromContactNumber.errors.required">Email is required</div>
-                                </div>
-                            </div>
-                        </div>
-                
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-                            <div class="form-group">
-                                <!-- <label for="fromContactNumber">contact Number</label> -->
-                                  <input placeholder="contact Number*" type="text" class="form-control css_fields" name="fromContactNumber" [(ngModel)]="model.fromContactNumber"
-                                    #fromContactNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fromContactNumber.invalid }"
-                                    required />
-                
-                                <div *ngIf="f.submitted && fromContactNumber.invalid" class="invalid-feedback">
-                                    <div *ngIf="fromContactNumber.errors.required">ContactNumber is required</div>
-                                </div>
-                            </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                    <div class="form-group">
+
+
+                        <input placeholder="Email*" type="email" class="form-control css_fields" name="toContactName" [(ngModel)]="model.toContactName"
+                            #toContactName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && toContactName.invalid }" required
+                        />
+
+                        <div *ngIf="f.submitted && fromContactNumber.invalid" class="invalid-feedback">
+                            <div *ngIf="fromContactNumber.errors.required">Email is required</div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-                                <div class="form-group">
-                    
-                                    <!-- <label for="sizeOfBusiness">size Of Business</label> -->
-                    
-                                    <select class="form-control css_fields" name="sizeOfBusiness" [(ngModel)]="model.sizeOfBusiness" style="margin-top:24px;">
-                                      <!--   <option>size Of Business</option> -->
-                                        <option value={{Timeline.name}} name="sizeOfBusiness" *ngFor="let Timeline of size">
-                                            {{Timeline.name}}</option>
-                                    </select>
-                                </div>
-                            </div>
-                    
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-                            <div class="form-group">
-                                <!-- <label for="Designation">Designation</label> -->
-                                  <input placeholder="Designation*" type="text" class="form-control css_fields" name="Designation" [(ngModel)]="model.Designation"
-                                    #Designation="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Designation.invalid }" required />
-                
-                                <div *ngIf="f.submitted && Designation.invalid" class="invalid-feedback">
-                                    <div *ngIf="Designation.errors.required">Designation is required</div>
-                                </div>
-                            </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                    <div class="form-group">
+                        <!-- <label for="fromContactNumber">contact Number</label> -->
+                        <input placeholder="contact Number*" type="text" class="form-control css_fields" name="fromContactNumber"
+                            [(ngModel)]="model.fromContactNumber" #fromContactNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fromContactNumber.invalid }"
+                            required />
+
+                        <div *ngIf="f.submitted && fromContactNumber.invalid" class="invalid-feedback">
+                            <div *ngIf="fromContactNumber.errors.required">ContactNumber is required</div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
-                                <div class="form-group">
-                                    <!-- <label for="toContactNumber">Message</label> -->
-                                      <input  placeholder="Message*" type="text" class="form-control css_fields" name="toContactNumber" [(ngModel)]="model.toContactNumber"
-                                        #toContactNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && toContactNumber.invalid }"
-                                        required />
-                                    <div *ngIf="f.submitted && toContactNumber.invalid" class="invalid-feedback">
-                                        <div *ngIf="toContactNumber.errors.required">Message is required</div>
-                                    </div>
-                                </div>
-                            </div>
                     </div>
-                
-                
-                    <div class="row" style="margin-left:20px">
-                
-                        <div class="list-group">
-                            <h5> Select our services</h5>
-                
-                            <div class="checkbox pull-left" *ngFor="let all of responds">
-                
-                                <form id="myform" class="checkboxes">
-                                    <label><input type="checkbox" name="checkfield" id="{{all.id}}" />{{all.value}}</label>
-                
-                                </form>
-                            </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                    <div class="form-group">
+
+                        <!-- <label for="sizeOfBusiness">size Of Business</label> -->
+
+                        <select class="form-control css_fields" name="sizeOfBusiness" [(ngModel)]="model.sizeOfBusiness" style="margin-top:24px;">
+                            <!--   <option>size Of Business</option> -->
+                            <option value={{Timeline.name}} name="sizeOfBusiness" *ngFor="let Timeline of size">
+                                {{Timeline.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                    <div class="form-group">
+                        <!-- <label for="Designation">Designation</label> -->
+                        <input placeholder="Designation*" type="text" class="form-control css_fields" name="Designation"
+                            [(ngModel)]="model.Designation" #Designation="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Designation.invalid }"
+                            required />
+
+                        <div *ngIf="f.submitted && Designation.invalid" class="invalid-feedback">
+                            <div *ngIf="Designation.errors.required">Designation is required</div>
                         </div>
-                
-                
                     </div>
-                
-                    <div class="form-group" style="text-align:center">
-                                                <button class="button button-3">Send</button>
-                                        </div>
-                            
-                </form>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                    <div class="form-group">
+                        <!-- <label for="toContactNumber">Message</label> -->
+                        <input placeholder="Message*" type="text" class="form-control css_fields" name="toContactNumber"
+                            [(ngModel)]="model.toContactNumber" #toContactNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && toContactNumber.invalid }"
+                            required />
+                        <div *ngIf="f.submitted && toContactNumber.invalid" class="invalid-feedback">
+                            <div *ngIf="toContactNumber.errors.required">Message is required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row" style="margin-left:20px">
+
+                <div class="list-group">
+                    <h5> Select our services</h5>
+
+                    <div class="checkbox pull-left" *ngFor="let all of responds">
+
+                        <form id="myform" class="checkboxes">
+                            <label><input type="checkbox" name="checkfield" id="{{all.id}}" />{{all.value}}</label>
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="form-group" style="text-align:center">
+                <button class="button button-3">Send</button>
+                </div>
+        
+        </form>
 
 
 
@@ -126,7 +133,7 @@
 
 
         <div class="row">
-           
+
             <div class="col-md-12">
                 <img src="/assets/images/banner/map.jpg" class="img-fluid" alt="office-map">
 
@@ -183,17 +190,17 @@
                                 <br />
 
                             </div>
-
-
-
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>
 
+
+<svg x="0px" y="0px" viewBox="0 0 1000 78" style="enable-background:new 0 0 1000 78; fill: var(--secondary-color);">
+    <g>
+        <polygon points="1000,78 0,0 0,78" />
+    </g>
+</svg>

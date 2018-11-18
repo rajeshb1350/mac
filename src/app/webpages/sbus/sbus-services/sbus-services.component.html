@@ -1,89 +1,33 @@
-<section class="banner">
-  <div class="page-banner" style="background-color: var(--quinary-background-color)">
-    <div class="banner-content container">
-      <h2 class="banner-heading">SBuS Services</h2>
-    </div>
-  </div>
-</section>
-
 <section class="sbus-tabs">
-
+<router-outlet></router-outlet>
   <!-- Nav tabs -->
+  <div class="dummy-container"></div>
   <div class="sbus-controls up">
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/finance-accounting">
+        <a class="nav-link" routerLink="/sbus-service/finance-accounting">
           <i class="fa fa-line-chart fa-fw" aria-hidden="true"></i>
-          Finance & Accounting
+          <span>
+            Finance & Accounting
+          </span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/information-technology">
+        <a class="nav-link" routerLink="/sbus-service/technology-services">
           <i class="fa fa-laptop fa-fw" aria-hidden="true"></i>
-          Information & Technology
+          <span>
+            Information & Technology
+          </span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/operation-excellence">
+        <a class="nav-link" routerLink="/sbus-service/operation-excellence">
           <i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i>
-          Operation Excellence
+          <span>
+            Operation Excellence
+          </span>
         </a>
       </li>
     </ul>
   </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-8 col-sm-8">
-        <p>
-          Meeting customer needs drives everything SBuS does, from creating outstanding products to highly skilled workforce to support
-          the global market.
-          <br> 
-          We allow you to focus on your core business, while we assure and manage cost effective workforce support.
-          <br> 
-        </p>
-        <p class="text-center">
-          <i>
-            Optimum Resource Utilization – Best in Class Delivery Model – Benchmarked Accounting Processes.
-          </i>
-        </p>
-        <p>
-          <b>‘Cost’</b> – one word that always gets undivided attention of any business head or stakeholders. The constant pressures
-          to bring down the cost coupled with increasing need for regulatory compliance and demands for a closer alignment to
-          the business are driving organizations towards new Finance and Accounting Operating models. Chief Financial Officers
-          (CFO) of leading organizations are incorporating Finance and Accounting services outsourcing as a strategy to change
-          their operating models. MacTec – Smart Business Solutions - offers industry recognized Financial Services Offshoring
-          Solutions that support end-to-end functions.
-        </p>
-        <p>
-          MacTec leverages its deep Finance and Accounting functional expertise, industry familiarity, operational excellence
-          and efficient delivery model with innovative technology. MacTec offshoring model has the aptitude to deliver the solutions
-          that standardizes finance and accounting processes, transforms operations and lowers costs.
-        </p>
-      </div>
-      <div class="col-12 col-md-4 col-sm-4">
-        <img src="/assets/images/banner/sbusStragegy.png" class="img-fluid" alt="Meeting SBuS Image">
-      </div>
-    </div>
-  </div>
-
-  <div class="sales-img container">
-    <picture>
-      <source media="(min-width: 960px)" srcset="/assets/images/banner/marketTrends.png">
-      <img src="/assets/images/banner/marketTrends-mobi.png" class="img-fluid" alt="Finance and Account Banner">
-    </picture>
-  </div>
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div class="tab-pane" [ngClass]="currentsec=='finance-accounting'?'active':'fade'" id="home">
-      <app-finance-accounting></app-finance-accounting>
-    </div>
-    <div class="tab-pane" [ngClass]="currentsec=='information-technology'?'active':'fade'" id="menu1">
-      <app-technology-consulting-service></app-technology-consulting-service>
-    </div>
-    <div class="tab-pane" [ngClass]="currentsec=='operation-excellence'?'active':'fade'" id="menu2">
-      <app-operational-excellence></app-operational-excellence>
-    </div>
-  </div>
-  <div class="dummy-container"></div>
-</section>
+</section>  
