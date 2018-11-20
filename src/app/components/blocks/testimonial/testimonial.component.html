@@ -1,5 +1,5 @@
 <div class="container slideshow-container">
-  <div id="visionpath" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+  <div id="visionpath" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8000">
     <!-- The slideshow -->
     <div class="carousel-inner">
       <div class="carousel-item" [ngClass]="i==0?'active':''" *ngFor="let d of data.listdata; let i = index">
@@ -15,7 +15,7 @@
     <a class="carousel-control-prev prev" href="#visionpath" data-slide="prev">
       <i class="fa fa-angle-left" aria-hidden="true"></i>
     </a>
-    <a class="carousel-control-next next" href="#visionpath" data-slide="next">
+    <a class="carousel-control-next next" id="t-nextauto" href="#visionpath" data-slide="next">
       <i class="fa fa-angle-right" aria-hidden="true"></i>
     </a>
   </div>
