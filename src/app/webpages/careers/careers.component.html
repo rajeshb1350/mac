@@ -43,7 +43,7 @@
 
       <div (click)="viewjob(i)" class="jobList flex-container" *ngFor="let data of jobs; let i = index">
         <div>
-          <img [src]="'/assets/images/icons/'+data.architect+'.png'" class="jobImages" />
+          <img src="/assets/images/icons/{{data.imgName}}.png" class="jobImages" />
         </div>
         <div class="flex-container flex-d-c">
           <h5>{{data.title}}</h5>
