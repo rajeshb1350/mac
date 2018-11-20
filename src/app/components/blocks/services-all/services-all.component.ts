@@ -1,11 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import * as $ from 'jquery';
 import { Router } from '@angular/router';
-
 import { ApiService } from './../../../services/http/api.service';
-import { Response } from '@angular/http';
 import { ModuleService } from './../../../services/model/module.service';
-import { Location } from '@angular/common';
 import { ActivatedRoute, Data } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { FormGroup, FormControl, Validators } from '@angular/forms';

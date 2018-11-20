@@ -97,7 +97,7 @@ body,
 		background-color: var(--primary-transparent-color);
 	}
 	&.disabled {
-		background-color: var(--secondary-transparent-color);
+		background-color: #aaaaaa;
 	}
 	&.primary {
 		background-color: var(--primary-background-color);
@@ -105,7 +105,7 @@ body,
 			background-color: var(--primary-transparent-color);
 		}
 		&.disabled {
-			background-color: var(--primary-transparent-color);
+			background-color: #aaaaaa;
 		}
 	}
 	&.secondary {
@@ -114,13 +114,13 @@ body,
 			background-color: var(--quinary-transparent-color);
 		}
 		&.disabled {
-			background-color: var(--quinary-transparent-color);
+			background-color: #aaaaaa;
 		}
 	}
 	&.inverse {
 		background-color: transparent;
 		&:hover {
-			background-color: var(--primary-background-color);
+			background-color: #aaaaaa;
 		}
 	}
 }
@@ -1399,7 +1399,6 @@ form.form-1 {
 	}
 	.heading {
 		color: var(--secondary-color);
-		text-transform: uppercase;
 	}
 	.v-image {
 		height: 10rem;
@@ -1414,8 +1413,9 @@ form.form-1 {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		min-height: 10rem;
 		&.h-lrg{
-			min-height: 20rem;
+			min-height: 24rem;
 		}	
 	}
 	.prev, .next {
