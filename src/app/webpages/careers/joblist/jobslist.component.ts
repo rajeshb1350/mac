@@ -30,6 +30,11 @@ export class JobslistComponent implements OnInit {
       'Designation': new FormControl(),
       'sizeOfBusiness': new FormControl()
     });
+
+
+  //   document.getElementById("uploadBtn").onchange = function () {
+  //     (<HTMLInputElement>document.getElementById("uploadFile")).value = this.value.substring(12);
+  // };
   }
 
 
