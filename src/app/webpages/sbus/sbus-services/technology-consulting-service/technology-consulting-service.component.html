@@ -133,7 +133,7 @@
                 <div class="col-12 col-sm-6 col-md-6 flex-container flex-d-c flex-jc-c">
                     <h4>Adobe Experience Manager Certified Experts</h4>
                     <i class="space-10">We are here to give your brand the complete makeover</i>
-                    <p class="space-10">To attract and inspire by your customer. We champion youre brand presence with innovative
+                    <p class="space-10">To attract and inspire by your customer. We champion your brand presence with innovative
                         idea using industry standards tools especially Adobe Experience Manager.</p>
                 </div>
             </div>
@@ -246,25 +246,58 @@
                 <div class="container space-40 flex-container flex-d-c flex-ai-c">
                     <p class="text-center">We offer Quality Assurance consulting service based on customer-oriented approach
                         and well-organized QA processes.</p>
+                    <h3>Our Testing Process</h3>
                     <div class="space-30"></div>
                     <img src="/assets/images/services/qa/levels.png" alt="QA image" class="qa-levels img-fluid">
+                    <div class="space-20"></div>
                 </div>
                 <div class="approach container space-40">
                     <div class="row">
-                        <div class="col-12 col-md-12 col-sm-12">
-                            <h2 class="heading">
-                                <span>
-                                    Our Approach
-                                </span>
-                            </h2>
-                            <p>
-                                At MacTec we develop priority software and aim to deliver high-value QA services to our customers. Our approach to deliver
-                                QA services is an essential part that empowers optimization
-                            </p>
-                        </div>
                         <div class="offset-0 offset-md-1 col-12 col-md-10 col-sm-12">
+                            <div class="col-12 col-md-12 col-sm-12">
+                                <h2 class="heading">
+                                    <span>
+                                        Our Approach
+                                    </span>
+                                </h2>
+                                <p>
+                                    At MacTec we develop priority software and aim to deliver high-value QA services to our customers. Our approach to deliver
+                                    QA services is an essential part that empowers optimization
+                                </p>
+                            </div>
                             <div class="sub-heading text-center">
                                 <img src="/assets/images/services/qa/ourapp-desktop.png" alt="QA image" class="qa-levels img-fluid">
+                            </div>
+                        </div>
+                        <div class="data-section">
+                            <div class="data-container" *ngFor="let pdata of testingdata">
+                                <div class="container">
+                                    <h3 class="data-heading">{{pdata.heading}}</h3>
+                                    <p class="data-content">{{pdata.content}}</p>
+                                    <div class="list-container">
+                                        <div class="list-box" *ngFor="let data of pdata.datalist">
+                                            <h5 class="sub-heading">
+                                                {{data.heading}}
+                                            </h5>
+                                            <p>{{data.content}}</p>
+                                            <ul class="slide-list outsource">
+                                                <li *ngFor="let cdata of data.datasublist">
+                                                    <p>{{cdata}}</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offset-0 offset-md-2 col-12 col-md-8 col-sm-12">
+                            <div class="col-12 col-md-12 col-sm-12">
+                                <h3 class="text-center">
+                                    Regression testing
+                                </h3>
+                            </div>
+                            <div class="sub-heading text-center space-30">
+                                <img src="/assets/images/services/qa/regression.png" alt="Regression image" class="qa-levels img-fluid">
                             </div>
                         </div>
                     </div>

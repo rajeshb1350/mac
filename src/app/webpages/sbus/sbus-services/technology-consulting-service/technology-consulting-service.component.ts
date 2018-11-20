@@ -19,6 +19,86 @@ export class TechnologyConsultingServiceComponent implements OnInit {
     },
   ];
 
+  testingdata = [
+    {
+      heading: 'Functional testing',
+      content: 'Our expertise of manual, semi-automated and automated functional testing services ensures that both front-end and back-end components of the application work properly and as initially designed.',
+      datalist: [
+        {
+          heading: 'Interface Testing',
+          content: 'Evaluation of correct system module interaction '
+        },
+        {
+          heading: 'Smoke Testing',
+          content: 'Initial testing process to check whether software is ready for further testing'
+        },
+        {
+          heading: 'System Testing',
+          content: 'Conducted on a complete, integrated system to evaluate the system\'s compliance with its specified requirements '
+        },
+        {
+          heading: 'Integration Testing',
+          content: 'Performed to test units of code to verify interaction between various software components and detect interface defects. Confirms that the environments are suitably configured.'
+        },
+        {
+          heading: 'Regression Testing',
+          content: 'Testing to ensure changes made are not impacting previously working functionality '
+        },
+        {
+          heading: 'Acceptance Testing',
+          content: 'Performed to make sure the software fulfils the project and business requirements'
+        },
+      ] 
+    }, {
+      heading: 'Usability Testing',
+      subheading: 'We ensure a web application is user-friendly, with simple, intuitive navigation.',
+      content: 'We deliver a complete operational view by analysing, identifying and benchmarking the weak spots in core features of the application and suggest opportunities for improvement.',
+      datalist: [
+        {
+          heading: 'Information Architecture',
+          datasublist: [
+            'Intuitive navigation and information interactions',
+            'Comprehensible search function and results presentation'
+          ]
+        },
+        {
+          heading: 'Workflows and Interactions',
+          datasublist: [
+            'Verification of usage, workflow logics',
+            'Effective application usage, identification and elimination of redundant operations',
+            'Intuitive application operability check',
+            'Fast response time, process continuity, smooth user journeys'
+          ]
+        },
+        {
+          heading: 'Usability Audit',
+          content: 'Our experts audit the product according to the best usability practices and heuristics.',
+          datasublist: [
+            'Generate lists of test tasks',
+            'Ordering issues by severity',
+            'Matching issues with heuristics',
+            'Developing optimization recommendations',
+            'Reports composition',
+            'Results delivery'
+          ]
+        },
+        {
+          heading: 'Usability Testing',
+          content: 'Our experts use scenarios tested by real users to process the results and develop recommendations.',
+          datasublist: [
+            'Test script development',
+            'Creating user groups',
+            'Tracking task performance',
+            'User behaviour analysis',
+            'Recording typical mistakes',
+            'Detecting non-intuitive functionality',
+            'Developing optimization recommendations'
+          ]
+        }
+      ]
+    }
+  ]
+
   techdata = [
     {
       img: 'ma.png',
