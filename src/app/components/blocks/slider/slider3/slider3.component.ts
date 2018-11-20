@@ -66,7 +66,7 @@ export class Slider3Component implements OnInit {
         heading: 'IT and ITES CoE Solutions',
         subheading: 'Cutting edge technology solutions and workforce for your business needs.',
         content: 'Our foundation of efficiency is robust and apprised state of technological solutions that brings quantifiable value to our customers. We have more than 500+ highly skilled and certified resources supporting our IT and ITES CoE.  Ready to deploy for all your technology development support and resource engagement.',
-        secheading: 'Engage Finance & Accounting Resources',
+        secheading: 'Engage Technology Resources',
         seccontent: 'Just for Only $ 999 - $ 2999 per month or $ 6 - $ 18 per hour',
         feature: [
           'Skilled to Work and Engaged to Deliver',

@@ -42,7 +42,7 @@ import { FinanceAccountingComponent } from "./webpages/sbus/sbus-services/financ
 import { TechnologyConsultingServiceComponent } from "./webpages/sbus/sbus-services/technology-consulting-service/technology-consulting-service.component";
 import { OperationalExcellenceComponent } from "./webpages/sbus/sbus-services/operational-excellence/operational-excellence.component";
 import { SbusFirstComponent } from "./webpages/sbus/sbus-services/sbus-first/sbus-first.component";
-import { JobslistComponent } from "./webpages/careers/jobready/jobslist.component";
+import { JobslistComponent } from "./webpages/careers/joblist/jobslist.component";
 const appRoutes: Routes = [
     // { path: "", component: IndexComponent, resolve: {server: SlotbookResolverService} },
     {

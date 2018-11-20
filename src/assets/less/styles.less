@@ -1328,19 +1328,28 @@ form.form-1 {
 .page-banner {
 	background-color: var(--secondary-background-color);
 	position: relative;
-	svg{
-		position: absolute;
-		bottom: 0;
+	.logo-img {
+		display: flex;
+		align-items: center;
+		margin-right: 1.5rem;
+		svg{
+			fill: var(--quaternary-color);
+			width: 4.5rem;
+			height: 4.5rem;
+		}
 	}
 	.banner-content {
 		position: relative;
 		width: 100%;
 		height: 20rem;
 		color: var(--quaternary-color);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 		z-index: 10;
+		display: flex;
+		.heading-content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
 		.banner-heading {
 			font-size: 2.5rem;
 			font-weight: 300;
@@ -1443,13 +1452,15 @@ form.form-1 {
 	box-sizing: border-box;
 	border-bottom: 1px solid var(--quaternary-transparent-color);
     .sbus-controls{
-        position: sticky;
-        background-color: var(--secondary-color);
-        display: flex;
-        justify-content: center;
-        z-index: 1000;    
-        min-height: 4rem;
-        transition: 0.1s all linear;
+		position: fixed;
+		background-color: var(--secondary-color);
+		display: flex;
+		justify-content: center;
+		z-index: 1000;
+		min-height: 4rem;
+		transition: 0.1s all linear;
+		border-bottom: 0.1rem solid white;
+		width: 100%;
         &.up {
             top: 100vh;
         }
@@ -1481,11 +1492,13 @@ form.form-1 {
                 font-size: 0.65rem;
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                margin: 0 1rem;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin: 0 0.5rem;
+				text-align: center;
                 i.fa {
                     margin-right: 0.5rem;
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
                 &:hover {
                     border-radius: 0rem;
@@ -1508,8 +1521,14 @@ form.form-1 {
         .nav-tabs {
             flex-wrap: wrap;
             .nav-item {
-                a {
-                    font-size: 1rem;
+				a {
+					flex-wrap: nowrap;
+					font-size: 1rem;
+					text-align: left;
+					margin: 0 1rem;
+					i.fa {
+						font-size: 2rem;
+					}
                 }
             }
         }
@@ -1521,11 +1540,11 @@ h2.heading {
     display: block;
 	color: var(--secondary-color);
     margin: 0 auto 1.5rem;
-    text-transform: uppercase;
 	text-align: center;
 	font-size: 2rem !important;
     padding: 0.25rem 0;
 	span {
+		padding: 0.25rem 0;
 		border-bottom: 0.1rem solid var(--primary-color);
 	}
 	// &::after {

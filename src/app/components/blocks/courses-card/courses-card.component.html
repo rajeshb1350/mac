@@ -26,7 +26,7 @@
 </section> -->
 
 <div class="container boxes">
-  <h2 class="heading text-center">Our Capabilities</h2>
+  <h2 class="heading text-center"><span>Our Capabilities</span></h2>
   <div class="row">
     <div *ngFor="let data of carddata" class="col-6 col-sm-6 col-sm-4 col-lg-4 out-box">
       <div class="box" [ngStyle]="{backgroundImage: 'url('+data.img+')'}">
@@ -34,7 +34,8 @@
         <div class="text-content">
           <h3 [innerHTML]="data.heading"></h3>
           <p [innerHTML]="data.content"></p>
-          <a routerLink="{{data.link}}" *ngIf="data.type!='none'">Learn more <i class="fa fa-external-link" *ngIf="data.type!='page'" aria-hidden="true"></i></a>
+          <a [routerLink]="data.link" *ngIf="data.type!='web' && data.type!='none'">Learn more </a>
+          <a href="{{data.link}}" target="_blank" *ngIf="data.type=='web' && data.type!='none'">Learn more <i class="fa fa-external-link" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>

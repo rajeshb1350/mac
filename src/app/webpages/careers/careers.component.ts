@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from "jquery";
-import { ApiService } from '../../services/http/api.service';
-import { Router } from '@angular/router';
+import { SlotserviceService } from '../../services/http/slotservice.service';
 @Component({
   selector: 'app-careers',
   templateUrl: './careers.component.html',
   styleUrls: ['./careers.component.less']
 })
-export class CareersComponent implements OnInit {
-  ch: any = {};
-  jobs: any = [];
 
+export class CareersComponent implements OnInit {
+  jobs: any = [];
+  selectedjob: any = {};
   data: { "title": string; "data": { "question": string; "description": string; }[]; }[];
-  constructor(private contservice: ApiService, private router: Router) {
-    // this.contservice.removejobspost();
-  }
+
+  constructor(
+    private slotser: SlotserviceService
+  ) {}
 
   ngOnInit() {
     this.jobs = [
@@ -143,9 +142,7 @@ export class CareersComponent implements OnInit {
 
     ]
   }
-  viewjob(c) {
-    /*  $('#recentjobs').modal('show');  */
-    // this.contservice.jobspost(c);
-    this.router.navigate(['/joblist']);
+  viewjob(data) {
+    this.slotser.setJobPost(data);
   }
 }

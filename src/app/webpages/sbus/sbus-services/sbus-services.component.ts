@@ -26,7 +26,7 @@ export class SbusServicesComponent implements OnInit {
 			}
 		);            
 		function debounce(func){
-			var wait = 50;
+			var wait = 10;
 			var immediate = true;
 			var timeout;
 			return function() {
@@ -43,6 +43,7 @@ export class SbusServicesComponent implements OnInit {
 		  }
 		const $controls = $(".sbus-controls");
 		var position = $(window).scrollTop();
+		var footertop = $('.footer-3').offset().top - innerHeight;
 		if($controls) {
 			$(window).scroll(  debounce( function () {
 				var scroll = $(window).scrollTop();
@@ -50,6 +51,10 @@ export class SbusServicesComponent implements OnInit {
 				$controls.removeClass('up').addClass('down') :
 				$controls.removeClass('down').addClass('up');
 				position = scroll;
+
+				scroll > footertop ? 
+				$controls.addClass('fixed'):
+				$controls.removeClass('fixed');
 			}));
 		}
 		

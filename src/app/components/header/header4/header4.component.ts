@@ -18,7 +18,6 @@ export class Header4Component implements OnInit {
     
     Array.from($btnlinks).forEach(function(e){
         e.addEventListener('click', function () {
-            console.log('running', this);
             $burger.classList.toggle("clickMenuSix");
             $menubox.classList.toggle("open");
         });

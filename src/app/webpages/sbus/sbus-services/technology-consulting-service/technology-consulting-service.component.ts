@@ -13,14 +13,132 @@ export class TechnologyConsultingServiceComponent implements OnInit {
       content1: 'MacTec is an expert in the evolving ITO marketplace. By using our proprietary methodology and knowledge base, we can develop and tailor your IT outsourcing strategy. ',
       content2: 'All our employees are office-based to ensure that the quality of communication and output is maintained at a high level. We have our own leased line to guarantee uninterrupted and high-speed internet connection with fiber optic cable as the backbone network.  ',
 
-
       type: 'page',
       link: 'appProducts',
       imagepath: '/assets/images/banner/slide-7.png'
     },
-
-
   ];
+
+  techdata = [
+    {
+      img: 'ma.png',
+      heading: 'Marketing Automation',
+      content: [
+        {
+          subheading: 'Experience Business',
+          subcontent: 'Marketing Automation Done Right. B2B or B2C, we have supported most ambitious brands in optimizing their marketing Automation investment.',
+          icon: 'hand-shake'
+        },
+        {
+          subheading: 'Web Analytics',
+          subcontent: 'we are best to decipher the customer journey & uncover actionable items to convert and retain customers ',
+          icon: 'analysis'
+        },
+        {
+          subheading: 'Digital Development',
+          subcontent: 'With the enormous amount of digital content churned out every nanosecond the competition is fierce to allure the customers constantly.',
+          icon: 'feature'
+
+        },
+        {
+          subheading: 'Customer Engagement',
+          subcontent: 'Today’s customer expect you to entertain them individually with uniquely relevant and consistent contents across all the channels.',
+          icon: 'support-1'
+        },
+        {
+          subheading: 'Campaign Execution',
+          subcontent: 'Providing the right information at the right time to the right customers through the direct mail and keeping that optimized for mobile users as well gives you an edge during the whole campaign process. ',
+          icon: 'seo'
+        }
+      ],
+      imagepath: '/assets/images/banner/slide-7.png'
+    }, {
+      img: 'pendrive.png',
+      heading: 'Experience Technology',
+      content: [
+        {
+          subheading: 'Adobe Marketing Cloud Experts',
+          subcontent: 'Certified team of experts in particular with Adobe Experience Manager who are expert in delivering rich digital experience having AEM fitted right in the technology stack. Reach us to get the most out of your Adobe Experience Manager deployments.',
+          icon: 'cloud'
+        },
+        {
+          subheading: 'Strategy. Creativity UX',
+          subcontent: 'Everything we do is about inspiring your customer to have a lasting relationship with your organization. Have our experts to talk to you to make excellent strategy with innovative ideas together.',
+          icon: 'ui'
+        },
+        {
+          subheading: 'MEAN & MERN Stack Experts',
+          subcontent: 'Well versed consultants on modern web development techniques.',
+          icon: 'algorithm'
+        },
+        {
+          subheading: 'JAVA/JEE Experts',
+          subcontent: 'Our consultants have vast experience, serving to the industries more than a decade. Get the most out of Micros Services as well as self contained web applications.',
+          icon: 'java'
+        }
+      ],
+      imagepath: '/assets/images/banner/slide-7.png'
+    }, {
+      img: 'mobileUI.png',
+      heading: 'Mobile Apps',
+      content: [
+        {
+          subheading: 'Mobile Apps',
+          subcontent: 'We help enterprises transform their business process. Using mobile technology we take pride in building the most awesome apps that garner both – users love and value for our clients.',
+          icon: 'smartphone'
+        },
+        {
+          subheading: 'Hybrid Apps',
+          subcontent: 'Hybrid app development includes the best of both the HTML5 and JavaScript, in a nutshell, a hybrid app is initially developed using JavaScript and HTML5 and then wrapped inside a native container that gives access to the features of a native platform. ',
+          icon: 'smartphone-2'
+        },
+        {
+          subheading: 'Native Apps',
+          subcontent: 'Native apps are appropriate when you need to provide a complex or highly polished mobile experience. They support advance features like augmented reality, location-based services and third-party device integrations.',
+          icon: 'smartphone-1'
+        },
+        {
+          subheading: 'Responsive Designs',
+          subcontent: 'HTML5 is the leading technology used for developing front-end mobile app. Ubiquitous and advance features of HTML5 for content delivery with responsive layouts make it the right option to choose for those who need immersive and interactive mobile solutions. ',
+          icon: 'responsive'
+        }
+      ],
+      imagepath: '/assets/images/banner/slide-7.png'
+    }, {
+      img: 'eb.png',
+      heading: 'Experience Business',
+      content: [
+        {
+          subheading: 'Experience Business',
+          subcontent: 'Think beyond Personalization. Make your business an “Experience Business” Personalization has been the buzzword for years yet failed to make significant impact on your audience. Delivering consistent experiences across multiple channels is key to converting your visitors into customers. ',
+          icon: 'profit'
+        },
+        {
+          subheading: 'Content Management Services',
+          subcontent: 'We are an authorized Adobe Solution Partner and we provide services like AEM implementations upgrades integrations with external systems. Whether it is an ad hoc task on AEM or full-fledged implementation our Adobe Certified Experts can deliver your project in timelines and under budget by leveraging their extensive experience in AEM',
+          icon: 'content'
+        },
+        {
+          subheading: 'Building Digital Strategy',
+          subcontent: 'Using Industry proven tools, unmatched skillset, passion to innovate.',
+          icon: 'support-1'
+        },
+        {
+          subheading: 'Analytics Services',
+          subcontent: 'Using Adobe Analytics, Google Analytics, Google Tag Manager.',
+          icon: 'analysis'
+        },
+        {
+          subheading: 'How we can help',
+          subcontent: 'Pick right digital strategy, Select right toolset, Implement & integrate. ',
+          icon: 'information'
+        }
+      ],
+      imagepath: '/assets/images/banner/slide-7.png'
+    }
+  ];
+
+
   servOffer = [
     {
       heading: 'SBuS Service Offerings',
@@ -98,61 +216,6 @@ export class TechnologyConsultingServiceComponent implements OnInit {
       link: 'appProducts',
       imagepath: '/assets/images/banner/slide-7.png'
     },
-    {
-      heading: 'Our Digital Transformation Offerings',
-
-      seclist: [
-        {
-          header: 'User Experience',
-          feature: [
-            'Due Diligence',
-            'Wireframe/templating Services',
-            'Click Through Web Demos',
-            'HTML Design Services',
-            'SPA & Responsive Design',
-          ],
-        },
-        {
-          header: 'Application Development',
-          feature: [
-            'Web & Windows Applications',
-            'eCommerce & eLearning Portal',
-            'RESTful Services',
-            'Database Development',
-            'Integration with other products',
-            'Application Migration',
-          ],
-        },
-        {
-          header: 'Digital Marketing',
-          feature: [
-            'Social Network Marketing',
-            'SEO',
-            'Market Research',
-            'Google Adwords',
-          ],
-        },
-        {
-          header: 'Mobility',
-          feature: [
-            'Native Mobile Application Development for iOS, Android & Windows',
-            'Hybrid Mobile Application Development',
-          ],
-        },
-        {
-          header: 'CMS',
-          feature: [
-            'Portal Development',
-            'COTS products customization',
-          ],
-        },
-
-      ],
-
-      type: 'page',
-      link: 'appProducts',
-      imagepath: '/assets/images/banner/slide-7.png'
-    },
 
     {
       heading: 'Our Cloud Services',
@@ -212,113 +275,6 @@ export class TechnologyConsultingServiceComponent implements OnInit {
             'Database & VMs Backup Services',
           ],
         },
-   
-      ],
-
-      type: 'page',
-      link: 'appProducts',
-      imagepath: '/assets/images/banner/slide-7.png'
-    },
-
-    {
-      heading: 'Our IT Support Offerings',
-
-      seclist: [
-        {
-          header: 'Application Support',
-          feature: [
-            'Analysis & Troubleshooting',
-            'Change Management',
-            'Release Management',
-            'Database Support',
-            'Innovation & Transformation',
-          ],
-        },
-        {
-          header: 'Infrastructure Support',
-          feature: [
-            'Environment Readiness',
-            'Environment Upgrades',
-            'Software Installation',
-            'Desktop Management',
-            'Troubleshooting',
-            'Patch Management',
-            'Backups & Recovery',
-          ],
-        },
-        {
-          header: 'Network Monitoring',
-          feature: [
-            'Application Server Monitoring',
-            'Database Server Monitoring',
-            'Log Analysis',
-            'Network Monitoring',
-          ],
-        },
-        {
-          header: 'Service Desk',
-          feature: [
-            'Service Desk Setup',
-            'Incident Management',
-            '24 x 7 Support',
-            'SLA Management',
-            'Knowledge Management',
-          ],
-        },
-
-
-
-      ],
-
-      type: 'page',
-      link: 'appProducts',
-      imagepath: '/assets/images/banner/slide-7.png'
-    },
-
-    {
-      heading: 'Our Automation Offerings',
-
-      seclist: [
-        {
-          header: 'RPA',
-          feature: [
-            'Due diligence & Recommendations',
-            'Process Automation Implementation',
-            'Support Services',
-          ],
-        },
-        {
-          header: 'DevOps',
-          feature: [
-            'Build Automation',
-            'Test Automation',
-            'Infra Provisioning Automation',
-            // 'Release Automation',
-          ],
-        },
-        {
-          header: 'Chatbots',
-          feature: [
-            'Chatbot Integration with Internal/ External applications',
-            'Additional Services include AI building using NLP, Machine Learning',
-          ],
-        },
-        {
-          header: 'Digital Assistance',
-          feature: [
-            'Due diligence & platform recommendations',
-            'Development of DA for Mobiles and Web',
-          ],
-        },
-        {
-          header: 'Advisory Service',
-          feature: [
-            'Discover, Remediate, Provision and operationalize  along with ability to evolve through a process of learning',
-          ],
-        },
-
-
-
 
       ],
 
@@ -329,7 +285,6 @@ export class TechnologyConsultingServiceComponent implements OnInit {
 
     {
       heading: 'Our Emerging Technology Offerings ',
-
       seclist: [
         {
           header: 'IoT',

@@ -52,7 +52,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     {
       name: 'Abhishek Jangid',
       desg: 'Head UX Design',
-      content: `---`,
+      content: `UX Developer with a demonstrated history of working in the computer software industry. Skilled in mockups designing, UX analysis and designing.`,
       img: '/assets/images/leads/rajeev.jpg'
     },
     {
@@ -260,11 +260,9 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
       const $journey = $('.about_sec9');
       const $jcircle = $('.about_sec9 .yeardata');
       const journeytop = $journey.offset().top - $journey.height() / 3;
-      console.log($journey);
       window.addEventListener('scroll', debounce(function () {
         var currpos = window.scrollY;
         if (currpos + 20 > journeytop) {
-          console.log(currpos, journeytop);
           $jcircle.addClass('active');
         }
       }));

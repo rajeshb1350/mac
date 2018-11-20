@@ -69,7 +69,7 @@ import { Slider3Component } from './components/blocks/slider/slider3/slider3.com
 import { Tabs1Component } from './components/blocks/tabs/tabs1/tabs1.component';
 import { Header3Component } from './components/header/header3/header3.component';
 
-import { JobslistComponent } from './webpages/careers/jobready/jobslist.component';
+import { JobslistComponent } from './webpages/careers/joblist/jobslist.component';
 import { SlotbookComponent } from './components/blocks/slotbook/slotbook.component';
 import { KeyhighlightsComponent } from './components/blocks/keyhighlights/keyhighlights.component';
 import { SupportComponent } from './components/blocks/support/support.component';
