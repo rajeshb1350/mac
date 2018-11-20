@@ -100,7 +100,7 @@
 		border: none;
 		color: var(--quaternary-color); 
 		margin-top: 1rem;
-		
+		display: inline-block;
 		&::after{
 			content:'\f178';
 			font-family: fontawesome;
@@ -119,6 +119,19 @@
 				visibility : visible;
 				margin-left: 8px;
 			}
+        }        
+    }
+   
+	&.button-4 {
+        padding: 0.8rem 1.5rem;
+        background-color: var(--primary-background-color);
+		font-weight: 400;
+		border: none;
+		color: var(--quaternary-color); 
+		margin-top: 1rem;
+
+		&:hover {
+			background-color: var(--primary-background-color);
         }        
     }
 

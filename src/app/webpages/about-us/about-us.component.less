@@ -1,14 +1,118 @@
 p {
-	font-size: 0.8rem;
-	line-height: 1rem;
+	font-size: 1rem;
+	line-height: auto;
 	text-align: left;
 	margin-bottom: 0rem;
 }
 
+* {
+    user-select: none;
+}
+
 section {
     padding: 2rem 0;
-    &:nth-child(odd){
+    &.svg-section {
+        padding: 0rem;
+    }
+    &.gray{
         background-color: #f1f1f1;
+    }
+}
+
+.preety-boxes {
+    .p-box {
+        padding: 0.5rem;
+        .p-inner {
+            height: 100%;
+            padding: 0.75rem;
+            transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+            border-bottom: 1px solid;
+            border-color: var(--quaternary-color);
+            display: flex;
+            .icon {
+                flex: 0 0 4rem;
+                padding-top: 1rem;
+                display: flex;
+                justify-content: center;
+                i {
+                    font-size: 3rem;
+                }
+            }
+            .content {
+                flex: 0 0 clac(100% - 4rem);
+                padding: 0rem 0.5rem;
+                h5 {
+                    color: var(--secondary-color);
+                    &::after{
+                        content: "";
+                        display: block;
+                        margin: 0.5rem 0;
+                        width: 2rem;
+                        height: 0.25rem;
+                        background-color: var(--primary-color);
+                    }
+                }
+                p {
+                    color: var(--secondary-color);
+                    font-size: 1rem;
+                    line-height: 1.2rem;
+                }
+            }
+            &:hover {
+                background-color: #fff;
+                box-shadow: 0 10px 25px rgba(0,0,0,.1);
+                border-color: var(--primary-color);
+            }
+        }
+    }
+}
+
+.page-nav {
+    position: fixed;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;;
+    ul {
+        list-style: none;
+        text-align: right;
+        li {
+            a {
+                color: white;
+                display: flex;
+                justify-content: flex-end;
+                margin: 0.2rem 0;
+                position: relative;
+                span, .fa {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 3rem;
+                    min-width: 3rem;
+                    padding: 1rem 0rem;
+                }
+                
+                span {
+                    position: absolute;
+                    padding: 0rem 1rem;
+                    background-color: var(--secondary-background-color);
+                    opacity: 0.7;
+                    right: -5rem;
+                    z-index: 10;
+                    transition: 0.2s all ease-in-out;
+                    font-size: 0.8rm;
+                    line-height: 1rem;
+                }
+                &:hover span {
+                    right: 3rem;
+                }
+                .fa {
+                    position: relative;
+                    background-color: var(--secondary-background-color);
+                    z-index: 20;
+                }
+            }
+        }
     }
 }
 
@@ -20,6 +124,7 @@ section {
         top: 6rem;
     }
 }
+
 .about_sec3 {
     .block-container {
         background-color: white;
@@ -27,16 +132,13 @@ section {
         .heading {
             font-size: 1.25rem;
         }
-        .slide-list {
-            margin: 0;
-            padding: 0;
-        }
     }
 }
+
 .about_sec4 {
     .box-container {
-        padding: 1.5rem 1rem;
         background-color: #f1f1f1;
+        padding: 1.5rem 1rem;
     }
 }
 
@@ -59,28 +161,45 @@ section {
     .team-box {
         margin: 1.5rem 0;
         .team-img {
+            height: 9rem;
+            width: 9rem;
+            border: .5rem solid var(--quaternary-color);
+            border-radius: 15rem 15rem 15rem 0rem;
+            background-color: var(--secondary-color);
             margin-bottom: 1rem;
-            height: 10rem;
         }
         .leadership {
             .title {
                 font-size: 1.25rem;
                 margin: 0rem;
                 line-height: 1.25rem;
+                font-weight: bold;
+                color: var(--secondary-color);
             }
             .dsg {
                 font-size: 1rem;
                 margin: 0rem;
             }
             .content {
-                font-size: 0.7rem;
+                font-size: 1rem;
+                line-height: 1.2rem;
+            }            
+        }
+        .team {
+            border-bottom: 0.1rem solid;
+            border-color: transparent;
+            padding: 1rem;
+            &:hover {
+                background-color: #f1f1f1;
+                box-shadow: 0 10px 25px rgba(0,0,0,.1);
+                border-color: var(--primary-color);
             }
         }
     }
 }
 
 .about_sec9 {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
     position: relative;
     .rocket-bg {
         position: absolute;
@@ -88,7 +207,7 @@ section {
         background-image: url(/assets/images/banner/rocket.png);
         background-position: center;
         background-repeat: no-repeat;
-        height: 100%;
+        height: calc(100% - 2rem);
         left: calc(50%);
         transform: translateX(-50%);
     }
@@ -105,23 +224,36 @@ section {
     }
 }
 
+.img-fluid{
+    margin: 1rem 0;
+}
+
 @media only screen and ( min-width: 960px ){
-    .about_sec8 {
-        .team-box {
-            .team-img {
-                margin-bottom: 0;
-            }
-        }
+    .img-fluid{
+        margin: 0;
     }
 
+    .journey-heading {
+        color: var(--quaternary-color);
+        background-color: var(--secondary-color);
+        padding-top: 1rem;
+        h2{
+            margin-bottom: 0rem;
+        }
+    }
     .about_sec9 {
         padding: 0;
+        h2 {
+            color: var(--quaternary-color);
+        }
         .rocket-bg {
-            height: 40rem;
-            background-position: -0.5rem -2rem;
+            background-size: 55rem;
+            height: 45rem;
+            background-position: calc(50% - 1rem) 1rem;
+            width: 39rem;
         }
         .about_years {
-            height: 40rem;
+            height: 45rem;
             .yeardata {
                 background-color: white;
                 position: absolute;
@@ -134,32 +266,70 @@ section {
                 border-radius: 50%;
                 padding: 1rem;
                 text-align: center;
+                transition: 1.3s cubic-bezier(.8, .5, .2, 1.4);
                 &>*{
                     text-align: center;
                 }
+                h4 {
+                    margin-bottom: 0rem;
+                }
+                p {
+                    font-size: 0.9rem;
+                    line-height: 1rem;
+                }
                 &:nth-child(1) {
                     top: 2rem;
-                    left: 13rem;
+                    left: 16rem;
+                    opacity: 0;
+                    &.active {
+                        opacity: 1;
+                        left: 20rem;
+                    }
                 }
                 &:nth-child(2) {
                     top: 13rem;
                     left: 6rem;
+                    opacity: 0;
+                    &.active {
+                        opacity: 1;
+                        left: 10rem;
+                    }
                 }
                 &:nth-child(3) {
                     top: 26rem;
-                    left: 8rem;
+                    left: 13rem;
+                    opacity: 0;
+                    &.active {
+                        opacity: 1;
+                        left: 17rem;
+                    }
                 }
                 &:nth-child(4) {
                     top: 26rem;
-                    right: 8rem;
+                    right: 13rem;
+                    opacity: 0;
+                    &.active {
+                        opacity: 1;
+                        right: 17rem;
+                    }
                 }
                 &:nth-child(5) {
                     top: 13rem;
                     right: 6rem;
+                    opacity: 0;
+                    &.active {
+                        opacity: 1;
+                        right: 10rem;
+                    }
                 }
                 &:nth-child(6) {
                     top: 2rem;
-                    right: 13rem;
+                    right: 16rem;
+                    opacity: 0;
+                    &.active {
+                        opacity: 1;
+                        right: 20rem;
+                    }
                 }
             }
         }

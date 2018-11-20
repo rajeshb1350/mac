@@ -1,39 +1,32 @@
-<section class="banner">
-  <div class="page-banner" style="background-color: var(--quinary-background-color)">
-		<div class="banner-content container">
-			<h2 class="banner-heading">SBuS Services</h2>
-		</div>
-	</div>
-</section>
-
-
-
 <section class="sbus-tabs">
+<router-outlet></router-outlet>
   <!-- Nav tabs -->
+  <div class="dummy-container"></div>
   <div class="sbus-controls up">
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="currentsec=='finance-accounting'?'active':''" data-toggle="tab" href="#home">Finance & Accounting</a>
+        <a class="nav-link" routerLink="/sbus-service/finance-accounting">
+          <i class="fa fa-line-chart fa-fw" aria-hidden="true"></i>
+          <span>
+            Finance & Accounting
+          </span>
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="currentsec=='information-technology'?'active':''" data-toggle="tab" href="#menu1">Information & Technology</a>
+        <a class="nav-link" routerLink="/sbus-service/technology-services">
+          <i class="fa fa-laptop fa-fw" aria-hidden="true"></i>
+          <span>
+            Information & Technology
+          </span>
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [ngClass]="currentsec=='operation-excellence'?'active':''" data-toggle="tab" href="#menu2">Operation Excellence</a>
+        <a class="nav-link" routerLink="/sbus-service/operation-excellence">
+          <i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i>
+          <span>
+            Operation Excellence
+          </span>
+        </a>
       </li>
     </ul>
   </div>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div class="tab-pane" [ngClass]="currentsec=='finance-accounting'?'active':'fade'" id="home">
-      <app-finance-accounting></app-finance-accounting> 
-    </div>
-    <div class="tab-pane" [ngClass]="currentsec=='information-technology'?'active':'fade'" id="menu1">
-        <app-technology-consulting-service></app-technology-consulting-service>
-    </div>
-    <div class="tab-pane" [ngClass]="currentsec=='operation-excellence'?'active':'fade'" id="menu2">
-      <app-operational-excellence></app-operational-excellence>
-    </div>
-  </div>
-</section>

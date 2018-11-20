@@ -1,12 +1,48 @@
 .carousel-control-next, .carousel-control-prev {
-    width: 10%;
+    cursor: pointer;
+    z-index: 11;
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 18px;
+    background-color: rgba(0, 44, 78);
+    font-weight: bold;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.carousel-control-next{
+    right: -2.5rem;
+} 
+.carousel-control-prev {    
+    left: 0.5rem;
+}
+.carousel {
+    position: relative;   
+    svg{
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+    }
+    .carousel-indicators {
+        li {
+            background-color: var(--secondary-color);
+            opacity: 0.5;
+            &.active {
+                opacity: 1;
+            }
+        
+        }
+    }
 }
 .carousel-inner {
     .carousel-item {
         width: 100%; 
         height: auto;
         min-height: 100vh;
-        padding: 1rem 1rem 2.5rem;
+        z-index: 10;
+
         .animate {
             position: relative;
             visibility: hidden;
@@ -39,20 +75,45 @@
         }
         .banner-content {
             color: var(--quaternary-color);
-            .button {
-                margin: 1rem 1rem;
-                display: inline-block;
+            position: relative;
+            z-index: 10;
+            .content-box {
+                margin-top: 3rem;
             }
-            .slide-content {
-                padding-top: 6rem;
+            .slide-content {    
+                padding: 3rem;
                 font-weight: 100;
                 height: auto;
                 .emp-text {
                     display: none;
+                    background-color: #00000066;
+                    justify-content: center;
+                    align-items: center;
+                    width: fit-content;
+                    margin: 0 auto 0.5rem;
+                    padding: 0.35rem 1rem;
+                    &.e1 {
+                        display: flex;
+                        background-color: #f0761570;
+                        flex-direction: column;
+                        h5 {
+                            font-size: 1rem;
+                        }
+                        p {
+                            font-size: 0.8rem;
+                        }
+                    }
+                    &>* {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0;
+                    }
                 }
                 h2 {
-                    font-size: 1.25rem;
-                    font-weight: 400;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: var(--primary-color);
                     sup {
                         font-size: 1rem;
                         top: -1rem;
@@ -63,9 +124,9 @@
                     display: none;
                 }
                 .content {
-                    font-size: 0.8rem;
-                    line-height: 1rem;
-                    font-weight: 400;
+                    font-size: 0.9rem;
+                    line-height: 1.3rem;
+                    font-weight: 200;
                 }
                 .slide-features {
                     display: none;
@@ -77,9 +138,13 @@
                         list-style-type: none;
                         flex: 0 0 calc(100% - 1rem);
                         margin: 0 0.5rem;
+                        h5 {
+                            margin-bottom: 0.1rem;
+                        }
                         h6 {
                             font-size: 0.9rem;
                             text-align: center;
+                            margin-bottom: 0.1rem;
                             font-weight: 600;
                         }
                         p {
@@ -90,7 +155,7 @@
                         &:not(:last-child)::after {
                             content: "";
                             width: 1px;
-                            height: 2rem;
+                            height: 4rem;
                             background-color: var(--quaternary-color);
                             display: block;
                             position: absolute;
@@ -104,13 +169,10 @@
                     display: none;
                     flex-wrap: wrap;
                     list-style: none;
+                    justify-content: flex-start !important;
                     li {
-                        font-size: 0.8rem;
-                        &:not(:last-child)::after{
-                            content: " | ";
-                            margin: 0 0.5rem;
-                            font-weight: bold;
-                        }
+                        font-size: 0.9rem;
+                        flex: 0 0 50%;
                     }                                        
                 }
             }
@@ -125,30 +187,36 @@
                 }
             }
             &>*{
-                height: 100%;
+                // height: 42rem;
+                height: 39rem;
             }
         }
         &:nth-child(1) {
-            background: linear-gradient(45deg, #312a6c, #852d91);
+            background: linear-gradient(235deg, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
         }        
         &:nth-child(2) {
             background: linear-gradient(45deg, #3a3897, #a3a1ff);
         }        
         &:nth-child(3) {
-            background: linear-gradient(-45deg, #662D8C, #ED1E79);
+            background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
         }        
         &:nth-child(4) {
-            background: linear-gradient(45deg, #4f00bc, #29abe2);
+            background: linear-gradient(235deg, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }        
         &:nth-child(5) {
-            background: linear-gradient(45deg, #3222c4, #382e8f);
+            background: linear-gradient(45deg, #403591, #53bedf);
         }      
     }
 }
 
 @media only screen and (min-width: 960px) {
-    .carousel-control-next, .carousel-control-prev {
-        width: 5%;
+    .carousel-control-next{
+        right: 2rem;
+    } 
+    .carousel-control-prev {    
+        left: 4rem;
     }
     .carousel-inner {
         .md-none {
@@ -156,16 +224,18 @@
         }
         .carousel-item {
             min-height: auto;
-            height: 45rem;
+            height: 42rem;
             .banner-content {
+                .content-box {
+                    margin-top: 6rem;
+                }
                 .slide-content {
-                    height: 35rem;
+                    padding: 1rem 0 0;
+                    height: 38rem;
                     .emp-text {
                         display: block;
                     }
                     h2 {
-                        font-size: 2rem;
-                        font-weight: 300;
                     }
                     .subheading {
                         display: block;
@@ -179,49 +249,101 @@
                     .slide-list {
                         display: flex;                                     
                     }
+                    .button-4 {
+                        display: inline-block;
+                        margin-right: 0.5rem;
+                    }
                 }
                 .slide-img {
                     display: flex;
-                    height: 35rem;
+                    height: calc(100vh - 8rem);
                     img {
                         // position: relative;
                     }
+                }
+                
+                &>*{
+                    height: 42rem;
                 }
             }
 
             &:nth-child(1) {
                 img {
-                    height: 29rem;
-                    top: calc(50% - 11rem);
-                    left: 1.5rem;
+                    height: 34rem;
+                    top: 7rem;
+                    left: -7.5rem;
                 }
             }
             &:nth-child(2) {
                 img {
                     height: 21rem;
-                    top: calc(50% - 11rem);
-                    left: -1.5rem;
+                    top: 19rem;
+                    left: -8.5rem;
                 }
             }
             &:nth-child(3) {
                 img {
+                    height: 26rem;
+                    top: 14rem;
+                    left: -8.5rem;
+                }
+            }
+            &:nth-child(4) {
+                img {
                     height: 28rem;
-                    top: calc(50% - 12rem);
+                    top: 12rem;
+                    left: -3.5rem;
+                }
+            }
+            &:nth-child(5) {
+                img {
+                    height: 26rem;
+                    top: 14rem;
+                    left: -1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .carousel-inner {
+        .carousel-item {
+            .banner-content {
+                .content-box {
+                    margin-top: 2.5rem;
+                }
+                .slide-content {
+                    height: 37rem;
+                }
+            }
+            
+            &:nth-child(2) {
+                img {
+                    height: 20rem;
+                    top: 19rem;
                     left: -5.5rem;
+                }
+            }
+            &:nth-child(3) {
+                img {
+                    height: 25rem;
+                    top: 14rem;
+                    left: -4.5rem;
                 }
             }
             &:nth-child(4) {
                 img {
                     height: 27rem;
-                    top: calc(50% - 11rem);
-                    left: -4.5rem;
+                    top: 13rem;
+                    left: -2.5rem;
                 }
             }
             &:nth-child(5) {
                 img {
-                    height: 27rem;
-                    top: calc(50% - 11rem);
-                    left: -4.5rem;
+                    height: 24rem;
+                    top: 16rem;
+                    left: 0.5rem;
                 }
             }
         }

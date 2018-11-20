@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-slider3',
@@ -18,14 +19,17 @@ export class Slider3Component implements OnInit {
         seccontent: 'Just for Only $ 999 - $ 2999 per month or $ 9 - $ 18 per hour',
         seclist: [
           {
+          icon: 'fa-area-chart',
           heading: 'Reduce your cost',
           content: 'Save 70% per employee cost, improve your core business.'
-          },
-          {
+        },
+        {
+          icon: 'fa-handshake-o',
           heading: 'Operation Excellence',
           content: 'Benchmark excellence engage skilled talent across.'
-          },
-          {
+        },
+        {
+          icon: 'fa-line-chart',
           heading: 'Increase your profit margins',
           content: 'Focus on business development, no employee over heads, no operational challenges.'
           }
@@ -38,8 +42,8 @@ export class Slider3Component implements OnInit {
           'Best in class processes for accelerated success'
         ],
         type: 'page',
-        link: 'allProducts',
-        imagepath: '/assets/images/banner/slide-2.png'
+        link: 'sbus-service',
+        imagepath: '/assets/images/banner/slide-9.png'
       },
       {
         heading: 'Finance and Accounting CoE Solutions',
@@ -55,7 +59,7 @@ export class Slider3Component implements OnInit {
           'Cross Functional and End to End Expertise'
         ],
         type: 'page',
-        link: 'sbus-service',
+        link: 'sbus-service/finance-accounting',
         imagepath: '/assets/images/banner/slide-5.png'
       },
       {
@@ -72,7 +76,7 @@ export class Slider3Component implements OnInit {
           'Data privacy and integrity established'
         ],
         type: 'page',
-        link: 'sbus-service',
+        link: 'sbus-service/technology-services',
         imagepath: '/assets/images/banner/slide-1.png'
       },
       {
@@ -90,7 +94,7 @@ export class Slider3Component implements OnInit {
         ],
         type: 'web',
         link: 'https://www.skillpassport.in',
-        imagepath: '/assets/images/banner/slide-4.png'
+        imagepath: '/assets/images/banner/slide-8.png'
       },
       {
         heading: 'Smart Business Solutions Product.',
@@ -105,11 +109,16 @@ export class Slider3Component implements OnInit {
         ],
         type: 'page',
         link: 'allProducts',
-        imagepath: '/assets/images/banner/slide-3.png'
+        imagepath: '/assets/images/banner/slide-10.png'
       },
     ];
 
+
   ngOnInit() {
+    window.setTimeout(function(){
+      let data = $('#auto-next') as HTMLElement;
+      data.click();
+    }, 5000);
   }
 
 }

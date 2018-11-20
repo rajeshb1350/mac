@@ -15,6 +15,8 @@ private globalData: any;
 private portUrl: string =
 // this.port.getUrl(1);
 'http://183.82.117.232:8088/SBuS';
+// 'https://www.mactecit.com/sbus';
+
 
 public portUrl1: any = 'http://192.168.1.191:8080/ritebooks-web/data';
 // this.port.getUrl(1);

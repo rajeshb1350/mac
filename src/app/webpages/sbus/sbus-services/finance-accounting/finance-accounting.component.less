@@ -1,10 +1,8 @@
-p {
-    font-size: 0.8rem;
-    line-height: 1rem;
-    text-align: left;
+.banner {
+    padding: 0rem;
 }
 
-.banner {
+.sub-banner {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -12,22 +10,26 @@ p {
     background-color: #f1f1f1;
     padding: 1rem;
     img {
-        height: 20rem;
+        height: 10rem;
     }
 }
 
 section {
-    padding: 1rem;
-    &:nth-child(even){
+    background-color: #ffffff;
+    &.section1 {
         background-color: #f1f1f1;
     }
 }
-.heading {
+.subheading {
     color: #555555;
     font-size: 1.25rem;
     margin: 1rem auto;
-    width: 50%;
     text-align: center;
+    display: inline-block;
+}
+
+.section3 {
+    padding: 1rem 0rem 0rem;
 }
 
 .block-box1 {
@@ -35,9 +37,10 @@ section {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
+        padding: 0rem;
         .block {
-            flex: 0 0 calc(50% - 2rem);
-            margin: 0.5rem;
+            flex: 0 0 calc(100% - 2rem);
+            margin: 1rem 0rem 1rem;
             h5 {
                 font-weight: bold;
                 font-size: 1rem;
@@ -51,20 +54,46 @@ section {
     }
 }
 
-.sales-img {
-    margin: 2rem auto;
+.data-section {
+    .data-container {
+        border-top: 0.05rem solid #aaa;
+        .list-container {
+            display: flex;
+            flex-wrap: wrap;
+            .list-box {
+                flex: 0 0 calc(100% - 1rem);
+                margin: 0.5rem;
+                background-color: #f1f1f1;
+                padding: 1rem;
+                .sub-heading {
+                    font-size: 1.25rem;
+                    &::after {
+                        content: "";
+                        margin: 0.5rem 0 1rem;
+                        background-color: var(--primary-color);
+                        width: 2rem;
+                        height: 0.25rem;
+                        display: block;
+                    }
+                }
+                .list-heading {
+                    font-weight: 600;
+                }
+                .slide-list {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .data-heading {
+            margin: 1rem 0;
+        }
+        padding: 1.5rem 0;
+    }
 }
 
 .fin-data-list {
-    padding: 1rem;
-    &:nth-child(odd){
-        background-color: #f1f1f1;
-        .level-1 {
-            li {
-                background-color: #fff;
-            }
-        }
-    }
+    padding: 1rem 0;
+    background-color: #ffffff;
     .list-heading {
         text-align: center;
     }
@@ -73,10 +102,10 @@ section {
         display: flex;
         flex-wrap: wrap;
         li {
-            padding: 1rem 0.75rem;
+           padding: 1rem 0.75rem;
             background-color: #f1f1f1;
-            flex: 0 0 calc(33.33% - 1rem);
-            margin: 0.5rem;
+            flex: 0 0 100%;
+            margin: 0.5rem 0;
         }
     }
     .title::after {
@@ -84,8 +113,42 @@ section {
         display: block;
         width: 2rem;
         height: 0.2rem;
-        background-color: #444444;
+        background-color: var(--primary-color);
         margin: 0.5rem 0;
     }
-    .sub-title {}
+}
+
+@media only screen and ( min-width: 980px) {
+    .sub-banner {
+        img {
+            height: 20rem;
+        }
+    }
+    .data-section {
+        .data-container {
+            .list-container {
+                .list-box {
+                    flex: 0 0 calc(33.33% - 1rem);
+                }
+            }
+        }
+    }
+    
+    .block-box1 {
+        .block-list {
+            .block {
+                flex: 0 0 calc(50% - 2rem);
+                margin: 0.5rem;
+           }   
+        }   
+    }   
+    
+    .fin-data-list {
+        .level-1 {
+            li {
+            margin: 0.5rem;
+            flex: 0 0 calc(33.33% - 1rem);
+            }
+        }
+    }
 }

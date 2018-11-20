@@ -68,7 +68,8 @@ import { SubscribeComponent } from './components/blocks/subscribe/subscribe.comp
 import { Slider3Component } from './components/blocks/slider/slider3/slider3.component';
 import { Tabs1Component } from './components/blocks/tabs/tabs1/tabs1.component';
 import { Header3Component } from './components/header/header3/header3.component';
-import { JobreadyComponent } from './components/blocks/jobready/jobready.component';
+
+import { JobslistComponent } from './webpages/careers/jobready/jobslist.component';
 import { SlotbookComponent } from './components/blocks/slotbook/slotbook.component';
 import { KeyhighlightsComponent } from './components/blocks/keyhighlights/keyhighlights.component';
 import { SupportComponent } from './components/blocks/support/support.component';
@@ -109,7 +110,8 @@ import { CareerIndexComponent } from './components/blocks/career-index/career-in
 import { AboutComponent } from './components/blocks/about/about.component';
 import { ServicesAllComponent } from './components/blocks/services-all/services-all.component';
 import { CheckColorChangeDirective } from './directive/check-color-change.directive';
-import { CareersComponent } from './components/blocks/careers/careers.component';
+
+import { CareersComponent } from './webpages/careers/careers.component';
 import { AppDevelopmentComponent } from './webpages/services/app-development/app-development.component';
 import { BusinessReEngineeringComponent } from './webpages/services/business-re-engineering/business-re-engineering.component';
 import { EGovernenceComponent } from './webpages/services/e-governence/e-governence.component';
@@ -124,6 +126,8 @@ import { SbusServicesComponent } from './webpages/sbus/sbus-services/sbus-servic
 import { FinanceAccountingComponent } from './webpages/sbus/sbus-services/finance-accounting/finance-accounting.component';
 import { OperationalExcellenceComponent } from './webpages/sbus/sbus-services/operational-excellence/operational-excellence.component';
 import { TechnologyConsultingServiceComponent } from './webpages/sbus/sbus-services/technology-consulting-service/technology-consulting-service.component';
+import { Header4Component } from './components/header/header4/header4.component';
+import { SbusFirstComponent } from './webpages/sbus/sbus-services/sbus-first/sbus-first.component';
 
 @NgModule({
   declarations: [
@@ -181,7 +185,7 @@ import { TechnologyConsultingServiceComponent } from './webpages/sbus/sbus-servi
     SubscribeComponent,
     Slider3Component,
     Tabs1Component,
-    JobreadyComponent,
+    JobslistComponent,
     SlotbookComponent,
     KeyhighlightsComponent,
     SupportComponent,
@@ -222,10 +226,9 @@ import { TechnologyConsultingServiceComponent } from './webpages/sbus/sbus-servi
     ProcessExcellenceComponent,
     SbusComponent,
     SbusStrategyComponent,
-    OperationalExcellenceComponent
-    
-    
-
+    OperationalExcellenceComponent,
+    Header4Component,
+    SbusFirstComponent
   ],
   imports: [
     BrowserModule,

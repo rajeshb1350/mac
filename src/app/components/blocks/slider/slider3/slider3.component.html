@@ -1,60 +1,72 @@
+<div id="banner1" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="hover">
 
-<div id="demo" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <!-- <li data-target="#demo" data-slide-to="{{i}}" [ngClass]="i==0?'active':''" *ngFor="let pdata of bannerContent; let i = index;"></li> -->
-    </ul>
-    
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div class="carousel-item" [ngClass]="i==0?'active':''" *ngFor="let pdata of sliderContent; let i = index;">
-        <div class="container banner-content">
-          <div class="row">
-            <div class="col-12 col-md-12 col-sm-12"></div>
-            <div class="col-md-7 col-sm-7 col-12 slide-content flex-container flex-d-c flex-jc-c">
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item" [ngClass]="i==0?'active':''" *ngFor="let pdata of sliderContent; let i = index;">
+      <div class="container banner-content">
+        <div class="row">
+          <div class="col-md-7 col-sm-7 col-12 slide-content flex-container flex-d-c flex-jc-sb">
+            <div class="content-box">
               <h2 [innerHTML]="pdata.heading"></h2>
-              <h5 class="subheading">{{pdata.subheading}}</h5>
+              <h5>
+                <i class="subheading">{{pdata.subheading}}</i>
+              </h5>
               <p class="content" [innerHTML]="pdata.content"></p>
               <ul class="slide-features animate a-right" *ngIf="pdata.seclist">
                 <li *ngFor="let data of pdata.seclist">
+                  <h5 class="text-center">
+                    <i class="fa {{data.icon}}" aria-hidden="true"></i>
+                  </h5>
                   <h6>{{data.heading}}</h6>
                   <p>{{data.content}}</p>
                 </li>
               </ul>
-              <h6 class="text-center emp-text animate a-left" *ngIf="pdata.secheading">
-                <i>
-                  {{pdata.secheading}}  
-                </i>
-                <br>
-              </h6>
-              <p class="text-center emp-text animate a-left">
-                <i>
-                  {{pdata.seccontent}}  
-                </i>
-              </p>
-              <ul class="slide-list">
-                <li *ngFor="let data of pdata.feature">
-                  {{data}}
-                </li>
-              </ul>
+              <div class="emp-text e1 animate a-left" *ngIf="pdata.secheading">
+                <h5 class="text-center">
+                  <i>
+                    {{pdata.secheading}}
+                  </i>
+                  <br>
+                </h5>
+                <p class="text-center">
+                  <i>
+                    {{pdata.seccontent}}
+                  </i>
+                </p>
+              </div>
+              <div class="emp-text animate a-right" *ngIf="pdata.feature">
+                <ul class="slide-list">
+                  <li *ngFor="let data of pdata.feature">
+                    {{data}}
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="offset-md-1 offset-sm-1 col-md-4 col-sm-4 col-12 slide-img animate a-top">
-              <img alt="First slide" src="{{pdata.imagepath}}">
+
+            <div>
+              <a routerLink="{{pdata.link}}" *ngIf="pdata.type=='page'" class="button button-3">Learn more</a>
+              <a href="{{pdata.link}}" *ngIf="pdata.type=='web'" target="_blank" class="button button-4">Learn more <i class="fa fa-external-link" aria-hidden="true"></i></a>
             </div>
-            <div class="col-12 col-md-12 col-sm-12">
-                <a routerLink="{{pdata.link}}" *ngIf="pdata.type=='page'" class="button button-3">Read More</a>
-                <a href="{{pdata.link}}" *ngIf="pdata.type=='web'" target="_blank" class="button button-3">Visit now</a>
-            </div>
+          </div>
+          <div class="offset-md-1 offset-sm-1 col-md-4 col-sm-4 col-12 slide-img animate a-top">
+            <img alt="First slide" src="{{pdata.imagepath}}">
           </div>
         </div>
       </div>
+      <svg id="Layer_1" style="enable-background:new 0 0 1000 140;fill: #f1f1f1;" viewBox="0 0 1000 140" x="0px" y="0px">
+        <g >
+          <polygon points="1000,140 1000,0 0,140"></polygon>
+        </g>
+      </svg>
     </div>
-    
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
   </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#banner1" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" id="auto-next" href="#banner1" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>

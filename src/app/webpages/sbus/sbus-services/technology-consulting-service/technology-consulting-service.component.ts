@@ -94,17 +94,10 @@ export class TechnologyConsultingServiceComponent implements OnInit {
         },
 
       ],
-
       type: 'page',
       link: 'appProducts',
       imagepath: '/assets/images/banner/slide-7.png'
     },
-
-
-  ];
-
-
-  DigitalTrans = [
     {
       heading: 'Our Digital Transformation Offerings',
 
@@ -161,12 +154,6 @@ export class TechnologyConsultingServiceComponent implements OnInit {
       imagepath: '/assets/images/banner/slide-7.png'
     },
 
-
-  ];
-
-
-
-  cldserv = [
     {
       heading: 'Our Cloud Services',
 
@@ -233,15 +220,6 @@ export class TechnologyConsultingServiceComponent implements OnInit {
       imagepath: '/assets/images/banner/slide-7.png'
     },
 
-
-  ];
-
-
-
-
-
-
-  ITSupport = [
     {
       heading: 'Our IT Support Offerings',
 
@@ -297,11 +275,6 @@ export class TechnologyConsultingServiceComponent implements OnInit {
       imagepath: '/assets/images/banner/slide-7.png'
     },
 
-
-  ];
-
-
-  AutoSupport = [
     {
       heading: 'Our Automation Offerings',
 
@@ -354,12 +327,6 @@ export class TechnologyConsultingServiceComponent implements OnInit {
       imagepath: '/assets/images/banner/slide-7.png'
     },
 
-
-  ];
-
-
-
-  EmergingSer = [
     {
       heading: 'Our Emerging Technology Offerings ',
 
@@ -410,10 +377,6 @@ export class TechnologyConsultingServiceComponent implements OnInit {
       imagepath: '/assets/images/banner/slide-7.png'
     },
 
-
-  ];
-
-  pmoOffer = [
     {
       heading: 'Our Emerging Technology Offerings ',
 

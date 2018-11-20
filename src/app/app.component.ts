@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { Router, NavigationEnd } from '@angular/router';
-import { ApiService } from './services/http/api.service';
 
 @Component({
     selector: 'app-root',
@@ -37,8 +36,7 @@ export class AppComponent implements OnInit {
         //     });
         // }
         // setTimeout( changeTheme, 5000 );
-
-
+        
         $(document).ready(function () {
             $(".filter-button").click(function () {
                 var value = $(this).attr('data-filter');

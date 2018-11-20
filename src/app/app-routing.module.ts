@@ -28,7 +28,7 @@ import { FeaturesComponent } from "./webpages/features/features.component";
 import { ServiceResolverService } from "./services/resolver/serviceCheck-resolver.service";
 import { AboutComponent } from "../app/components/blocks/about/about.component";
 import { ServicesAllComponent } from './components/blocks/services-all/services-all.component';
-import { CareersComponent } from './components/blocks/careers/careers.component';
+import { CareersComponent } from './webpages/careers/careers.component';
 import { AppDevelopmentComponent } from './webpages/services/app-development/app-development.component';
 import { BusinessReEngineeringComponent } from './webpages/services/business-re-engineering/business-re-engineering.component';
 import { EGovernenceComponent } from './webpages/services/e-governence/e-governence.component';
@@ -38,6 +38,11 @@ import { WhymactecComponent } from './webpages/whymactec/whymactec.component';
 import { ProcessExcellenceComponent } from './webpages/services/process-excellence/process-excellence.component';
 import { SbusServicesComponent } from "./webpages/sbus/sbus-services/sbus-services.component";
 import { SbusStrategyComponent } from "./webpages/sbus/sbus-strategy/sbus-strategy.component";
+import { FinanceAccountingComponent } from "./webpages/sbus/sbus-services/finance-accounting/finance-accounting.component";
+import { TechnologyConsultingServiceComponent } from "./webpages/sbus/sbus-services/technology-consulting-service/technology-consulting-service.component";
+import { OperationalExcellenceComponent } from "./webpages/sbus/sbus-services/operational-excellence/operational-excellence.component";
+import { SbusFirstComponent } from "./webpages/sbus/sbus-services/sbus-first/sbus-first.component";
+import { JobslistComponent } from "./webpages/careers/jobready/jobslist.component";
 const appRoutes: Routes = [
     // { path: "", component: IndexComponent, resolve: {server: SlotbookResolverService} },
     {
@@ -81,10 +86,17 @@ const appRoutes: Routes = [
     { path: "study-programs", component: StudyProgramsComponent },
     { path: "apply", component: ApplyComponent },
     // { path: "blogs", component: BlogsComponent },
-    { path: "sbus-service", component: SbusServicesComponent },
-    { path: "sbus-service/:path", component: SbusServicesComponent },
     { path: "sbus-strategy", component: SbusStrategyComponent },
-    { path: "careers", component: CareersComponent },
+    { path: "sbus-service",component: SbusServicesComponent, children: [
+        { path: "", component: SbusFirstComponent },
+        { path: "finance-accounting", component: FinanceAccountingComponent },
+        { path: "technology-services", component: TechnologyConsultingServiceComponent },
+        { path: "operation-excellence", component: OperationalExcellenceComponent },
+    ]},
+    { path: "careers", children: [
+        { path: "", component: CareersComponent },
+        { path: "joblist", component: JobslistComponent }
+    ]},
     { path: "aboutus", component: AboutUsComponent },
     { path: "aboutus/:path", component: AboutUsComponent },
     { path: "why-mactec", component: WhymactecComponent },

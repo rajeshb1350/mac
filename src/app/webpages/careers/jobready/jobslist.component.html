@@ -1,0 +1,120 @@
+<div class="page-banner" style="background-color: var(--secondary)">
+    <div class="banner-content container">
+        <h2 class="banner-heading">{{jobdata.title}}</h2>
+        <p class="banner-subheading">
+            No. of positions: {{jobdata.noOfPositions}}
+        </p>
+    </div>
+</div>
+<section class="jobInfo">
+    <div class="row">
+        <div class="col col-md-6 col-sm-6 col-lg-6">
+            <div>
+                <h6><b>Description</b></h6>
+                <p>{{jobdata.description}}</p>
+                <h6><b>Experience level</b></h6>
+                <p>{{jobdata.experiencelevel}}</p>
+                <h6><b>Skill required</b></h6>
+                <p>{{jobdata.skill_set}}</p>
+                <h6><b>Cost-to-company (CTC)</b></h6>
+                <p>{{jobdata.CTC}}</p>
+                <h6><b>Job location</b></h6>
+                <p>{{jobdata.job_location}}</p>
+                <h6><b>Valid till</b></h6>
+                <p>{{jobdata.job_due}}</p>
+                <h6><b>Job availability</b></h6>
+                <p>{{jobdata.availability}}</p>
+            </div>
+        </div>
+        <div class="col col-md-6 col-sm-6 col-lg-6">
+            <div class="applyForm">
+                <h3>Apply From Here</h3>
+                <form name="form" (ngSubmit)="f.form.valid &&  onSubmit4th()" #f="ngForm" novalidate>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                            <div class="form-group">
+
+                                <input placeholder="Name*" type="text" class="form-control css_fields" name="fromContactName"
+                                    [(ngModel)]="model.fromContactName" #fromContactName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fromContactName.invalid }"
+                                    required />
+                                <div *ngIf="f.submitted && fromContactName.invalid" class="invalid-feedback">
+                                    <div *ngIf="fromContactName.errors.required"> Name required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                            <div class="form-group">
+
+
+                                <input placeholder="Email*" type="email" class="form-control css_fields" name="toContactName"
+                                    [(ngModel)]="model.toContactName" #toContactName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && toContactName.invalid }"
+                                    required />
+
+                                <div *ngIf="f.submitted && fromContactNumber.invalid" class="invalid-feedback">
+                                    <div *ngIf="fromContactNumber.errors.required">Email is required</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                            <div class="form-group">
+
+                                <input placeholder="Contact Number*" type="text" class="form-control css_fields" name="fromContactNumber"
+                                    [(ngModel)]="model.fromContactNumber" #fromContactNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fromContactNumber.invalid }"
+                                    required />
+
+                                <div *ngIf="f.submitted && fromContactNumber.invalid" class="invalid-feedback">
+                                    <div *ngIf="fromContactNumber.errors.required">ContactNumber is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                            <div class="form-group">
+
+                                <input placeholder="Message*" type="text" class="form-control css_fields" name="toContactNumber"
+                                    [(ngModel)]="model.toContactNumber" #toContactNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && toContactNumber.invalid }"
+                                    required />
+                                <div *ngIf="f.submitted && toContactNumber.invalid" class="invalid-feedback">
+                                    <div *ngIf="toContactNumber.errors.required">Message is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                            <div class="form-group">
+
+                                <input placeholder="Designation*" type="text" class="form-control css_fields" name="Designation"
+                                    [(ngModel)]="model.Designation" #Designation="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Designation.invalid }"
+                                    required />
+
+                                <div *ngIf="f.submitted && Designation.invalid" class="invalid-feedback">
+                                    <div *ngIf="Designation.errors.required">Designation is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+                            <div class="form-group">
+
+                                <input placeholder="Designation*" type="file" class="form-control css_fields" name="Designation"
+                                    [(ngModel)]="model.Designation" #Designation="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Designation.invalid }"
+                                    required />
+
+                                <div *ngIf="f.submitted && Designation.invalid" class="invalid-feedback">
+                                    <div *ngIf="Designation.errors.required">Designation is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" style="text-align:center">
+                        <button class="button button-3">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="space-30"></div>

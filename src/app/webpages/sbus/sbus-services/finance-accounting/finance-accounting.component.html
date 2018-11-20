@@ -1,44 +1,78 @@
-<div class="finacc">
-  <div class="banner">
-    <img src="/assets/images/banner/financebg.png" class="img-fluid" alt="Finance and Account Banner">
-    <h2>Finance & Accounting</h2>
-  </div>
-  <section class="section1">
-    <div class="container">
-      <h3 class="heading">
-        Choose our Finance & Accounting 
-        Offshoring Solutions to reach Operational Excellence
-      </h3>
-
-      <p>
-        MacTec allows you to focus on your Core Business, while we assure Cost Effective Offshore Support – Optimum Resource Utilization – Best in Class Delivery Model – Benchmarked Accounting Processes. 
-        <br>
-        ‘Cost’ – one word that always gets undivided attention of any business head or stakeholders. The constant pressures to bring down the cost coupled with increasing need for regulatory compliance and demands for a closer alignment to the business are driving organizations towards new Finance and Accounting Operating models. Chief Financial Officers (CFO) of leading organizations are incorporating Finance and Accounting services outsourcing as a strategy to change their operating models. MacTec offers industry recognized Financial Services Offshoring Solutions that support end-to-end functions. 
-        <br>
-        MacTec leverages its deep Finance and Accounting functional expertise, industry familiarity, operational excellence and efficient delivery model with innovative Technology. MacTec offshoring model has the aptitude to deliver the solutions that standardizes finance and accounting processes, transforms operations and lowers costs.
-      </p>
+<section class="banner">
+  <div class="page-banner" style="background-color: var(--primary)">
+    <div class="banner-content container">
+      <h2 class="banner-heading">Finance & Accounting</h2>
     </div>
-    <div class="block-box1 container">
+    <svg x="0px" y="0px" viewBox="0 0 1000 78" style="enable-background:new 0 0 1000 78; fill: #f1f1f1;">
+      <g>
+        <polygon points="1000,78 1000,0 0,78" />
+      </g>
+    </svg>
+  </div>
+</section>
+<div class="finacc sbus-tabs">
+  <section class="section1">
+    <div>
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/sbus-service">SBuS Services</a></li>
+          <li>Finance & Accounting</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-sm-6">
+          <img src="/assets/images/banner/financebg.png" class="img-fluid" alt="Finance and Account Banner">
+        </div>
+        <div class="col-12 col-md-6 col-sm-6">
+          <h3 class="subheading">
+            Choose our Finance & Accounting Offshoring Solutions to reach Operational Excellence
+          </h3>
+          <p>
+            MacTec allows you to focus on your Core Business, while we assure Cost Effective Offshore Support – Optimum Resource Utilization
+            – Best in Class Delivery Model – Benchmarked Accounting Processes.
+            <br> ‘Cost’ – one word that always gets undivided attention of any business head or stakeholders. The constant pressures
+            to bring down the cost coupled with increasing need for regulatory compliance and demands for a closer alignment
+            to the business are driving organizations towards new Finance and Accounting Operating models. Chief Financial Officers
+            (CFO) of leading organizations are incorporating Finance and Accounting services outsourcing as a strategy to change
+            their operating models. MacTec offers industry recognized Financial Services Offshoring Solutions that support end-to-end
+            functions.
+            <br> MacTec leverages its deep Finance and Accounting functional expertise, industry familiarity, operational excellence
+            and efficient delivery model with innovative Technology. MacTec offshoring model has the aptitude to deliver the
+            solutions that standardizes finance and accounting processes, transforms operations and lowers costs.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!-- <div class="block-box1 container">
       <ul class="block-list">
         <li class="block" *ngFor="let data of findata.flist">
-          <h5>{{data.title}}</h5>
+          <h5>{{data.heading}}</h5>
           <p>{{data.content}}</p>
         </li>
       </ul>
-    </div>
+    </div> -->
+    <app-testimonial [data]="findata.flist" class="width-100"></app-testimonial>
+    <svg x="0px" y="0px" viewBox="0 0 1000 78" style="enable-background:new 0 0 1000 78; fill: #ffffff;">
+      <g>
+        <polygon points="0,0 1000,78 0,78" />
+      </g>
+    </svg>
   </section>
-  <section class="section2">
-    <h3 class="heading">
-      Market Understanding: Customers are Looking For Strategic and Sustainable Impact
-    </h3>
-    <div class="sales-img container">
-      <picture>
-        <source media="(min-width: 960px)" srcset="/assets/images/banner/marketTrends.png">
-        <img src="/assets/images/banner/marketTrends-mobi.png" class="img-fluid" alt="Finance and Account Banner">
-      </picture>
-    </div>
+  <section class="section2 white">
     <div class="fin-data-list" *ngFor="let gpdata of findata.r2rcap;let i = index;">
-      <h4 class="list-heading">{{gpdata.heading}}</h4>
+      <h2 class="heading" *ngIf="gpdata.type=='main'">
+        <span>
+          {{gpdata.heading}}
+        </span>
+      </h2>
+      <h5 class="text-center" *ngIf="gpdata.caption">{{gpdata.caption}}</h5>
+      <div class="container" *ngIf="gpdata.type=='standard'">
+        <h4 class="list-heading">{{gpdata.heading}}</h4>
+      </div>
       <ul class="level-1 container">
         <li *ngFor="let pdata of gpdata.list">
           <h5 class="title">{{pdata.title}}</h5>
@@ -48,23 +82,63 @@
       </ul>
     </div>
   </section>
-  <section class="section3">
+  <section class="section3 white">
     <div class="container">
-      <h3 class="heading">FP&A Capabilities Overview</h3>
+      <h3 >FP&A Capabilities Overview</h3>
       <p>
         <b>
           Budgeting & Planning
         </b>
-        <br>
-        Key Activities Budgeting and forecasting, Budget file and model management, Uploading models into financial systems, True-up of budget assumptions, Data inputs for expense estimates, Variance analysis
+        <br> Key Activities Budgeting and forecasting, Budget file and model management, Uploading models into financial
+        systems, True-up of budget assumptions, Data inputs for expense estimates, Variance analysis
       </p>
       <p>
         <b>
           Management Reporting
         </b>
-        <br>
-        Key Activities: Base cost reporting, Sales to contribution margin analysis, Product and channel analysis, Price / volume mix, Sales estimates, Sales and Marketing expense analysis, Commission analysis, Royalty, collaboration agreements, Customer review packs, Balance sheet walk, Property, plant and equipment analysis, Working capital analysis , Program expenses and investments, Variance analysis, Ad-hoc requests, Region analysis, Product/ business line analysis, Transfer price margin analysis, Inter-company profit tracking, Preliminary management commentary, Headcount reporting, Legal financial planning and analysis, vendor analysis, travel and living expense analysis, Contract vs. Actual analysis
+        <br> Key Activities: Base cost reporting, Sales to contribution margin analysis, Product and channel analysis, Price
+        / volume mix, Sales estimates, Sales and Marketing expense analysis, Commission analysis, Royalty, collaboration
+        agreements, Customer review packs, Balance sheet walk, Property, plant and equipment analysis, Working capital analysis
+        , Program expenses and investments, Variance analysis, Ad-hoc requests, Region analysis, Product/ business line analysis,
+        Transfer price margin analysis, Inter-company profit tracking, Preliminary management commentary, Headcount reporting,
+        Legal financial planning and analysis, vendor analysis, travel and living expense analysis, Contract vs. Actual analysis
       </p>
+    </div>
+  </section>
+
+  <section class="data-section">
+    <div class="data-container" *ngFor="let pdata of financeData">
+      <div class="container">
+        <h3 class="data-heading">{{pdata.heading}}</h3>
+        <div class="list-container">
+          <div class="list-box" *ngFor="let data of pdata.content">
+            <h5 class="sub-heading">
+              {{data.heading}}
+            </h5>
+            <h6 class="list-heading">Commonly Outsourced Services</h6>
+            <ul class="slide-list outsource">
+              <li *ngFor="let cdata of data.outSource">
+                <p *ngIf="!cdata.submod; else hasinnerdata;">{{cdata}}</p>
+
+                <ng-template #hasinnerdata>
+                  <ul class="slide-list">
+                    <p><b>{{cdata.subhead}}</b></p>
+                    <li *ngFor="let gcdata of cdata.submod">
+                      <p>{{gcdata}}</p>
+                    </li>
+                  </ul>
+                </ng-template>
+              </li>
+            </ul>
+            <h6 class="list-heading">Commonly Retained Services</h6>
+            <ul class="slide-list retain">
+              <li *ngFor="let cdata of data.retain">
+                <p>{{cdata}}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>
