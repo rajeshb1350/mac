@@ -33,12 +33,7 @@
 </div>
 <section class="jobInfo container" *ngIf="jobdata">
     <div class="row">
-
-
-
-
         <div class="col-12 col-md-8 col-sm-12 col-lg-8">
-
             <div class="card joblist_highlite">
                 <div class="row">
                     <div class="col-md-6">
@@ -50,8 +45,6 @@
                                         fill="#002C4E" />
                                 </svg>
                                 <p>{{jobdata.experiencelevel}}</p>
-
-
                             </div>
                             <div class="col-md-6 hilite">
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,14 +61,12 @@
                     </div>
                     <div class="col-md-6">
                         <div class="pull-right">
-                            Status:  <b><span class="green_status">Open</span></b>
+                            Status: <b><span class="green_status">Open</span></b>
                         </div>
 
                     </div>
                 </div>
             </div>
-
-
             <div>
                 <h5>
                     <b>Skillset Required</b>
@@ -128,7 +119,6 @@
                             </div>
                         </div>
 
-   
                         <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
                             <div class="form-group">
 
@@ -141,8 +131,8 @@
                                 </div>
                             </div>
                         </div>
-                     
-                    
+
+
                         <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
                             <div class="form-group">
 
@@ -158,20 +148,31 @@
                         <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
                             <div class="form-group">
 
-                                    <div class="panel-body">
-                                            <div class="input-group">
-                                              <input id="uploadFile" class="form-control" placeholder="Upload Resume" disabled="disabled">
-                                              <div class="input-group-btn">
-                                                <div class="fileUpload btn btn-default upload_btn">
-                                                  <span><i class="glyphicon glyphicon-upload"></i> Upload</span>
-                                                  <input id="uploadBtn" type="file" class="upload" />
-                                                </div>
-                                              </div>
+                                <div class="panel-body">
+                                    <div class="input-group">
+                                        <input id="uploadFile" class="form-control" placeholder="Upload Resume" disabled="disabled">
+                                        <div class="input-group-btn">
+                                            <div class="fileUpload btn btn-default upload_btn">
+                                                <span><i class="glyphicon glyphicon-upload"></i> Upload</span>
+                                                <input id="uploadBtn" type="file" class="upload" />
                                             </div>
-                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div *ngIf="f.submitted && Designation.invalid" class="invalid-feedback">
                                     <div *ngIf="Designation.errors.required">Designation is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                            <div class="form-group">
+
+                                <textarea placeholder="Message *" type="textarea" class="form-control css_fields" name="toContactNumber" [(ngModel)]="model.toContactNumber"
+                                    #toContactNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && toContactNumber.invalid }"
+                                    required></textarea>
+                                <div *ngIf="f.submitted && toContactNumber.invalid" class="invalid-feedback">
+                                    <div *ngIf="toContactNumber.errors.required">Message is required</div>
                                 </div>
                             </div>
                         </div>

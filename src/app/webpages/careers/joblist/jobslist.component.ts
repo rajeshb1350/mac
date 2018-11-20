@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SlotserviceService } from '../../../services/http/slotservice.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-jobslist',
   templateUrl: './jobslist.component.html',
@@ -15,9 +16,13 @@ export class JobslistComponent implements OnInit {
   jobdata: any = {};
 
   constructor(
-    private slotser: SlotserviceService
+    private slotser: SlotserviceService,
+    private router: Router
   ) {
-    this.jobdata = slotser.getJobPost()[0];
+    if(slotser.getJobPost())
+    this.jobdata = slotser.getJobPost();
+    else 
+    this.router.navigate(['/careers']);
   }
   
   
@@ -48,6 +53,7 @@ export class JobslistComponent implements OnInit {
       "sizeOfBusiness": this.model.sizeOfBusiness,
       "designation": this.model.Designation
     }
+
     alert('successfully saved data');
     this.model = {};
   }

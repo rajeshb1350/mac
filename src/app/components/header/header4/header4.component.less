@@ -235,13 +235,23 @@
     transition: .3s cubic-bezier(.8, .5, .2, 1.4);
 }
 
-.menu-list a:hover svg,
-.menu-list a.active svg {
-    fill: var(--primary-color);
+.menu-list a:hover,
+.menu-list a.active {
+    &.not {
+        svg {
+            fill: var(--quaternary-color);
+        }
+    }
+    svg {
+        fill: var(--primary-color);
+    }
 }
 
 .menu-list a:hover,
 .menu-list a.active {
+    &.not {
+        color: var(--quaternary-color);
+    }
     color: var(--primary-color);
 }
 

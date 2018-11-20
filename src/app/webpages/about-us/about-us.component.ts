@@ -52,7 +52,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     {
       name: 'Abhishek Jangid',
       desg: 'Head UX Design',
-      content: `UX Developer with a demonstrated history of working in the computer software industry. Skilled in mockups designing, UX analysis and designing.`,
+      content: `UX strategist with a demonstrated history of working in the computer software industry. Skilled in strategising user journey and information architecture with creativity & innovative ideas.`,
       img: '/assets/images/leads/rajeev.jpg'
     },
     {

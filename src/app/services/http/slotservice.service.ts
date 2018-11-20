@@ -143,12 +143,12 @@ export class SlotserviceService {
   //   );
   // }
 
+  postedjob: any;
   public setData(data) {
     this.data = data;
   }
-  postedjob: any = []
   setJobPost(data) {
-    this.postedjob.push(data);
+    this.postedjob = data;
   }
   getJobPost() {
     return this.postedjob;
