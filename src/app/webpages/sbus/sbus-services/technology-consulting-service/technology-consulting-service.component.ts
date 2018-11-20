@@ -55,19 +55,16 @@ export class TechnologyConsultingServiceComponent implements OnInit {
       content: 'We deliver a complete operational view by analysing, identifying and benchmarking the weak spots in core features of the application and suggest opportunities for improvement.',
       datalist: [
         {
-          heading: 'Information Architecture',
+          heading: 'Usability Testing',
+          content: 'Our experts use scenarios tested by real users to process the results and develop recommendations.',
           datasublist: [
-            'Intuitive navigation and information interactions',
-            'Comprehensible search function and results presentation'
-          ]
-        },
-        {
-          heading: 'Workflows and Interactions',
-          datasublist: [
-            'Verification of usage, workflow logics',
-            'Effective application usage, identification and elimination of redundant operations',
-            'Intuitive application operability check',
-            'Fast response time, process continuity, smooth user journeys'
+            'Test script development',
+            'Creating user groups',
+            'Tracking task performance',
+            'User behaviour analysis',
+            'Recording typical mistakes',
+            'Detecting non-intuitive functionality',
+            'Developing optimization recommendations'
           ]
         },
         {
@@ -83,16 +80,19 @@ export class TechnologyConsultingServiceComponent implements OnInit {
           ]
         },
         {
-          heading: 'Usability Testing',
-          content: 'Our experts use scenarios tested by real users to process the results and develop recommendations.',
+          heading: 'Workflows and Interactions',
           datasublist: [
-            'Test script development',
-            'Creating user groups',
-            'Tracking task performance',
-            'User behaviour analysis',
-            'Recording typical mistakes',
-            'Detecting non-intuitive functionality',
-            'Developing optimization recommendations'
+            'Verification of usage, workflow logics',
+            'Effective application usage, identification and elimination of redundant operations',
+            'Intuitive application operability check',
+            'Fast response time, process continuity, smooth user journeys'
+          ]
+        },
+        {
+          heading: 'Information Architecture',
+          datasublist: [
+            'Intuitive navigation and information interactions',
+            'Comprehensible search function and results presentation'
           ]
         }
       ]

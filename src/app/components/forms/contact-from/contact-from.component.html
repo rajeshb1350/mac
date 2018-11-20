@@ -19,10 +19,10 @@
       <div class="input-box col-12 col-sm-6 col-md-6">
         <select class="form-input" formControlName="sizeOfBusiness" placeholder="Select your size of business">
           <option name="sizeOfBusiness" value="" [selected]="'selected'"> Select your size of business*</option>
-          <option name="sizeOfBusiness" value="100-500"> 100-500</option>
-          <option name="sizeOfBusiness" value=" 500-1000"> 500-1000</option>
-          <option name="sizeOfBusiness" value=" 1000-5000"> 1000-5000</option>
-          <option name="sizeOfBusiness" value="5000+"> 5000+</option>
+          <option name="sizeOfBusiness" value="100-500"> 10-50</option>
+          <option name="sizeOfBusiness" value=" 500-1000"> 50-100</option>
+          <option name="sizeOfBusiness" value=" 1000-5000"> 100-500</option>
+          <option name="sizeOfBusiness" value="5000+"> 500+</option>
         </select>
         <p *ngIf="contactFrom.get('sizeOfBusiness').invalid && contactFrom.get('sizeOfBusiness').touched" class="warn-text">
           Select your business size</p>
