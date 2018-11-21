@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from "jquery";
 
 @Component({
   selector: 'app-slider3',
@@ -115,10 +114,8 @@ export class Slider3Component implements OnInit {
 
 
   ngOnInit() {
-    window.setTimeout(function(){
-      let data = $('#auto-next') as HTMLElement;
-      data.click();
+    window.setInterval(function(){
+      document.getElementById('auto-next').click();
     }, 5000);
   }
-
 }

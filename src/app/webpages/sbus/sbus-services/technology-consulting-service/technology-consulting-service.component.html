@@ -270,7 +270,7 @@
                             </div>
                         </div>
                         <div class="data-section">
-                            <div class="data-container" *ngFor="let pdata of testingdata">
+                            <div class="data-container" *ngFor="let pdata of testingdata; let i = index">
                                 <div class="container">
                                     <h3 class="data-heading">{{pdata.heading}}</h3>
                                     <p class="data-content">{{pdata.content}}</p>
@@ -279,7 +279,7 @@
                                             <h5 class="sub-heading">
                                                 {{data.heading}}
                                             </h5>
-                                            <p>{{data.content}}</p>
+                                            <p [ngClass]="{'sub-para': i==1}" *ngIf="data.content">{{data.content}}</p>
                                             <ul class="slide-list outsource">
                                                 <li *ngFor="let cdata of data.datasublist">
                                                     <p>{{cdata}}</p>
