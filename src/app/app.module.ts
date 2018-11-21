@@ -128,6 +128,7 @@ import { OperationalExcellenceComponent } from './webpages/sbus/sbus-services/op
 import { TechnologyConsultingServiceComponent } from './webpages/sbus/sbus-services/technology-consulting-service/technology-consulting-service.component';
 import { Header4Component } from './components/header/header4/header4.component';
 import { SbusFirstComponent } from './webpages/sbus/sbus-services/sbus-first/sbus-first.component';
+import { SeoService } from './services/digital-marketing/seo.service';
 
 @NgModule({
   declarations: [
@@ -253,7 +254,8 @@ import { SbusFirstComponent } from './webpages/sbus/sbus-services/sbus-first/sbu
     ModuleService,
     ServiceCheckService,
     ServiceResolverService,
-    urlPortService
+    urlPortService,
+    SeoService
 
   ],
   bootstrap: [AppComponent],

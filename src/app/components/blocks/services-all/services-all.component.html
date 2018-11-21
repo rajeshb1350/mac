@@ -92,7 +92,7 @@
         <i class="fa fa-angle-right" aria-hidden="true"></i>
         <i>Business Details</i>
         <i class="fa fa-angle-right" aria-hidden="true"></i>
-        <i>Subscirbe</i>
+        <i>Subscribe</i>
     </h5>
 </div>
 <div class="space-30"></div>
@@ -135,8 +135,14 @@
                     </h3>
                     <div class="conversion">
                         <h6>Change<br>Currency:</h6>
-                        <button class="curr-btn" (click)="changeConversion()"><i class="fa" [ngClass]="selectedCurr=='INR'?'fa-dollar':'fa-rupee'"
-                                aria-hidden="true"></i></button>
+                        <button class="curr-btn" (click)="changeConversion()" [ngClass]="{'disabled':selectedCurr=='USD'}">
+                            <i class="fa fa-rupee" aria-hidden="true">
+                            </i>
+                        </button>
+                        <button class="curr-btn disabled" (click)="changeConversion()" [ngClass]="{'disabled':selectedCurr=='INR'}">
+                            <i class="fa fa-dollar" aria-hidden="true">
+                            </i>
+                        </button>
                     </div>
                 </div>
                 <div class="table-price">

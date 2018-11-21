@@ -63,7 +63,7 @@ const appRoutes: Routes = [
     // },
     { path: "support", component: SupportpageComponent },
     {
-        path: "allProducts", component: ServicesAllComponent,
+        path: "all-products", component: ServicesAllComponent,
         resolve: {
             serviceData: ServiceResolverService
         }
@@ -111,13 +111,12 @@ const appRoutes: Routes = [
     // { path: "verifydash", component: EmailverificationComponent },
     // { path: "process-excellence", component: ProcessExcellenceComponent },
     { path: "pagenotfound", component: PagenotfoundComponent },
-    
     { path: "**", redirectTo: "/pagenotfound" }
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes, { useHash: true })
+        RouterModule.forRoot(appRoutes, { useHash: false })
     ],
     exports: [RouterModule]
 })

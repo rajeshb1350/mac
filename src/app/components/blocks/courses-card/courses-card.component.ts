@@ -45,7 +45,7 @@ export class CoursesCardComponent implements OnInit {
       heading: "SBuS Product",
       content: "Digitise your business processes with fully integrated stack of operations and applications – Smart Business Solutions.",
       img: "/assets/images/coursesImages/admin_t2.jpg",
-      link: "/allProducts",
+      link: "/all-products",
       readLink:'Learn more',
       type:'page'
     },

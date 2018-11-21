@@ -63,7 +63,7 @@ export class ContactFromComponent implements OnInit {
         console.log(response)
         if(response['status'] == "Success") {
           this.finalStatus = 2;
-          this.statusMessage = "Your request have been submitted.<br> We will contact you soon";
+          this.statusMessage = "We have recieved your message.<br> One of our expert will contact you shortly.";
         } else {
           this.finalStatus = 4;
           this.statusMessage = "Something went wrong. Please try again";
