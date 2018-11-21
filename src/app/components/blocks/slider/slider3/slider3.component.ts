@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, of } from 'rxjs';
 
 @Component({
   selector: 'app-slider3',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Slider3Component implements OnInit {
 
-  constructor() { }
+  constructor(
+
+  ) { }
 
   sliderContent = [
       {
@@ -114,10 +117,7 @@ export class Slider3Component implements OnInit {
 
 
   ngOnInit() {
-    const $slider3btn = document.getElementById('auto-next');
-    var interval = setInterval(function(){
-      if($slider3btn) $slider3btn.click();
-      else clearInterval(interval);
-    }, 5000);
+    // const $slider3btn = document.getElementById('auto-next');
+    // const timer = setTimeout(() => $slider3btn.click(), 5000);
   }
 }

@@ -11,8 +11,8 @@ export class TestimonialComponent implements OnInit {
 
   constructor() { }
   ngOnInit() {
-    window.setInterval(function(){
-      document.getElementById('t-nextauto').click();
-    }, 5000);
+    // setTimeout(function(){
+    //   document.getElementById('t-nextauto').click();
+    // }, 5000);
   }
 }

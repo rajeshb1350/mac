@@ -110,14 +110,13 @@ const appRoutes: Routes = [
     // { path: "suscribe", component: SubscriptionComponent },
     // { path: "verifydash", component: EmailverificationComponent },
     // { path: "process-excellence", component: ProcessExcellenceComponent },
-    // { path: "pagenotfound", component: PagenotfoundComponent },
-    
-    // { path: "**", redirectTo: "/pagenotfound" }
+    { path: "pagenotfound", component: PagenotfoundComponent },
+    { path: "**", redirectTo: "/pagenotfound" }
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes, { useHash: true })
+        RouterModule.forRoot(appRoutes, { useHash: false })
     ],
     exports: [RouterModule]
 })
