@@ -32,6 +32,7 @@ export class ServicesAllComponent implements OnInit {
   subscriptiontype: string = '';
 
   // Product
+  price: number = 0;
   totalPrice: number = 0;
   totalProduct: number = 0;
   selectedCurr: string = "INR";
@@ -57,30 +58,6 @@ export class ServicesAllComponent implements OnInit {
         this.services = data.serviceData
       }
     );
-  }
-
-  changeConversion(){
-    if(this.selectedCurr=="INR") {
-      this.selectedCurr = "USD";
-      this.services.map(pdata => {
-        pdata['productDetails'].map(data => {
-          data['price']/=71
-        });
-      });
-      this.totalPrice/=71;
-    } else {
-      this.selectedCurr = "INR";
-      this.services.map(pdata => {
-        pdata['productDetails'].map(data => {
-          data['price']*=71
-        });
-      });
-      this.totalPrice*=71;
-    }
-  }
-
-  setSubcriptionType(data: string){
-    this.subscriptiontype = data;
   }
 
   ngOnInit() {
@@ -122,8 +99,37 @@ export class ServicesAllComponent implements OnInit {
     });
   }
 
+
+  changeConversion(){
+    if(this.selectedCurr=="INR") {
+      this.selectedCurr = "USD";
+      this.services.map(pdata => {
+        pdata['productDetails'].map(data => {
+          data['price']/=71
+        });
+      });
+      this.price/=71;
+      this.totalPrice/=71;
+    } else {
+      this.selectedCurr = "INR";
+      this.services.map(pdata => {
+        pdata['productDetails'].map(data => {
+          data['price']*=71
+        });
+      });
+      this.price*=71;
+      this.totalPrice*=71;
+    }
+  }
+
+  setSubcriptionType(data: string){
+    this.subscriptiontype = data;
+  }
+  
   productAccUser(val) {
-    this.totalPrice*=parseInt(val.target.value);
+    var userprice = this.price;
+    userprice *=parseInt(val.target.value);
+    this.totalPrice = userprice;
   }
 
   nextStep() {
@@ -157,6 +163,7 @@ export class ServicesAllComponent implements OnInit {
       return data[0];
     });
 
+    this.price = price;
     this.totalPrice = price;
     this.totalProduct = count;
   }

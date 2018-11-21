@@ -14,7 +14,7 @@ export class Header4Component implements OnInit {
     const $menubox = document.querySelector('.menu-section');
     const $burgerbox = document.querySelector('.burger');
     const $burger = document.querySelector('.menuSix')
-    const $btnlinks = document.querySelectorAll('.menu-list a');
+    const $btnlinks = document.querySelectorAll('.menu-list .link');
     
     Array.from($btnlinks).forEach(function(e){
         e.addEventListener('click', function () {

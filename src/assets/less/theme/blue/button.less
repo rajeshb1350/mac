@@ -92,35 +92,38 @@
 		}
     }
     
-    &.button-3 {
-        padding: 0.8rem 1.5rem;
-        background-color: var(--primary-background-color);
-		transition: 0.15s all ease-in;
-		font-weight: 400;
-		border: none;
-		color: var(--quaternary-color); 
-		margin-top: 1rem;
-		display: inline-block;
-		&::after{
-			content:'\f178';
-			font-family: fontawesome;
-			opacity: 0;
-			visibility: hidden;
-			transition: all 0.3s linear;
-		}
-
-		
-        &:hover {
+	button-3 
+	&.button-3 {
+			padding: 0.8rem 1.5rem;
 			background-color: var(--primary-background-color);
+			transition: 0.15s all ease-in;
+			font-weight: 400;
+			border: none;
+			color: var(--quaternary-color); 
+			margin-top: 1rem;
+			display: inline-block;
 			&::after{
-				content:'\f178';
+				content:'';
 				font-family: fontawesome;
-				opacity : 1;
-				visibility : visible;
-				margin-left: 8px;
+				opacity: 0;
+				visibility: hidden;
+				height: 0;
+				width:0;
+				transition: all 0.3s linear;
 			}
-        }        
-    }
+			&:hover {
+				background-color: var(--primary-background-color);
+				&::after{
+					content:'\f178';
+					font-family: fontawesome;
+					opacity : 1;
+					visibility : visible;
+					margin-left: 8px;
+					height: auto;
+					width:auto;
+				}
+			}        
+		}
    
 	&.button-4 {
         padding: 0.8rem 1.5rem;

@@ -129,6 +129,7 @@ import { TechnologyConsultingServiceComponent } from './webpages/sbus/sbus-servi
 import { Header4Component } from './components/header/header4/header4.component';
 import { SbusFirstComponent } from './webpages/sbus/sbus-services/sbus-first/sbus-first.component';
 import { SeoService } from './services/digital-marketing/seo.service';
+import { JobpostFormComponent } from './components/forms/jobpost-form/jobpost-form.component';
 
 @NgModule({
   declarations: [
@@ -229,7 +230,8 @@ import { SeoService } from './services/digital-marketing/seo.service';
     SbusStrategyComponent,
     OperationalExcellenceComponent,
     Header4Component,
-    SbusFirstComponent
+    SbusFirstComponent,
+    JobpostFormComponent
   ],
   imports: [
     BrowserModule,

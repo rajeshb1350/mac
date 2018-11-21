@@ -39,7 +39,7 @@ export class FeaturesComponent implements OnInit {
             content: `Employee development
       is an essential growth factor for us and that’s where MacTec’s contribution helped us a lot. Their expertise
       in Learning & Development is well appreciated across the bands. The program was well received by the
-      management team and they got to learn some critical nuances with regards to behavioral aspects.`
+      management team and they got to learn some critical nuances with regards to behavioural aspects.`
           },
           {
             heading: 'Sony Electronics',
