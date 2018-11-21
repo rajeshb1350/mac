@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SeoService } from '../../../../services/digital-marketing/seo.service';
 
 @Component({
   selector: 'app-operational-excellence',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperationalExcellenceComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private seo: SeoService
+  ) {   seo.setDmTags("operation-excellence");}
 
   ngOnInit() {
   }

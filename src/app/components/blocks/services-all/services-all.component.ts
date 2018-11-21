@@ -7,6 +7,7 @@ import { ActivatedRoute, Data } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { SubscriptionFrom, OrganizeInfo, UserAddress } from '../../../services/model/subscriptionForm.model';
+import { SeoService } from '../../../services/digital-marketing/seo.service';
 
 
 
@@ -50,13 +51,16 @@ export class ServicesAllComponent implements OnInit {
     private moduleser: ModuleService,
     private title: Title,
     private meta: Meta,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private seo: SeoService
   ) {
+    
     this.route.data.subscribe(
       (data: Data) => {
         this.services = data.serviceData
       }
     );
+    seo.setDmTags('all-products');
   }
 
   changeConversion(){

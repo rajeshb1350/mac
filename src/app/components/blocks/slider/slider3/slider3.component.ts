@@ -110,7 +110,7 @@ export class Slider3Component implements OnInit {
           'Dynamic BI and info access'
         ],
         type: 'page',
-        link: 'all-products',
+        link: 'products',
         imagepath: '/assets/images/banner/slide-10.png'
       },
     ];

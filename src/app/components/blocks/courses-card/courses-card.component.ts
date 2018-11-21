@@ -12,7 +12,7 @@ export class CoursesCardComponent implements OnInit {
       heading: "Finance &amp; Accounting",
       content: "MacTec allows you to focus on your Core Business, while we assure Cost Effective Offshore Support – Optimum Resource Utilization – Best in Class Delivery Model – Benchmarked Accounting Processes.",
       img: "/assets/images/coursesImages/accounting.jpg",
-      link: "/sbus-service/finance-accounting",
+      link: "sbus-service/finance-accounting",
       readLink:'Learn more',
       type:'page'
     },
@@ -45,7 +45,7 @@ export class CoursesCardComponent implements OnInit {
       heading: "SBuS Product",
       content: "Digitise your business processes with fully integrated stack of operations and applications – Smart Business Solutions.",
       img: "/assets/images/coursesImages/admin_t2.jpg",
-      link: "/all-products",
+      link: "/products",
       readLink:'Learn more',
       type:'page'
     },

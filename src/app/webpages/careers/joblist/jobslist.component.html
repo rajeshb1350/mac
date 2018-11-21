@@ -61,7 +61,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="pull-right">
-                            Status: <b><span class="green_status">Open</span></b>
+                            Status: <b><span [class]="jobdata.availability=='Open'?'text-success':'text-danger'"><strong>{{jobdata.availability}}</strong></span></b>
                         </div>
 
                     </div>
@@ -73,6 +73,7 @@
                 </h5>
                 <p> {{jobdata.skill_set}}</p>
             </div>
+            <div class="row">
             <div class="col-12 col-md-12 col-sm-12 col-lg-12">
                 <h6> <span class="font-les"> CTC:</span>
                     <b> {{jobdata.CTC}}</b>
@@ -83,6 +84,7 @@
                 <h6><span class="font-les">Type:</span>
                     <b> Full Time</b>
                 </h6>
+             </div>
             </div>
             <div class="space-30">
                 <h5>

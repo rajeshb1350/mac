@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
+import { SeoService } from '../../../../services/digital-marketing/seo.service';
+
 
 @Component({
   selector: 'app-finance-accounting',
@@ -523,7 +526,10 @@ export class FinanceAccountingComponent implements OnInit {
   },
   ];
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private seo: SeoService
+  ) {   seo.setDmTags("finance-accounting");}
 
   ngOnInit() {
     const $controls = $(".sbus-controls");

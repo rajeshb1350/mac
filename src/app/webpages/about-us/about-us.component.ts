@@ -232,7 +232,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     private route: ActivatedRoute,
     private seo: SeoService
   ) {
-    seo.setDmTags(window.location.pathname.slice(1));
+    seo.setDmTags("aboutus");
   }
 
   ngOnInit() {

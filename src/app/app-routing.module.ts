@@ -63,7 +63,7 @@ const appRoutes: Routes = [
     // },
     { path: "support", component: SupportpageComponent },
     {
-        path: "all-products", component: ServicesAllComponent,
+        path: "products", component: ServicesAllComponent,
         resolve: {
             serviceData: ServiceResolverService
         }

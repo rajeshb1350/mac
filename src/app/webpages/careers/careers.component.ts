@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SlotserviceService } from '../../services/http/slotservice.service';
 import { Router } from '@angular/router';
+import { SeoService } from '../../services/digital-marketing/seo.service';
 @Component({
   selector: 'app-careers',
   templateUrl: './careers.component.html',
@@ -14,8 +15,9 @@ export class CareersComponent implements OnInit {
 
   constructor(
     private slotser: SlotserviceService,
-    private router: Router
-  ) { }
+    private router: Router,
+    private seo: SeoService
+  ) {   seo.setDmTags("careers");}
 
   ngOnInit() {
     this.jobs = [

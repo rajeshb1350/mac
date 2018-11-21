@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SeoService } from '../../../../services/digital-marketing/seo.service';
 
 @Component({
@@ -481,9 +482,10 @@ export class TechnologyConsultingServiceComponent implements OnInit {
 
 
   constructor(    
+    private router: Router,
     private seo: SeoService
   ) {
-    seo.setDmTags(window.location.pathname.slice(14));
+    seo.setDmTags("technology-services");
   }
   ngOnInit() {
   }

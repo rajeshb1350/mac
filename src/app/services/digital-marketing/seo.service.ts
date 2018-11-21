@@ -79,6 +79,21 @@ export class SeoService {
                 "description": " adipisicing elit. Perspiciatis illo nihil minus ullam, itaque error officia consequuntur nam quidem doloremque tempora nostrum."
             }
         },
+        "joblist": {
+            "title": "MacTec | Career",
+            "description": "adipisicing elit. Perspiciatis illo nihil.",
+            "keywords": "sbus careers,careers,it careers,it careers hydreabad, smart bussiness solutions ,MacTecit careers,smart erp,rite erp,eassy erp,erp,erp solution,mac tec it solutions,MacTec erp careers,sd MacTec it solutions careers,sd MacTec it careers,",
+            "og": {
+                "title": "Career",
+                "creater": "@authorname123",
+                "card": "product",
+                "site": "@publisher_handle",
+                "type": "type2",
+                "url": "http://www.mactecit.com",
+                "image": "/assets/images/applicationLogos/logo-blue.png",
+                "description": " adipisicing elit. Perspiciatis illo nihil minus ullam, itaque error officia consequuntur nam quidem doloremque tempora nostrum."
+            }
+        },
         "contact": {
             "title": "MacTec | Contact",
             "description": "Lorem ipsumfficia consequuntur nam quidem doloremque tempora nostrum.",

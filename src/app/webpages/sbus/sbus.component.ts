@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SeoService } from '../../services/digital-marketing/seo.service';
 
 @Component({
   selector: 'app-sbus',
@@ -7,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SbusComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(    private router: Router,
+    private seo: SeoService
+  ) {
+    seo.setDmTags(window.location.pathname.slice(1));
+  }
   ngOnInit() {
   }
 

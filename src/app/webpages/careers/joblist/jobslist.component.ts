@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SlotserviceService } from '../../../services/http/slotservice.service';
 import { Router } from '@angular/router';
+import { SeoService } from '../../../services/digital-marketing/seo.service';
 @Component({
   selector: 'app-jobslist',
   templateUrl: './jobslist.component.html',
@@ -15,14 +16,22 @@ export class JobslistComponent implements OnInit {
   subniteddata: any = {};
   jobdata: any = {};
 
+
+
+
+
   constructor(
     private slotser: SlotserviceService,
-    private router: Router
+    private router: Router,
+    private seo: SeoService
   ) {
+    seo.setDmTags(window.location.pathname.slice(9));
+
     if(slotser.getJobPost())
     this.jobdata = slotser.getJobPost();
     else 
     this.router.navigate(['/careers']);
+
   }
   
   
