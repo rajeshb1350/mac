@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as $ from "jquery";
+import { SeoService } from '../../services/digital-marketing/seo.service';
 
 @Component({
   selector: 'app-about-us',
@@ -228,8 +229,11 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   private currentsec = '';
 
   constructor(
-    private route: ActivatedRoute
-  ) { }
+    private route: ActivatedRoute,
+    private seo: SeoService
+  ) {
+    seo.setDmTags(window.location.hash.slice(2));
+  }
 
   ngOnInit() {
     this.route.params.subscribe(

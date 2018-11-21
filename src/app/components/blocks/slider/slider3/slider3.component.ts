@@ -107,15 +107,17 @@ export class Slider3Component implements OnInit {
           'Dynamic BI and info access'
         ],
         type: 'page',
-        link: 'allProducts',
+        link: 'all-products',
         imagepath: '/assets/images/banner/slide-10.png'
       },
     ];
 
 
   ngOnInit() {
-    window.setInterval(function(){
-      document.getElementById('auto-next').click();
+    const $slider3btn = document.getElementById('auto-next');
+    var interval = setInterval(function(){
+      if($slider3btn) $slider3btn.click();
+      else clearInterval(interval);
     }, 5000);
   }
 }
