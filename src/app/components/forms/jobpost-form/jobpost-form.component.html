@@ -1,42 +1,79 @@
-<form class="form-container" (ngSubmit)="onFormSubmit()" [formGroup]="jobpostfrom">
+<form class="form-container" (ngSubmit)="onFormSubmit(jobpostfrom.value)" [formGroup]="jobpostfrom">
   <fieldset id="form-2" *ngIf="formstep==1">
     <div class="row">
       <div class="input-box col-12 col-sm-12 col-md-12">
-        <input class="form-input" formControlName="name" type="text" placeholder="Enter your name e.g John doe *">
-        <p *ngIf="jobpostfrom.get('name').invalid && jobpostfrom.get('name').touched" class="warn-text">
-          Enter a valid name eg. JohnDoe</p>
+        <input class="form-input" 
+          formControlName="fname" 
+          type="text" 
+          placeholder="Enter your first name e.g John *"
+          >
+        <p *ngIf="jobpostfrom.get('fname').invalid && jobpostfrom.get('fname').touched" 
+          class="warn-text"
+          >
+          Enter your first name eg. John</p>
       </div>
       <div class="input-box col-12 col-sm-12 col-md-12">
-        <input class="form-input" formControlName="email" type="email" placeholder="Enter your email id e.g. johndoe@example.com *">
-        <p *ngIf="jobpostfrom.get('email').invalid && jobpostfrom.get('email').touched" class="warn-text">
+        <input class="form-input" 
+          formControlName="lname" 
+          type="text" 
+          placeholder="Enter your last name e.g doe *"
+          >
+        <p *ngIf="jobpostfrom.get('lname').invalid && jobpostfrom.get('lname').touched" 
+          class="warn-text"
+          >
+          Enter a last name eg. Doe</p>
+      </div>
+      <div class="input-box col-12 col-sm-12 col-md-12">
+        <input class="form-input" 
+          formControlName="email" 
+          type="email" 
+          placeholder="Enter your email id e.g. johndoe@example.com *"
+          >
+        <p *ngIf="jobpostfrom.get('email').invalid && jobpostfrom.get('email').touched" 
+          class="warn-text"
+          >
           Enter a valid email eg. johndoe@example.com</p>
       </div>
       <div class="input-box col-12 col-sm-12 col-md-12">
-        <input class="form-input" formControlName="contact" type="text" placeholder="Enter your mobile no. e.g. 9999 8888 77 *">
-        <p *ngIf="jobpostfrom.get('contact').invalid && jobpostfrom.get('contact').touched" class="warn-text">
+        <input class="form-input" 
+          formControlName="contact" 
+          type="text" 
+          placeholder="Enter your mobile no. e.g. 9999 8888 77 *"
+          >
+        <p *ngIf="jobpostfrom.get('contact').invalid && jobpostfrom.get('contact').touched" 
+          class="warn-text"
+          >
           Enter a valid mobile number eg. 9000090000</p>
       </div>
       <div class="input-box col-12 col-sm-12 col-md-12">
-        <input class="form-input fileUpload" (change)="onUpload($event)" type="file" placeholder="Upload your resume *" accept="application/pdf,application/vnd.ms-word">
-        <p *ngIf="jobpostfrom.get('designation').invalid && jobpostfrom.get('designation').touched" class="warn-text">
-          Upload your resume</p>
-      </div>
-      <div class="input-box col-12 col-sm-12 col-md-12">
-        <input class="form-input" formControlName="designation" type="text" placeholder="Enter your designation *">
-        <p *ngIf="jobpostfrom.get('designation').invalid && jobpostfrom.get('designation').touched" class="warn-text">
+        <input class="form-input" 
+          formControlName="designation" 
+          type="text" 
+          placeholder="Enter your designation *"
+          >
+        <p *ngIf="jobpostfrom.get('designation').invalid && jobpostfrom.get('designation').touched" 
+          class="warn-text"
+          >
           Enter your designation</p>
       </div>
       <div class="input-box col-12 col-sm-12 col-md-12">
-        <textarea class="form-input" cols="4" formControlName="message" placeholder="Enter your Message *"></textarea>
-        <p *ngIf="jobpostfrom.get('message').invalid && jobpostfrom.get('message').touched" class="warn-text">
-          Enter a Message</p>
+        <input class="form-input fileUpload" 
+          type="file" 
+          formControlName="resume" 
+          (change)="onUpload()" 
+          #user_resume 
+          placeholder="Upload your resume *" 
+          accept="application/pdf,application/vnd.ms-word">
       </div>
     </div>
     <div class="text-center">
-      <button type="submit" class="button button-3" [ngClass]="{'disabled': jobpostfrom.invalid}" [disabled]="jobpostfrom.invalid">Send</button>
+      <button type="submit" class="button button-3" 
+      [ngClass]="{'disabled': jobpostfrom.invalid}" 
+      [disabled]="jobpostfrom.invalid"
+      >Send</button>
     </div>
   </fieldset>
-  <fieldset id="form-2" *ngIf="formstep==3">
+  <fieldset id="form-2" *ngIf="formstep==2">
     <div class="flex-container flex-d-c flex-pc">
       <i class="fa fa-circle-o-notch fa-spin fa-5x fa-fw text-primary" aria-hidden="true" *ngIf="finalStatus==1"></i>
       <i class="fa fa-check fa-5x text-success" aria-hidden="true" *ngIf="finalStatus==2"></i>

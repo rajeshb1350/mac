@@ -232,7 +232,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     private route: ActivatedRoute,
     private seo: SeoService
   ) {
-    seo.setDmTags(window.location.pathname.slice(1));
+    seo.setDmTags("aboutus");
   }
 
   ngOnInit() {
@@ -244,7 +244,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     );
 
     function debounce(func) {
-      var wait = 50;
+      var wait = 10;
       var immediate = true;
       var timeout;
       return function () {
@@ -283,5 +283,10 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     } else {
       return;
     }
+  }
+  
+  moveto(path){
+    const $ele = $('#' + path);
+    $('html,body').animate({ scrollTop: $ele.offset().top - 70 }, 'slow');
   }
 }

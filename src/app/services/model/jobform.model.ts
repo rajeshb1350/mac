@@ -1,10 +1,10 @@
 export class JobpostFromModel{
     constructor(
-        public name: string,
+        public firstName: string,
+        public lastName: string,
         public email: string,
-        public phone: string,
-        public flie: File,
+        public mobileNumber: string,
         public designation: string,
-        public message: string
+        public resume: File
     ){}
 }

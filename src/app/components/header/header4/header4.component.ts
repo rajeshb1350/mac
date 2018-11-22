@@ -16,6 +16,13 @@ export class Header4Component implements OnInit {
     const $burger = document.querySelector('.menuSix')
     const $btnlinks = document.querySelectorAll('.menu-list .link');
     
+      // $(window).on('click', function(e){
+      //   if(!(e.originalEvent.path.some(data => $(data)[0]['className']=='header4'))){
+      //     $menubox.classList.remove("open")
+      //     $burger.classList.remove("clickMenuSix");
+      //   }
+      // })
+
     Array.from($btnlinks).forEach(function(e){
         e.addEventListener('click', function () {
             $burger.classList.toggle("clickMenuSix");

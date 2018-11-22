@@ -5,6 +5,8 @@ import {
 import {
 	ActivatedRoute
 } from '@angular/router';
+import { Router } from '@angular/router';
+import { SeoService } from '../../../services/digital-marketing/seo.service';
 import * as $ from 'jquery';
 
 @Component({
@@ -16,8 +18,11 @@ export class SbusServicesComponent implements OnInit {
 	currentsec: string;
 
 	constructor(
-		private route: ActivatedRoute
-	) { }
+		private route: ActivatedRoute,
+		private seo: SeoService
+	  ) {
+		seo.setDmTags("sbus-service");
+	  }
 
 	ngOnInit() {
 		this.route.params.subscribe(

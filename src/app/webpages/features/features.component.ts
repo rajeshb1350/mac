@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import * as $ from "jquery";
-import { ActivatedRoute, Data } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
-// import Typed from 'typed.js';
 
 @Component({
   selector: 'app-features',
@@ -56,7 +53,6 @@ export class FeaturesComponent implements OnInit {
   constructor(
     private title: Title,
     private meta: Meta,
-    private route: ActivatedRoute
   ) { }
 
 

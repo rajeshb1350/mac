@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { JobpostFromModel } from '../../../services/model/jobform.model';
+import { ApiService } from '../../../services/http/api.service';
 
 @Component({
   selector: 'app-jobpost-form',
@@ -16,39 +17,48 @@ export class JobpostFormComponent implements OnInit {
   finalStatus: number = 1;
   statusMessage: string = "Please wait...";
   formstep: number = 1;
+  @Input() jobid: number;
 
   // Form
   jobpostfrom: FormGroup;
   formdata: JobpostFromModel;
   resumefile: File = null;
-
-  constructor() { }
+  @ViewChild('user_resume') resume;
+  
+  constructor(
+    private api: ApiService,
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit() {
-    this.jobpostfrom = new FormGroup({
-      'name' : new FormControl(null, [Validators.required]),
-      'email': new FormControl(null, [Validators.required, Validators.email]),
-      'contact' : new FormControl(null, [Validators.required, Validators.pattern("^[a-z0-9_-]{8,15}$")]),
-      'message' : new FormControl(null, [Validators.required]),
-      'designation' : new FormControl(null, [Validators.required])
+    this.jobpostfrom = this.fb.group({
+        'fname' : [ null, Validators.required ],
+        'lname' : [ null, Validators.required ],
+        'email' : [ null, Validators.compose([Validators.required, Validators.email])],
+        'contact' : [ null, Validators.compose([Validators.required, Validators.pattern("^[a-z0-9_-]{8,15}$")])],
+        'designation' : [ null, Validators.required ],
+        'resume' : [ null ]
     });
+    // this.jobpostfrom = new FormGroup({
+    // });
   }
 
 
-  onFormSubmit(){
-    // this.formstep = 3;
+  onFormSubmit(data){
+    // this.formstep = 2;
     this.formdata = new JobpostFromModel(
-      this.jobpostfrom.get('name').value,
-      this.jobpostfrom.get('email').value,
-      this.jobpostfrom.get('contact').value,
-      this.resumefile,
-      this.jobpostfrom.get('designation').value,
-      this.jobpostfrom.get('message').value
+      data['fname'],
+      data['lname'],
+      data['email'],
+      data['contact'],
+      data['designation'],
+      data['resume']
     );
  
-    console.log(this.formdata)
+    console.log(this.formdata);
 
-    // this.api.postEnquiryData(this.formdata).subscribe(
+    console.log(data['resume'])
+    // this.api.postJobsRequest(this.formdata, this.jobid).subscribe(
     //   (response: any) => {
     //     console.log(response)
     //     if(response['status'] == "Success") {
@@ -67,7 +77,7 @@ export class JobpostFormComponent implements OnInit {
     // );
   }
 
-  onUpload(event) {
-    this.resumefile = event.target.files[0];
+  onUpload() {
+    console.log(this.resume)
   }
 }
