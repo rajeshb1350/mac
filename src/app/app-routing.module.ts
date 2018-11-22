@@ -48,11 +48,11 @@ const appRoutes: Routes = [
     {
         // path: "feature", 
         path: "",
-        component: FeaturesComponent,
-        resolve: {
-            server: SlotbookResolverService,
-            serviceData: ServiceResolverService
-        }
+        component: FeaturesComponent
+        // ,resolve: {
+        //     server: SlotbookResolverService,
+        //     serviceData: ServiceResolverService
+        // }
 
     },
     // {

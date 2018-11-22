@@ -5,11 +5,11 @@ import { Injectable } from '@angular/core';
 export class SeoService {
     private dmData={
         "index": {
-            "title": "MacTec IT Solutions",
+            "title": "MacTec IT Solutions | Home",
             "description": "Lorem ipsum, error officia consequuntur nam quidem doloremque tempora nostrum.",
             "keywords": "sbus index,sbus home, smart bussiness solutions home,MacTecit home,smart erp,rite erp,eassy erp,erp,erp solution,mac tec it solutions home,MacTec erp home,sd MacTec it solutions home,sd MacTec it home,finance module erp,",
             "og": {
-                "title": "MacTec | Home",
+                "title": "MacTec IT Solutions | Home",
                 "creater": "@author_name",
                 "card": "product",
                 "site": "@publisher_handle",
@@ -49,12 +49,12 @@ export class SeoService {
                 "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis illo nihil minus ullam, itaque error officia consequuntur nam quidem doloremque tempora nostrum."
             }
         },
-        "all-products": {
-            "title": "MacTec Products",
+        "products": {
+            "title": "MacTec | SBuS Products",
             "description": "Lorem ipsum, error officia consequuntur nam quidem doloremque tempora nostrum.",
             "keywords": "products,sbus products, smart bussiness solutions ,MacTecit products,smart erp products,rite erp products,eassy erp,erp,erp solution,mac tec it solutions products,MacTec erp,sd MacTec it solutions products,sd MacTec it products,",
             "og": {
-                "title": "SBuS Products",
+                "title": "MacTec | SBuS Products",
                 "creater": "@author_name",
                 "card": "product",
                 "site": "@publisher_handle",

@@ -67,7 +67,7 @@
 			</div>
 
 		</div>
-		<svg x="0px" y="0px" viewBox="0 0 1000 78" style="enable-background:new 0 0 1000 78; fill: #ffffff;">
+		<svg x="0px" y="0px" viewBox="0 0 1000 78" style="enable-background:new 0 0 1000 78; fill: #f1f1f1;">
 			<g>
 				<polygon points="1000,78 1000,0 0,78" />
 			</g>
@@ -76,14 +76,14 @@
 
 	<div class="page-nav">
 		<ul>
-			<li> <a routerLink="/aboutus/vision"> <span>Vision& Mission</span> <i class="fa fa-eye"></i></a></li>
-			<li> <a routerLink="/aboutus/whyMacTec"> <span>Why MacTec</span> <i class="fa fa-question"></i></a></li>
-			<li> <a routerLink="/aboutus/leadership"> <span>Leadership</span> <i class="fa fa-flag"></i></a></li>
+			<li> <a (click)="moveto('vision')"> <span>Vision& Mission</span> <i class="fa fa-eye"></i></a></li>
+			<li> <a (click)="moveto('whyMacTec')"> <span>Why MacTec</span> <i class="fa fa-question"></i></a></li>
+			<li> <a (click)="moveto('leadership')"> <span>Leadership</span> <i class="fa fa-flag"></i></a></li>
 			<!-- <li> <a href="#contact"> <span>Journey</span> <i class="fa fa-map-marker"></i></a></li> -->
 		</ul>
 	</div>
 
-	<section class="about_sec1 ">
+	<section class="about_sec1 gray">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-12 flex-container flex-pc">
@@ -99,11 +99,11 @@
 		</div>
 	</section>
 	<svg style="enable-background:new 0 0 1000 78; fill: #f1f1f1;" viewBox="0 0 1000 78" x="0px" y="0px"><g>
-			<polygon points="1000,78 0,78 0,0"></polygon>
+			<polygon points="1000,78 1000,0 0,0"></polygon>
 		</g>
 	</svg>
 
-	<section class="about_sec2 gray">
+	<section class="about_sec2">
 		<div class="container">
 			<h2 class="heading"><span>Introduction</span></h2>
 			<div class="row">
@@ -165,22 +165,22 @@
 			</div>
 		</div>
 	</section>
+	
+	<svg style="enable-background:new 0 0 1000 78; fill: #f1f1f1;" viewBox="0 0 1000 78" x="0px" y="0px"><g>
+			<polygon points="1000,78 0,78 0,0"></polygon>
+		</g>
+	</svg>
+	
+	<section class="about_sec5 gray" id="vision">
+		<app-testimonial [data]="visiondata" class="width-100"></app-testimonial>
+	</section>
+	
 	<svg style="enable-background:new 0 0 1000 78; fill: #f1f1f1;" viewBox="0 0 1000 78" x="0px" y="0px"><g>
 			<polygon points="1000,0 0,78 0,0"></polygon>
 		</g>
 	</svg>
 
-
-	<section class="about_sec5" id="vision">
-		<app-testimonial [data]="visiondata" class="width-100"></app-testimonial>
-	</section>
-
-
-	<svg style="enable-background:new 0 0 1000 78; fill: #f1f1f1;" viewBox="0 0 1000 78" x="0px" y="0px"><g>
-			<polygon points="1000,78 0,78 0,0"></polygon>
-		</g>
-	</svg>
-	<section class="about_sec3 gray" id="whyMacTec">
+	<section class="about_sec3" id="whyMacTec">
 		<div class="container" *ngFor="let sdata of servOffer;">
 			<div class="row">
 				<div class="col-12 col-sm-12 col-md-12">

@@ -44,7 +44,7 @@
                                     <path d="M19.4177 2.3439C19.4165 2.3439 19.4153 2.34375 19.4141 2.34375H14.1016V1.75781C14.1016 0.788574 13.313 0 12.3438 0H7.65625C6.68701 0 5.89844 0.788574 5.89844 1.75781V2.34375H0.585938C0.259705 2.34375 0 2.61108 0 2.92969V15.8203C0 16.7896 0.788574 17.5781 1.75781 17.5781H18.2422C19.2114 17.5781 20 16.7896 20 15.8203V2.94205C20 2.94128 20 2.94052 20 2.93976C19.9776 2.55493 19.7409 2.34604 19.4177 2.3439ZM7.07031 1.75781C7.07031 1.43478 7.33322 1.17188 7.65625 1.17188H12.3438C12.6668 1.17188 12.9297 1.43478 12.9297 1.75781V2.34375H7.07031V1.75781ZM18.6011 3.51562L16.7815 8.9743C16.7017 9.21402 16.4783 9.375 16.2257 9.375H12.9297V8.78906C12.9297 8.46542 12.6674 8.20312 12.3438 8.20312H7.65625C7.33261 8.20312 7.07031 8.46542 7.07031 8.78906V9.375H3.77426C3.52173 9.375 3.29834 9.21402 3.21854 8.9743L1.39893 3.51562H18.6011ZM11.7578 9.375V10.5469H8.24219V9.375H11.7578ZM18.8281 15.8203C18.8281 16.1433 18.5652 16.4062 18.2422 16.4062H1.75781C1.43478 16.4062 1.17188 16.1433 1.17188 15.8203V6.54037L2.10678 9.34494C2.34634 10.0639 3.01651 10.5469 3.77426 10.5469H7.07031V11.1328C7.07031 11.4565 7.33261 11.7188 7.65625 11.7188H12.3438C12.6674 11.7188 12.9297 11.4565 12.9297 11.1328V10.5469H16.2257C16.9835 10.5469 17.6537 10.0639 17.8932 9.34494L18.8281 6.54037V15.8203Z"
                                         fill="#002C4E" />
                                 </svg>
-                                <p>{{jobdata.experiencelevel}}</p>
+                                <p>{{jobdata.requiredExperience}}</p>
                             </div>
                             <div class="col-md-6 hilite">
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,13 +55,13 @@
                                     <path d="M13.3371 13.6189C13.1629 13.5977 13.0058 13.7224 12.9855 13.8963C12.9653 14.0701 13.0894 14.2275 13.2629 14.2478C16.593 14.6398 18.3667 15.6962 18.3667 16.3083C18.3667 17.1678 14.9935 18.3667 9.5 18.3667C4.00647 18.3667 0.633333 17.1678 0.633333 16.3083C0.633333 15.6962 2.40698 14.6398 5.73705 14.2478C5.91058 14.2275 6.03472 14.0698 6.01445 13.8963C5.99387 13.7224 5.8368 13.597 5.66295 13.6189C2.32877 14.0115 0 15.1173 0 16.3083C0 17.6459 3.26325 19 9.5 19C15.7367 19 19 17.6459 19 16.3083C19 15.1173 16.6712 14.0115 13.3371 13.6189Z"
                                         fill="#002C4E" />
                                 </svg>
-                                <p>{{jobdata.job_location}}</p>
+                                <p>{{jobdata.location}}</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="pull-right">
-                            Status: <b><span [class]="jobdata.availability=='Open'?'text-success':'text-danger'"><strong>{{jobdata.availability}}</strong></span></b>
+                            Status: <b><span [class]="jobdata.status=='Open'?'text-success':'text-danger'"><strong>{{jobdata.status}}</strong></span></b>
                         </div>
 
                     </div>
@@ -71,7 +71,7 @@
                 <h5>
                     <b>Skillset</b>
                 </h5>
-                <p> {{jobdata.skill_set}}</p>
+                <p [innerHTML]="jobdata.skillSet"></p>
             </div>
             <div class="row">
             <div class="col-12 col-md-12 col-sm-12 col-lg-12">
@@ -90,110 +90,12 @@
                 <h5>
                     <b>Job Description</b>
                 </h5>
-                <p>{{jobdata.description}}</p>
-
+                <p [innerHTML]="jobdata.description"></p>
             </div>
         </div>
         <div class="col-12 col-md-4 col-sm-12 col-lg-4">
             <div class="applyForm">
-                <form name="form" (ngSubmit)="f.form.valid &&  onSubmit4th()" #f="ngForm" novalidate>
-
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-                            <div class="form-group">
-                                <input placeholder="Name *" type="text" class="form-control css_fields" name="fromContactName" [(ngModel)]="model.fromContactName"
-                                    #fromContactName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fromContactName.invalid }"
-                                    required />
-                                <div *ngIf="f.submitted && fromContactName.invalid" class="invalid-feedback">
-                                    <div *ngIf="fromContactName.errors.required"> Name required</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-                            <div class="form-group">
-                                <input placeholder="Email *" type="email" class="form-control css_fields" name="toContactName" [(ngModel)]="model.toContactName"
-                                    #toContactName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && toContactName.invalid }"
-                                    required />
-
-                                <div *ngIf="f.submitted && fromContactNumber.invalid" class="invalid-feedback">
-                                    <div *ngIf="fromContactNumber.errors.required">Email is required</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-                            <div class="form-group">
-
-                                <input placeholder="Contact Number *" type="text" class="form-control css_fields" name="fromContactNumber" [(ngModel)]="model.fromContactNumber"
-                                    #fromContactNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fromContactNumber.invalid }"
-                                    required />
-
-                                <div *ngIf="f.submitted && fromContactNumber.invalid" class="invalid-feedback">
-                                    <div *ngIf="fromContactNumber.errors.required">ContactNumber is required</div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-                            <div class="form-group">
-
-                                <input placeholder="Designation *" type="text" class="form-control css_fields" name="Designation" [(ngModel)]="model.Designation"
-                                    #Designation="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Designation.invalid }" required
-                                />
-
-                                <div *ngIf="f.submitted && Designation.invalid" class="invalid-feedback">
-                                    <div *ngIf="Designation.errors.required">Designation is required</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-                            <div class="form-group">
-
-                                <div class="panel-body">
-                                    <div class="input-group">
-                                        <input id="uploadFile" class="form-control" placeholder="Upload Resume" disabled="disabled">
-                                        <div class="input-group-btn">
-                                            <div class="fileUpload btn btn-default upload_btn">
-                                                <span><i class="glyphicon glyphicon-upload"></i> Upload</span>
-                                                <input id="uploadBtn" type="file" class="upload" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div *ngIf="f.submitted && Designation.invalid" class="invalid-feedback">
-                                    <div *ngIf="Designation.errors.required">Designation is required</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-                            <div class="form-group">
-
-                                <textarea placeholder="Message *" type="textarea" class="form-control css_fields" name="toContactNumber" [(ngModel)]="model.toContactNumber"
-                                    #toContactNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && toContactNumber.invalid }"
-                                    required></textarea>
-                                <div *ngIf="f.submitted && toContactNumber.invalid" class="invalid-feedback">
-                                    <div *ngIf="toContactNumber.errors.required">Message is required</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
-                                <div class="form-group">
-    
-                                    <textarea placeholder="Message *" type="textarea" class="form-control css_fields" name="toContactNumber" [(ngModel)]="model.toContactNumber"
-                                        #toContactNumber="ngModel" [ngClass]="{ 'is-invalid': f.submitted && toContactNumber.invalid }"
-                                        required ></textarea>
-                                    <div *ngIf="f.submitted && toContactNumber.invalid" class="invalid-feedback">
-                                        <div *ngIf="toContactNumber.errors.required">Message is required</div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="form-group" style="text-align:center">
-                        <button class="button button-3">Apply</button>
-                    </div>
-                </form>
+                <app-jobpost-form [jobid]='jobdata.id'></app-jobpost-form>
             </div>
         </div>
     </div>
