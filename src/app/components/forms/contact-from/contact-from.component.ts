@@ -43,7 +43,7 @@ export class ContactFromComponent implements OnInit {
       'message' : new FormControl(null, [Validators.required]),
       'servicesList' : new FormControl(null),
       'sizeOfBusiness' : new FormControl(null, [Validators.required]),
-      'designation' : new FormControl(null, [Validators.required])
+      'designation' : new FormControl(null, [Validators.required]),
     });
   }
 
@@ -56,7 +56,7 @@ export class ContactFromComponent implements OnInit {
       this.contactFrom.get('message').value,
       Array.from(this.serviceSet),
       this.contactFrom.get('sizeOfBusiness').value,
-      this.contactFrom.get('designation').value
+      this.contactFrom.get('designation').value,
     );
     this.api.postEnquiryData(this.formdata).subscribe(
       (response: any) => {

@@ -1,50 +1,66 @@
 <form class="form-container" (ngSubmit)="onFormSubmit()" [formGroup]="contactFrom" >
   <fieldset id="form-2" *ngIf="formstep==1">
     <div class="row">
-      <div class="input-box col-12 col-sm-6 col-md-6">
+
+<div class="col-lg-6 col-md-6 col-sm-12">
+    <div class="row">
+    <div class="input-box col-12 col-sm-12 col-md-12">
         <input class="form-input" formControlName="contactName" type="text" placeholder="Enter your name e.g John doe *">
         <p *ngIf="contactFrom.get('contactName').invalid && contactFrom.get('contactName').touched" class="warn-text">
           Enter a valid name eg. JohnDoe</p>
       </div>
-      <div class="input-box col-12 col-sm-6 col-md-6">
-        <input class="form-input" formControlName="email" type="email" placeholder="Enter your email id e.g. johndoe@example.com *">
-        <p *ngIf="contactFrom.get('email').invalid && contactFrom.get('email').touched" class="warn-text">
-          Enter a valid email eg. johndoe@example.com</p>
-      </div>
-      <div class="input-box col-12 col-sm-6 col-md-6">
+
+      <div class="input-box col-12 col-sm-12 col-md-12">
         <input class="form-input" formControlName="contactNumber" type="text" placeholder="Enter your mobile no. e.g. 9999 8888 77 *">
         <p *ngIf="contactFrom.get('contactNumber').invalid && contactFrom.get('contactNumber').touched" class="warn-text">
           Enter a valid mobile number eg. 9000090000</p>
       </div>
-      <div class="input-box col-12 col-sm-6 col-md-6">
-        <select class="form-input" formControlName="sizeOfBusiness" placeholder="Select your size of business">
-          <option name="sizeOfBusiness" value="" [selected]="'selected'"> Select your size of business*</option>
-          <option name="sizeOfBusiness" value="100-500"> 10-50</option>
-          <option name="sizeOfBusiness" value=" 500-1000"> 50-100</option>
-          <option name="sizeOfBusiness" value=" 1000-5000"> 100-500</option>
-          <option name="sizeOfBusiness" value="5000+"> 500+</option>
-        </select>
-        <p *ngIf="contactFrom.get('sizeOfBusiness').invalid && contactFrom.get('sizeOfBusiness').touched" class="warn-text">
-          Select your business size</p>
-      </div>
-      <div class="input-box col-12 col-sm-6 col-md-6">
+      <div class="input-box col-12 col-sm-12 col-md-12">
+          <input class="form-input" formControlName="email" type="email" placeholder="Enter your email id e.g. johndoe@example.com *">
+          <p *ngIf="contactFrom.get('email').invalid && contactFrom.get('email').touched" class="warn-text">
+            Enter a valid email eg. johndoe@example.com</p>
+        </div>
+   
+      <div class="input-box col-12 col-sm-12 col-md-12">
         <input class="form-input" formControlName="designation" type="text" placeholder="Enter your designation *">
         <p *ngIf="contactFrom.get('designation').invalid && contactFrom.get('designation').touched" class="warn-text">
           Enter your designation</p>
       </div>
-      <div class="input-box col-12 col-sm-6 col-md-6">
-        <textarea class="form-input" cols="4" formControlName="message" placeholder="Enter your Message *"></textarea>
+
+      </div>
+</div>
+
+<div class="col-lg-6 col-md-6 col-sm-12">
+    <div class="row">
+        <div class="input-box col-12 col-sm-12 col-md-12" *ngIf="serviceList">
+     
+            <div class="service-box" >
+                <select class="form-input" formControlName="servicesList"  placeholder="Select our service">
+                    <option name="sizeOfBusiness" value="" [selected]="'selected'"> Select our services</option>
+                  <option *ngFor="let data of serviceList.response; " name="servicesList" value="100-500"> <input type="checkbox" (change)="onServiceListChange($event)" class="form-check-input" name="{{data.id}}" id="{{i}}" value="{{data.value}}"> {{data.value}}
+                    </option>
+              </select>
+            </div>
+          </div>
+      <div class="input-box col-12 col-sm-12 col-md-12">
+          <select class="form-input" formControlName="sizeOfBusiness" placeholder="Select your size of business">
+            <option name="sizeOfBusiness" value="" [selected]="'selected'"> Select your size of business*</option>
+            <option name="sizeOfBusiness" value="100-500"> 10-50</option>
+            <option name="sizeOfBusiness" value=" 500-1000"> 50-100</option>
+            <option name="sizeOfBusiness" value=" 1000-5000"> 100-500</option>
+            <option name="sizeOfBusiness" value="5000+"> 500+</option>
+          </select>
+          <p *ngIf="contactFrom.get('sizeOfBusiness').invalid && contactFrom.get('sizeOfBusiness').touched" class="warn-text">
+            Select your business size</p>
+        </div>
+      <div class="input-box col-12 col-sm-12 col-md-12">
+        <textarea class="form-input" rows="7" style="max-height: 114px;" formControlName="message" placeholder="Enter your Message *"></textarea>
         <p *ngIf="contactFrom.get('message').invalid && contactFrom.get('message').touched" class="warn-text">
           Enter a Message</p>
       </div>
-      <div class="input-box col-12 col-sm-12 col-md-12" *ngIf="serviceList">
-        Select our service:
-        <div class="service-box" *ngFor="let data of serviceList.response; let i of index;">
-          <label class="form-check-label">
-            <input type="checkbox" (change)="onServiceListChange($event)" class="form-check-input" name="{{data.id}}" id="{{i}}" value="{{data.value}}">            {{data.value}}
-          </label>
-        </div>
       </div>
+      </div>
+   
     </div>
     <div class="text-center">
       <button type="submit" class="button button-3" [ngClass]="{'disabled': contactFrom.invalid}" [disabled]="contactFrom.invalid">Send</button>

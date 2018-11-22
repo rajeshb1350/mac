@@ -1,14 +1,26 @@
 .form-container 
 {
     margin-bottom: 1rem;
-    .input-box p {
+    #form-2{
+        background: #eee;
+        padding: 2rem;
+    }
+
+    .input-box {
+        p {
         position: absolute;
         bottom: -1rem;
         color: var(--danger);
         font-size: 0.75rem;
     }
+    .form-input{
+&:focus{
+    border: 1px var(--secondary-color) solid;
+}
+    }
+}
 
     .service-box {
-        margin-left: 2rem;
+       // margin-left: 2rem;
     }
 }

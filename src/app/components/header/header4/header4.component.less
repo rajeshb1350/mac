@@ -1,5 +1,5 @@
 .header4 {
-    position: fixed;
+    position: relative;
     z-index: 9999999;
     &.down {
         .toogle-button {
@@ -11,6 +11,28 @@
             opacity: 0;
         }
     }
+    .pos_rel{position:relative; }
+    .pos_abs{    position: absolute; 
+        right: 2rem;
+        top: 1rem; 
+        padding: 0.1rem 0.4rem;
+    border-radius: 0.2rem; 
+   a{
+    color: var(--quaternary-color);
+    background: var(--primary-background-color);
+    cursor: pointer;
+    .linkdirect{
+        background: var(--primary-background-color);
+        color: #fff;
+        border:0px;
+        cursor: pointer;
+     &:focus{
+        border:0px;
+     }
+       } 
+   } 
+    }
+ 
 }
 
 /* menuSix */

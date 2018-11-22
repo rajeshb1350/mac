@@ -239,6 +239,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     this.route.params.subscribe(
       data => {
         this.currentsec = data.path;
+        console.log(this.currentsec);
         this.scrolltopath(this.currentsec);
       }
     );
